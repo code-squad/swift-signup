@@ -43,21 +43,24 @@ class idTextField : UITextField, UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        guard let text = textField.text else {
+        guard var text = textField.text else {
             return false
         }
         
-        if isValidId(string: "\(text)\(string)") {
-            self.currentState = .valid
+        if range.length != 0 {
+            let removeRange = text.index(text.startIndex, offsetBy: range.location)..<text.index(text.startIndex, offsetBy: range.location + range.length)
+            text.removeSubrange(removeRange)
         } else {
-            self.currentState = .invalid
+            text.insert(contentsOf: string, at: text.index(text.startIndex, offsetBy: range.location))
         }
+                
+        isValidId(string: text)
         stateToColor()
         return true
     }
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        self.layer.borderColor = UIColor.blue.cgColor
+        self.layer.borderColor = UIColor.systemBlue.cgColor
         return true
     }
     
@@ -69,10 +72,31 @@ class idTextField : UITextField, UITextFieldDelegate {
         return true
     }
     
-    func isValidId(string: String) -> Bool {
-        let idRegEx = "[A-Za-z0-9_-]{5,20}"
+    func isValidId(string: String) {
+        let idRegEx = "[a-z0-9_-]{5,20}"
         let validString = NSPredicate(format: "SELF MATCHES %@", idRegEx)
 
-        return validString.evaluate(with: string)
+        var info : [AnyHashable:Any] = [:]
+        
+        if validString.evaluate(with: string) {
+            info.updateValue("사용 가능한 아이디입니다.", forKey: UserInfo.textInfo)
+            info.updateValue(UIColor.systemGreen, forKey: UserInfo.colorInfo)
+            self.currentState = .valid
+        } else {
+            info.updateValue("5~20자의 영문 소문자, 숫자와 특수기호(_)(-)만 사용 가능합니다.", forKey: UserInfo.textInfo)
+            info.updateValue(UIColor.red, forKey: UserInfo.colorInfo)
+            self.currentState = .invalid
+        }
+        NotificationCenter.default.post(name: idTextField.idState, object: self, userInfo: info)
+        
     }
+}
+
+extension idTextField {
+    enum UserInfo {
+        case textInfo
+        case colorInfo
+    }
+    
+    static let idState = Notification.Name("idState")
 }

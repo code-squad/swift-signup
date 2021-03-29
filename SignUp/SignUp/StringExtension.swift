@@ -9,7 +9,6 @@ import Foundation
 
 extension String{
     func getArrayAfterRegex(regex: String) -> [String] {
-        
         do {
             let regex = try NSRegularExpression(pattern: regex)
             let results = regex.matches(in: self,
@@ -17,8 +16,7 @@ extension String{
             return results.map {
                 String(self[Range($0.range, in: self)!])
             }
-        } catch let error {
-            print("invalid regex: \(error.localizedDescription)")
+        } catch {
             return []
         }
     }

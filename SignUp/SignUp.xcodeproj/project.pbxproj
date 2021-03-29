@@ -15,6 +15,8 @@
 		B343224B2611A0CA0094C04A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B34322492611A0CA0094C04A /* LaunchScreen.storyboard */; };
 		B34322562611A0CA0094C04A /* SignUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34322552611A0CA0094C04A /* SignUpTests.swift */; };
 		B34322612611A0CA0094C04A /* SignUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34322602611A0CA0094C04A /* SignUpUITests.swift */; };
+		B34322722611AD790094C04A /* IDTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34322712611AD790094C04A /* IDTextFieldDelegate.swift */; };
+		B34322772611BFCF0094C04A /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34322762611BFCF0094C04A /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		B343225C2611A0CA0094C04A /* SignUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B34322602611A0CA0094C04A /* SignUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUITests.swift; sourceTree = "<group>"; };
 		B34322622611A0CA0094C04A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B34322712611AD790094C04A /* IDTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDTextFieldDelegate.swift; sourceTree = "<group>"; };
+		B34322762611BFCF0094C04A /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				B343223E2611A0CA0094C04A /* AppDelegate.swift */,
 				B34322402611A0CA0094C04A /* SceneDelegate.swift */,
 				B34322422611A0CA0094C04A /* ViewController.swift */,
+				B34322712611AD790094C04A /* IDTextFieldDelegate.swift */,
+				B34322762611BFCF0094C04A /* Extension.swift */,
 				B34322442611A0CA0094C04A /* Main.storyboard */,
 				B34322472611A0CA0094C04A /* Assets.xcassets */,
 				B34322492611A0CA0094C04A /* LaunchScreen.storyboard */,
@@ -259,7 +265,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B34322432611A0CA0094C04A /* ViewController.swift in Sources */,
+				B34322722611AD790094C04A /* IDTextFieldDelegate.swift in Sources */,
 				B343223F2611A0CA0094C04A /* AppDelegate.swift in Sources */,
+				B34322772611BFCF0094C04A /* Extension.swift in Sources */,
 				B34322412611A0CA0094C04A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

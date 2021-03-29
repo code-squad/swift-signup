@@ -8,10 +8,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet var IDTextField: UITextField!
+    var IdTextFieldDelegate = IDTextFieldDelegate()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        IDTextField.delegate = IdTextFieldDelegate
     }
 
 

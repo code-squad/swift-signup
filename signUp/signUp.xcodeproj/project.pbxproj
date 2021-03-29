@@ -17,6 +17,7 @@
 		712DBC3426119DD000F853A7 /* signUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DBC3326119DD000F853A7 /* signUpUITests.swift */; };
 		712DBC592611B2D900F853A7 /* MainTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DBC582611B2D900F853A7 /* MainTitleLabel.swift */; };
 		712DBC612611B44B00F853A7 /* MainInfoStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DBC602611B44B00F853A7 /* MainInfoStackView.swift */; };
+		712DBC662611B81100F853A7 /* EachInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DBC652611B81100F853A7 /* EachInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		712DBC3526119DD000F853A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		712DBC582611B2D900F853A7 /* MainTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTitleLabel.swift; sourceTree = "<group>"; };
 		712DBC602611B44B00F853A7 /* MainInfoStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInfoStackView.swift; sourceTree = "<group>"; };
+		712DBC652611B81100F853A7 /* EachInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EachInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			children = (
 				712DBC582611B2D900F853A7 /* MainTitleLabel.swift */,
 				712DBC602611B44B00F853A7 /* MainInfoStackView.swift */,
+				712DBC652611B81100F853A7 /* EachInfoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				712DBC1626119DCF00F853A7 /* SignUpMainViewController.swift in Sources */,
 				712DBC1226119DCF00F853A7 /* AppDelegate.swift in Sources */,
 				712DBC592611B2D900F853A7 /* MainTitleLabel.swift in Sources */,
+				712DBC662611B81100F853A7 /* EachInfoView.swift in Sources */,
 				712DBC612611B44B00F853A7 /* MainInfoStackView.swift in Sources */,
 				712DBC1426119DCF00F853A7 /* SceneDelegate.swift in Sources */,
 			);

@@ -44,6 +44,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID validation result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SV3-o5-Cch">
+                                <rect key="frame" x="36.666666666666657" y="195" width="105" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fK-GW-uJ3">
                                 <rect key="frame" x="36" y="219" width="48.666666666666657" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
@@ -135,18 +141,40 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password Validation result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6c-Mo-EB4">
+                                <rect key="frame" x="36" y="279" width="148.66666666666666" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password reconfirm validation result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6PE-Iu-l6H">
+                                <rect key="frame" x="37.000000000000014" y="363" width="205.33333333333337" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name validation result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ade-Kd-MEt">
+                                <rect key="frame" x="37" y="447" width="126" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.96470588235294119" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="ade-Kd-MEt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="06s-ka-pHm"/>
                             <constraint firstItem="0fK-GW-uJ3" firstAttribute="top" secondItem="fJ4-DQ-TSD" secondAttribute="bottom" constant="25" id="1dY-rm-DiS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rDG-LN-BOR" secondAttribute="trailing" symbolic="YES" id="1qi-h0-VYJ"/>
                             <constraint firstItem="t7O-88-SBV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36.5" id="2oR-Ks-u5a"/>
                             <constraint firstItem="Tr0-FB-RHN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="5rY-bD-wf8"/>
+                            <constraint firstItem="B6c-Mo-EB4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="8ER-Tm-o6P"/>
                             <constraint firstItem="2sk-3r-tPS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36.5" id="AUV-b1-dqo"/>
                             <constraint firstItem="hIt-Yx-4va" firstAttribute="top" secondItem="wsy-Ob-Oh3" secondAttribute="bottom" constant="25" id="Cct-lV-bNY"/>
                             <constraint firstItem="rDG-LN-BOR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="HPk-0i-dnU"/>
                             <constraint firstItem="fGg-Ug-Nvy" firstAttribute="top" secondItem="t7O-88-SBV" secondAttribute="bottom" constant="30" id="IK6-5w-lPw"/>
+                            <constraint firstItem="6PE-Iu-l6H" firstAttribute="top" secondItem="2sk-3r-tPS" secondAttribute="bottom" constant="1" id="JcY-BU-CSW"/>
+                            <constraint firstItem="6PE-Iu-l6H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="Kwe-OR-00y"/>
                             <constraint firstItem="2sk-3r-tPS" firstAttribute="top" secondItem="hIt-Yx-4va" secondAttribute="bottom" constant="4" id="LAi-Kd-j13"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t7O-88-SBV" secondAttribute="trailing" constant="36.5" id="NTf-Th-Iu7"/>
                             <constraint firstItem="t7O-88-SBV" firstAttribute="top" secondItem="rDG-LN-BOR" secondAttribute="bottom" constant="4" id="T4C-KC-Y36"/>
@@ -155,10 +183,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xEA-sP-Oxf" secondAttribute="trailing" symbolic="YES" id="Uhf-P0-sth"/>
                             <constraint firstItem="hIt-Yx-4va" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="X1c-Zn-hm8"/>
                             <constraint firstItem="fGg-Ug-Nvy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XIg-Qi-VGz"/>
+                            <constraint firstItem="ade-Kd-MEt" firstAttribute="top" secondItem="t7O-88-SBV" secondAttribute="bottom" constant="1" id="XJn-Ra-Wph"/>
+                            <constraint firstItem="B6c-Mo-EB4" firstAttribute="top" secondItem="wsy-Ob-Oh3" secondAttribute="bottom" constant="1" id="XhB-e6-wzc"/>
                             <constraint firstItem="xEA-sP-Oxf" firstAttribute="top" secondItem="Tr0-FB-RHN" secondAttribute="bottom" constant="25" id="Yxm-IM-whT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hIt-Yx-4va" secondAttribute="trailing" symbolic="YES" id="ZrZ-CT-Wgr"/>
+                            <constraint firstItem="SV3-o5-Cch" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36.5" id="aEA-3A-l10"/>
                             <constraint firstItem="xEA-sP-Oxf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="b7N-CT-nJz"/>
                             <constraint firstItem="fGg-Ug-Nvy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="145" id="bYP-fo-Je4"/>
+                            <constraint firstItem="SV3-o5-Cch" firstAttribute="top" secondItem="fJ4-DQ-TSD" secondAttribute="bottom" constant="1" id="cDq-1s-Ias"/>
                             <constraint firstItem="fJ4-DQ-TSD" firstAttribute="top" secondItem="xEA-sP-Oxf" secondAttribute="bottom" constant="4" id="cU7-gj-D55"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fJ4-DQ-TSD" secondAttribute="trailing" constant="36.5" id="chs-O0-AAm"/>
                             <constraint firstItem="wsy-Ob-Oh3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36.5" id="eVf-He-Mxt"/>
@@ -172,6 +204,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="IDValidationResult" destination="SV3-o5-Cch" id="suA-dI-tYU"/>
+                        <outlet property="NameValidationResult" destination="ade-Kd-MEt" id="FWB-Vh-xFc"/>
+                        <outlet property="PasswordReconfirmValidationResult" destination="6PE-Iu-l6H" id="2Bx-8o-Ci3"/>
+                        <outlet property="PasswordValidationResult" destination="B6c-Mo-EB4" id="3r2-fq-EpS"/>
                         <outlet property="idTextField" destination="fJ4-DQ-TSD" id="JDW-6h-WR7"/>
                         <outlet property="nameTextField" destination="t7O-88-SBV" id="ugP-rI-6zo"/>
                         <outlet property="passwordReconfirmTextField" destination="2sk-3r-tPS" id="BeL-XN-aBR"/>

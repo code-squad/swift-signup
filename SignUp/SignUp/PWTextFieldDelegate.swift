@@ -9,7 +9,7 @@ import UIKit
 
 class PWTextFieldDelegate: NSObject, UITextFieldDelegate {
     
-    var state: PasswordTextFieldState? = nil
+    private var state: PasswordTextFieldState? = nil
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         let text = textField.text ?? ""

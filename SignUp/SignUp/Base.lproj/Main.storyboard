@@ -126,6 +126,7 @@
                         <outlet property="PWCheckLabel" destination="732-HQ-wkR" id="wiS-Nu-Csh"/>
                         <outlet property="PWReconfirmLabel" destination="Hzp-a5-Cwj" id="LtH-wd-xV5"/>
                         <outlet property="nameCheckLabel" destination="es4-wt-1gG" id="c1C-TH-YfG"/>
+                        <outlet property="pwTextField" destination="5yS-ln-BRF" id="rvi-bO-qUC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

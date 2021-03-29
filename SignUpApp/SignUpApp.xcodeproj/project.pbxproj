@@ -1,0 +1,642 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA6CB5C02611F5910097F29F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6CB5BF2611F5910097F29F /* AppDelegate.swift */; };
+		FA6CB5C22611F5910097F29F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6CB5C12611F5910097F29F /* SceneDelegate.swift */; };
+		FA6CB5C42611F5910097F29F /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6CB5C32611F5910097F29F /* SignUpVC.swift */; };
+		FA6CB5C72611F5910097F29F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6CB5C52611F5910097F29F /* Main.storyboard */; };
+		FA6CB5C92611F5920097F29F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA6CB5C82611F5920097F29F /* Assets.xcassets */; };
+		FA6CB5CC2611F5920097F29F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6CB5CA2611F5920097F29F /* LaunchScreen.storyboard */; };
+		FA6CB5D72611F5920097F29F /* SignUpAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6CB5D62611F5920097F29F /* SignUpAppTests.swift */; };
+		FA6CB5E22611F5920097F29F /* SignUpAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6CB5E12611F5920097F29F /* SignUpAppUITests.swift */; };
+		FAEC60D52612091D00E9005C /* PesonalInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC60D42612091D00E9005C /* PesonalInfoVC.swift */; };
+		FAEC60DD2612095200E9005C /* PrivacyPolicyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC60DC2612095200E9005C /* PrivacyPolicyVC.swift */; };
+		FAEC60E22612097200E9005C /* SelectIntersetsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC60E12612097200E9005C /* SelectIntersetsVC.swift */; };
+		FAEC60E726120C3F00E9005C /* SceneTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC60E626120C3F00E9005C /* SceneTitleLabel.swift */; };
+		FAEC60ED26120E2E00E9005C /* SceneTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC60EC26120E2E00E9005C /* SceneTitle.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA6CB5D32611F5920097F29F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA6CB5B42611F5910097F29F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA6CB5BB2611F5910097F29F;
+			remoteInfo = SignUpApp;
+		};
+		FA6CB5DE2611F5920097F29F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA6CB5B42611F5910097F29F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA6CB5BB2611F5910097F29F;
+			remoteInfo = SignUpApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FA6CB5BC2611F5910097F29F /* SignUpApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignUpApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA6CB5BF2611F5910097F29F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA6CB5C12611F5910097F29F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FA6CB5C32611F5910097F29F /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		FA6CB5C62611F5910097F29F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FA6CB5C82611F5920097F29F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA6CB5CB2611F5920097F29F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA6CB5CD2611F5920097F29F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA6CB5D22611F5920097F29F /* SignUpAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignUpAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA6CB5D62611F5920097F29F /* SignUpAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAppTests.swift; sourceTree = "<group>"; };
+		FA6CB5D82611F5920097F29F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA6CB5DD2611F5920097F29F /* SignUpAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignUpAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA6CB5E12611F5920097F29F /* SignUpAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAppUITests.swift; sourceTree = "<group>"; };
+		FA6CB5E32611F5920097F29F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAEC60D42612091D00E9005C /* PesonalInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesonalInfoVC.swift; sourceTree = "<group>"; };
+		FAEC60DC2612095200E9005C /* PrivacyPolicyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyVC.swift; sourceTree = "<group>"; };
+		FAEC60E12612097200E9005C /* SelectIntersetsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectIntersetsVC.swift; sourceTree = "<group>"; };
+		FAEC60E626120C3F00E9005C /* SceneTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneTitleLabel.swift; sourceTree = "<group>"; };
+		FAEC60EC26120E2E00E9005C /* SceneTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneTitle.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA6CB5B92611F5910097F29F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA6CB5CF2611F5920097F29F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA6CB5DA2611F5920097F29F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA1398F0261204D8005A7E39 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA6CB5C32611F5910097F29F /* SignUpVC.swift */,
+				FAEC60D42612091D00E9005C /* PesonalInfoVC.swift */,
+				FAEC60DC2612095200E9005C /* PrivacyPolicyVC.swift */,
+				FAEC60E12612097200E9005C /* SelectIntersetsVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA6CB5B32611F5910097F29F = {
+			isa = PBXGroup;
+			children = (
+				FA6CB5BE2611F5910097F29F /* SignUpApp */,
+				FA6CB5D52611F5920097F29F /* SignUpAppTests */,
+				FA6CB5E02611F5920097F29F /* SignUpAppUITests */,
+				FA6CB5BD2611F5910097F29F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA6CB5BD2611F5910097F29F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA6CB5BC2611F5910097F29F /* SignUpApp.app */,
+				FA6CB5D22611F5920097F29F /* SignUpAppTests.xctest */,
+				FA6CB5DD2611F5920097F29F /* SignUpAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA6CB5BE2611F5910097F29F /* SignUpApp */ = {
+			isa = PBXGroup;
+			children = (
+				FAEC60EB26120E0B00E9005C /* Model */,
+				FA97B70D2611F78700F090FD /* View */,
+				FA1398F0261204D8005A7E39 /* Controller */,
+				FA6CB5BF2611F5910097F29F /* AppDelegate.swift */,
+				FA6CB5C12611F5910097F29F /* SceneDelegate.swift */,
+				FA6CB5C82611F5920097F29F /* Assets.xcassets */,
+				FA6CB5CA2611F5920097F29F /* LaunchScreen.storyboard */,
+				FA6CB5CD2611F5920097F29F /* Info.plist */,
+			);
+			path = SignUpApp;
+			sourceTree = "<group>";
+		};
+		FA6CB5D52611F5920097F29F /* SignUpAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA6CB5D62611F5920097F29F /* SignUpAppTests.swift */,
+				FA6CB5D82611F5920097F29F /* Info.plist */,
+			);
+			path = SignUpAppTests;
+			sourceTree = "<group>";
+		};
+		FA6CB5E02611F5920097F29F /* SignUpAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FA6CB5E12611F5920097F29F /* SignUpAppUITests.swift */,
+				FA6CB5E32611F5920097F29F /* Info.plist */,
+			);
+			path = SignUpAppUITests;
+			sourceTree = "<group>";
+		};
+		FA97B70D2611F78700F090FD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA6CB5C52611F5910097F29F /* Main.storyboard */,
+				FAEC60E626120C3F00E9005C /* SceneTitleLabel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAEC60EB26120E0B00E9005C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAEC60EC26120E2E00E9005C /* SceneTitle.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA6CB5BB2611F5910097F29F /* SignUpApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA6CB5E62611F5920097F29F /* Build configuration list for PBXNativeTarget "SignUpApp" */;
+			buildPhases = (
+				FA6CB5B82611F5910097F29F /* Sources */,
+				FA6CB5B92611F5910097F29F /* Frameworks */,
+				FA6CB5BA2611F5910097F29F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SignUpApp;
+			productName = SignUpApp;
+			productReference = FA6CB5BC2611F5910097F29F /* SignUpApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FA6CB5D12611F5920097F29F /* SignUpAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA6CB5E92611F5920097F29F /* Build configuration list for PBXNativeTarget "SignUpAppTests" */;
+			buildPhases = (
+				FA6CB5CE2611F5920097F29F /* Sources */,
+				FA6CB5CF2611F5920097F29F /* Frameworks */,
+				FA6CB5D02611F5920097F29F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA6CB5D42611F5920097F29F /* PBXTargetDependency */,
+			);
+			name = SignUpAppTests;
+			productName = SignUpAppTests;
+			productReference = FA6CB5D22611F5920097F29F /* SignUpAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FA6CB5DC2611F5920097F29F /* SignUpAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA6CB5EC2611F5920097F29F /* Build configuration list for PBXNativeTarget "SignUpAppUITests" */;
+			buildPhases = (
+				FA6CB5D92611F5920097F29F /* Sources */,
+				FA6CB5DA2611F5920097F29F /* Frameworks */,
+				FA6CB5DB2611F5920097F29F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA6CB5DF2611F5920097F29F /* PBXTargetDependency */,
+			);
+			name = SignUpAppUITests;
+			productName = SignUpAppUITests;
+			productReference = FA6CB5DD2611F5920097F29F /* SignUpAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA6CB5B42611F5910097F29F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					FA6CB5BB2611F5910097F29F = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					FA6CB5D12611F5920097F29F = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = FA6CB5BB2611F5910097F29F;
+					};
+					FA6CB5DC2611F5920097F29F = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = FA6CB5BB2611F5910097F29F;
+					};
+				};
+			};
+			buildConfigurationList = FA6CB5B72611F5910097F29F /* Build configuration list for PBXProject "SignUpApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA6CB5B32611F5910097F29F;
+			productRefGroup = FA6CB5BD2611F5910097F29F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA6CB5BB2611F5910097F29F /* SignUpApp */,
+				FA6CB5D12611F5920097F29F /* SignUpAppTests */,
+				FA6CB5DC2611F5920097F29F /* SignUpAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA6CB5BA2611F5910097F29F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA6CB5CC2611F5920097F29F /* LaunchScreen.storyboard in Resources */,
+				FA6CB5C92611F5920097F29F /* Assets.xcassets in Resources */,
+				FA6CB5C72611F5910097F29F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA6CB5D02611F5920097F29F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA6CB5DB2611F5920097F29F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA6CB5B82611F5910097F29F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAEC60E726120C3F00E9005C /* SceneTitleLabel.swift in Sources */,
+				FA6CB5C42611F5910097F29F /* SignUpVC.swift in Sources */,
+				FAEC60DD2612095200E9005C /* PrivacyPolicyVC.swift in Sources */,
+				FAEC60ED26120E2E00E9005C /* SceneTitle.swift in Sources */,
+				FAEC60E22612097200E9005C /* SelectIntersetsVC.swift in Sources */,
+				FAEC60D52612091D00E9005C /* PesonalInfoVC.swift in Sources */,
+				FA6CB5C02611F5910097F29F /* AppDelegate.swift in Sources */,
+				FA6CB5C22611F5910097F29F /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA6CB5CE2611F5920097F29F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA6CB5D72611F5920097F29F /* SignUpAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA6CB5D92611F5920097F29F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA6CB5E22611F5920097F29F /* SignUpAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA6CB5D42611F5920097F29F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA6CB5BB2611F5910097F29F /* SignUpApp */;
+			targetProxy = FA6CB5D32611F5920097F29F /* PBXContainerItemProxy */;
+		};
+		FA6CB5DF2611F5920097F29F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA6CB5BB2611F5910097F29F /* SignUpApp */;
+			targetProxy = FA6CB5DE2611F5920097F29F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FA6CB5C52611F5910097F29F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA6CB5C62611F5910097F29F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FA6CB5CA2611F5920097F29F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA6CB5CB2611F5920097F29F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA6CB5E42611F5920097F29F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA6CB5E52611F5920097F29F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA6CB5E72611F5920097F29F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XRSWD487Z4;
+				INFOPLIST_FILE = SignUpApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jkr.SignUpApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA6CB5E82611F5920097F29F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XRSWD487Z4;
+				INFOPLIST_FILE = SignUpApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jkr.SignUpApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FA6CB5EA2611F5920097F29F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B3PWYBKFUK;
+				INFOPLIST_FILE = SignUpAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jkr.SignUpAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SignUpApp.app/SignUpApp";
+			};
+			name = Debug;
+		};
+		FA6CB5EB2611F5920097F29F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B3PWYBKFUK;
+				INFOPLIST_FILE = SignUpAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jkr.SignUpAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SignUpApp.app/SignUpApp";
+			};
+			name = Release;
+		};
+		FA6CB5ED2611F5920097F29F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B3PWYBKFUK;
+				INFOPLIST_FILE = SignUpAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jkr.SignUpAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SignUpApp;
+			};
+			name = Debug;
+		};
+		FA6CB5EE2611F5920097F29F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B3PWYBKFUK;
+				INFOPLIST_FILE = SignUpAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jkr.SignUpAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SignUpApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA6CB5B72611F5910097F29F /* Build configuration list for PBXProject "SignUpApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA6CB5E42611F5920097F29F /* Debug */,
+				FA6CB5E52611F5920097F29F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA6CB5E62611F5920097F29F /* Build configuration list for PBXNativeTarget "SignUpApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA6CB5E72611F5920097F29F /* Debug */,
+				FA6CB5E82611F5920097F29F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA6CB5E92611F5920097F29F /* Build configuration list for PBXNativeTarget "SignUpAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA6CB5EA2611F5920097F29F /* Debug */,
+				FA6CB5EB2611F5920097F29F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA6CB5EC2611F5920097F29F /* Build configuration list for PBXNativeTarget "SignUpAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA6CB5ED2611F5920097F29F /* Debug */,
+				FA6CB5EE2611F5920097F29F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA6CB5B42611F5910097F29F /* Project object */;
+}

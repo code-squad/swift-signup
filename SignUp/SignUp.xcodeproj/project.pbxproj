@@ -14,6 +14,9 @@
 		BF11F66C26119971006AC76C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF11F66B26119971006AC76C /* Assets.xcassets */; };
 		BF11F66F26119971006AC76C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF11F66D26119971006AC76C /* LaunchScreen.storyboard */; };
 		BF11F6782611AB3C006AC76C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF11F6772611AB3C006AC76C /* ViewModel.swift */; };
+		BF11F67C2611C18E006AC76C /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF11F67B2611C18E006AC76C /* UITextField+Extension.swift */; };
+		BF11F6822611C20A006AC76C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF11F6812611C20A006AC76C /* Model.swift */; };
+		BF11F6862611C2A4006AC76C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF11F6852611C2A4006AC76C /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		BF11F66E26119971006AC76C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF11F67026119971006AC76C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF11F6772611AB3C006AC76C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		BF11F67B2611C18E006AC76C /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		BF11F6812611C20A006AC76C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		BF11F6852611C2A4006AC76C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,8 @@
 		BF11F6612611996F006AC76C /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				BF11F6802611C1F6006AC76C /* Network */,
+				BF11F67A2611C178006AC76C /* Extension */,
 				BF11F6622611996F006AC76C /* AppDelegate.swift */,
 				BF11F6642611996F006AC76C /* SceneDelegate.swift */,
 				BF11F6662611996F006AC76C /* ViewController.swift */,
@@ -68,6 +76,23 @@
 				BF11F67026119971006AC76C /* Info.plist */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		BF11F67A2611C178006AC76C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BF11F67B2611C18E006AC76C /* UITextField+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		BF11F6802611C1F6006AC76C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BF11F6812611C20A006AC76C /* Model.swift */,
+				BF11F6852611C2A4006AC76C /* Service.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +166,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF11F6672611996F006AC76C /* ViewController.swift in Sources */,
+				BF11F67C2611C18E006AC76C /* UITextField+Extension.swift in Sources */,
 				BF11F6632611996F006AC76C /* AppDelegate.swift in Sources */,
+				BF11F6862611C2A4006AC76C /* Service.swift in Sources */,
+				BF11F6822611C20A006AC76C /* Model.swift in Sources */,
 				BF11F6782611AB3C006AC76C /* ViewModel.swift in Sources */,
 				BF11F6652611996F006AC76C /* SceneDelegate.swift in Sources */,
 			);

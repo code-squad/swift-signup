@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Signup View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SignupViewController" customModule="signup" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SignUpViewController" customModule="signup" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,7 +28,7 @@
                                 <color key="textColor" name="LabelBlack"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="영문 소문자, 숫자, 특수기호(_,-), 5~20자" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F5n-ze-Prd" customClass="SignUpTextField" customModule="signup" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="영문 소문자, 숫자, 특수기호(_,-), 5~20자" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F5n-ze-Prd" userLabel="idTextField" customClass="SignUpTextField" customModule="signup" customModuleProvider="target">
                                 <rect key="frame" x="36" y="156" width="317" height="38"/>
                                 <color key="backgroundColor" name="BackgroundWhite"/>
                                 <color key="tintColor" name="PointBlue"/>
@@ -36,7 +36,7 @@
                                     <constraint firstAttribute="height" constant="38" id="nua-rR-WzX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" name="PointGrey"/>
@@ -47,10 +47,10 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="sidePadding">
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedBorderColor">
-                                        <color key="value" name="PointBlue"/>
-                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="3hE-T8-7WA" id="sKp-8u-7F0"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDV-Zf-M8a">
                                 <rect key="frame" x="36.666666666666657" y="219" width="63" height="17"/>
@@ -58,7 +58,7 @@
                                 <color key="textColor" name="LabelBlack"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="영문 대/소문자, 숫자, 특수문자(!@#$%) 8~16자" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gs4-B8-4BV" customClass="SignUpTextField" customModule="signup" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="영문 대/소문자, 숫자, 특수문자(!@#$%) 8~16자" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gs4-B8-4BV" userLabel="passwordTextField" customClass="SignUpTextField" customModule="signup" customModuleProvider="target">
                                 <rect key="frame" x="36.666666666666657" y="240" width="317" height="38"/>
                                 <color key="backgroundColor" name="BackgroundWhite"/>
                                 <color key="tintColor" name="PointBlue"/>
@@ -66,7 +66,7 @@
                                     <constraint firstAttribute="height" constant="38" id="hoM-gI-DEp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" name="PointGrey"/>
@@ -77,10 +77,10 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="sidePadding">
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedBorderColor">
-                                        <color key="value" name="PointBlue"/>
-                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="3hE-T8-7WA" id="OVa-zL-Sdg"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호 재확인" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8lJ-sA-mCY">
                                 <rect key="frame" x="36.666666666666657" y="303" width="103" height="17"/>
@@ -88,7 +88,7 @@
                                 <color key="textColor" name="LabelBlack"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JuD-77-4MF" customClass="SignUpTextField" customModule="signup" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JuD-77-4MF" userLabel="passwordCheckTextField" customClass="SignUpTextField" customModule="signup" customModuleProvider="target">
                                 <rect key="frame" x="36.666666666666657" y="324" width="317" height="38"/>
                                 <color key="backgroundColor" name="BackgroundWhite"/>
                                 <color key="tintColor" name="PointBlue"/>
@@ -96,7 +96,7 @@
                                     <constraint firstAttribute="height" constant="38" id="TF7-XR-H4n"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" name="PointGrey"/>
@@ -107,10 +107,10 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="sidePadding">
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedBorderColor">
-                                        <color key="value" name="PointBlue"/>
-                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="3hE-T8-7WA" id="Aaz-AT-sB0"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KE9-r7-YQS">
                                 <rect key="frame" x="36.666666666666664" y="387" width="38.999999999999993" height="17"/>
@@ -118,7 +118,7 @@
                                 <color key="textColor" name="LabelBlack"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j28-ec-IYi" customClass="SignUpTextField" customModule="signup" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j28-ec-IYi" userLabel="nameTextField" customClass="SignUpTextField" customModule="signup" customModuleProvider="target">
                                 <rect key="frame" x="36.666666666666657" y="408" width="317" height="38"/>
                                 <color key="backgroundColor" name="BackgroundWhite"/>
                                 <color key="tintColor" name="PointBlue"/>
@@ -126,7 +126,7 @@
                                     <constraint firstAttribute="height" constant="38" id="Nvb-gt-fwn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" name="PointGrey"/>
@@ -137,10 +137,10 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="sidePadding">
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedBorderColor">
-                                        <color key="value" name="PointBlue"/>
-                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="3hE-T8-7WA" id="TfA-BL-zc9"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwv-bd-Xx4" customClass="SignUpButton" customModule="signup" customModuleProvider="target">
                                 <rect key="frame" x="145" y="476" width="100" height="44"/>
@@ -200,31 +200,39 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="3hE-T8-7WA" userLabel="SignupTextFieldViewModel" customClass="SignUpTextFieldModel" customModule="signup" customModuleProvider="target">
+                    <connections>
+                        <outletCollection property="textFieldCollection" destination="F5n-ze-Prd" collectionClass="NSMutableArray" id="oRH-gR-PY6"/>
+                        <outletCollection property="textFieldCollection" destination="Gs4-B8-4BV" collectionClass="NSMutableArray" id="g5H-xN-S0d"/>
+                        <outletCollection property="textFieldCollection" destination="JuD-77-4MF" collectionClass="NSMutableArray" id="cMn-Jk-Bg3"/>
+                        <outletCollection property="textFieldCollection" destination="j28-ec-IYi" collectionClass="NSMutableArray" id="sp1-z4-EAo"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="-275.38461538461536" y="93.838862559241704"/>
         </scene>
     </scenes>
     <designables>
         <designable name="F5n-ze-Prd">
-            <size key="intrinsicContentSize" width="263.66666666666669" height="26.666666666666668"/>
+            <size key="intrinsicContentSize" width="243.66666666666666" height="26.666666666666668"/>
         </designable>
         <designable name="Gs4-B8-4BV">
-            <size key="intrinsicContentSize" width="303" height="26.666666666666668"/>
+            <size key="intrinsicContentSize" width="283" height="25"/>
         </designable>
         <designable name="JuD-77-4MF">
-            <size key="intrinsicContentSize" width="32" height="26.666666666666668"/>
+            <size key="intrinsicContentSize" width="12" height="25"/>
         </designable>
         <designable name="hwv-bd-Xx4">
             <size key="intrinsicContentSize" width="53.666666666666664" height="21"/>
         </designable>
         <designable name="j28-ec-IYi">
-            <size key="intrinsicContentSize" width="32" height="26.666666666666668"/>
+            <size key="intrinsicContentSize" width="12" height="26.666666666666668"/>
         </designable>
     </designables>
     <resources>
         <image name="chevron.right.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="BackgroundGrey">
-            <color red="0.96078431372549022" green="0.96470588235294119" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.96100002527236938" green="0.9649999737739563" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BackgroundWhite">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -233,13 +241,13 @@
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="PointBlue">
-            <color red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.4779999852180481" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="PointGreen">
-            <color red="0.019607843137254902" green="0.65098039215686276" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.019999999552965164" green="0.65100002288818359" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="PointGrey">
-            <color red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.43900001049041748" green="0.43900001049041748" blue="0.43900001049041748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

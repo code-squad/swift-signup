@@ -34,7 +34,7 @@ extension SignUpMainViewController {
         view.addSubview(mainStackView)
         mainStackView.translatesAutoresizingMaskIntoConstraints = false
         mainStackView.widthAnchor.constraint(equalToConstant: 300).isActive = true
-        mainStackView.heightAnchor.constraint(equalToConstant: 400).isActive = true
+        mainStackView.heightAnchor.constraint(equalToConstant: 500).isActive = true
         mainStackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 120).isActive = true
         mainStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40).isActive = true
     }

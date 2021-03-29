@@ -39,3 +39,12 @@ extension SignUpMainViewController {
         mainStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40).isActive = true
     }
 }
+
+//MARK:: -@objc Action
+
+extension SignUpMainViewController {
+    
+    @objc func textFieldTouched(textField: UITextField) {
+        textField.text = ""
+    }
+}

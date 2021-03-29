@@ -13,6 +13,8 @@
 		B075D0F126119A7D00731DAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B075D0EF26119A7D00731DAC /* Main.storyboard */; };
 		B075D0F326119A7F00731DAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B075D0F226119A7F00731DAC /* Assets.xcassets */; };
 		B075D0F626119A7F00731DAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B075D0F426119A7F00731DAC /* LaunchScreen.storyboard */; };
+		B075D1012611BBC700731DAC /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B075D1002611BBC700731DAC /* TextFieldDelegate.swift */; };
+		B075D1042611BEB600731DAC /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B075D1032611BEB600731DAC /* Notification+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		B075D0F226119A7F00731DAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B075D0F526119A7F00731DAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B075D0F726119A7F00731DAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B075D1002611BBC700731DAC /* TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
+		B075D1032611BEB600731DAC /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 				B075D0F226119A7F00731DAC /* Assets.xcassets */,
 				B075D0F426119A7F00731DAC /* LaunchScreen.storyboard */,
 				B075D0F726119A7F00731DAC /* Info.plist */,
+				B075D1032611BEB600731DAC /* Notification+Extension.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -71,6 +76,7 @@
 			children = (
 				B075D0ED26119A7D00731DAC /* SignUpViewController.swift */,
 				B075D0EF26119A7D00731DAC /* Main.storyboard */,
+				B075D1002611BBC700731DAC /* TextFieldDelegate.swift */,
 			);
 			path = SignUpView;
 			sourceTree = "<group>";
@@ -147,6 +153,8 @@
 			files = (
 				B075D0EE26119A7D00731DAC /* SignUpViewController.swift in Sources */,
 				B075D0EA26119A7D00731DAC /* AppDelegate.swift in Sources */,
+				B075D1012611BBC700731DAC /* TextFieldDelegate.swift in Sources */,
+				B075D1042611BEB600731DAC /* Notification+Extension.swift in Sources */,
 				B075D0EC26119A7D00731DAC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

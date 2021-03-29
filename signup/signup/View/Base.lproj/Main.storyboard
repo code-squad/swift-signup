@@ -3,30 +3,243 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Signup View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="signup" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SignupViewController" customModule="signup" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="회원가입" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZ7-eh-peX">
+                                <rect key="frame" x="136" y="74" width="119" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" name="PointGreen"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아이디" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BmN-Vf-LYg">
+                                <rect key="frame" x="36" y="135" width="51" height="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" name="LabelBlack"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="영문 소문자, 숫자, 특수기호(_,-), 5~20자" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F5n-ze-Prd" customClass="SignUpTextField" customModule="signup" customModuleProvider="target">
+                                <rect key="frame" x="36" y="156" width="317" height="38"/>
+                                <color key="backgroundColor" name="BackgroundWhite"/>
+                                <color key="tintColor" name="PointBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="nua-rR-WzX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="PointGrey"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="sidePadding">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedBorderColor">
+                                        <color key="value" name="PointBlue"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDV-Zf-M8a">
+                                <rect key="frame" x="36.666666666666657" y="219" width="63" height="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" name="LabelBlack"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="영문 대/소문자, 숫자, 특수문자(!@#$%) 8~16자" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gs4-B8-4BV" customClass="SignUpTextField" customModule="signup" customModuleProvider="target">
+                                <rect key="frame" x="36.666666666666657" y="240" width="317" height="38"/>
+                                <color key="backgroundColor" name="BackgroundWhite"/>
+                                <color key="tintColor" name="PointBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="hoM-gI-DEp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="PointGrey"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="sidePadding">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedBorderColor">
+                                        <color key="value" name="PointBlue"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호 재확인" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8lJ-sA-mCY">
+                                <rect key="frame" x="36.666666666666657" y="303" width="103" height="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" name="LabelBlack"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JuD-77-4MF" customClass="SignUpTextField" customModule="signup" customModuleProvider="target">
+                                <rect key="frame" x="36.666666666666657" y="324" width="317" height="38"/>
+                                <color key="backgroundColor" name="BackgroundWhite"/>
+                                <color key="tintColor" name="PointBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="TF7-XR-H4n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="PointGrey"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="sidePadding">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedBorderColor">
+                                        <color key="value" name="PointBlue"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KE9-r7-YQS">
+                                <rect key="frame" x="36.666666666666664" y="387" width="38.999999999999993" height="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" name="LabelBlack"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j28-ec-IYi" customClass="SignUpTextField" customModule="signup" customModuleProvider="target">
+                                <rect key="frame" x="36.666666666666657" y="408" width="317" height="38"/>
+                                <color key="backgroundColor" name="BackgroundWhite"/>
+                                <color key="tintColor" name="PointBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="Nvb-gt-fwn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="PointGrey"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="sidePadding">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedBorderColor">
+                                        <color key="value" name="PointBlue"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwv-bd-Xx4" customClass="SignUpButton" customModule="signup" customModuleProvider="target">
+                                <rect key="frame" x="145" y="476" width="100" height="44"/>
+                                <color key="backgroundColor" name="BackgroundWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="k4f-mz-a7q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="tintColor" name="PointGreen"/>
+                                <state key="normal" title=" 다음" image="chevron.right.circle.fill" catalog="system">
+                                    <color key="titleColor" name="PointGreen"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="PointGrey"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundGrey"/>
+                        <constraints>
+                            <constraint firstItem="j28-ec-IYi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36.5" id="5Vz-z9-LNz"/>
+                            <constraint firstItem="JuD-77-4MF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="280" id="8MT-TF-jcQ"/>
+                            <constraint firstItem="j28-ec-IYi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="364" id="F5v-G0-IPb"/>
+                            <constraint firstItem="JuD-77-4MF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36.5" id="Gwo-j9-WC9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8lJ-sA-mCY" secondAttribute="trailing" constant="250.5" id="JMi-Rd-T9g"/>
+                            <constraint firstItem="cZ7-eh-peX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="LCi-Rw-Fgz"/>
+                            <constraint firstItem="F5n-ze-Prd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="112" id="LMN-aQ-u2E"/>
+                            <constraint firstItem="KE9-r7-YQS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36.5" id="Nc8-Bo-PQb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JuD-77-4MF" secondAttribute="trailing" constant="36.5" id="QeB-zx-dyG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F5n-ze-Prd" secondAttribute="trailing" constant="37" id="Shw-Ay-lKN"/>
+                            <constraint firstItem="BmN-Vf-LYg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="T7v-KQ-0uN"/>
+                            <constraint firstItem="ZDV-Zf-M8a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="175" id="USl-7m-JHG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hwv-bd-Xx4" secondAttribute="trailing" constant="145" id="Uct-dw-gmg"/>
+                            <constraint firstItem="8lJ-sA-mCY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="259" id="VhW-a2-TJY"/>
+                            <constraint firstItem="F5n-ze-Prd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="YtJ-Mv-9f8"/>
+                            <constraint firstItem="BmN-Vf-LYg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="91" id="ZUN-vr-1GI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KE9-r7-YQS" secondAttribute="trailing" constant="314.5" id="aEQ-dr-ET4"/>
+                            <constraint firstItem="hwv-bd-Xx4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="145" id="bcA-4d-Srv"/>
+                            <constraint firstItem="cZ7-eh-peX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="136" id="eqE-2s-lML"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cZ7-eh-peX" secondAttribute="trailing" constant="135" id="l6r-Gq-LuU"/>
+                            <constraint firstItem="hwv-bd-Xx4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="432" id="mbt-t8-BG1"/>
+                            <constraint firstItem="ZDV-Zf-M8a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36.5" id="n6H-h1-LXc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j28-ec-IYi" secondAttribute="trailing" constant="36.5" id="pVg-sV-sSI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gs4-B8-4BV" secondAttribute="trailing" constant="36.5" id="qdf-UC-fhj"/>
+                            <constraint firstItem="Gs4-B8-4BV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36.5" id="ql5-Aw-8rJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BmN-Vf-LYg" secondAttribute="trailing" constant="303" id="sFQ-Jr-yQv"/>
+                            <constraint firstItem="Gs4-B8-4BV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="196" id="uyd-oU-TPD"/>
+                            <constraint firstItem="8lJ-sA-mCY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36.5" id="yLL-No-Jam"/>
+                            <constraint firstItem="KE9-r7-YQS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="343" id="zYP-ux-pZ9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZDV-Zf-M8a" secondAttribute="trailing" constant="290.5" id="zvm-N3-jtc"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-275" y="94"/>
+            <point key="canvasLocation" x="-275.38461538461536" y="93.838862559241704"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="F5n-ze-Prd">
+            <size key="intrinsicContentSize" width="263.66666666666669" height="26.666666666666668"/>
+        </designable>
+        <designable name="Gs4-B8-4BV">
+            <size key="intrinsicContentSize" width="303" height="26.666666666666668"/>
+        </designable>
+        <designable name="JuD-77-4MF">
+            <size key="intrinsicContentSize" width="32" height="26.666666666666668"/>
+        </designable>
+        <designable name="hwv-bd-Xx4">
+            <size key="intrinsicContentSize" width="53.666666666666664" height="21"/>
+        </designable>
+        <designable name="j28-ec-IYi">
+            <size key="intrinsicContentSize" width="32" height="26.666666666666668"/>
+        </designable>
+    </designables>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="chevron.right.circle.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="BackgroundGrey">
+            <color red="0.96078431372549022" green="0.96470588235294119" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BackgroundWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LabelBlack">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PointBlue">
+            <color red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PointGreen">
+            <color red="0.019607843137254902" green="0.65098039215686276" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PointGrey">
+            <color red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

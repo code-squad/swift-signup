@@ -30,7 +30,7 @@ class ViewModel {
     
     init() {
         $idText.sink { (idText) in
-            self.isIdValid = self.countInputString(idText)
+            self.isIdValid = self.isValid(idText)
         }.store(in: &cancellable)
         
 //        $passwordText.sink { (pwText) in
@@ -42,7 +42,8 @@ class ViewModel {
         }.store(in: &cancellable)
     }
     
-    func countInputString(_ string : String) -> Bool {
-        return string.count > 4 && string.count <= 20
+    func isValid(_ string : String) -> Bool {
+        let patten = "^[a-z0-9_-]{5,20}$"
+        return string.range(of: patten,options: [.regularExpression]) != nil
     }
 }

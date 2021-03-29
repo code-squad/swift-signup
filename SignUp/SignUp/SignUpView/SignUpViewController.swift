@@ -13,11 +13,14 @@ class SignUpViewController: UIViewController {
     @IBOutlet var textFieldCollection: [UITextField]!
     @IBOutlet var informationLabelCollection: [UILabel]!
     
+    let textFieldDelegate = TextFieldDelegate()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCategorylabel()
         configureTextField()
         configureInformationLabel()
+        configureObserver()
     }
 
     func configureCategorylabel() {
@@ -29,6 +32,13 @@ class SignUpViewController: UIViewController {
     func configureTextField() {
         for textfield in textFieldCollection {
             textfield.borderStyle = .line
+            textfield.delegate = textFieldDelegate
+            
+            let identifier = textfield.accessibilityIdentifier ?? ""
+            if identifier == "PWTextField" ||
+               identifier == "PW2TextField" {
+                textfield.isSecureTextEntry = true
+            }
         }
     }
     
@@ -39,5 +49,35 @@ class SignUpViewController: UIViewController {
         }
     }
 
+    func configureObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(idTextFieldEdited(_:)), name: .idTextField, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(pwTextFieldEdited(_:)), name: .pwTextField, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(pw2TextFieldEdited(_:)), name: .pw2TextField, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(nameTextFieldEdited(_:)), name: .nameTextField, object: nil)
+    }
+    
+    @objc func idTextFieldEdited(_ notification : Notification) {
+        let textField = notification.object as! UITextField
+        textField.layer.borderWidth = 1
+        textField.layer.borderColor = UIColor.red.cgColor
+    }
+    
+    @objc func pwTextFieldEdited(_ notification : Notification) {
+        let textField = notification.object as! UITextField
+        textField.layer.borderWidth = 1
+        textField.layer.borderColor = UIColor.red.cgColor
+    }
+    
+    @objc func pw2TextFieldEdited(_ notification : Notification) {
+        let textField = notification.object as! UITextField
+        textField.layer.borderWidth = 1
+        textField.layer.borderColor = UIColor.red.cgColor
+    }
+    
+    @objc func nameTextFieldEdited(_ notification : Notification) {
+        let textField = notification.object as! UITextField
+        textField.layer.borderWidth = 1
+        textField.layer.borderColor = UIColor.red.cgColor
+    }
 }
 

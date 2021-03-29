@@ -22,11 +22,19 @@
                                 <color key="textColor" red="0.019607843137254902" green="0.65098039215686276" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아이디" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEA-sP-Oxf">
+                                <rect key="frame" x="36" y="135" width="36.333333333333343" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Tr0-FB-RHN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="5rY-bD-wf8"/>
+                            <constraint firstItem="xEA-sP-Oxf" firstAttribute="top" secondItem="Tr0-FB-RHN" secondAttribute="bottom" constant="25" id="Yxm-IM-whT"/>
+                            <constraint firstItem="xEA-sP-Oxf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="b7N-CT-nJz"/>
                             <constraint firstItem="Tr0-FB-RHN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ndu-H9-nTJ"/>
                         </constraints>
                     </view>

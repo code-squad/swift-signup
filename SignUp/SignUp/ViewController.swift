@@ -41,9 +41,7 @@ class ViewController: UIViewController {
         nameTextField.textPublisher
             .assign(to: &viewModel.$nameText)
         
-        
         viewModel.isMatchPassword.sink { (value) in
-            print(value)
         }.store(in: &cancellable)
         
 //        viewModel.$isIdValid.sink { [weak self] (bool) in

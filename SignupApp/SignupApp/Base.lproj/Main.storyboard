@@ -72,7 +72,7 @@
                                                     <constraint firstAttribute="height" constant="38" id="sUG-W2-fGm"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -92,7 +92,7 @@
                                                     <constraint firstAttribute="height" constant="38" id="upE-cJ-I13"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -132,6 +132,9 @@
                             <constraint firstItem="6Fm-qb-Ujc" firstAttribute="top" secondItem="1jn-eS-hfv" secondAttribute="bottom" constant="25" id="ubJ-XN-Mw2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nextButton" destination="iWq-we-Q0o" id="uVA-QP-Wlz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

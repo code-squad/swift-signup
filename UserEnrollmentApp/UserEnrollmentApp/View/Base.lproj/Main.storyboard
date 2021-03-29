@@ -173,6 +173,9 @@
                     </view>
                     <connections>
                         <outlet property="idTextField" destination="fJ4-DQ-TSD" id="JDW-6h-WR7"/>
+                        <outlet property="nameTextField" destination="t7O-88-SBV" id="ugP-rI-6zo"/>
+                        <outlet property="passwordReconfirmTextField" destination="2sk-3r-tPS" id="BeL-XN-aBR"/>
+                        <outlet property="passwordTextField" destination="wsy-Ob-Oh3" id="izp-fR-xm6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

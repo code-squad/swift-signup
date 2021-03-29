@@ -28,14 +28,34 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="영문 소문자, 숫자, 특수기호(_,-),5~20자" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fJ4-DQ-TSD" customClass="IDTextField" customModule="UserEnrollmentApp" customModuleProvider="target">
+                                <rect key="frame" x="37" y="156" width="315" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="n24-bh-WLQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Tr0-FB-RHN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="5rY-bD-wf8"/>
+                            <constraint firstItem="fJ4-DQ-TSD" firstAttribute="top" secondItem="Tr0-FB-RHN" secondAttribute="bottom" constant="46" id="KaK-iU-cCM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xEA-sP-Oxf" secondAttribute="trailing" symbolic="YES" id="Uhf-P0-sth"/>
                             <constraint firstItem="xEA-sP-Oxf" firstAttribute="top" secondItem="Tr0-FB-RHN" secondAttribute="bottom" constant="25" id="Yxm-IM-whT"/>
                             <constraint firstItem="xEA-sP-Oxf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="b7N-CT-nJz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fJ4-DQ-TSD" secondAttribute="trailing" constant="38" id="chs-O0-AAm"/>
                             <constraint firstItem="Tr0-FB-RHN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ndu-H9-nTJ"/>
+                            <constraint firstItem="fJ4-DQ-TSD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="zu3-gH-XfG"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -44,6 +64,11 @@
             <point key="canvasLocation" x="-274" y="80"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="fJ4-DQ-TSD">
+            <size key="intrinsicContentSize" width="239.33333333333334" height="26.666666666666668"/>
+        </designable>
+    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

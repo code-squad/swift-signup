@@ -10,6 +10,10 @@ class SignUpMainViewController: UIViewController {
         setUpMainView()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     private func setUpMainView() {
         //MainView Background Color
         view.backgroundColor = UIColor.systemGray6

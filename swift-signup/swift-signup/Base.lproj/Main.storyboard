@@ -26,7 +26,7 @@
                                 <color key="textColor" systemColor="systemGreenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="영문 소문자, 숫자, 특수기호( _, -), 5~20자" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kns-LJ-zCP">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="영문 소문자, 숫자, 특수기호( _, -), 5~20자" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kns-LJ-zCP" customClass="idTextField" customModule="swift_signup" customModuleProvider="target">
                                 <rect key="frame" x="30" y="154" width="330" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="0as-Q7-rgj"/>
@@ -147,6 +147,9 @@
                             <constraint firstItem="G0Q-sK-zyQ" firstAttribute="top" secondItem="Zgb-xq-xfD" secondAttribute="bottom" constant="8" symbolic="YES" id="ym3-us-04C"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="idText" destination="kns-LJ-zCP" id="8pT-S5-hk6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

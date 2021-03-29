@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		8877AB552611A28B005314EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877AB542611A28B005314EC /* AppDelegate.swift */; };
 		8877AB572611A28B005314EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877AB562611A28B005314EC /* SceneDelegate.swift */; };
-		8877AB592611A28B005314EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877AB582611A28B005314EC /* ViewController.swift */; };
+		8877AB592611A28B005314EC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877AB582611A28B005314EC /* SignUpViewController.swift */; };
 		8877AB5C2611A28B005314EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8877AB5A2611A28B005314EC /* Main.storyboard */; };
 		8877AB5E2611A28C005314EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8877AB5D2611A28C005314EC /* Assets.xcassets */; };
 		8877AB612611A28C005314EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8877AB5F2611A28C005314EC /* LaunchScreen.storyboard */; };
@@ -17,6 +17,7 @@
 		8877AB772611A28C005314EC /* UserEnrollmentAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877AB762611A28C005314EC /* UserEnrollmentAppUITests.swift */; };
 		8877AB882611AD19005314EC /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877AB872611AD19005314EC /* DesignableTextField.swift */; };
 		8877AB902611BEEF005314EC /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877AB8F2611BEEF005314EC /* DesignableButton.swift */; };
+		8877AB9F2611D300005314EC /* SignUpSceneIdFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877AB9E2611D300005314EC /* SignUpSceneIdFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +41,7 @@
 		8877AB512611A28B005314EC /* UserEnrollmentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserEnrollmentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8877AB542611A28B005314EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8877AB562611A28B005314EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8877AB582611A28B005314EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8877AB582611A28B005314EC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		8877AB5B2611A28B005314EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8877AB5D2611A28C005314EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8877AB602611A28C005314EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +54,7 @@
 		8877AB782611A28C005314EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8877AB872611AD19005314EC /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
 		8877AB8F2611BEEF005314EC /* DesignableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
+		8877AB9E2611D300005314EC /* SignUpSceneIdFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSceneIdFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +107,10 @@
 			children = (
 				8877AB542611A28B005314EC /* AppDelegate.swift */,
 				8877AB562611A28B005314EC /* SceneDelegate.swift */,
-				8877AB582611A28B005314EC /* ViewController.swift */,
-				8877AB872611AD19005314EC /* DesignableTextField.swift */,
-				8877AB8F2611BEEF005314EC /* DesignableButton.swift */,
-				8877AB5A2611A28B005314EC /* Main.storyboard */,
+				8877AB942611D1AC005314EC /* SupporingFiles */,
+				8877AB9D2611D2E9005314EC /* Model */,
+				8877AB992611D1CF005314EC /* View */,
+				8877AB952611D1BD005314EC /* Controller */,
 				8877AB5D2611A28C005314EC /* Assets.xcassets */,
 				8877AB5F2611A28C005314EC /* LaunchScreen.storyboard */,
 				8877AB622611A28C005314EC /* Info.plist */,
@@ -132,6 +134,39 @@
 				8877AB782611A28C005314EC /* Info.plist */,
 			);
 			path = UserEnrollmentAppUITests;
+			sourceTree = "<group>";
+		};
+		8877AB942611D1AC005314EC /* SupporingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				8877AB872611AD19005314EC /* DesignableTextField.swift */,
+				8877AB8F2611BEEF005314EC /* DesignableButton.swift */,
+			);
+			path = SupporingFiles;
+			sourceTree = "<group>";
+		};
+		8877AB952611D1BD005314EC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8877AB582611A28B005314EC /* SignUpViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8877AB992611D1CF005314EC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8877AB5A2611A28B005314EC /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8877AB9D2611D2E9005314EC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8877AB9E2611D300005314EC /* SignUpSceneIdFieldDelegate.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,8 +299,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8877AB592611A28B005314EC /* ViewController.swift in Sources */,
+				8877AB592611A28B005314EC /* SignUpViewController.swift in Sources */,
 				8877AB552611A28B005314EC /* AppDelegate.swift in Sources */,
+				8877AB9F2611D300005314EC /* SignUpSceneIdFieldDelegate.swift in Sources */,
 				8877AB882611AD19005314EC /* DesignableTextField.swift in Sources */,
 				8877AB902611BEEF005314EC /* DesignableButton.swift in Sources */,
 				8877AB572611A28B005314EC /* SceneDelegate.swift in Sources */,

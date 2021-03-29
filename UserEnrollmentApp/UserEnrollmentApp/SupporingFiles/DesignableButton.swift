@@ -7,6 +7,7 @@
 
 import UIKit
 
+@IBDesignable
 class DesignableButton: UIButton {
     @IBInspectable var borderColor: UIColor? {
         didSet {

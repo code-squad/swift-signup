@@ -13,6 +13,7 @@
 		BF11F66A2611996F006AC76C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF11F6682611996F006AC76C /* Main.storyboard */; };
 		BF11F66C26119971006AC76C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF11F66B26119971006AC76C /* Assets.xcassets */; };
 		BF11F66F26119971006AC76C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF11F66D26119971006AC76C /* LaunchScreen.storyboard */; };
+		BF11F6782611AB3C006AC76C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF11F6772611AB3C006AC76C /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BF11F66B26119971006AC76C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF11F66E26119971006AC76C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF11F67026119971006AC76C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF11F6772611AB3C006AC76C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				BF11F6622611996F006AC76C /* AppDelegate.swift */,
 				BF11F6642611996F006AC76C /* SceneDelegate.swift */,
 				BF11F6662611996F006AC76C /* ViewController.swift */,
+				BF11F6772611AB3C006AC76C /* ViewModel.swift */,
 				BF11F6682611996F006AC76C /* Main.storyboard */,
 				BF11F66B26119971006AC76C /* Assets.xcassets */,
 				BF11F66D26119971006AC76C /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			files = (
 				BF11F6672611996F006AC76C /* ViewController.swift in Sources */,
 				BF11F6632611996F006AC76C /* AppDelegate.swift in Sources */,
+				BF11F6782611AB3C006AC76C /* ViewModel.swift in Sources */,
 				BF11F6652611996F006AC76C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -155,6 +155,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Btu-Ge-yfp"/>
+                    <connections>
+                        <outlet property="idTextField" destination="Zpp-0n-bP8" id="ZRU-GQ-vUN"/>
+                        <outlet property="idValidLabel" destination="wZD-ip-VOM" id="isX-uL-dIe"/>
+                        <outlet property="nameTextField" destination="ZBx-x8-ZBr" id="70j-N9-Mgb"/>
+                        <outlet property="nameValidLabel" destination="O0i-c1-r7i" id="Mkb-dA-8cg"/>
+                        <outlet property="nextButton" destination="7yk-ZQ-LyN" id="4sS-Xd-qMa"/>
+                        <outlet property="pwConfirmTextField" destination="Cc7-9g-fgu" id="Eve-Zj-WpG"/>
+                        <outlet property="pwConfirmVaildLabel" destination="nrq-Ny-A52" id="16f-aI-TDU"/>
+                        <outlet property="pwTextField" destination="6kA-yw-8iB" id="IEx-4C-Ka5"/>
+                        <outlet property="pwValidLabel" destination="8cA-3C-T8j" id="p3p-YC-VKG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

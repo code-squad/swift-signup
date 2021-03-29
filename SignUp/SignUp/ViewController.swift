@@ -43,6 +43,9 @@ class ViewController: UIViewController {
         
         viewModel.isMatchPassword.sink { (value) in
         }.store(in: &cancellable)
+        viewModel.passwordLabel.sink { (value) in
+            self.passwordValidLabel.text = value.description
+        }.store(in: &cancellable)
         
 //        viewModel.$isIdValid.sink { [weak self] (bool) in
             //guard let self = self else { return }

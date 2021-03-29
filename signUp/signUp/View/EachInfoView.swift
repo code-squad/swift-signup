@@ -39,6 +39,7 @@ class EachInfoView: UIView {
         inputTextField.textColor = UIColor.systemGray2
         inputTextField.backgroundColor = UIColor.white
         inputTextField.frame = CGRect(x: 0, y: 40, width: 300, height: 40)
+        inputTextField.addTarget(superview, action: #selector(SignUpMainViewController.textFieldTouched(textField:)), for: .touchDown)
         addSubview(inputTextField)
     }
 }

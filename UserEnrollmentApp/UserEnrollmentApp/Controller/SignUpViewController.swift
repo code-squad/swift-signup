@@ -18,6 +18,12 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordReconfirmTextField: DesignableTextField!
     @IBOutlet weak var nameTextField: DesignableTextField!
     
+    @IBOutlet weak var IDValidationResult: UILabel!
+    @IBOutlet weak var PasswordValidationResult: UILabel!
+    @IBOutlet weak var PasswordReconfirmValidationResult: UILabel!
+    
+    @IBOutlet weak var NameValidationResult: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

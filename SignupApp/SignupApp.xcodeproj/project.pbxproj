@@ -14,6 +14,7 @@
 		223F69912611D81400877CAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223F69902611D81400877CAA /* Assets.xcassets */; };
 		223F69942611D81400877CAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223F69922611D81400877CAA /* LaunchScreen.storyboard */; };
 		223F699D2611E93400877CAA /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223F699C2611E93400877CAA /* CustomTextField.swift */; };
+		223F69A02611E99900877CAA /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223F699F2611E99900877CAA /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		223F69932611D81400877CAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		223F69952611D81400877CAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		223F699C2611E93400877CAA /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		223F699F2611E99900877CAA /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				223F69892611D81000877CAA /* SceneDelegate.swift */,
 				223F698B2611D81000877CAA /* ViewController.swift */,
 				223F699C2611E93400877CAA /* CustomTextField.swift */,
+				223F699F2611E99900877CAA /* String.swift */,
 				223F698D2611D81000877CAA /* Main.storyboard */,
 				223F69902611D81400877CAA /* Assets.xcassets */,
 				223F69922611D81400877CAA /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 			files = (
 				223F699D2611E93400877CAA /* CustomTextField.swift in Sources */,
 				223F698C2611D81000877CAA /* ViewController.swift in Sources */,
+				223F69A02611E99900877CAA /* String.swift in Sources */,
 				223F69882611D81000877CAA /* AppDelegate.swift in Sources */,
 				223F698A2611D81000877CAA /* SceneDelegate.swift in Sources */,
 			);

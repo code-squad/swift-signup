@@ -17,8 +17,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordMessageLabel: UILabel!
     @IBOutlet weak var checkPasswordMessageLabel: UILabel!
     @IBOutlet weak var nameMessageLabel: UILabel!
-    
-    
+     
     @IBOutlet var textFields: [CustomTextField]!
     @IBOutlet var messageLabel: [UILabel]!
     
@@ -27,6 +26,31 @@ class ViewController: UIViewController, UITextFieldDelegate {
         textFields.forEach { (textField) in
             textField.delegate = self
         }
+        let url = URL(string: "https://8r6ruzgzve.execute-api.ap-northeast-2.amazonaws.com/default/SwiftCamp")!
+        receiveIDList(url: url) { (IDs) in
+            print(IDs)
+        }
+    }
+    
+    private func receiveIDList(url: URL, callback: @escaping ([String]) -> ()) {
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        var IDList = Array<String>()
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            guard error == nil else { print(error!.localizedDescription); return }
+            guard let data = data else { return }
+            do {
+                IDList = try JSONDecoder().decode([String].self, from: data)
+            } catch {
+                print(error.localizedDescription)
+                return
+            }
+            
+            DispatchQueue.main.async {
+                callback(IDList)
+            }
+        }
+        task.resume()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

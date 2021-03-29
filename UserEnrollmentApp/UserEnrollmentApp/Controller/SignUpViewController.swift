@@ -9,13 +9,21 @@ import UIKit
 
 class SignUpViewController: UIViewController {
     let idFieldDelegate = SignUpSceneIdFieldDelegate()
+    let passwordFieldDelegate = SignUpScenePasswordFieldDelegate()
+    let passwordReconfirmFieldDelegate = SignUpScenePasswordReconfirmFieldDelegate()
+    let nameFieldDelegate = SignUpSceneNameFieldDelegate()
     
     @IBOutlet weak var idTextField: DesignableTextField!
+    @IBOutlet weak var passwordTextField: DesignableTextField!
+    @IBOutlet weak var passwordReconfirmTextField: DesignableTextField!
+    @IBOutlet weak var nameTextField: DesignableTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.idTextField.delegate = idFieldDelegate
+        self.passwordTextField.delegate = passwordFieldDelegate
+        self.passwordReconfirmTextField.delegate = passwordReconfirmFieldDelegate
+        self.nameTextField.delegate = nameFieldDelegate
     }
-    
 }

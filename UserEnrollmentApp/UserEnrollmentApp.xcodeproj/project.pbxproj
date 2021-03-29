@@ -18,6 +18,9 @@
 		8877AB882611AD19005314EC /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877AB872611AD19005314EC /* DesignableTextField.swift */; };
 		8877AB902611BEEF005314EC /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877AB8F2611BEEF005314EC /* DesignableButton.swift */; };
 		8877AB9F2611D300005314EC /* SignUpSceneIdFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877AB9E2611D300005314EC /* SignUpSceneIdFieldDelegate.swift */; };
+		8877ABB02611DD9F005314EC /* SignUpScenePasswordFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877ABAF2611DD9F005314EC /* SignUpScenePasswordFieldDelegate.swift */; };
+		8877ABB82611DE6F005314EC /* SignUpScenePasswordReconfirmFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877ABB72611DE6F005314EC /* SignUpScenePasswordReconfirmFieldDelegate.swift */; };
+		8877ABBD2611DF48005314EC /* SignUpSceneNameFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877ABBC2611DF48005314EC /* SignUpSceneNameFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		8877AB872611AD19005314EC /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
 		8877AB8F2611BEEF005314EC /* DesignableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
 		8877AB9E2611D300005314EC /* SignUpSceneIdFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSceneIdFieldDelegate.swift; sourceTree = "<group>"; };
+		8877ABAF2611DD9F005314EC /* SignUpScenePasswordFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScenePasswordFieldDelegate.swift; sourceTree = "<group>"; };
+		8877ABB72611DE6F005314EC /* SignUpScenePasswordReconfirmFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScenePasswordReconfirmFieldDelegate.swift; sourceTree = "<group>"; };
+		8877ABBC2611DF48005314EC /* SignUpSceneNameFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSceneNameFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +171,9 @@
 			isa = PBXGroup;
 			children = (
 				8877AB9E2611D300005314EC /* SignUpSceneIdFieldDelegate.swift */,
+				8877ABAF2611DD9F005314EC /* SignUpScenePasswordFieldDelegate.swift */,
+				8877ABB72611DE6F005314EC /* SignUpScenePasswordReconfirmFieldDelegate.swift */,
+				8877ABBC2611DF48005314EC /* SignUpSceneNameFieldDelegate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -299,10 +308,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8877ABBD2611DF48005314EC /* SignUpSceneNameFieldDelegate.swift in Sources */,
 				8877AB592611A28B005314EC /* SignUpViewController.swift in Sources */,
 				8877AB552611A28B005314EC /* AppDelegate.swift in Sources */,
+				8877ABB02611DD9F005314EC /* SignUpScenePasswordFieldDelegate.swift in Sources */,
 				8877AB9F2611D300005314EC /* SignUpSceneIdFieldDelegate.swift in Sources */,
 				8877AB882611AD19005314EC /* DesignableTextField.swift in Sources */,
+				8877ABB82611DE6F005314EC /* SignUpScenePasswordReconfirmFieldDelegate.swift in Sources */,
 				8877AB902611BEEF005314EC /* DesignableButton.swift in Sources */,
 				8877AB572611A28B005314EC /* SceneDelegate.swift in Sources */,
 			);

@@ -16,6 +16,7 @@
 		8877AB6C2611A28C005314EC /* UserEnrollmentAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877AB6B2611A28C005314EC /* UserEnrollmentAppTests.swift */; };
 		8877AB772611A28C005314EC /* UserEnrollmentAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877AB762611A28C005314EC /* UserEnrollmentAppUITests.swift */; };
 		8877AB882611AD19005314EC /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877AB872611AD19005314EC /* DesignableTextField.swift */; };
+		8877AB902611BEEF005314EC /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877AB8F2611BEEF005314EC /* DesignableButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		8877AB762611A28C005314EC /* UserEnrollmentAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEnrollmentAppUITests.swift; sourceTree = "<group>"; };
 		8877AB782611A28C005314EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8877AB872611AD19005314EC /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
+		8877AB8F2611BEEF005314EC /* DesignableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				8877AB562611A28B005314EC /* SceneDelegate.swift */,
 				8877AB582611A28B005314EC /* ViewController.swift */,
 				8877AB872611AD19005314EC /* DesignableTextField.swift */,
+				8877AB8F2611BEEF005314EC /* DesignableButton.swift */,
 				8877AB5A2611A28B005314EC /* Main.storyboard */,
 				8877AB5D2611A28C005314EC /* Assets.xcassets */,
 				8877AB5F2611A28C005314EC /* LaunchScreen.storyboard */,
@@ -264,6 +267,7 @@
 				8877AB592611A28B005314EC /* ViewController.swift in Sources */,
 				8877AB552611A28B005314EC /* AppDelegate.swift in Sources */,
 				8877AB882611AD19005314EC /* DesignableTextField.swift in Sources */,
+				8877AB902611BEEF005314EC /* DesignableButton.swift in Sources */,
 				8877AB572611A28B005314EC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

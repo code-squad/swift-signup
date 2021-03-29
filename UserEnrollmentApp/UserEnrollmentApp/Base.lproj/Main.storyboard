@@ -101,6 +101,36 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fGg-Ug-Nvy" customClass="DesignableButton" customModule="UserEnrollmentApp" customModuleProvider="target">
+                                <rect key="frame" x="145" y="476" width="100" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="tSR-O7-Chb"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="􀁵 ">
+                                            <attributes>
+                                                <color key="NSColor" red="0.019607843137254902" green="0.65098039215686276" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="17" name="SFProText-Medium"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="다음">
+                                            <attributes>
+                                                <color key="NSColor" red="0.019607843137254902" green="0.65098039215686276" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="17" name=".AppleSDGothicNeoI-Medium"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -112,6 +142,7 @@
                             <constraint firstItem="2sk-3r-tPS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36.5" id="AUV-b1-dqo"/>
                             <constraint firstItem="hIt-Yx-4va" firstAttribute="top" secondItem="wsy-Ob-Oh3" secondAttribute="bottom" constant="25" id="Cct-lV-bNY"/>
                             <constraint firstItem="rDG-LN-BOR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="HPk-0i-dnU"/>
+                            <constraint firstItem="fGg-Ug-Nvy" firstAttribute="top" secondItem="t7O-88-SBV" secondAttribute="bottom" constant="30" id="IK6-5w-lPw"/>
                             <constraint firstItem="2sk-3r-tPS" firstAttribute="top" secondItem="hIt-Yx-4va" secondAttribute="bottom" constant="4" id="LAi-Kd-j13"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t7O-88-SBV" secondAttribute="trailing" constant="36.5" id="NTf-Th-Iu7"/>
                             <constraint firstItem="t7O-88-SBV" firstAttribute="top" secondItem="rDG-LN-BOR" secondAttribute="bottom" constant="4" id="T4C-KC-Y36"/>
@@ -119,9 +150,11 @@
                             <constraint firstItem="0fK-GW-uJ3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="UIc-t5-N82"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xEA-sP-Oxf" secondAttribute="trailing" symbolic="YES" id="Uhf-P0-sth"/>
                             <constraint firstItem="hIt-Yx-4va" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="X1c-Zn-hm8"/>
+                            <constraint firstItem="fGg-Ug-Nvy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XIg-Qi-VGz"/>
                             <constraint firstItem="xEA-sP-Oxf" firstAttribute="top" secondItem="Tr0-FB-RHN" secondAttribute="bottom" constant="25" id="Yxm-IM-whT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hIt-Yx-4va" secondAttribute="trailing" symbolic="YES" id="ZrZ-CT-Wgr"/>
                             <constraint firstItem="xEA-sP-Oxf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="b7N-CT-nJz"/>
+                            <constraint firstItem="fGg-Ug-Nvy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="145" id="bYP-fo-Je4"/>
                             <constraint firstItem="fJ4-DQ-TSD" firstAttribute="top" secondItem="xEA-sP-Oxf" secondAttribute="bottom" constant="4" id="cU7-gj-D55"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fJ4-DQ-TSD" secondAttribute="trailing" constant="36.5" id="chs-O0-AAm"/>
                             <constraint firstItem="wsy-Ob-Oh3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36.5" id="eVf-He-Mxt"/>
@@ -130,6 +163,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2sk-3r-tPS" secondAttribute="trailing" constant="36.5" id="hBd-ZB-20W"/>
                             <constraint firstItem="Tr0-FB-RHN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ndu-H9-nTJ"/>
                             <constraint firstItem="wsy-Ob-Oh3" firstAttribute="top" secondItem="0fK-GW-uJ3" secondAttribute="bottom" constant="4" id="qjs-sS-usi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fGg-Ug-Nvy" secondAttribute="trailing" constant="145" id="reu-nT-E8g"/>
                             <constraint firstItem="fJ4-DQ-TSD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36.5" id="zu3-gH-XfG"/>
                         </constraints>
                     </view>

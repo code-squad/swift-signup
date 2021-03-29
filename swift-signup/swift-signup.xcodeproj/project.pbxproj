@@ -15,6 +15,7 @@
 		CE366BE02611BA8E00506D3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE366BDE2611BA8E00506D3F /* LaunchScreen.storyboard */; };
 		CE366BEB2611BA8E00506D3F /* swift_signupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366BEA2611BA8E00506D3F /* swift_signupTests.swift */; };
 		CE366BF62611BA8E00506D3F /* swift_signupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366BF52611BA8E00506D3F /* swift_signupUITests.swift */; };
+		CE366C2C2611F9CF00506D3F /* idTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366C2B2611F9CF00506D3F /* idTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		CE366BF12611BA8E00506D3F /* swift-signupUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-signupUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE366BF52611BA8E00506D3F /* swift_signupUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_signupUITests.swift; sourceTree = "<group>"; };
 		CE366BF72611BA8E00506D3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE366C2B2611F9CF00506D3F /* idTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = idTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				CE366BD32611BA8D00506D3F /* AppDelegate.swift */,
 				CE366BD52611BA8D00506D3F /* SceneDelegate.swift */,
 				CE366BD72611BA8D00506D3F /* ViewController.swift */,
+				CE366C2B2611F9CF00506D3F /* idTextField.swift */,
 				CE366BD92611BA8D00506D3F /* Main.storyboard */,
 				CE366BDC2611BA8E00506D3F /* Assets.xcassets */,
 				CE366BDE2611BA8E00506D3F /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			files = (
 				CE366BD82611BA8D00506D3F /* ViewController.swift in Sources */,
 				CE366BD42611BA8D00506D3F /* AppDelegate.swift in Sources */,
+				CE366C2C2611F9CF00506D3F /* idTextField.swift in Sources */,
 				CE366BD62611BA8D00506D3F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

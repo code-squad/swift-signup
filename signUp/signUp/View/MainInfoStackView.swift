@@ -32,6 +32,14 @@ class MainInfoStackView: UIStackView {
         setUpnameCheckInfoView()
     }
     
+    // 기능테스트를 위해 임시로 추가한 조건 반드시 수정해야 함 -> 정규표현식으로
+    func enableCheckForNextPage() -> Bool {
+        let conditionForID = infoIDView.inputTextField.text?.count ?? 0
+        let conditionForPassWord = infoPasswordView.inputTextField.text?.count ?? 0
+        let conditionForDoubleCheckPassWord = dobleCheckPassWordView.inputTextField.text?.count ?? 0
+        let conditionForName = nameCheckView.inputTextField.text?.count ?? 0
+        return conditionForID>=4 && conditionForPassWord>=4 && conditionForDoubleCheckPassWord>=4 && conditionForName>=4
+    }
 }
 
 //MARK: -setUp Elements Of StackView

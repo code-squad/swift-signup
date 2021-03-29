@@ -9,6 +9,7 @@ class SignUpMainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpMainView()
+        enableButton()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -24,6 +25,14 @@ class SignUpMainViewController: UIViewController {
         configureMainStackView()
         
         configureNextButton()
+    }
+    
+    private func enableButton() {
+        if mainStackView.enableCheckForNextPage() {
+            buttonForMove.isOn = .on
+        } else {
+            buttonForMove.isOn = .off
+        }
     }
 }
 
@@ -68,5 +77,9 @@ extension SignUpMainViewController {
         let privacyController = PrivacyViewController()
         privacyController.modalPresentationStyle = .fullScreen
         present(privacyController, animated: true, completion: nil)
-}
+    }
+    
+    @objc func textFieldEddtingChanged(textField: UITextField) {
+        enableButton()
+    }
 }

@@ -48,6 +48,20 @@ class String_ValidationTests: XCTestCase {
         XCTAssertFalse("aaaa%%%%".validate(with: passwordUppercaseRegex))
     }
     
+    func test_SignupApp_Password_숫자포함_정규표현식_검증() throws {
+        let passwordUppercaseRegex = "[^0-9]*[0-9].*"
+        
+        XCTAssertTrue("12345678".validate(with: passwordUppercaseRegex))
+        XCTAssertTrue("12345Ab%".validate(with: passwordUppercaseRegex))
+        XCTAssertTrue("12345Ab%   ".validate(with: passwordUppercaseRegex))
+        XCTAssertTrue("1234AAAA".validate(with: passwordUppercaseRegex))
+        XCTAssertTrue("1234aaaa".validate(with: passwordUppercaseRegex))
+        XCTAssertFalse("AAAAAAAA".validate(with: passwordUppercaseRegex))
+        XCTAssertFalse("aaaaaaaa".validate(with: passwordUppercaseRegex))
+        XCTAssertFalse("%%%%%%%%".validate(with: passwordUppercaseRegex))
+        XCTAssertFalse("aaaa%%%%".validate(with: passwordUppercaseRegex))
+    }
+    
     func test_SignupApp_Password_정규표현식_검증() throws {
         let passwordRegex = "(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*\\W)[\\S]{8,16}"
         
@@ -56,9 +70,7 @@ class String_ValidationTests: XCTestCase {
         XCTAssertFalse("aaaaaaaa".validate(with: passwordRegex))
         XCTAssertFalse("%%%%%%%%".validate(with: passwordRegex))
         XCTAssertFalse("12345Ab%   ".validate(with: passwordRegex))
-        
         XCTAssertFalse("1234AAAA".validate(with: passwordRegex))
-        
         XCTAssertFalse("aaaa%%%%".validate(with: passwordRegex))
     }
 }

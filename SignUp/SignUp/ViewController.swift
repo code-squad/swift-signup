@@ -42,6 +42,15 @@ class ViewController: UIViewController {
             .assign(to: &viewModel.$nameText)
         
         viewModel.isMatchPassword.sink { (value) in
+            self.passwordConfirmVaildLabel.text = value.description
+            switch value {
+            case .notEqual :
+                self.passwordConfirmVaildLabel.textColor = .red
+                self.passwordConfirmTextField.fail()
+            case .valid :
+                self.passwordConfirmVaildLabel.textColor = .systemGreen
+                self.passwordConfirmTextField.succeed()
+            }
         }.store(in: &cancellable)
         
         viewModel.passwordLabel.sink { (value) in
@@ -51,7 +60,7 @@ class ViewController: UIViewController {
                 self.passwordValidLabel.textColor = .red
                 self.passwordTextField.fail()
             case .valid :
-                self.passwordValidLabel.textColor = .green
+                self.passwordValidLabel.textColor = .systemGreen
                 self.passwordTextField.succeed()
             }
         }.store(in: &cancellable)

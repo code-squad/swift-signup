@@ -32,6 +32,20 @@ enum PasswordStatus : CustomStringConvertible {
     }
 }
 
+enum PasswordConfirmStatus : CustomStringConvertible {
+    case notEqual
+    case valid
+    
+    var description: String {
+      switch self {
+      case .notEqual:
+        return "비밀번호가 일치하지 않습니다"
+      case .valid :
+        return "비밀번호가 일치합니다"
+      }
+    }
+}
+
 
 
 class ViewModel {
@@ -48,9 +62,11 @@ class ViewModel {
     
     private var cancellable = Set<AnyCancellable>()
     
-    var isMatchPassword : AnyPublisher<Bool, Never> {
-        return self.$passwordText.combineLatest(self.$passwordConfirmText) {
-            return $0 == $1
+    var isMatchPassword : AnyPublisher<PasswordConfirmStatus, Never> {
+        $passwordConfirmText
+            .dropFirst()
+            .combineLatest(self.$passwordText){
+            return $0 == $1 ? PasswordConfirmStatus.valid : PasswordConfirmStatus.notEqual
         }.eraseToAnyPublisher()
     }
     
@@ -95,23 +111,6 @@ class ViewModel {
             .dropFirst()
             .map{ $0.range(of: pattern, options: .regularExpression) == nil }
             .eraseToAnyPublisher()
-    }
-    
-    init() {
-        $idText.sink { (idText) in
-            self.isIdValid = self.validateId(idText)
-        }.store(in: &cancellable)
-        
-//        $passwordText.sink { (passwordText) in
-//            print(passwordText)
-//        }.store(in: &cancellable)
-//        { (passwordText) in
-//            print(try self.validatePassword(passwordText))
-//        }.store(in: &cancellable)
-            
-        $nameText.sink { (nameText) in
-            print(self.validateName(nameText))
-        }.store(in: &cancellable)
     }
     
     func validateId(_ string : String) -> Bool {

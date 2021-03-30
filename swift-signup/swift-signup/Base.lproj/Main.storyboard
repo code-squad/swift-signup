@@ -42,7 +42,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jMQ-Qe-L3i">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jMQ-Qe-L3i" customClass="PasswordConfirmTextField" customModule="swift_signup" customModuleProvider="target">
                                 <rect key="frame" x="30" y="354" width="330" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="oPx-wy-6YQ"/>
@@ -122,9 +122,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZF-5u-wdE">
-                                <rect key="frame" x="30" y="394" width="330" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZF-5u-wdE">
+                                <rect key="frame" x="30" y="394" width="330" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -186,6 +186,8 @@
                     <connections>
                         <outlet property="idLabel" destination="uKS-IN-ds0" id="1H8-aH-tJG"/>
                         <outlet property="idText" destination="kns-LJ-zCP" id="8pT-S5-hk6"/>
+                        <outlet property="passwordConfirmLabel" destination="MZF-5u-wdE" id="Iwo-Zx-fId"/>
+                        <outlet property="passwordConfirmText" destination="jMQ-Qe-L3i" id="DFu-o4-9b8"/>
                         <outlet property="passwordLabel" destination="LQL-fd-Krx" id="Gii-kZ-WBJ"/>
                         <outlet property="passwordText" destination="G0Q-sK-zyQ" id="vGU-2P-NQ2"/>
                     </connections>

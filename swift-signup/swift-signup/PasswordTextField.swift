@@ -26,48 +26,49 @@ class PasswordTextField : CustomTextField {
             text.insert(contentsOf: string, at: text.index(text.startIndex, offsetBy: range.location))
         }
                 
-        isValidId(string: text)
+        isValid(password: text)
         stateToColor()
         return true
     }
     
-    func isValidId(string: String) {
+    func isValid(password: String) {
         let capitalRegularExpression = "[A-Z]+"
         let numberRegularExpression = "[0-9]+"
         let specialRegularExpression = "[!@#$%^&*()_+=-]+"
         
         var info : [AnyHashable:Any] = [:]
         
-        if string.count < 8 || string.count > 16 {
-            info.updateValue("8자 이상 16자 이하로 입력해주세요.", forKey: UserInfo.textInfo)
-            info.updateValue(UIColor.red, forKey: UserInfo.colorInfo)
+        if password.count < 8 || password.count > 16 {
+            info.updateValue("8자 이상 16자 이하로 입력해주세요.", forKey: MessageInfo.text)
+            info.updateValue(UIColor.red, forKey: MessageInfo.color)
             self.currentState = .invalid
         }
-        else if evaluate(regularExpression: capitalRegularExpression, with: string) == false
+        else if evaluate(regularExpression: capitalRegularExpression, with: password) == false
         {
-            info.updateValue("영문 대문자를 최소 1자 이상 포함해주세요.", forKey: UserInfo.textInfo)
-            info.updateValue(UIColor.red, forKey: UserInfo.colorInfo)
+            info.updateValue("영문 대문자를 최소 1자 이상 포함해주세요.", forKey: MessageInfo.text)
+            info.updateValue(UIColor.red, forKey: MessageInfo.color)
             self.currentState = .invalid
         }
-        else if evaluate(regularExpression: numberRegularExpression, with: string) == false
+        else if evaluate(regularExpression: numberRegularExpression, with: password) == false
         {
-            info.updateValue("숫자를 최소 1자 이상 포함해주세요.", forKey: UserInfo.textInfo)
-            info.updateValue(UIColor.red, forKey: UserInfo.colorInfo)
+            info.updateValue("숫자를 최소 1자 이상 포함해주세요.", forKey: MessageInfo.text)
+            info.updateValue(UIColor.red, forKey: MessageInfo.color)
             self.currentState = .invalid
         }
-        else if evaluate(regularExpression: specialRegularExpression, with: string) == false
+        else if evaluate(regularExpression: specialRegularExpression, with: password) == false
         {
-            info.updateValue("특수문자를 최소 1자 이상 포함해주세요.", forKey: UserInfo.textInfo)
-            info.updateValue(UIColor.red, forKey: UserInfo.colorInfo)
+            info.updateValue("특수문자를 최소 1자 이상 포함해주세요.", forKey: MessageInfo.text)
+            info.updateValue(UIColor.red, forKey: MessageInfo.color)
             self.currentState = .invalid
         }
         else
         {
-            info.updateValue("안전한 비밀번호입니다.", forKey: UserInfo.textInfo)
-            info.updateValue(UIColor.systemGreen, forKey: UserInfo.colorInfo)
+            info.updateValue("안전한 비밀번호입니다.", forKey: MessageInfo.text)
+            info.updateValue(UIColor.systemGreen, forKey: MessageInfo.color)
             self.currentState = .valid
         }
         
+        info.updateValue(password, forKey: UserInfo.password)
         NotificationCenter.default.post(name: CustomTextField.passwordState, object: self, userInfo: info)
     }
     
@@ -80,5 +81,11 @@ class PasswordTextField : CustomTextField {
             return false
         }
         
+    }
+}
+
+extension PasswordTextField {
+    enum UserInfo {
+        case password
     }
 }

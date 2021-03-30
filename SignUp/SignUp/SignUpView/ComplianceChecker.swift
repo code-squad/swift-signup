@@ -12,7 +12,7 @@ struct ComplianceChecker {
         do {
             let regex = try NSRegularExpression(pattern: pattern)
             
-            let regexedTarget = regex.matches(in: target, options: .anchored, range: NSRange(location: 0, length: target.utf16.count))
+            let regexedTarget = regex.matches(in: target, options: [], range: NSRange(location: 0, length: target.utf16.count))
             let resultString = regexedTarget.map({
                 String(describing: target[Range($0.range, in: target)!])
             }).joined()
@@ -30,11 +30,31 @@ struct ComplianceChecker {
         return true
     }
     
-    func checkIdTextForm(with text : String) -> idTextFormError {
+    func checkIdTextForm(with text : String) -> IdTextFormError {
         if !regexChekcing(target: text, pattern: "([^A-Z][0-9a-z-_]).{3,18}") {
             return .wrong
         }
         // id 중복 시 case return 내용 필요함.
+        
+        return .ok
+    }
+    
+    func checkPwTextForm(with text : String) -> PwTextFormError {
+        if !regexChekcing(target: text, pattern :"([A-Za-z0-9!@#$%]).{7,15}") {
+            return .outOfIndex
+        }
+        
+        if !regexChekcing(target: text, pattern :"^.*(?=.*[A-Z])[A-Za-z0-9!@#$%].*$") {
+            return .noUpperCase
+        }
+        
+        if !regexChekcing(target: text, pattern :"^.*(?=.*[0-9])[A-Za-z0-9!@#$%].*$") {
+            return .noNumber
+        }
+        
+        if !regexChekcing(target: text, pattern :"^.*(?=.*[!@#$%])[A-Za-z0-9!@#$%].*$") {
+            return .noSpecialCharacter
+        }
         
         return .ok
     }

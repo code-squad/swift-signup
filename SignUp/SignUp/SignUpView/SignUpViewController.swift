@@ -99,12 +99,59 @@ class SignUpViewController: UIViewController {
         }
         
         label.isHidden = false
+        
+        switch complianceChecker.checkPwTextForm(with: text) {
+        case .ok:
+            textField.changeBorderColor(color: UIColor.green.cgColor)
+            label.changeTextNColor(color: UIColor.green, text: "안전한 비밀번호입니다.")
+        case .outOfIndex:
+            textField.changeBorderColor(color: UIColor.red.cgColor)
+            label.changeTextNColor(color: UIColor.red, text: "8자 이상 16자 이하로 입력해주세요.")
+        case .noUpperCase:
+            textField.changeBorderColor(color: UIColor.red.cgColor)
+            label.changeTextNColor(color: UIColor.red, text: "영문 대문자를 최소 1자 이상 포함해주세요.")
+        
+        case .noNumber:
+            textField.changeBorderColor(color: UIColor.red.cgColor)
+            label.changeTextNColor(color: UIColor.red, text: "숫자를 최소 1자 이상 포함해주세요.")
+        
+        case .noSpecialCharacter:
+            textField.changeBorderColor(color: UIColor.red.cgColor)
+            label.changeTextNColor(color: UIColor.red, text: "특수문자를 최소 1자 이상 포함해주세요.")
+        }
+        
     }
     
     @objc private func pw2TextFieldEdited(_ notification : Notification) {
         let textField = notification.object as! UITextField
-        textField.layer.borderWidth = 1
-        textField.layer.borderColor = UIColor.red.cgColor
+        guard let text = textField.text else {
+            return
+        }
+        
+        guard let pwTextField = textFieldCollection.first(where: {textField in
+            textField.accessibilityIdentifier ?? "" == "PWTextField"
+        }) else {
+            return
+        }
+        
+        guard let label = informationLabelCollection.first(where: { label in
+            label.accessibilityIdentifier ?? "" == "PW2Information"
+        })  else {
+            return
+        }
+        
+        let pwCoincidenceCheck : CoincidenceError = text == pwTextField.text ? .ok : .wrong
+        
+        label.isHidden = false
+        
+        switch pwCoincidenceCheck {
+        case .ok:
+            textField.changeBorderColor(color: UIColor.green.cgColor)
+            label.changeTextNColor(color: UIColor.green, text: "비밀번호가 일치합니다.")
+        case .wrong:
+            textField.changeBorderColor(color: UIColor.red.cgColor)
+            label.changeTextNColor(color: UIColor.red, text: "비밀번호가 일치하지 않습니다..")
+        }
     }
     
     @objc private func nameTextFieldEdited(_ notification : Notification) {
@@ -112,7 +159,7 @@ class SignUpViewController: UIViewController {
         guard let text = textField.text else {
             return
         }
-        let nameTextFormFlag : nameTextFormError = text == "" ? .wrong : .ok
+        let nameTextNilCheck : CoincidenceError = text == "" ? .wrong : .ok
         
         guard let label = informationLabelCollection.first(where: { label in
             label.accessibilityIdentifier ?? "" == "NameInformation"
@@ -120,7 +167,7 @@ class SignUpViewController: UIViewController {
             return
         }
         
-        switch nameTextFormFlag {
+        switch nameTextNilCheck {
         case .ok:
             label.isHidden = true
             textField.changeBorderColor(color: UIColor.black.cgColor)

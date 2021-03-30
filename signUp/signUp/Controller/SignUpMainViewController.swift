@@ -48,21 +48,13 @@ extension SignUpMainViewController {
     }
     
     private func configureMainStackView() {
+        mainStackView.frame = CGRect(x: 40, y: 120, width: 300, height: 400)
         view.addSubview(mainStackView)
-        mainStackView.translatesAutoresizingMaskIntoConstraints = false
-        mainStackView.widthAnchor.constraint(equalToConstant: 300).isActive = true
-        mainStackView.heightAnchor.constraint(equalToConstant: 400).isActive = true
-        mainStackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 120).isActive = true
-        mainStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40).isActive = true
     }
     
     private func configureNextButton() {
+        buttonForMove.frame = CGRect(x: 120, y: 500, width: 140, height: 50)
         view.addSubview(buttonForMove)
-        buttonForMove.translatesAutoresizingMaskIntoConstraints = false
-        buttonForMove.widthAnchor.constraint(equalToConstant: 140).isActive = true
-        buttonForMove.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        buttonForMove.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 120).isActive = true
-        buttonForMove.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -200).isActive = true
     }
 }
 

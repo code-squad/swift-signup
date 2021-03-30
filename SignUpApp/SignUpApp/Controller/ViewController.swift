@@ -29,30 +29,36 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         idTextField.delegate = idTextFieldDelegate
         passwordTextField.delegate = pwTextFiledDelegate
+        idTextField.addTarget(self, action: #selector(checkIdLabel), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(checkPasswordLabel), for: .editingChanged)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
     
-    func checkId() {
+    @objc func checkIdLabel() {
         guard let text = idTextField.text else { return }
         switch regex.isValidId(id: text) {
         case true:
-            print("성공")
-        default:
-            print("실패")
+            idCheckLabel.text = "사용 가능한 아이디입니다."
+            idCheckLabel.textColor = .systemGreen
+        case false:
+            idCheckLabel.text = "5~20자의 영문 소문자, 숫자와 특수기호(_)(-) 만 사용 가능합니다."
+            idCheckLabel.textColor = .systemRed
+            idCheckLabel.sizeToFit()
         }
     }
     
-    func checkPassword() {
+    @objc func checkPasswordLabel() {
         guard let text = passwordTextField.text else { return }
         switch regex.isValidPassword(pw: text) {
         case true:
-            print("성공")
-        default:
-            print("실패")
+            pwCheckLabel.text = "사용 가능한 비밀번호입니다."
+            pwCheckLabel.textColor = .systemGreen
+        case false:
+            pwCheckLabel.text = "똑바로 써"
+            pwCheckLabel.textColor = .systemRed
         }
     }
 }
-

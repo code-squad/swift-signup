@@ -27,10 +27,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bindUI()
+        configureBind()
     }
     
-    func bindUI() {
+    func configureBind() {
 
         idTextField.textPublisher
             .assign(to: &viewModel.$idText)
@@ -40,6 +40,18 @@ class ViewController: UIViewController {
             .assign(to: &viewModel.$passwordConfirmText)
         nameTextField.textPublisher
             .assign(to: &viewModel.$nameText)
+        
+        viewModel.isIdMatch.sink { (value) in
+            self.idValidLabel.text = value.description
+            switch value {
+            case .notStandard, .idExist :
+                self.idValidLabel.textColor = .red
+                self.idTextField.fail()
+            case .valid :
+                self.idValidLabel.textColor = .systemGreen
+                self.idTextField.succeed()
+            }
+        }.store(in: &cancellable)
         
         viewModel.isMatchPassword.sink { (value) in
             self.passwordConfirmVaildLabel.text = value.description
@@ -76,13 +88,7 @@ class ViewController: UIViewController {
                 self.nameValidLabel.textColor = .none
             }
         }.store(in: &cancellable)
-        
-        
-//        viewModel.$isIdValid.sink { [weak self] (bool) in
-            //guard let self = self else { return }
-            //self.idValidLabel.text = "사용가능합니다"
-//        }.store(in: &cancellable)
-        
+                
     }
 }
 

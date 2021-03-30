@@ -62,21 +62,29 @@ extension MainInfoStackView {
 //MARK: -Condition & Regex
 extension MainInfoStackView {
     private func conditionForID() -> Bool {
-        let conditionForID = infoIDView.inputTextField.text?.getArrayAfterRegex(regex: "[a-z0-9_-]").count ?? 0
-        return conditionForID >= 5 && conditionForID <= 20
+        return checkTextForID(infoIDView.inputTextField.text)
     }
     
     private func conditionForPassWord() -> Bool {
-        let conditionForPassWord = infoPasswordView.inputTextField.text?.getArrayAfterRegex(regex: "[a-zA-Z0-9!@#$%]").count ?? 0
-        let conditionForDoubleCheckPassWord = dobleCheckPassWordView.inputTextField.text?.getArrayAfterRegex(regex: "[a-zA-Z0-9!@#$%]").count ?? 0
-        let equalTest1 = infoPasswordView.inputTextField.text ?? "a"
-        let equalTest2 = dobleCheckPassWordView.inputTextField.text ?? "b"
-        return conditionForPassWord >= 8 && conditionForDoubleCheckPassWord <= 16 && equalTest1 == equalTest2
+        let password = infoPasswordView.inputTextField.text ?? "a"
+        let passwordCheck = dobleCheckPassWordView.inputTextField.text ?? "b"
+        return checkTextForPassWord(password) && password == passwordCheck
     }
     
     private func conditionForName() -> Bool {
-        let conditionForName = nameCheckView.inputTextField.text?.getArrayAfterRegex(regex: "[가-힣]").count ?? 0
-        return conditionForName >= 2
+        return checkTextForName(nameCheckView.inputTextField.text)
+    }
+    
+    private func checkTextForID(_ id: String?) -> Bool {
+        return ((id?.getArrayAfterRegex(regex: "[a-z0-9_-]{5, 20}")) != nil)
+    }
+    
+    private func checkTextForPassWord(_ password: String?) -> Bool {
+        return ((password?.getArrayAfterRegex(regex: "[a-zA-Z0-9!@#$%]{8, 16}")) != nil)
+    }
+    
+    private func checkTextForName(_ name: String?) -> Bool {
+        return ((name?.getArrayAfterRegex(regex: "[가-힣]{2, 10}")) != nil)
     }
     
     func enableCheckForNextPage() -> Bool {

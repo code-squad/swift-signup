@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TextFieldDelegate: NSObject, UITextFieldDelegate {
+class BaseTextFieldDelegate: NSObject, UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.layer.borderColor = UIColor.systemBlue.cgColor

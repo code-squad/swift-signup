@@ -37,7 +37,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="  영문 소문자, 숫자, 특수기호(_,-), 5~20자" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BhC-Tc-jeG">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="  영문 소문자, 숫자, 특수기호(_,-), 5~20자" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BhC-Tc-jeG" customClass="SignUpTextField" customModule="SignUp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="38" width="317" height="38"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -46,8 +46,8 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이미 사용중인 아이디입니다." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cia-CL-4p7">
-                                                <rect key="frame" x="0.0" y="154.66666666666666" width="157" height="0.0"/>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5~20자의 영문 소문자, 숫자와 특수기호(_)(-) 만 사용 가능합니다." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cia-CL-4p7">
+                                                <rect key="frame" x="0.0" y="154.66666666666666" width="370.33333333333331" height="0.0"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" systemColor="systemPinkColor"/>
@@ -68,7 +68,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="  영문 대/소문자, 숫자, 특수문자(!@#$%) 8~16자" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mt9-I6-B86">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="  영문 대/소문자, 숫자, 특수문자(!@#$%) 8~16자" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mt9-I6-B86" customClass="SignUpTextField" customModule="SignUp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="38" width="317" height="38"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -98,7 +98,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1e6-RB-dX6">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1e6-RB-dX6" customClass="SignUpTextField" customModule="SignUp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="38" width="317" height="38"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -128,7 +128,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="md5-Sj-qtw">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="md5-Sj-qtw" customClass="SignUpTextField" customModule="SignUp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="38" width="317" height="38"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -185,10 +185,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outletCollection property="textFields" destination="BhC-Tc-jeG" collectionClass="NSMutableArray" id="M1y-gU-SWC"/>
-                        <outletCollection property="textFields" destination="Mt9-I6-B86" collectionClass="NSMutableArray" id="qmv-Av-tRP"/>
-                        <outletCollection property="textFields" destination="1e6-RB-dX6" collectionClass="NSMutableArray" id="Yo5-gk-CIN"/>
-                        <outletCollection property="textFields" destination="md5-Sj-qtw" collectionClass="NSMutableArray" id="f2n-Kq-Z02"/>
+                        <outlet property="idResultLabel" destination="Cia-CL-4p7" id="l3Z-kd-680"/>
+                        <outlet property="idTextField" destination="BhC-Tc-jeG" id="MI9-5s-sGz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

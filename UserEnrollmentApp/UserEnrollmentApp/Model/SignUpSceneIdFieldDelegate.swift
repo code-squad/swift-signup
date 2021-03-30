@@ -17,7 +17,7 @@ class SignUpSceneIdFieldDelegate: NSObject, UITextFieldDelegate {
         if let inputText = textField.text {
             let validationResult = UserInputValidator.validateId(inputText)
             let explanation = validationResult ? "사용 가능한 아이디입니다." : "5~20자의 영문 소문자, 숫자와 특수기호(_)(-) 만 사용 가능합니다."
-            resultNotifyingDelegate?.showValidationResult(sender: self, result: validationResult, explanation: "\(explanation)")
+            resultNotifyingDelegate?.passValidationResult(sender: self, result: validationResult, explanation: "\(explanation)")
         }
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

@@ -8,12 +8,18 @@
 import UIKit
 
 class SignUpScenePasswordReconfirmFieldDelegate: NSObject, UITextFieldDelegate {
+    public var resultNotifyingDelegate: ResultNotifyingDelegate?
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         print("textFieldDidBeginEditing: \((textField.text) ?? "Empty")")
     }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
-        print("textFieldDidEndEditing: \((textField.text) ?? "Empty")")
+        if let inputText = textField.text {
+            resultNotifyingDelegate?.passTextFieldValue(sender: self, value: inputText)
+        }
     }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print("textFieldShouldReturn \((textField.text) ?? "Empty")")
         textField.resignFirstResponder()

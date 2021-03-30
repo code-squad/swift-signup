@@ -34,6 +34,7 @@ class SignUpViewController: UIViewController {
         self.idFieldDelegate.resultNotifyingDelegate = self
         self.passwordFieldDelegate.resultNotifyingDelegate = self
         self.passwordReconfirmFieldDelegate.resultNotifyingDelegate = self
+        self.nameFieldDelegate.resultNotifyingDelegate = self
     }
 }
 
@@ -64,6 +65,11 @@ extension SignUpViewController: ResultNotifyingDelegate {
             PasswordValidationResultLabel.text = explanation
             PasswordValidationResultLabel.setTextColor(isGoodExplanation: result)
             passwordTextField.setBorderColor(wasValidInput: result)
+            
+        case is SignUpSceneNameFieldDelegate:
+            NameValidationResultLabel.text = explanation
+            NameValidationResultLabel.setTextColor(isGoodExplanation: result)
+            nameTextField.setBorderColor(wasValidInput: result)
         default: return
         }
     }

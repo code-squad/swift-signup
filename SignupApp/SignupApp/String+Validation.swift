@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+extension String {
+    public func validate(with regex: String) -> Bool {
+        return NSPredicate(format: "SELF MATCHES %@", regex).evaluate(with: self)
+    }
+}

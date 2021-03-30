@@ -8,25 +8,37 @@
 import XCTest
 
 class String_ValidationTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    func test_SignupApp_ID_정규표현식_검증() throws {
+        let idRegex = "[a-z0-9_-]{5,20}"
+        
+        XCTAssertTrue("12345".validate(with: idRegex))
+        XCTAssertTrue("aaaaa".validate(with: idRegex))
+        XCTAssertTrue("_____".validate(with: idRegex))
+        XCTAssertTrue("-----".validate(with: idRegex))
+        XCTAssertTrue("12345aaaaa__--".validate(with: idRegex))
+        XCTAssertTrue("1234567890aaaabbbb_-".validate(with: idRegex))
+        
+        XCTAssertFalse("1234".validate(with: idRegex))
+        XCTAssertFalse("12345%".validate(with: idRegex))
+        XCTAssertFalse("AAAAA".validate(with: idRegex))
+        XCTAssertFalse("12345678910aaaaabbbbbc".validate(with: idRegex))
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func test_SignupApp_Password_정규표현식_검증() throws {
+        let passwordRegex = "(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*\\W)[\\S]{8,16}"
+        
+        XCTAssertTrue("12345Ab%".validate(with: passwordRegex))
+        XCTAssertFalse("12345678".validate(with: passwordRegex))
+        XCTAssertFalse("AAAAAAAA".validate(with: passwordRegex))
+        XCTAssertFalse("aaaaaaaa".validate(with: passwordRegex))
+        XCTAssertFalse("%%%%%%%%".validate(with: passwordRegex))
+        XCTAssertFalse("12345Ab%   ".validate(with: passwordRegex))
+        XCTAssertFalse("1234aaaa".validate(with: passwordRegex))
+        XCTAssertFalse("1234AAAA".validate(with: passwordRegex))
+        XCTAssertFalse("1234%%%%".validate(with: passwordRegex))
+        XCTAssertFalse("aaaa%%%%".validate(with: passwordRegex))
+        XCTAssertFalse("123Ab%".validate(with: passwordRegex))
+        XCTAssertFalse("1234567890AAABBB%%%".validate(with: passwordRegex))
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }

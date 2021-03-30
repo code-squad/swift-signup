@@ -68,15 +68,13 @@
 		B075D0E826119A7D00731DAC /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				B075D1132612121800731DAC /* Extension */,
 				B075D0FE26119C0200731DAC /* SignUpView */,
 				B075D0E926119A7D00731DAC /* AppDelegate.swift */,
 				B075D0EB26119A7D00731DAC /* SceneDelegate.swift */,
 				B075D0F226119A7F00731DAC /* Assets.xcassets */,
 				B075D0F426119A7F00731DAC /* LaunchScreen.storyboard */,
 				B075D0F726119A7F00731DAC /* Info.plist */,
-				B075D1032611BEB600731DAC /* Notification+Extension.swift */,
-				B075D10D261209C300731DAC /* UITextField+Extension.swift */,
-				B075D11026120A5900731DAC /* UILabel+Extension.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -91,6 +89,16 @@
 				B075D10A261207A600731DAC /* ComplianceChecker.swift */,
 			);
 			path = SignUpView;
+			sourceTree = "<group>";
+		};
+		B075D1132612121800731DAC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B075D1032611BEB600731DAC /* Notification+Extension.swift */,
+				B075D10D261209C300731DAC /* UITextField+Extension.swift */,
+				B075D11026120A5900731DAC /* UILabel+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -7,13 +7,21 @@
 
 import Foundation
 
-enum idTextFormError {
+enum IdTextFormError {
     case ok
     case used
     case wrong
 }
 
-enum nameTextFormError {
+enum PwTextFormError {
+    case ok
+    case outOfIndex
+    case noUpperCase
+    case noNumber
+    case noSpecialCharacter
+}
+
+enum CoincidenceError {
     case ok
     case wrong
 }

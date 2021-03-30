@@ -11,10 +11,9 @@ class IDTextFieldDelegate: NSObject, UITextFieldDelegate {
     
     private var state: IDTextFieldState?
     
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.layer.borderWidth = 1.0
         textField.layer.borderColor = UIColor.blue.cgColor
-        return true
     }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {

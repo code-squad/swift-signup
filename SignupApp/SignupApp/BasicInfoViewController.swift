@@ -74,8 +74,15 @@ extension BasicInfoViewController: UITextFieldDelegate {
             idMessageLabel.text = "이미 사용중인 아이디입니다."
             idMessageLabel.textColor = UIColor(named: "redErrorMessage")
         } else {
-            idMessageLabel.text = "사용 가능한 아이디입니다."
-            idMessageLabel.textColor = UIColor(named: "greenText")
+            let idRegex = "[a-z0-9_-]{5,20}"
+            let idValidation = id.validate(with: idRegex)
+            if idValidation {
+                idMessageLabel.text = "사용 가능한 아이디입니다."
+                idMessageLabel.textColor = UIColor(named: "greenText")
+            } else {
+                idMessageLabel.text = "5~20자의 영문 소문자, 숫자와 특수기호(_)(-) 만 사용 가능합니다."
+                idMessageLabel.textColor = UIColor(named: "redErrorMessage")
+            }
         }
     }
 }

@@ -28,9 +28,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" red="0.2901960784" green="0.63921568630000003" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title=" 다음" image="arrow.right.circle.fill" catalog="system">
-                                    <color key="titleColor" red="0.2901960784" green="0.63921568630000003" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
+                                <state key="normal" title=" 다음" image="arrow.right.circle.fill" catalog="system"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="4fn-Fd-m0g">
                                 <rect key="frame" x="20" y="116.33333333333334" width="350" height="386.33333333333326"/>
@@ -52,7 +50,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZD-ip-VOM">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZD-ip-VOM" customClass="MessageLabel" customModule="SignUp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="70.333333333333329" width="350" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15" id="XuI-sW-zyI"/>
@@ -80,7 +78,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cA-3C-T8j">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cA-3C-T8j" customClass="MessageLabel" customModule="SignUp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="70.333333333333343" width="350" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15" id="74P-fy-atI"/>
@@ -108,7 +106,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrq-Ny-A52">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrq-Ny-A52" customClass="MessageLabel" customModule="SignUp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="70.333333333333314" width="350" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15" id="9BB-YK-cym"/>
@@ -136,7 +134,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0i-c1-r7i">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0i-c1-r7i" customClass="MessageLabel" customModule="SignUp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="70.333333333333371" width="350" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15" id="hsk-1v-dsP"/>

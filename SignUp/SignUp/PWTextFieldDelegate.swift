@@ -14,9 +14,11 @@ class PWTextFieldDelegate: NSObject, UITextFieldDelegate {
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         let text = textField.text ?? ""
         let extract = text.getArrayAfterRegex(regex: "[0-9a-zA-Z~!@#$%^&*()_+|]+")
+        if text == "" || extract == [] {
+            state = PasswordTextFieldState.incorrect
+            return true
+        }
         if text.getArrayAfterRegex(regex: "[0-9a-zA-Z]+")[0] == text {
-            print(text.getArrayAfterRegex(regex: "[0-9a-zA-Z]+")[0])
-            print(extract[0])
             textField.layer.borderWidth = 1.0
             textField.layer.borderColor = #colorLiteral(red: 0.9967475533, green: 0.03828956559, blue: 0.05758263916, alpha: 1)
             state = PasswordTextFieldState.notIncludeSpecialCharacter
@@ -32,7 +34,7 @@ class PWTextFieldDelegate: NSObject, UITextFieldDelegate {
             textField.layer.borderWidth = 1.0
             textField.layer.borderColor = #colorLiteral(red: 0.9967475533, green: 0.03828956559, blue: 0.05758263916, alpha: 1)
             state = PasswordTextFieldState.notIncludeNumber
-        } else {
+        } else if text.getArrayAfterRegex(regex: "[0-9a-zA-Z~!@#$%^&*()_+|]+")[0] == text {
             textField.layer.borderWidth = 1.0
             textField.layer.borderColor = #colorLiteral(red: 0.1540483236, green: 0.6966413856, blue: 0.1375852525, alpha: 1)
             state = PasswordTextFieldState.correct
@@ -48,4 +50,5 @@ enum PasswordTextFieldState {
     case incorrectPWCount
     case notIncludeSpecialCharacter
     case correct
+    case incorrect
 }

@@ -63,7 +63,7 @@
                                     <constraint firstAttribute="height" constant="38" id="3mj-bc-o0G"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="next" enablesReturnKeyAutomatically="YES" smartInsertDeleteType="no"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" smartInsertDeleteType="no"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="1"/>
@@ -83,7 +83,7 @@
                                     <constraint firstAttribute="height" constant="38" id="d2i-5V-wH5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="next" enablesReturnKeyAutomatically="YES" smartInsertDeleteType="no"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" smartInsertDeleteType="no"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="1"/>
@@ -221,7 +221,7 @@
     </scenes>
     <designables>
         <designable name="2sk-3r-tPS">
-            <size key="intrinsicContentSize" width="12" height="26.666666666666668"/>
+            <size key="intrinsicContentSize" width="12" height="25"/>
         </designable>
         <designable name="fGg-Ug-Nvy">
             <size key="intrinsicContentSize" width="54" height="32.333333333333336"/>
@@ -233,7 +233,7 @@
             <size key="intrinsicContentSize" width="12" height="26.666666666666668"/>
         </designable>
         <designable name="wsy-Ob-Oh3">
-            <size key="intrinsicContentSize" width="283" height="26.666666666666668"/>
+            <size key="intrinsicContentSize" width="283" height="25"/>
         </designable>
     </designables>
 </document>

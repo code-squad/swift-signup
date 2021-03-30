@@ -59,4 +59,6 @@ enum PasswordCheck: String {
     case noSpecialChar = "특수문자를 최소 1자 이상 포함해주세요."
     case safe = "안전한 비밀번호 입니다."
     case empty = "비밀번호를 입력해주세요."
+    case notCorrespond = "비밀번호가 일치하지 않습니다."
+    case correspond = "비밀번호가 일치합니다."
 }

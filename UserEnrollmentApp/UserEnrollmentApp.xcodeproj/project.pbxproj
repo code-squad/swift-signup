@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88477D9D26131A6F00C7FED3 /* ResultExplanationLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88477D9C26131A6E00C7FED3 /* ResultExplanationLabel.swift */; };
 		8877AB552611A28B005314EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877AB542611A28B005314EC /* AppDelegate.swift */; };
 		8877AB572611A28B005314EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877AB562611A28B005314EC /* SceneDelegate.swift */; };
 		8877AB592611A28B005314EC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877AB582611A28B005314EC /* SignUpViewController.swift */; };
@@ -14,7 +15,6 @@
 		8877AB5E2611A28C005314EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8877AB5D2611A28C005314EC /* Assets.xcassets */; };
 		8877AB612611A28C005314EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8877AB5F2611A28C005314EC /* LaunchScreen.storyboard */; };
 		8877AB6C2611A28C005314EC /* UserEnrollmentAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877AB6B2611A28C005314EC /* UserEnrollmentAppTests.swift */; };
-		8877AB772611A28C005314EC /* UserEnrollmentAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877AB762611A28C005314EC /* UserEnrollmentAppUITests.swift */; };
 		8877AB882611AD19005314EC /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877AB872611AD19005314EC /* DesignableTextField.swift */; };
 		8877AB902611BEEF005314EC /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877AB8F2611BEEF005314EC /* DesignableButton.swift */; };
 		8877AB9F2611D300005314EC /* SignUpSceneIdFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877AB9E2611D300005314EC /* SignUpSceneIdFieldDelegate.swift */; };
@@ -22,6 +22,8 @@
 		8877ABB82611DE6F005314EC /* SignUpScenePasswordReconfirmFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877ABB72611DE6F005314EC /* SignUpScenePasswordReconfirmFieldDelegate.swift */; };
 		8877ABBD2611DF48005314EC /* SignUpSceneNameFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877ABBC2611DF48005314EC /* SignUpSceneNameFieldDelegate.swift */; };
 		8877ABD826120FD0005314EC /* ResultNotifyiingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877ABD726120FD0005314EC /* ResultNotifyiingDelegate.swift */; };
+		8877ABE02612BAB0005314EC /* UserInputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877ABDF2612BAB0005314EC /* UserInputValidator.swift */; };
+		8877ABE82612C8A7005314EC /* UserInputValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877ABE72612C8A7005314EC /* UserInputValidatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,16 +34,10 @@
 			remoteGlobalIDString = 8877AB502611A28B005314EC;
 			remoteInfo = UserEnrollmentApp;
 		};
-		8877AB732611A28C005314EC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8877AB492611A28B005314EC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8877AB502611A28B005314EC;
-			remoteInfo = UserEnrollmentApp;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		88477D9C26131A6E00C7FED3 /* ResultExplanationLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultExplanationLabel.swift; sourceTree = "<group>"; };
 		8877AB512611A28B005314EC /* UserEnrollmentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserEnrollmentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8877AB542611A28B005314EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8877AB562611A28B005314EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,9 +49,6 @@
 		8877AB672611A28C005314EC /* UserEnrollmentAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserEnrollmentAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8877AB6B2611A28C005314EC /* UserEnrollmentAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEnrollmentAppTests.swift; sourceTree = "<group>"; };
 		8877AB6D2611A28C005314EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8877AB722611A28C005314EC /* UserEnrollmentAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserEnrollmentAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8877AB762611A28C005314EC /* UserEnrollmentAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEnrollmentAppUITests.swift; sourceTree = "<group>"; };
-		8877AB782611A28C005314EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8877AB872611AD19005314EC /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
 		8877AB8F2611BEEF005314EC /* DesignableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
 		8877AB9E2611D300005314EC /* SignUpSceneIdFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSceneIdFieldDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +56,8 @@
 		8877ABB72611DE6F005314EC /* SignUpScenePasswordReconfirmFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScenePasswordReconfirmFieldDelegate.swift; sourceTree = "<group>"; };
 		8877ABBC2611DF48005314EC /* SignUpSceneNameFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSceneNameFieldDelegate.swift; sourceTree = "<group>"; };
 		8877ABD726120FD0005314EC /* ResultNotifyiingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultNotifyiingDelegate.swift; sourceTree = "<group>"; };
+		8877ABDF2612BAB0005314EC /* UserInputValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputValidator.swift; sourceTree = "<group>"; };
+		8877ABE72612C8A7005314EC /* UserInputValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputValidatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,13 +75,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8877AB6F2611A28C005314EC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -95,7 +83,6 @@
 			children = (
 				8877AB532611A28B005314EC /* UserEnrollmentApp */,
 				8877AB6A2611A28C005314EC /* UserEnrollmentAppTests */,
-				8877AB752611A28C005314EC /* UserEnrollmentAppUITests */,
 				8877AB522611A28B005314EC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,7 +92,6 @@
 			children = (
 				8877AB512611A28B005314EC /* UserEnrollmentApp.app */,
 				8877AB672611A28C005314EC /* UserEnrollmentAppTests.xctest */,
-				8877AB722611A28C005314EC /* UserEnrollmentAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,18 +116,10 @@
 			isa = PBXGroup;
 			children = (
 				8877AB6B2611A28C005314EC /* UserEnrollmentAppTests.swift */,
+				8877ABE72612C8A7005314EC /* UserInputValidatorTests.swift */,
 				8877AB6D2611A28C005314EC /* Info.plist */,
 			);
 			path = UserEnrollmentAppTests;
-			sourceTree = "<group>";
-		};
-		8877AB752611A28C005314EC /* UserEnrollmentAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				8877AB762611A28C005314EC /* UserEnrollmentAppUITests.swift */,
-				8877AB782611A28C005314EC /* Info.plist */,
-			);
-			path = UserEnrollmentAppUITests;
 			sourceTree = "<group>";
 		};
 		8877AB942611D1AC005314EC /* SupporingFiles */ = {
@@ -164,6 +142,7 @@
 		8877AB992611D1CF005314EC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				88477D9C26131A6E00C7FED3 /* ResultExplanationLabel.swift */,
 				8877AB5A2611A28B005314EC /* Main.storyboard */,
 			);
 			path = View;
@@ -173,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				8877ABD726120FD0005314EC /* ResultNotifyiingDelegate.swift */,
+				8877ABDF2612BAB0005314EC /* UserInputValidator.swift */,
 				8877AB9E2611D300005314EC /* SignUpSceneIdFieldDelegate.swift */,
 				8877ABAF2611DD9F005314EC /* SignUpScenePasswordFieldDelegate.swift */,
 				8877ABB72611DE6F005314EC /* SignUpScenePasswordReconfirmFieldDelegate.swift */,
@@ -219,24 +199,6 @@
 			productReference = 8877AB672611A28C005314EC /* UserEnrollmentAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8877AB712611A28C005314EC /* UserEnrollmentAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8877AB812611A28C005314EC /* Build configuration list for PBXNativeTarget "UserEnrollmentAppUITests" */;
-			buildPhases = (
-				8877AB6E2611A28C005314EC /* Sources */,
-				8877AB6F2611A28C005314EC /* Frameworks */,
-				8877AB702611A28C005314EC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8877AB742611A28C005314EC /* PBXTargetDependency */,
-			);
-			name = UserEnrollmentAppUITests;
-			productName = UserEnrollmentAppUITests;
-			productReference = 8877AB722611A28C005314EC /* UserEnrollmentAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -250,10 +212,6 @@
 						CreatedOnToolsVersion = 12.4;
 					};
 					8877AB662611A28C005314EC = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 8877AB502611A28B005314EC;
-					};
-					8877AB712611A28C005314EC = {
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = 8877AB502611A28B005314EC;
 					};
@@ -274,7 +232,6 @@
 			targets = (
 				8877AB502611A28B005314EC /* UserEnrollmentApp */,
 				8877AB662611A28C005314EC /* UserEnrollmentAppTests */,
-				8877AB712611A28C005314EC /* UserEnrollmentAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -297,13 +254,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8877AB702611A28C005314EC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -312,10 +262,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8877ABD826120FD0005314EC /* ResultNotifyiingDelegate.swift in Sources */,
+				88477D9D26131A6F00C7FED3 /* ResultExplanationLabel.swift in Sources */,
 				8877ABBD2611DF48005314EC /* SignUpSceneNameFieldDelegate.swift in Sources */,
 				8877AB592611A28B005314EC /* SignUpViewController.swift in Sources */,
 				8877AB552611A28B005314EC /* AppDelegate.swift in Sources */,
 				8877ABB02611DD9F005314EC /* SignUpScenePasswordFieldDelegate.swift in Sources */,
+				8877ABE02612BAB0005314EC /* UserInputValidator.swift in Sources */,
 				8877AB9F2611D300005314EC /* SignUpSceneIdFieldDelegate.swift in Sources */,
 				8877AB882611AD19005314EC /* DesignableTextField.swift in Sources */,
 				8877ABB82611DE6F005314EC /* SignUpScenePasswordReconfirmFieldDelegate.swift in Sources */,
@@ -328,15 +280,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8877ABE82612C8A7005314EC /* UserInputValidatorTests.swift in Sources */,
 				8877AB6C2611A28C005314EC /* UserEnrollmentAppTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8877AB6E2611A28C005314EC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8877AB772611A28C005314EC /* UserEnrollmentAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,11 +292,6 @@
 			isa = PBXTargetDependency;
 			target = 8877AB502611A28B005314EC /* UserEnrollmentApp */;
 			targetProxy = 8877AB682611A28C005314EC /* PBXContainerItemProxy */;
-		};
-		8877AB742611A28C005314EC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8877AB502611A28B005314EC /* UserEnrollmentApp */;
-			targetProxy = 8877AB732611A28C005314EC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -573,46 +513,6 @@
 			};
 			name = Release;
 		};
-		8877AB822611A28C005314EC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 74X8W85PJ2;
-				INFOPLIST_FILE = UserEnrollmentAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jjstudio.UserEnrollmentAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = UserEnrollmentApp;
-			};
-			name = Debug;
-		};
-		8877AB832611A28C005314EC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 74X8W85PJ2;
-				INFOPLIST_FILE = UserEnrollmentAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jjstudio.UserEnrollmentAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = UserEnrollmentApp;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -639,15 +539,6 @@
 			buildConfigurations = (
 				8877AB7F2611A28C005314EC /* Debug */,
 				8877AB802611A28C005314EC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8877AB812611A28C005314EC /* Build configuration list for PBXNativeTarget "UserEnrollmentAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8877AB822611A28C005314EC /* Debug */,
-				8877AB832611A28C005314EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

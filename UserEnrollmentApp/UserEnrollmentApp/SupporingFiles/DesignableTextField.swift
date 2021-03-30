@@ -20,4 +20,12 @@ class DesignableTextField: UITextField {
             layer.borderWidth = borderWidth
         }
     }
+    
+    func setBorderColor(wasValidInput: Bool) {
+        if wasValidInput {
+            self.layer.borderColor = UIColor.systemGreen.cgColor
+        } else {
+            self.layer.borderColor = UIColor.systemRed.cgColor
+        }
+    }
 }

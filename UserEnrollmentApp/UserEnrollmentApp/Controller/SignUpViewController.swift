@@ -18,10 +18,10 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordReconfirmTextField: DesignableTextField!
     @IBOutlet weak var nameTextField: DesignableTextField!
     
-    @IBOutlet weak var IDValidationResult: UILabel!
-    @IBOutlet weak var PasswordValidationResult: UILabel!
-    @IBOutlet weak var PasswordReconfirmValidationResult: UILabel!
-    @IBOutlet weak var NameValidationResult: UILabel!
+    @IBOutlet weak var IDValidationResult: ResultExplanationLabel!
+    @IBOutlet weak var PasswordValidationResult: ResultExplanationLabel!
+    @IBOutlet weak var PasswordReconfirmValidationResult: ResultExplanationLabel!
+    @IBOutlet weak var NameValidationResult: ResultExplanationLabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,9 +37,12 @@ class SignUpViewController: UIViewController {
 }
 
 extension SignUpViewController: ResultNotifyingDelegate {
-    func showValidationResult(sender: UITextFieldDelegate, result: String) {
+    func showValidationResult(sender: UITextFieldDelegate, result: Bool, explanation: String) {
         switch sender {
-        case is SignUpSceneIdFieldDelegate: IDValidationResult.text = "test1"
+        case is SignUpSceneIdFieldDelegate:
+            IDValidationResult.text = explanation
+            IDValidationResult.setTextColor(isGoodExplanation: result)
+            idTextField.setBorderColor(wasValidInput: result)
         default: NameValidationResult.text = "test2"
         }
     }

@@ -27,7 +27,6 @@ class MoveToNextPage: UIButton {
         setTitle("다음", for: .normal)
         setTitleColor(.systemGray, for: .normal)
         backgroundColor = UIColor.white
-        addTarget(superview, action: #selector(SignUpMainViewController.nextMoveButtonTouched(button:)), for: .touchUpInside)
     }
     
     private func enableButton() {

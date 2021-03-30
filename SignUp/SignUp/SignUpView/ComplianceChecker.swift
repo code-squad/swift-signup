@@ -35,8 +35,15 @@ struct ComplianceChecker {
             return .wrong
         }
         // id 중복 시 case return 내용 필요함.
-        
-        return .ok
+        let networkManager = NetworkManager()
+        networkManager.getUserList()
+        let response = networkManager.usedUserList
+        print(response)
+        if response.contains(text) { // 비정상 작동 중, 비동기 network작업이 완료되기 전에 해당 구문이 실행됨.
+            return .used
+        } else {
+            return .ok
+        }
     }
     
     func checkPwTextForm(with text : String) -> PwTextFormError {
@@ -59,3 +66,4 @@ struct ComplianceChecker {
         return .ok
     }
 }
+

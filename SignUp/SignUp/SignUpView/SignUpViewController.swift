@@ -104,9 +104,11 @@ class SignUpViewController: UIViewController {
         case .ok:
             textField.changeBorderColor(color: UIColor.green.cgColor)
             label.changeTextNColor(color: UIColor.green, text: "안전한 비밀번호입니다.")
+            
         case .outOfIndex:
             textField.changeBorderColor(color: UIColor.red.cgColor)
             label.changeTextNColor(color: UIColor.red, text: "8자 이상 16자 이하로 입력해주세요.")
+            
         case .noUpperCase:
             textField.changeBorderColor(color: UIColor.red.cgColor)
             label.changeTextNColor(color: UIColor.red, text: "영문 대문자를 최소 1자 이상 포함해주세요.")
@@ -176,6 +178,8 @@ class SignUpViewController: UIViewController {
             textField.changeBorderColor(color: UIColor.red.cgColor)
             label.changeTextNColor(color: UIColor.red, text: "이름은 필수 입력 항목입니다.")
         }
+    }
+    @IBAction func nextButtonTouched(_ sender: Any) {
     }
 }
 

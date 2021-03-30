@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-enum PasswordStatus {
+enum PasswordStatus : CustomStringConvertible {
     case notEnoughCount
     case notUpperWord
     case notNumber
@@ -55,14 +55,15 @@ class ViewModel {
     }
     
     var passwordLabel : AnyPublisher<PasswordStatus, Never> {
-        Publishers.CombineLatest4(isPasswordCount, isPasswordUpperword, isPasswordNumber, isPasswordSymbol)
+        Publishers.Zip4(isPasswordCount, isPasswordUpperword, isPasswordNumber, isPasswordSymbol)
             .map {
                 if $0 { return PasswordStatus.notEnoughCount }
                 if $1 { return PasswordStatus.notUpperWord }
                 if $2 { return PasswordStatus.notNumber }
                 if $3 { return PasswordStatus.notSymbol }
                 return PasswordStatus.valid
-            }.eraseToAnyPublisher()
+            }
+            .eraseToAnyPublisher()
     }
     
     private var isPasswordCount : AnyPublisher<Bool, Never> {

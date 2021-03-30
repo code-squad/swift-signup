@@ -10,10 +10,10 @@ import Combine
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var idTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var passwordConfirmTextField: UITextField!
-    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var idTextField: InputTextField!
+    @IBOutlet weak var passwordTextField: InputTextField!
+    @IBOutlet weak var passwordConfirmTextField: InputTextField!
+    @IBOutlet weak var nameTextField: InputTextField!
     
     @IBOutlet weak var idValidLabel: UILabel!
     @IBOutlet weak var passwordValidLabel: UILabel!
@@ -43,8 +43,17 @@ class ViewController: UIViewController {
         
         viewModel.isMatchPassword.sink { (value) in
         }.store(in: &cancellable)
+        
         viewModel.passwordLabel.sink { (value) in
             self.passwordValidLabel.text = value.description
+            switch value {
+            case .notEnoughCount,.notNumber,.notUpperWord,.notSymbol :
+                self.passwordValidLabel.textColor = .red
+                self.passwordTextField.fail()
+            case .valid :
+                self.passwordValidLabel.textColor = .green
+                self.passwordTextField.succeed()
+            }
         }.store(in: &cancellable)
         
 //        viewModel.$isIdValid.sink { [weak self] (bool) in

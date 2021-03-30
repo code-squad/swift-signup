@@ -157,7 +157,7 @@
                                     <constraint firstItem="ewK-7E-NRg" firstAttribute="leading" secondItem="g4u-WR-jeq" secondAttribute="leading" id="urn-bE-lzp"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejz-Vw-5Nr">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejz-Vw-5Nr" customClass="SignUpButton" customModule="SignUp" customModuleProvider="target">
                                 <rect key="frame" x="153" y="522" width="85" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="YB8-Tg-F5W"/>

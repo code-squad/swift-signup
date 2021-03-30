@@ -15,6 +15,8 @@
 		D018C5202611A63A00991D43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D018C51E2611A63A00991D43 /* LaunchScreen.storyboard */; };
 		D018C5512611F81D00991D43 /* IdFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D018C5502611F81D00991D43 /* IdFieldDelegate.swift */; };
 		D018C5562612083800991D43 /* PasswordFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D018C5552612083800991D43 /* PasswordFieldDelegate.swift */; };
+		D018C55F2613092100991D43 /* PasswordConfirmFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D018C55E2613092100991D43 /* PasswordConfirmFieldDelegate.swift */; };
+		D018C56326130A3F00991D43 /* NameFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D018C56226130A3F00991D43 /* NameFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		D018C5212611A63A00991D43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D018C5502611F81D00991D43 /* IdFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdFieldDelegate.swift; sourceTree = "<group>"; };
 		D018C5552612083800991D43 /* PasswordFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordFieldDelegate.swift; sourceTree = "<group>"; };
+		D018C55E2613092100991D43 /* PasswordConfirmFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordConfirmFieldDelegate.swift; sourceTree = "<group>"; };
+		D018C56226130A3F00991D43 /* NameFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,8 @@
 				D018C5172611A63900991D43 /* ViewController.swift */,
 				D018C5502611F81D00991D43 /* IdFieldDelegate.swift */,
 				D018C5552612083800991D43 /* PasswordFieldDelegate.swift */,
+				D018C55E2613092100991D43 /* PasswordConfirmFieldDelegate.swift */,
+				D018C56226130A3F00991D43 /* NameFieldDelegate.swift */,
 				D018C5192611A63900991D43 /* Main.storyboard */,
 				D018C51C2611A63A00991D43 /* Assets.xcassets */,
 				D018C51E2611A63A00991D43 /* LaunchScreen.storyboard */,
@@ -144,8 +150,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D018C5562612083800991D43 /* PasswordFieldDelegate.swift in Sources */,
+				D018C55F2613092100991D43 /* PasswordConfirmFieldDelegate.swift in Sources */,
 				D018C5512611F81D00991D43 /* IdFieldDelegate.swift in Sources */,
 				D018C5182611A63900991D43 /* ViewController.swift in Sources */,
+				D018C56326130A3F00991D43 /* NameFieldDelegate.swift in Sources */,
 				D018C5142611A63900991D43 /* AppDelegate.swift in Sources */,
 				D018C5162611A63900991D43 /* SceneDelegate.swift in Sources */,
 			);

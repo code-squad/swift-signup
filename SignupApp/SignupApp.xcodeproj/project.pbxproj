@@ -15,6 +15,7 @@
 		223F69942611D81400877CAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223F69922611D81400877CAA /* LaunchScreen.storyboard */; };
 		223F699D2611E93400877CAA /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223F699C2611E93400877CAA /* CustomTextField.swift */; };
 		223F69A02611E99900877CAA /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223F699F2611E99900877CAA /* String.swift */; };
+		226F49582612C9AA00490DDE /* NetworkCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226F49572612C9AA00490DDE /* NetworkCenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		223F69952611D81400877CAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		223F699C2611E93400877CAA /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		223F699F2611E99900877CAA /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		226F49572612C9AA00490DDE /* NetworkCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				223F69872611D81000877CAA /* AppDelegate.swift */,
 				223F69892611D81000877CAA /* SceneDelegate.swift */,
 				223F698B2611D81000877CAA /* ViewController.swift */,
+				226F49572612C9AA00490DDE /* NetworkCenter.swift */,
 				223F699C2611E93400877CAA /* CustomTextField.swift */,
 				223F699F2611E99900877CAA /* String.swift */,
 				223F698D2611D81000877CAA /* Main.storyboard */,
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				223F699D2611E93400877CAA /* CustomTextField.swift in Sources */,
+				226F49582612C9AA00490DDE /* NetworkCenter.swift in Sources */,
 				223F698C2611D81000877CAA /* ViewController.swift in Sources */,
 				223F69A02611E99900877CAA /* String.swift in Sources */,
 				223F69882611D81000877CAA /* AppDelegate.swift in Sources */,

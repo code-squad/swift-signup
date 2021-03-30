@@ -46,7 +46,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         
         let url = URL(string: "https://8r6ruzgzve.execute-api.ap-northeast-2.amazonaws.com/default/SwiftCamp")!
-        receiveIDList(url: url) { (existIDs) in
+        NetworkCenter().receiveIDList(url: url) { (existIDs) in
             self.existIDs = existIDs
         }
         
@@ -161,27 +161,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     private func isIncorrectID(ID: String) -> Bool {
         return !ID.match(for: "^[a-z\\d\\-\\_]{5,20}$")
-    }
-    
-    private func receiveIDList(url: URL, callback: @escaping ([String]) -> ()) {
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        var IDList = Array<String>()
-        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            guard error == nil else { print(error!.localizedDescription); return }
-            guard let data = data else { return }
-            do {
-                IDList = try JSONDecoder().decode([String].self, from: data)
-            } catch {
-                print(error.localizedDescription)
-                return
-            }
-            
-            DispatchQueue.main.async {
-                callback(IDList)
-            }
-        }
-        task.resume()
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {

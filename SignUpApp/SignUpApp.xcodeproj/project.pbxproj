@@ -16,6 +16,9 @@
 		BD501DB52611A1A300DE60F2 /* SignUpAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD501DB42611A1A300DE60F2 /* SignUpAppTests.swift */; };
 		BD501DC02611A1A300DE60F2 /* SignUpAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD501DBF2611A1A300DE60F2 /* SignUpAppUITests.swift */; };
 		BD501E5226122CB300DE60F2 /* RegularExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD501E5126122CB300DE60F2 /* RegularExpression.swift */; };
+		BD501E652612FA0600DE60F2 /* IdTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD501E642612FA0600DE60F2 /* IdTextFieldDelegate.swift */; };
+		BD501E6A2612FA1700DE60F2 /* PwTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD501E692612FA1700DE60F2 /* PwTextFieldDelegate.swift */; };
+		BD501E6F2612FB9400DE60F2 /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD501E6E2612FB9400DE60F2 /* TextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		BD501DBF2611A1A300DE60F2 /* SignUpAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAppUITests.swift; sourceTree = "<group>"; };
 		BD501DC12611A1A300DE60F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD501E5126122CB300DE60F2 /* RegularExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpression.swift; sourceTree = "<group>"; };
+		BD501E642612FA0600DE60F2 /* IdTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdTextFieldDelegate.swift; sourceTree = "<group>"; };
+		BD501E692612FA1700DE60F2 /* PwTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PwTextFieldDelegate.swift; sourceTree = "<group>"; };
+		BD501E6E2612FB9400DE60F2 /* TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +157,9 @@
 			isa = PBXGroup;
 			children = (
 				BD501DA12611A1A200DE60F2 /* ViewController.swift */,
+				BD501E6E2612FB9400DE60F2 /* TextFieldDelegate.swift */,
+				BD501E642612FA0600DE60F2 /* IdTextFieldDelegate.swift */,
+				BD501E692612FA1700DE60F2 /* PwTextFieldDelegate.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -286,8 +295,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD501E5226122CB300DE60F2 /* RegularExpression.swift in Sources */,
+				BD501E6A2612FA1700DE60F2 /* PwTextFieldDelegate.swift in Sources */,
 				BD501DA22611A1A200DE60F2 /* ViewController.swift in Sources */,
+				BD501E6F2612FB9400DE60F2 /* TextFieldDelegate.swift in Sources */,
 				BD501D9E2611A1A200DE60F2 /* AppDelegate.swift in Sources */,
+				BD501E652612FA0600DE60F2 /* IdTextFieldDelegate.swift in Sources */,
 				BD501DA02611A1A200DE60F2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -23,5 +23,4 @@ class RegularExpression {
         let pwTest = NSPredicate(format: "SELF MATCHES %@", pwRegEx)
         return pwTest.evaluate(with: pw)
     }
-    
 }

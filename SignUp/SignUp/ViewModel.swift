@@ -63,6 +63,20 @@ enum IdState : CustomStringConvertible {
     }
 }
 
+enum NameState : CustomStringConvertible {
+    case empty
+    case valid
+    
+    var description: String {
+      switch self {
+      case .empty:
+        return "이름은 필수 입력 항목입니다"
+      case .valid :
+        return ""
+      }
+    }
+}
+
 
 class ViewModel {
     
@@ -71,15 +85,16 @@ class ViewModel {
     @Published var passwordConfirmText = ""
     @Published var nameText = ""
     
-    @Published var isIdValid = false
-    @Published var isPasswordValid = false
-    @Published var isPasswordConfirmValid = false
-    @Published var isNameValid = false
-    
     private var cancellable = Set<AnyCancellable>()
     private var service : Service
+
+    var allValid : AnyPublisher<Bool, Never> {
+        Publishers.CombineLatest(namePasswordInputValid, passwordConfirmNameInputValid)
+            .map { $0 == true && $1 == true }
+            .eraseToAnyPublisher()
+    }
     
-    var isIdMatch : AnyPublisher<IdState , Never> {
+    var isIdMatchValid : AnyPublisher<IdState , Never> {
         Publishers.CombineLatest(isIdRegularExpression, isIdexist)
             .map {
                 if $0 { return IdState.notStandard}
@@ -87,16 +102,8 @@ class ViewModel {
                 return IdState.valid
             }.eraseToAnyPublisher()
     }
-
-    var isMatchPassword : AnyPublisher<PasswordConfirmState, Never> {
-        $passwordConfirmText
-            .dropFirst()
-            .combineLatest(self.$passwordText){
-            return $0 == $1 ? PasswordConfirmState.valid : PasswordConfirmState.notEqual
-        }.eraseToAnyPublisher()
-    }
     
-    var isPasswordValidState : AnyPublisher<PasswordState, Never> {
+    var isPasswordValid : AnyPublisher<PasswordState, Never> {
         Publishers.Zip4(isPasswordCount, isPasswordUpperword, isPasswordNumber, isPasswordSymbol)
             .map {
                 if $0 { return PasswordState.notEnoughCount }
@@ -108,10 +115,18 @@ class ViewModel {
             .eraseToAnyPublisher()
     }
     
-    var isNameEmpty : AnyPublisher<Bool, Never> {
+    var isMatchPasswordValid : AnyPublisher<PasswordConfirmState, Never> {
+        $passwordConfirmText
+            .dropFirst()
+            .combineLatest(self.$passwordText){
+            return $0 == $1 ? PasswordConfirmState.valid : PasswordConfirmState.notEqual
+        }.eraseToAnyPublisher()
+    }
+    
+    var isNameValid : AnyPublisher<NameState, Never> {
         $nameText
             .dropFirst()
-            .map { $0.isEmpty }
+            .map { $0.isEmpty ? NameState.empty : NameState.valid }
             .eraseToAnyPublisher()
     }
     
@@ -162,21 +177,25 @@ class ViewModel {
             .eraseToAnyPublisher()
     }
     
+    private var namePasswordInputValid : AnyPublisher<Bool, Never> {
+        Publishers.CombineLatest(isIdMatchValid, isPasswordValid)
+            .map { $0 == .valid && $1 == .valid }
+            .eraseToAnyPublisher()
+    }
+    
+    private var passwordConfirmNameInputValid : AnyPublisher<Bool, Never> {
+        Publishers.CombineLatest(isMatchPasswordValid, isNameValid)
+            .map { $0 == .valid && $1 == .valid }
+            .eraseToAnyPublisher()
+    }
+    
     private var idList = [String]()
+    
     init() {
         service = Service()
         service.request { (resultList) in
             self.idList = resultList
         }
-    }
-    
-    func validateId(_ string : String) -> Bool {
-        let patten = "^[a-z0-9_-]{5,20}$"
-        return string.range(of: patten,options: [.regularExpression]) != nil
-    }
-
-    func validateName(_ string : String) -> Bool {
-        return !string.isEmpty
     }
     
 }

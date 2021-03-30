@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         nameTextField.textPublisher
             .assign(to: &viewModel.$nameText)
         
-        viewModel.isIdMatch.sink { (value) in
+        viewModel.isIdMatchValid.sink { (value) in
             self.idValidLabel.text = value.description
             switch value {
             case .notStandard, .idExist :
@@ -53,7 +53,7 @@ class ViewController: UIViewController {
             }
         }.store(in: &cancellable)
         
-        viewModel.isMatchPassword.sink { (value) in
+        viewModel.isMatchPasswordValid.sink { (value) in
             self.passwordConfirmVaildLabel.text = value.description
             switch value {
             case .notEqual :
@@ -65,7 +65,7 @@ class ViewController: UIViewController {
             }
         }.store(in: &cancellable)
         
-        viewModel.isPasswordValidState.sink { (value) in
+        viewModel.isPasswordValid.sink { (value) in
             self.passwordValidLabel.text = value.description
             switch value {
             case .notEnoughCount,.notNumber,.notUpperWord,.notSymbol :
@@ -78,17 +78,21 @@ class ViewController: UIViewController {
         }.store(in: &cancellable)
         
         
-        viewModel.isNameEmpty.sink { value in
-            value ? self.nameTextField.fail() : self.nameTextField.succeed()
-            if value {
-                self.nameValidLabel.text = "이름은 필수 입력 항목입니다"
+        viewModel.isNameValid.sink { value in
+            self.nameValidLabel.text = value.description
+            switch value {
+            case .empty :
                 self.nameValidLabel.textColor = .red
-            } else {
-                self.nameValidLabel.text = ""
+                self.nameTextField.fail()
+            case .valid :
                 self.nameValidLabel.textColor = .none
+                self.nameTextField.succeed()
             }
         }.store(in: &cancellable)
-                
+        
+        viewModel.allValid.receive(on: RunLoop.main)
+            .assign(to: \.isEnabled, on: nextButton)
+            .store(in: &cancellable)
     }
 }
 

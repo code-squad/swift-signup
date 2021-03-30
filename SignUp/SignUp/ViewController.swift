@@ -53,7 +53,7 @@ class ViewController: UIViewController {
             }
         }.store(in: &cancellable)
         
-        viewModel.passwordLabel.sink { (value) in
+        viewModel.isPasswordValidState.sink { (value) in
             self.passwordValidLabel.text = value.description
             switch value {
             case .notEnoughCount,.notNumber,.notUpperWord,.notSymbol :
@@ -64,6 +64,19 @@ class ViewController: UIViewController {
                 self.passwordTextField.succeed()
             }
         }.store(in: &cancellable)
+        
+        
+        viewModel.isNameEmpty.sink { value in
+            value ? self.nameTextField.fail() : self.nameTextField.succeed()
+            if value {
+                self.nameValidLabel.text = "이름은 필수 입력 항목입니다"
+                self.nameValidLabel.textColor = .red
+            } else {
+                self.nameValidLabel.text = ""
+                self.nameValidLabel.textColor = .none
+            }
+        }.store(in: &cancellable)
+        
         
 //        viewModel.$isIdValid.sink { [weak self] (bool) in
             //guard let self = self else { return }

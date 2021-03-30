@@ -21,7 +21,6 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var IDValidationResult: UILabel!
     @IBOutlet weak var PasswordValidationResult: UILabel!
     @IBOutlet weak var PasswordReconfirmValidationResult: UILabel!
-    
     @IBOutlet weak var NameValidationResult: UILabel!
     
     override func viewDidLoad() {
@@ -31,5 +30,17 @@ class SignUpViewController: UIViewController {
         self.passwordTextField.delegate = passwordFieldDelegate
         self.passwordReconfirmTextField.delegate = passwordReconfirmFieldDelegate
         self.nameTextField.delegate = nameFieldDelegate
+        
+        //SignUp~~~인 idFieldDelegate인 의 델리깃을 self로 설정함
+        self.idFieldDelegate.resultNotifyingDelegate = self
+    }
+}
+
+extension SignUpViewController: ResultNotifyingDelegate {
+    func showValidationResult(sender: UITextFieldDelegate, result: String) {
+        switch sender {
+        case is SignUpSceneIdFieldDelegate: IDValidationResult.text = "test1"
+        default: NameValidationResult.text = "test2"
+        }
     }
 }

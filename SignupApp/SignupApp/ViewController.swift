@@ -44,7 +44,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             textField.delegate = self
         }
         
-        
+        //MARK:서버의 부담을 막기 위해 load 시 한 번만 불러오도록 함
         let url = URL(string: "https://8r6ruzgzve.execute-api.ap-northeast-2.amazonaws.com/default/SwiftCamp")!
         NetworkCenter().receiveIDList(url: url) { (existIDs) in
             self.existIDs = existIDs
@@ -108,23 +108,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    private func isOutOfCharacterLimitPassword(of password: String) -> Bool {
-        return !password.match(for: "^.{8,16}$")
-    }
-    
-    private func isNotIncludeUppercaseLetter(of password: String) -> Bool {
-        return !password.match(for: "^.*[A-Z]{1,}.*$")
-    }
-    
-    private func isNotIncludeDigit(of password: String) -> Bool {
-        return !password.match(for: "^.*[\\d]+.*$")
-    }
-    
-    private func isNotIncludeSpecialCharacter(of password: String) -> Bool {
-        return !password.match(for: "^.*[\\!\\@\\#\\$\\%]+.*$")
-    }
-    
-    
     @objc private func checkID() {
         let ID = IDField.text ?? ""
         switch ID {
@@ -145,24 +128,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    private func changeStyleToCorrect(label: UILabel, textField: UITextField, correct: Bool) {
-        if correct {
-            label.textColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
-            textField.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        } else {
-            label.textColor = #colorLiteral(red: 0.7830513277, green: 0.2840242443, blue: 0.3156971657, alpha: 1)
-            textField.layer.borderColor = #colorLiteral(red: 0.7830513277, green: 0.2840242443, blue: 0.3156971657, alpha: 1)
-        }
-    }
-    
-    private func isExistID(ID: String) -> Bool {
-        return self.existIDs.contains(ID)
-    }
-    
-    private func isIncorrectID(ID: String) -> Bool {
-        return !ID.match(for: "^[a-z\\d\\-\\_]{5,20}$")
-    }
-    
+    //MARK: textField Delegate
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.layer.borderWidth = 1
         textField.layer.borderColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
@@ -191,5 +157,42 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
         }
         self.nextButton.isEnabled = true
+    }
+}
+
+
+extension ViewController {
+    private func changeStyleToCorrect(label: UILabel, textField: UITextField, correct: Bool) {
+        if correct {
+            label.textColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
+            textField.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        } else {
+            label.textColor = #colorLiteral(red: 0.7830513277, green: 0.2840242443, blue: 0.3156971657, alpha: 1)
+            textField.layer.borderColor = #colorLiteral(red: 0.7830513277, green: 0.2840242443, blue: 0.3156971657, alpha: 1)
+        }
+    }
+    
+    private func isOutOfCharacterLimitPassword(of password: String) -> Bool {
+        return !password.match(for: "^.{8,16}$")
+    }
+    
+    private func isNotIncludeUppercaseLetter(of password: String) -> Bool {
+        return !password.match(for: "^.*[A-Z]{1,}.*$")
+    }
+    
+    private func isNotIncludeDigit(of password: String) -> Bool {
+        return !password.match(for: "^.*[\\d]+.*$")
+    }
+    
+    private func isNotIncludeSpecialCharacter(of password: String) -> Bool {
+        return !password.match(for: "^.*[\\!\\@\\#\\$\\%]+.*$")
+    }
+    
+    private func isExistID(ID: String) -> Bool {
+        return self.existIDs.contains(ID)
+    }
+    
+    private func isIncorrectID(ID: String) -> Bool {
+        return !ID.match(for: "^[a-z\\d\\-\\_]{5,20}$")
     }
 }

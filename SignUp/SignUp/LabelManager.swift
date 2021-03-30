@@ -44,7 +44,9 @@ class LabelManager {
     }
     
     func checkPasswordConfirm(pw: UITextField, pwr: UITextField, pwrLabel: UILabel) {
-        if pw.text == pwr.text {
+        if pw.text == pwr.text && pwr.text != "" {
+            pwr.layer.borderWidth = 1.0
+            pwr.layer.borderColor = #colorLiteral(red: 0.1540483236, green: 0.6966413856, blue: 0.1375852525, alpha: 1)
             pwrLabel.text = "비밀번호가 일치합니다."
             pwrLabel.textColor = #colorLiteral(red: 0.1540483236, green: 0.6966413856, blue: 0.1375852525, alpha: 1)
         } else {
@@ -52,6 +54,20 @@ class LabelManager {
             pwr.layer.borderColor = #colorLiteral(red: 0.9967475533, green: 0.03828956559, blue: 0.05758263916, alpha: 1)
             pwrLabel.text = "비밀번호가 일치하지 않습니다."
             pwrLabel.textColor = #colorLiteral(red: 0.9967475533, green: 0.03828956559, blue: 0.05758263916, alpha: 1)
+        }
+    }
+    
+    func checkName(name: UITextField, label: UILabel) {
+        let text = name.text
+        if text == "" {
+            name.layer.borderWidth = 1
+            name.layer.borderColor = #colorLiteral(red: 0.9967475533, green: 0.03828956559, blue: 0.05758263916, alpha: 1)
+            label.text = "이름은 필수 입력 항목입니다."
+            label.textColor = #colorLiteral(red: 0.9967475533, green: 0.03828956559, blue: 0.05758263916, alpha: 1)
+        } else {
+            name.layer.borderWidth = 0
+            label.text = ""
+            
         }
     }
 }

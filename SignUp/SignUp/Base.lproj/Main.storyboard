@@ -87,6 +87,9 @@
                                     <color key="titleColor" red="0.28633016350000001" green="0.63140279050000003" blue="0.18005284669999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="titleShadowColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wCP-Di-ZDu"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTz-rr-ofa">
                                 <rect key="frame" x="48" y="195" width="300" height="21"/>
@@ -128,6 +131,8 @@
                         <outlet property="PWReconfirmLabel" destination="Hzp-a5-Cwj" id="LtH-wd-xV5"/>
                         <outlet property="PWTextField" destination="5yS-ln-BRF" id="k9E-ql-A4G"/>
                         <outlet property="nameCheckLabel" destination="es4-wt-1gG" id="c1C-TH-YfG"/>
+                        <outlet property="nameTextField" destination="xqw-KQ-5h9" id="HHc-1p-9KU"/>
+                        <outlet property="nextButton" destination="8Ec-pp-ua3" id="gAc-nq-HPp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

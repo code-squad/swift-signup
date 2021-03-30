@@ -11,6 +11,11 @@ class PWTextFieldDelegate: NSObject, UITextFieldDelegate {
     
     private var state: PasswordTextFieldState? = nil
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.layer.borderWidth = 1.0
+        textField.layer.borderColor = UIColor.blue.cgColor
+    }
+    
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         let text = textField.text ?? ""
         let extract = text.getArrayAfterRegex(regex: "[0-9a-zA-Z~!@#$%^&*()_+|]+")

@@ -9,5 +9,4 @@ import Foundation
 
 struct responseModel : Codable {
     let result : String
-    let status : String
 }

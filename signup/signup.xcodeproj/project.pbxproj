@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E479EC452612F66D000AEB21 /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E479EC442612F66D000AEB21 /* ErrorManager.swift */; };
 		E4BCE3F92611FF080058640D /* SignUpTextFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BCE3F82611FF080058640D /* SignUpTextFieldModel.swift */; };
 		E4C7F09126119EFC004CD200 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C7F09026119EFC004CD200 /* AppDelegate.swift */; };
 		E4C7F09326119EFC004CD200 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C7F09226119EFC004CD200 /* SceneDelegate.swift */; };
@@ -16,10 +17,11 @@
 		E4C7F09D26119EFF004CD200 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4C7F09B26119EFF004CD200 /* LaunchScreen.storyboard */; };
 		E4C7F0AD2611ADED004CD200 /* SignUpTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C7F0AC2611ADED004CD200 /* SignUpTextField.swift */; };
 		E4C7F0B02611AEE6004CD200 /* SignUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C7F0AF2611AEE6004CD200 /* SignUpButton.swift */; };
-		E4D26B88261204B10063047E /* SignUpValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D26B87261204B10063047E /* SignUpValidation.swift */; };
+		E4D26B88261204B10063047E /* SignUpErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D26B87261204B10063047E /* SignUpErrorManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E479EC442612F66D000AEB21 /* ErrorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorManager.swift; sourceTree = "<group>"; };
 		E4BCE3F82611FF080058640D /* SignUpTextFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTextFieldModel.swift; sourceTree = "<group>"; };
 		E4C7F08D26119EFC004CD200 /* signup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = signup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4C7F09026119EFC004CD200 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -31,7 +33,7 @@
 		E4C7F09E26119EFF004CD200 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4C7F0AC2611ADED004CD200 /* SignUpTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTextField.swift; sourceTree = "<group>"; };
 		E4C7F0AF2611AEE6004CD200 /* SignUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpButton.swift; sourceTree = "<group>"; };
-		E4D26B87261204B10063047E /* SignUpValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpValidation.swift; sourceTree = "<group>"; };
+		E4D26B87261204B10063047E /* SignUpErrorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpErrorManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +116,8 @@
 		E4C7F0A926119F5F004CD200 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E4D26B87261204B10063047E /* SignUpValidation.swift */,
+				E479EC442612F66D000AEB21 /* ErrorManager.swift */,
+				E4D26B87261204B10063047E /* SignUpErrorManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -191,11 +194,12 @@
 			files = (
 				E4C7F09526119EFC004CD200 /* SignUpViewController.swift in Sources */,
 				E4C7F09126119EFC004CD200 /* AppDelegate.swift in Sources */,
+				E479EC452612F66D000AEB21 /* ErrorManager.swift in Sources */,
 				E4C7F09326119EFC004CD200 /* SceneDelegate.swift in Sources */,
 				E4C7F0AD2611ADED004CD200 /* SignUpTextField.swift in Sources */,
 				E4BCE3F92611FF080058640D /* SignUpTextFieldModel.swift in Sources */,
 				E4C7F0B02611AEE6004CD200 /* SignUpButton.swift in Sources */,
-				E4D26B88261204B10063047E /* SignUpValidation.swift in Sources */,
+				E4D26B88261204B10063047E /* SignUpErrorManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

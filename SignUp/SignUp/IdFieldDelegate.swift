@@ -9,27 +9,34 @@ import UIKit
 
 class IdFieldDelegate: NSObject, UITextFieldDelegate {
     
-    var handler: (((IdCheck, UIColor)) -> Void)?
+    var updateLabelHandler: (((IdCheck, UIColor)) -> Void)?
+    var firstResponserHandler: (() -> Void)?
     
-    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        guard let text = textField.text?.replacingOccurrences(of: " ", with: ""), !text.isEmpty else {
-            return false
-        }
-        if !check(for: text) {
-            handler?((.unavailable, .systemRed ))
-        } else {
-            checkAvailable(for: text)
-        }
-        return true
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.layer.borderWidth = 1
+        textField.layer.borderColor = UIColor.systemBlue.cgColor
     }
     
-    func check(for id: String) -> Bool {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.layer.borderWidth = 0
+        guard let text = textField.text?.replacingOccurrences(of: " ", with: ""), !text.isEmpty else {
+            return
+        }
+        if !validateFormat(for: text) {
+            updateLabelHandler?((.unavailable, .systemRed ))
+        } else {
+            validateAvailable(for: text)
+        }
+        return
+    }
+    
+    func validateFormat(for id: String) -> Bool {
         let reg = "[a-z0-9_-]{5,20}"
         let predicate = NSPredicate(format:"SELF MATCHES %@", reg)
         return predicate.evaluate(with: id)
     }
     
-    func checkAvailable(for id: String) {
+    func validateAvailable(for id: String) {
         var request = URLRequest(url: URL(string: "https://8r6ruzgzve.execute-api.ap-northeast-2.amazonaws.com/default/SwiftCamp")!)
         let body = ["id": id, "password": ""]
         let bodyData = try? JSONSerialization.data(
@@ -52,11 +59,16 @@ class IdFieldDelegate: NSObject, UITextFieldDelegate {
             }
             
             if status == "200" {
-                self.handler?((.available, .systemGreen))
+                self.updateLabelHandler?((.available, .systemGreen))
             } else {
-                self.handler?((.alreadyUsing, .systemRed))
+                self.updateLabelHandler?((.alreadyUsing, .systemRed))
             }
         }).resume()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        firstResponserHandler?()
+        return true
     }
 }
 

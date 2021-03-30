@@ -31,15 +31,6 @@ class MainInfoStackView: UIStackView {
         setUpDoubleCheckInfoView()
         setUpnameCheckInfoView()
     }
-    
-    // 기능테스트를 위해 임시로 추가한 조건 반드시 수정해야 함 -> 정규표현식으로
-    func enableCheckForNextPage() -> Bool {
-        let conditionForID = infoIDView.inputTextField.text?.count ?? 0
-        let conditionForPassWord = infoPasswordView.inputTextField.text?.count ?? 0
-        let conditionForDoubleCheckPassWord = dobleCheckPassWordView.inputTextField.text?.count ?? 0
-        let conditionForName = nameCheckView.inputTextField.text?.count ?? 0
-        return conditionForID>=4 && conditionForPassWord>=4 && conditionForDoubleCheckPassWord>=4 && conditionForName>=4
-    }
 }
 
 //MARK: -setUp Elements Of StackView
@@ -47,25 +38,48 @@ extension MainInfoStackView {
     
     private func setUpIDInfoView() {
         infoIDView.infoLabel.text = "아이디"
-        infoIDView.inputTextField.text = " 영문 소문자, 숫자, 특수기호, 5~20자"
+        infoIDView.inputTextField.text = " 영문 소문자, 숫자, 특수기호(_,-), 5~20자"
         self.addArrangedSubview(infoIDView)
     }
 
     private func setUpPassWordInfoView() {
         infoPasswordView.infoLabel.text = "비밀번호"
-        infoPasswordView.inputTextField.text = " 영문 대/소문자, 숫자, 특수문자, 8~16자"
+        infoPasswordView.inputTextField.text = " 영문 대/소문자, 숫자, 특수문자(!@#$%), 8~16자"
         self.addArrangedSubview(infoPasswordView)
     }
 
     private func setUpDoubleCheckInfoView() {
         dobleCheckPassWordView.infoLabel.text = "비밀번호 재확인"
-        dobleCheckPassWordView.inputTextField.text = " 같은 비밀번호를 입력해주세요."
         self.addArrangedSubview(dobleCheckPassWordView)
     }
     
     private func setUpnameCheckInfoView() {
         nameCheckView.infoLabel.text = "이름"
-        nameCheckView.inputTextField.text = " 이름을 입력해주세요."
         self.addArrangedSubview(nameCheckView)
+    }
+}
+
+//MARK: -Condition & Regex
+extension MainInfoStackView {
+    private func conditionForID() -> Bool {
+        let conditionForID = infoIDView.inputTextField.text?.getArrayAfterRegex(regex: "[a-z0-9_-]").count ?? 0
+        return conditionForID >= 5 && conditionForID <= 20
+    }
+    
+    private func conditionForPassWord() -> Bool {
+        let conditionForPassWord = infoPasswordView.inputTextField.text?.getArrayAfterRegex(regex: "[a-zA-Z0-9!@#$%]").count ?? 0
+        let conditionForDoubleCheckPassWord = dobleCheckPassWordView.inputTextField.text?.getArrayAfterRegex(regex: "[a-zA-Z0-9!@#$%]").count ?? 0
+        let equalTest1 = infoPasswordView.inputTextField.text ?? "a"
+        let equalTest2 = dobleCheckPassWordView.inputTextField.text ?? "b"
+        return conditionForPassWord >= 8 && conditionForDoubleCheckPassWord <= 16 && equalTest1 == equalTest2
+    }
+    
+    private func conditionForName() -> Bool {
+        let conditionForName = nameCheckView.inputTextField.text?.getArrayAfterRegex(regex: "[가-힣]").count ?? 0
+        return conditionForName >= 2
+    }
+    
+    func enableCheckForNextPage() -> Bool {
+        return conditionForID() && conditionForPassWord() && conditionForName()
     }
 }

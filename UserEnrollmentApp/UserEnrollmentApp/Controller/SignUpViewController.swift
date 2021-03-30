@@ -33,11 +33,27 @@ class SignUpViewController: UIViewController {
         
         self.idFieldDelegate.resultNotifyingDelegate = self
         self.passwordFieldDelegate.resultNotifyingDelegate = self
+        self.passwordReconfirmFieldDelegate.resultNotifyingDelegate = self
     }
 }
 
 extension SignUpViewController: ResultNotifyingDelegate {
-    func showValidationResult(sender: UITextFieldDelegate, result: Bool, explanation: String) {
+    func passTextFieldValue(sender: UITextFieldDelegate, value: String) {
+        switch sender {
+        case is SignUpScenePasswordReconfirmFieldDelegate:
+            let result = value == passwordTextField.text
+            PasswordReconfirmValidationResultLabel.setTextColor(isGoodExplanation: result)
+            passwordReconfirmTextField.setBorderColor(wasValidInput: result)
+            if result == true {
+                PasswordReconfirmValidationResultLabel.text = "비밀번호가 일치합니다."
+            } else {
+                PasswordReconfirmValidationResultLabel.text = "비밀번호가 일치하지 않습니다."
+            }
+        default: return
+        }
+    }
+    
+    func passValidationResult(sender: UITextFieldDelegate, result: Bool, explanation: String) {
         switch sender {
         case is SignUpSceneIdFieldDelegate:
             IDValidationResultLabel.text = explanation
@@ -48,7 +64,7 @@ extension SignUpViewController: ResultNotifyingDelegate {
             PasswordValidationResultLabel.text = explanation
             PasswordValidationResultLabel.setTextColor(isGoodExplanation: result)
             passwordTextField.setBorderColor(wasValidInput: result)
-        default: NameValidationResultLabel.text = "test2"
+        default: return
         }
     }
 }

@@ -13,6 +13,7 @@ class SignUpScenePasswordFieldDelegate: NSObject, UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         print("textFieldDidBeginEditing: \((textField.text) ?? "Empty")")
     }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let inputText = textField.text {
             var explanation: String
@@ -21,7 +22,7 @@ class SignUpScenePasswordFieldDelegate: NSObject, UITextFieldDelegate {
             guard UserInputValidator.validatePasswordLength(inputText) else {
                 explanation = "8자 이상 16자 이하로 입력해주세요."
                 validationResult = false
-                resultNotifyingDelegate?.showValidationResult(sender: self, result: validationResult, explanation: "\(explanation)")
+                resultNotifyingDelegate?.passValidationResult(sender: self, result: validationResult, explanation: "\(explanation)")
                 return
             }
             
@@ -29,27 +30,27 @@ class SignUpScenePasswordFieldDelegate: NSObject, UITextFieldDelegate {
                 print("sdfsdf")
                 explanation = "영문 대문자를 최소 1자 이상 포함해주세요."
                 validationResult = false
-                resultNotifyingDelegate?.showValidationResult(sender: self, result: validationResult, explanation: "\(explanation)")
+                resultNotifyingDelegate?.passValidationResult(sender: self, result: validationResult, explanation: "\(explanation)")
                 return
             }
             
             guard UserInputValidator.validatePasswordContainsNumber(inputText) else {
                 explanation = "숫자를 최소 1자 이상 포함해주세요."
                 validationResult = false
-                resultNotifyingDelegate?.showValidationResult(sender: self, result: validationResult, explanation: "\(explanation)")
+                resultNotifyingDelegate?.passValidationResult(sender: self, result: validationResult, explanation: "\(explanation)")
                 return
             }
             
             guard UserInputValidator.validatePasswordContainsSpecialCharacter(inputText) else {
                 explanation = "특수문자를 최소 1자 이상 포함해주세요."
                 validationResult = false
-                resultNotifyingDelegate?.showValidationResult(sender: self, result: validationResult, explanation: "\(explanation)")
+                resultNotifyingDelegate?.passValidationResult(sender: self, result: validationResult, explanation: "\(explanation)")
                 return
             }
             
             explanation = "안전한 비밀번호입니다."
             validationResult = true
-            resultNotifyingDelegate?.showValidationResult(sender: self, result: validationResult, explanation: "\(explanation)")
+            resultNotifyingDelegate?.passValidationResult(sender: self, result: validationResult, explanation: "\(explanation)")
             return
         }
     }

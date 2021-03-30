@@ -8,5 +8,6 @@
 import UIKit
 
 protocol ResultNotifyingDelegate {
-    func showValidationResult(sender: UITextFieldDelegate, result: Bool, explanation: String)
+    func passValidationResult(sender: UITextFieldDelegate, result: Bool, explanation: String)
+    func passTextFieldValue(sender: UITextFieldDelegate, value: String)
 }

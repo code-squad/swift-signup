@@ -14,6 +14,7 @@ class UserInputValidator {
         case PasswordContainsCapitalLetter = "[A-Z]+"
         case PasswordContainsNumber = "[0-9]+"
         case PasswordContainsSpecialCharacter = "[!\"#$%&'()*+,-./:;<=>?@\\[\\\\\\]^_`{|}~]+"
+        case ValidName = "[a-z0-9A-Z!\"#$%&'()*+,-./:;<=>?@\\[\\\\\\]^_`{|}~]+"
     }
     
     public static func validateId(_ testingInput: String) -> Bool {
@@ -52,6 +53,11 @@ class UserInputValidator {
     
     public static func validatePasswordContainsSpecialCharacter(_ testingInput: String) -> Bool {
         let regexResult = testingInput ~= ValidationPattern.PasswordContainsSpecialCharacter.rawValue
+        return regexResult.count > 0
+    }
+    
+    public static func validateName(_ testingInput: String) -> Bool {
+        let regexResult = testingInput ~= ValidationPattern.ValidName.rawValue
         return regexResult.count > 0
     }
 }

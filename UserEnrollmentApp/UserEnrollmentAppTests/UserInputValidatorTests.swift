@@ -69,4 +69,12 @@ class UserInputValidatorTests: XCTestCase {
         XCTAssertFalse(UserInputValidator.validatePasswordContainsSpecialCharacter(passwordWithoutSpecialLetter1))
         XCTAssertTrue(UserInputValidator.validatePasswordContainsSpecialCharacter(passwordWithSpecialLetter1))
     }
+    
+    func test_name_is_not_empty() {
+        let emptyName = ""
+        let validName = "jeje"
+        
+        XCTAssertFalse(UserInputValidator.validateName(emptyName))
+        XCTAssertTrue(UserInputValidator.validateName(validName))
+    }
 }

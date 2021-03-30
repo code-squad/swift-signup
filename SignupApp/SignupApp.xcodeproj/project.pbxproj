@@ -15,6 +15,9 @@
 		E40356AF2611AB90005D4D36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E40356AD2611AB90005D4D36 /* LaunchScreen.storyboard */; };
 		E40356BA2611AB90005D4D36 /* SignupAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40356B92611AB90005D4D36 /* SignupAppTests.swift */; };
 		E40356C52611AB90005D4D36 /* SignupAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40356C42611AB90005D4D36 /* SignupAppUITests.swift */; };
+		E403570A2612FD66005D4D36 /* String+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40357092612FD66005D4D36 /* String+Validation.swift */; };
+		E40357172612FDEE005D4D36 /* String+ValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40357162612FDEE005D4D36 /* String+ValidationTests.swift */; };
+		E403571D2612FF45005D4D36 /* String+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40357092612FD66005D4D36 /* String+Validation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,8 @@
 		E40356C02611AB90005D4D36 /* SignupAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignupAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E40356C42611AB90005D4D36 /* SignupAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupAppUITests.swift; sourceTree = "<group>"; };
 		E40356C62611AB90005D4D36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E40357092612FD66005D4D36 /* String+Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validation.swift"; sourceTree = "<group>"; };
+		E40357162612FDEE005D4D36 /* String+ValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ValidationTests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +108,7 @@
 				E40356A42611AB8E005D4D36 /* SceneDelegate.swift */,
 				E40356A62611AB8E005D4D36 /* BasicInfoViewController.swift */,
 				E40356A82611AB8E005D4D36 /* Main.storyboard */,
+				E40357092612FD66005D4D36 /* String+Validation.swift */,
 				E40356AB2611AB90005D4D36 /* Assets.xcassets */,
 				E40356AD2611AB90005D4D36 /* LaunchScreen.storyboard */,
 				E40356B02611AB90005D4D36 /* Info.plist */,
@@ -114,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				E40356B92611AB90005D4D36 /* SignupAppTests.swift */,
+				E40357162612FDEE005D4D36 /* String+ValidationTests.swift */,
 				E40356BB2611AB90005D4D36 /* Info.plist */,
 			);
 			path = SignupAppTests;
@@ -261,6 +268,7 @@
 				E40356A72611AB8E005D4D36 /* BasicInfoViewController.swift in Sources */,
 				E40356A32611AB8E005D4D36 /* AppDelegate.swift in Sources */,
 				E40356A52611AB8E005D4D36 /* SceneDelegate.swift in Sources */,
+				E403570A2612FD66005D4D36 /* String+Validation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +276,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E403571D2612FF45005D4D36 /* String+Validation.swift in Sources */,
 				E40356BA2611AB90005D4D36 /* SignupAppTests.swift in Sources */,
+				E40357172612FDEE005D4D36 /* String+ValidationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

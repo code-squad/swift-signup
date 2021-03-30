@@ -57,11 +57,12 @@ class CustomTextField : UITextField, UITextFieldDelegate {
 }
 
 extension CustomTextField {
-    enum UserInfo {
-        case textInfo
-        case colorInfo
+    enum MessageInfo {
+        case text
+        case color
     }
     
     static let idState = Notification.Name("idState")
     static let passwordState = Notification.Name("passwordState")
+    static let passwordConfirmState = Notification.Name("passwordConfirmState")
 }

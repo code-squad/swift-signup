@@ -28,12 +28,12 @@ class IdTextField : CustomTextField {
         var info : [AnyHashable:Any] = [:]
         
         if validString.evaluate(with: string) {
-            info.updateValue("사용 가능한 아이디입니다.", forKey: UserInfo.textInfo)
-            info.updateValue(UIColor.systemGreen, forKey: UserInfo.colorInfo)
+            info.updateValue("사용 가능한 아이디입니다.", forKey: MessageInfo.text)
+            info.updateValue(UIColor.systemGreen, forKey: MessageInfo.color)
             self.currentState = .valid
         } else {
-            info.updateValue("5~20자의 영문 소문자, 숫자와 특수기호(_)(-)만 사용 가능합니다.", forKey: UserInfo.textInfo)
-            info.updateValue(UIColor.red, forKey: UserInfo.colorInfo)
+            info.updateValue("5~20자의 영문 소문자, 숫자와 특수기호(_)(-)만 사용 가능합니다.", forKey: MessageInfo.text)
+            info.updateValue(UIColor.red, forKey: MessageInfo.color)
             self.currentState = .invalid
         }
         NotificationCenter.default.post(name: IdTextField.idState, object: self, userInfo: info)

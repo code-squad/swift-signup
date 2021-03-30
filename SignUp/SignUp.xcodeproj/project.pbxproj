@@ -19,6 +19,8 @@
 		B075D10B261207A600731DAC /* ComplianceChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B075D10A261207A600731DAC /* ComplianceChecker.swift */; };
 		B075D10E261209C300731DAC /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B075D10D261209C300731DAC /* UITextField+Extension.swift */; };
 		B075D11126120A5900731DAC /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B075D11026120A5900731DAC /* UILabel+Extension.swift */; };
+		B075D1162612F4AD00731DAC /* UserInfomation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B075D1152612F4AD00731DAC /* UserInfomation.swift */; };
+		B075D11A261300FB00731DAC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B075D119261300FB00731DAC /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		B075D10A261207A600731DAC /* ComplianceChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplianceChecker.swift; sourceTree = "<group>"; };
 		B075D10D261209C300731DAC /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		B075D11026120A5900731DAC /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		B075D1152612F4AD00731DAC /* UserInfomation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfomation.swift; sourceTree = "<group>"; };
+		B075D119261300FB00731DAC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 				B075D1002611BBC700731DAC /* TextFieldDelegate.swift */,
 				B075D1062611D07800731DAC /* textFormError.swift */,
 				B075D10A261207A600731DAC /* ComplianceChecker.swift */,
+				B075D119261300FB00731DAC /* NetworkManager.swift */,
+				B075D1152612F4AD00731DAC /* UserInfomation.swift */,
 			);
 			path = SignUpView;
 			sourceTree = "<group>";
@@ -175,6 +181,8 @@
 				B075D0EE26119A7D00731DAC /* SignUpViewController.swift in Sources */,
 				B075D0EA26119A7D00731DAC /* AppDelegate.swift in Sources */,
 				B075D1072611D07800731DAC /* textFormError.swift in Sources */,
+				B075D11A261300FB00731DAC /* NetworkManager.swift in Sources */,
+				B075D1162612F4AD00731DAC /* UserInfomation.swift in Sources */,
 				B075D1012611BBC700731DAC /* TextFieldDelegate.swift in Sources */,
 				B075D10E261209C300731DAC /* UITextField+Extension.swift in Sources */,
 				B075D1042611BEB600731DAC /* Notification+Extension.swift in Sources */,

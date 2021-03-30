@@ -70,7 +70,7 @@ class ViewModel {
         }.eraseToAnyPublisher()
     }
     
-    var passwordLabel : AnyPublisher<PasswordStatus, Never> {
+    var isPasswordValidState : AnyPublisher<PasswordStatus, Never> {
         Publishers.Zip4(isPasswordCount, isPasswordUpperword, isPasswordNumber, isPasswordSymbol)
             .map {
                 if $0 { return PasswordStatus.notEnoughCount }
@@ -81,6 +81,14 @@ class ViewModel {
             }
             .eraseToAnyPublisher()
     }
+    
+    var isNameEmpty : AnyPublisher<Bool, Never> {
+        $nameText
+            .dropFirst()
+            .map { $0.isEmpty }
+            .eraseToAnyPublisher()
+    }
+    
     
     private var isPasswordCount : AnyPublisher<Bool, Never> {
         $passwordText

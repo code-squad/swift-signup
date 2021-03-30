@@ -87,10 +87,14 @@ extension BasicInfoViewController: UITextFieldDelegate {
         
         guard let password = passwordTextField.text else { return }
         let passwordLengthRegex = ".{8,16}"
+        let passwordUppercaseRegex = "[^A-Z]*[A-Z].*"
         let passwordLengthValidation = password.validate(with: passwordLengthRegex)
-        print(passwordLengthValidation)
+        let passwordUppercaseValidation = password.validate(with: passwordUppercaseRegex)
         if !passwordLengthValidation {
             passwordMessageLabel.text = "8자 이상 16자 이하로 입력해주세요."
+            passwordMessageLabel.textColor = UIColor(named: "redErrorMessage")
+        } else if !passwordUppercaseValidation {
+            passwordMessageLabel.text = "영문 대문자를 최소 1자 이상 포함해주세요."
             passwordMessageLabel.textColor = UIColor(named: "redErrorMessage")
         } else {
             passwordMessageLabel.text = "안전한 비밀번호입니다."

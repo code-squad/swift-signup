@@ -15,6 +15,7 @@
 		BD501DAA2611A1A300DE60F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD501DA82611A1A300DE60F2 /* LaunchScreen.storyboard */; };
 		BD501DB52611A1A300DE60F2 /* SignUpAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD501DB42611A1A300DE60F2 /* SignUpAppTests.swift */; };
 		BD501DC02611A1A300DE60F2 /* SignUpAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD501DBF2611A1A300DE60F2 /* SignUpAppUITests.swift */; };
+		BD501E5226122CB300DE60F2 /* RegularExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD501E5126122CB300DE60F2 /* RegularExpression.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		BD501DBB2611A1A300DE60F2 /* SignUpAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignUpAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD501DBF2611A1A300DE60F2 /* SignUpAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAppUITests.swift; sourceTree = "<group>"; };
 		BD501DC12611A1A300DE60F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD501E5126122CB300DE60F2 /* RegularExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpression.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +103,13 @@
 			children = (
 				BD501D9D2611A1A200DE60F2 /* AppDelegate.swift */,
 				BD501D9F2611A1A200DE60F2 /* SceneDelegate.swift */,
-				BD501DA12611A1A200DE60F2 /* ViewController.swift */,
 				BD501DA32611A1A200DE60F2 /* Main.storyboard */,
 				BD501DA62611A1A300DE60F2 /* Assets.xcassets */,
 				BD501DA82611A1A300DE60F2 /* LaunchScreen.storyboard */,
 				BD501DAB2611A1A300DE60F2 /* Info.plist */,
+				BD501E452612275000DE60F2 /* Controller */,
+				BD501DDD2611F5C900DE60F2 /* Model */,
+				BD501E442612271600DE60F2 /* View */,
 			);
 			path = SignUpApp;
 			sourceTree = "<group>";
@@ -126,6 +130,29 @@
 				BD501DC12611A1A300DE60F2 /* Info.plist */,
 			);
 			path = SignUpAppUITests;
+			sourceTree = "<group>";
+		};
+		BD501DDD2611F5C900DE60F2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BD501E5126122CB300DE60F2 /* RegularExpression.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BD501E442612271600DE60F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD501E452612275000DE60F2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BD501DA12611A1A200DE60F2 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD501E5226122CB300DE60F2 /* RegularExpression.swift in Sources */,
 				BD501DA22611A1A200DE60F2 /* ViewController.swift in Sources */,
 				BD501D9E2611A1A200DE60F2 /* AppDelegate.swift in Sources */,
 				BD501DA02611A1A200DE60F2 /* SceneDelegate.swift in Sources */,

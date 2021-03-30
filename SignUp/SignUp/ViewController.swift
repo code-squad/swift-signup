@@ -15,10 +15,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordConfirmTextField: InputTextField!
     @IBOutlet weak var nameTextField: InputTextField!
     
-    @IBOutlet weak var idValidLabel: UILabel!
-    @IBOutlet weak var passwordValidLabel: UILabel!
-    @IBOutlet weak var passwordConfirmVaildLabel: UILabel!
-    @IBOutlet weak var nameValidLabel: UILabel!
+    @IBOutlet weak var idValidLabel: MessageLabel!
+    @IBOutlet weak var passwordValidLabel: MessageLabel!
+    @IBOutlet weak var passwordConfirmVaildLabel: MessageLabel!
+    @IBOutlet weak var nameValidLabel: MessageLabel!
     
     @IBOutlet weak var nextButton: UIButton!
     
@@ -28,6 +28,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureBind()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
     }
     
     func configureBind() {
@@ -41,56 +45,56 @@ class ViewController: UIViewController {
         nameTextField.textPublisher
             .assign(to: &viewModel.$nameText)
         
-        viewModel.isIdMatchValid.sink { (value) in
-            self.idValidLabel.text = value.description
-            switch value {
+        viewModel.isIdMatchValid.sink { state in
+            self.idValidLabel.setText(state.description)
+            switch state {
             case .notStandard, .idExist :
-                self.idValidLabel.textColor = .red
+                self.idValidLabel.fail()
                 self.idTextField.fail()
             case .valid :
-                self.idValidLabel.textColor = .systemGreen
+                self.idValidLabel.succeed()
                 self.idTextField.succeed()
             }
         }.store(in: &cancellable)
         
-        viewModel.isMatchPasswordValid.sink { (value) in
-            self.passwordConfirmVaildLabel.text = value.description
-            switch value {
+        viewModel.isMatchPasswordValid.sink { state in
+            self.passwordConfirmVaildLabel.setText(state.description)
+            switch state {
             case .notEqual :
-                self.passwordConfirmVaildLabel.textColor = .red
+                self.passwordConfirmVaildLabel.fail()
                 self.passwordConfirmTextField.fail()
             case .valid :
-                self.passwordConfirmVaildLabel.textColor = .systemGreen
+                self.passwordConfirmVaildLabel.succeed()
                 self.passwordConfirmTextField.succeed()
             }
         }.store(in: &cancellable)
         
-        viewModel.isPasswordValid.sink { (value) in
-            self.passwordValidLabel.text = value.description
-            switch value {
-            case .notEnoughCount,.notNumber,.notUpperWord,.notSymbol :
-                self.passwordValidLabel.textColor = .red
+        viewModel.isPasswordValid.sink { state in
+            self.passwordValidLabel.setText(state.description)
+            switch state {
+            case .notEnoughCount, .notNumber, .notUpperWord, .notSymbol :
+                self.passwordValidLabel.fail()
                 self.passwordTextField.fail()
             case .valid :
-                self.passwordValidLabel.textColor = .systemGreen
+                self.passwordValidLabel.succeed()
                 self.passwordTextField.succeed()
             }
         }.store(in: &cancellable)
         
         
-        viewModel.isNameValid.sink { value in
-            self.nameValidLabel.text = value.description
-            switch value {
+        viewModel.isNameValid.sink { state in
+            self.nameValidLabel.setText(state.description)
+            switch state {
             case .empty :
-                self.nameValidLabel.textColor = .red
+                self.nameValidLabel.fail()
                 self.nameTextField.fail()
             case .valid :
-                self.nameValidLabel.textColor = .none
+                self.nameValidLabel.succeed()
                 self.nameTextField.succeed()
             }
         }.store(in: &cancellable)
         
-        viewModel.allValid.receive(on: RunLoop.main)
+        viewModel.isInputValid.receive(on: RunLoop.main)
             .assign(to: \.isEnabled, on: nextButton)
             .store(in: &cancellable)
     }

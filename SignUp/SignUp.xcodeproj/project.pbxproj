@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BF0E75272612B58000D513B4 /* InputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0E75262612B58000D513B4 /* InputTextField.swift */; };
+		BF0E753226132D7200D513B4 /* MessageLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0E753126132D7200D513B4 /* MessageLabel.swift */; };
+		BF0E7535261333B200D513B4 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0E7534261333B200D513B4 /* State.swift */; };
 		BF11F6632611996F006AC76C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF11F6622611996F006AC76C /* AppDelegate.swift */; };
 		BF11F6652611996F006AC76C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF11F6642611996F006AC76C /* SceneDelegate.swift */; };
 		BF11F6672611996F006AC76C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF11F6662611996F006AC76C /* ViewController.swift */; };
@@ -21,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		BF0E75262612B58000D513B4 /* InputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextField.swift; sourceTree = "<group>"; };
+		BF0E753126132D7200D513B4 /* MessageLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageLabel.swift; sourceTree = "<group>"; };
+		BF0E7534261333B200D513B4 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		BF11F65F2611996F006AC76C /* SignUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF11F6622611996F006AC76C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF11F6642611996F006AC76C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				BF0E75262612B58000D513B4 /* InputTextField.swift */,
+				BF0E753126132D7200D513B4 /* MessageLabel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -78,6 +83,7 @@
 				BF11F6642611996F006AC76C /* SceneDelegate.swift */,
 				BF11F6662611996F006AC76C /* ViewController.swift */,
 				BF11F6772611AB3C006AC76C /* ViewModel.swift */,
+				BF0E7534261333B200D513B4 /* State.swift */,
 				BF0E75292612B6AA00D513B4 /* View */,
 				BF11F6682611996F006AC76C /* Main.storyboard */,
 				BF11F66B26119971006AC76C /* Assets.xcassets */,
@@ -175,8 +181,10 @@
 			files = (
 				BF0E75272612B58000D513B4 /* InputTextField.swift in Sources */,
 				BF11F6672611996F006AC76C /* ViewController.swift in Sources */,
+				BF0E753226132D7200D513B4 /* MessageLabel.swift in Sources */,
 				BF11F67C2611C18E006AC76C /* UITextField+Extension.swift in Sources */,
 				BF11F6632611996F006AC76C /* AppDelegate.swift in Sources */,
+				BF0E7535261333B200D513B4 /* State.swift in Sources */,
 				BF11F6862611C2A4006AC76C /* Service.swift in Sources */,
 				BF11F6782611AB3C006AC76C /* ViewModel.swift in Sources */,
 				BF11F6652611996F006AC76C /* SceneDelegate.swift in Sources */,

@@ -122,9 +122,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             changeStyleToCorrect(label: self.IDMessageLabel, textField: self.IDField, correct: false)
         default:
             self.IDMessageLabel.text = LabelMessage.correctID
-            changeStyleToCorrect(label: self.IDMessageLabel, textField: self.IDField, correct: false)
-            self.IDMessageLabel.textColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
-            self.IDField.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            changeStyleToCorrect(label: self.IDMessageLabel, textField: self.IDField, correct: true)
         }
     }
     

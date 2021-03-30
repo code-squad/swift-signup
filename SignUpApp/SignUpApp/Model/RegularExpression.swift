@@ -18,9 +18,22 @@ class RegularExpression {
     }
     
     //MARK: - Password
-    func isValidPassword(pw: String) -> Bool {
-        let pwRegEx = "^(?=.*[A-Za-z])(?=.*[0-9])(?=.*[!@#$%]).{8,16}"
-        let pwTest = NSPredicate(format: "SELF MATCHES %@", pwRegEx)
-        return pwTest.evaluate(with: pw)
+    func isValidPassword(pw: String) -> Int {
+        let upperPredicate = NSPredicate(format:"SELF MATCHES %@", "(?=.*[A-Z])[A-Za-z0-9!@#$%].*$")
+        let numberPredicate = NSPredicate(format:"SELF MATCHES %@", "(?=.*[0-9])[A-Za-z0-9!@#$%].*$")
+        let specialCharPredicate = NSPredicate(format:"SELF MATCHES %@", "(?=.*[!@#$%])[A-Za-z0-9!@#$%].*$")
+        if pw.count < 8 || pw.count > 16 {
+            return 1
+        }
+        if !upperPredicate.evaluate(with: pw) {
+            return 2
+        }
+        if !numberPredicate.evaluate(with: pw) {
+            return 3
+        }
+        if !specialCharPredicate.evaluate(with: pw) {
+            return 4
+        }
+        return 5
     }
 }

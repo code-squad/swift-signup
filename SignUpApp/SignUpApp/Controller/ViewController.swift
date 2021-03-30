@@ -70,13 +70,23 @@ class ViewController: UIViewController {
     @objc func checkPasswordLabel() {
         guard let text = passwordTextField.text else { return }
         switch regex.isValidPassword(pw: text) {
-        case true:
-            pwCheckLabel.text = CheckLabelState.PwState.Pass.rawValue
-            pwCheckLabel.textColor = .systemGreen
-        case false:
+        case 1:
             pwCheckLabel.text = CheckLabelState.PwState.Invalid.rawValue
             pwCheckLabel.textColor = .systemRed
+        case 2:
+            pwCheckLabel.text = CheckLabelState.PwState.MinimumEnglish.rawValue
+            pwCheckLabel.textColor = .systemRed
+        case 3:
+            pwCheckLabel.text = CheckLabelState.PwState.InvalidNumber.rawValue
+            pwCheckLabel.textColor = .systemRed
+        case 4:
+            pwCheckLabel.text = CheckLabelState.PwState.InvalidSpecialCharacter.rawValue
+            pwCheckLabel.textColor = .systemRed
+        default:
+            pwCheckLabel.text = CheckLabelState.PwState.Pass.rawValue
+            pwCheckLabel.textColor = .systemGreen
         }
+
     }
     
     @objc func checkPasswordCheckLabel() {

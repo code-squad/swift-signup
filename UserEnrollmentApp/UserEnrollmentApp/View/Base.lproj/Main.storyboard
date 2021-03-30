@@ -204,10 +204,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="IDValidationResult" destination="SV3-o5-Cch" id="suA-dI-tYU"/>
-                        <outlet property="NameValidationResult" destination="ade-Kd-MEt" id="FWB-Vh-xFc"/>
-                        <outlet property="PasswordReconfirmValidationResult" destination="6PE-Iu-l6H" id="2Bx-8o-Ci3"/>
-                        <outlet property="PasswordValidationResult" destination="B6c-Mo-EB4" id="3r2-fq-EpS"/>
+                        <outlet property="IDValidationResultLabel" destination="SV3-o5-Cch" id="suA-dI-tYU"/>
+                        <outlet property="NameValidationResultLabel" destination="ade-Kd-MEt" id="FWB-Vh-xFc"/>
+                        <outlet property="PasswordReconfirmValidationResultLabel" destination="6PE-Iu-l6H" id="2Bx-8o-Ci3"/>
+                        <outlet property="PasswordValidationResultLabel" destination="B6c-Mo-EB4" id="3r2-fq-EpS"/>
                         <outlet property="idTextField" destination="fJ4-DQ-TSD" id="JDW-6h-WR7"/>
                         <outlet property="nameTextField" destination="t7O-88-SBV" id="ugP-rI-6zo"/>
                         <outlet property="passwordReconfirmTextField" destination="2sk-3r-tPS" id="BeL-XN-aBR"/>

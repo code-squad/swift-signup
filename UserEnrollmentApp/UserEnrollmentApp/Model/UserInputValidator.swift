@@ -8,18 +8,51 @@
 import Foundation
 
 class UserInputValidator {
-    public static var shared = UserInputValidator()
+    enum ValidationPattern: String {
+        case ValidId = "[a-z0-9_)(-]{5,20}"
+        case PasswordLength = ".{8,16}"
+        case PasswordContainsCapitalLetter = "[A-Z]+"
+        case PasswordContainsNumber = "[0-9]+"
+        case PasswordContainsSpecialCharacter = "[!\"#$%&'()*+,-./:;<=>?@\\[\\\\\\]^_`{|}~]+"
+    }
     
-    public static func valiidateId(_ testingId: String, with pattern: String) -> Bool {
-        let regexResult = testingId ~= pattern
+    public static func validateId(_ testingInput: String) -> Bool {
+        let regexResult = testingInput ~= ValidationPattern.ValidId.rawValue
         
         if regexResult.count != 1 {
             return false
-        } else if regexResult.first?.count != testingId.count {
+        } else if regexResult.first?.count != testingInput.count {
             return false
         } else {
             return true
         }
+    }
+    
+    public static func validatePasswordLength(_ testingInput: String) -> Bool {
+        let regexResult = testingInput ~= ValidationPattern.PasswordLength.rawValue
+        
+        if regexResult.count != 1 {
+            return false
+        } else if regexResult.first?.count != testingInput.count {
+            return false
+        } else {
+            return true
+        }
+    }
+    
+    public static func validatePasswordContainsCapitalLetter(_ testingInput: String) -> Bool {
+        let regexResult = testingInput ~= ValidationPattern.PasswordContainsCapitalLetter.rawValue
+        return regexResult.count > 0
+    }
+    
+    public static func validatePasswordContainsNumber(_ testingInput: String) -> Bool {
+        let regexResult = testingInput ~= ValidationPattern.PasswordContainsNumber.rawValue
+        return regexResult.count > 0
+    }
+    
+    public static func validatePasswordContainsSpecialCharacter(_ testingInput: String) -> Bool {
+        let regexResult = testingInput ~= ValidationPattern.PasswordContainsSpecialCharacter.rawValue
+        return regexResult.count > 0
     }
 }
 

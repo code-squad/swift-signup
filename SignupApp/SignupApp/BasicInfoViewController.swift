@@ -84,5 +84,17 @@ extension BasicInfoViewController: UITextFieldDelegate {
                 idMessageLabel.textColor = UIColor(named: "redErrorMessage")
             }
         }
+        
+        guard let password = passwordTextField.text else { return }
+        let passwordLengthRegex = ".{8,16}"
+        let passwordLengthValidation = password.validate(with: passwordLengthRegex)
+        print(passwordLengthValidation)
+        if !passwordLengthValidation {
+            passwordMessageLabel.text = "8자 이상 16자 이하로 입력해주세요."
+            passwordMessageLabel.textColor = UIColor(named: "redErrorMessage")
+        } else {
+            passwordMessageLabel.text = "안전한 비밀번호입니다."
+            passwordMessageLabel.textColor = UIColor(named: "greenText")
+        }
     }
 }

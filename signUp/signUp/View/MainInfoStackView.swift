@@ -2,10 +2,10 @@ import UIKit
 
 class MainInfoStackView: UIStackView {
     
-    private var infoIDView = EachInfoView()
-    private var infoPasswordView = EachInfoView()
-    private var dobleCheckPassWordView = EachInfoView()
-    private var nameCheckView = EachInfoView()
+    private(set) var infoIDView = EachInfoView()
+    private(set) var infoPasswordView = EachInfoView()
+    private(set) var dobleCheckPassWordView = EachInfoView()
+    private(set) var nameCheckView = EachInfoView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,13 +38,13 @@ extension MainInfoStackView {
     
     private func setUpIDInfoView() {
         infoIDView.infoLabel.text = "아이디"
-        infoIDView.inputTextField.text = " 영문 소문자, 숫자, 특수기호(_,-), 5~20자"
+        infoIDView.inputTextField.attributedPlaceholder = NSAttributedString(string: " 영문 소문자, 숫자, 특수기호(_,-), 5~20자")
         self.addArrangedSubview(infoIDView)
     }
 
     private func setUpPassWordInfoView() {
         infoPasswordView.infoLabel.text = "비밀번호"
-        infoPasswordView.inputTextField.text = " 영문 대/소문자, 숫자, 특수문자(!@#$%), 8~16자"
+        infoPasswordView.inputTextField.attributedPlaceholder = NSAttributedString(string: " 영문 대/소문자, 숫자, 특수문자(!@#$%), 8~16자")
         self.addArrangedSubview(infoPasswordView)
     }
 
@@ -76,15 +76,18 @@ extension MainInfoStackView {
     }
     
     private func checkTextForID(_ id: String?) -> Bool {
-        return ((id?.getArrayAfterRegex(regex: "[a-z0-9_-]{5, 20}")) != nil)
+        let idTest = id?.getArrayAfterRegex(regex: "[a-z0-9_-]").count ?? 0
+        return idTest >= 5 && idTest <= 20
     }
     
     private func checkTextForPassWord(_ password: String?) -> Bool {
-        return ((password?.getArrayAfterRegex(regex: "[a-zA-Z0-9!@#$%]{8, 16}")) != nil)
+        let passwordTest = password?.getArrayAfterRegex(regex: "[a-zA-Z0-9!@#$%]").count ?? 0
+        return passwordTest >= 8 && passwordTest <= 16
     }
     
     private func checkTextForName(_ name: String?) -> Bool {
-        return ((name?.getArrayAfterRegex(regex: "[가-힣]{2, 10}")) != nil)
+        let nameTest = name?.getArrayAfterRegex(regex: "[가-힣]").count ?? 0
+        return nameTest >= 2
     }
     
     func enableCheckForNextPage() -> Bool {

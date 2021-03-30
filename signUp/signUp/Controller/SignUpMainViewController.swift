@@ -26,6 +26,10 @@ class SignUpMainViewController: UIViewController {
         configureMainStackView()
         
         configureNextButton()
+        
+        addTargetForButton()
+        
+        textEdittingForTextField()
     }
     
     private func enableButton() {
@@ -62,10 +66,6 @@ extension SignUpMainViewController {
 
 extension SignUpMainViewController {
     
-    @objc func textFieldTouched(textField: UITextField) {
-        textField.text = ""
-    }
-    
     @objc func nextMoveButtonTouched(button: UIButton) {
         let privacyController = PrivacyViewController()
         privacyController.modalPresentationStyle = .fullScreen
@@ -76,3 +76,19 @@ extension SignUpMainViewController {
         enableButton()
     }
 }
+
+//MARK: -Add Target
+extension SignUpMainViewController {
+    
+    private func addTargetForButton() {
+        buttonForMove.addTarget(self, action: #selector(nextMoveButtonTouched(button:)), for: .touchUpInside)
+    }
+    
+    private func textEdittingForTextField() {
+        mainStackView.infoIDView.inputTextField.addTarget(self, action: #selector(textFieldEddtingChanged(textField:)), for: .editingChanged)
+        mainStackView.infoPasswordView.inputTextField.addTarget(self, action: #selector(textFieldEddtingChanged(textField:)), for: .editingChanged)
+        mainStackView.dobleCheckPassWordView.inputTextField.addTarget(self, action: #selector(textFieldEddtingChanged(textField:)), for: .editingChanged)
+        mainStackView.nameCheckView.inputTextField.addTarget(self, action: #selector(textFieldEddtingChanged(textField:)), for: .editingChanged)
+    }
+}
+

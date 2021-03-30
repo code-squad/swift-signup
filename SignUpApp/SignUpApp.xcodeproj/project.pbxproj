@@ -19,6 +19,7 @@
 		BD501E652612FA0600DE60F2 /* IdTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD501E642612FA0600DE60F2 /* IdTextFieldDelegate.swift */; };
 		BD501E6A2612FA1700DE60F2 /* PwTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD501E692612FA1700DE60F2 /* PwTextFieldDelegate.swift */; };
 		BD501E6F2612FB9400DE60F2 /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD501E6E2612FB9400DE60F2 /* TextFieldDelegate.swift */; };
+		BD501E7A26133F0600DE60F2 /* CheckLabelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD501E7926133F0600DE60F2 /* CheckLabelState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		BD501E642612FA0600DE60F2 /* IdTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdTextFieldDelegate.swift; sourceTree = "<group>"; };
 		BD501E692612FA1700DE60F2 /* PwTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PwTextFieldDelegate.swift; sourceTree = "<group>"; };
 		BD501E6E2612FB9400DE60F2 /* TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
+		BD501E7926133F0600DE60F2 /* CheckLabelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckLabelState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +117,6 @@
 				BD501DAB2611A1A300DE60F2 /* Info.plist */,
 				BD501E452612275000DE60F2 /* Controller */,
 				BD501DDD2611F5C900DE60F2 /* Model */,
-				BD501E442612271600DE60F2 /* View */,
 			);
 			path = SignUpApp;
 			sourceTree = "<group>";
@@ -142,15 +143,9 @@
 			isa = PBXGroup;
 			children = (
 				BD501E5126122CB300DE60F2 /* RegularExpression.swift */,
+				BD501E7926133F0600DE60F2 /* CheckLabelState.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		BD501E442612271600DE60F2 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		BD501E452612275000DE60F2 /* Controller */ = {
@@ -301,6 +296,7 @@
 				BD501D9E2611A1A200DE60F2 /* AppDelegate.swift in Sources */,
 				BD501E652612FA0600DE60F2 /* IdTextFieldDelegate.swift in Sources */,
 				BD501DA02611A1A200DE60F2 /* SceneDelegate.swift in Sources */,
+				BD501E7A26133F0600DE60F2 /* CheckLabelState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

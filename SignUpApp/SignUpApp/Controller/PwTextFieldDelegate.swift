@@ -11,7 +11,7 @@ class PwTextFieldDelegate: TextFieldDelegate {
     
     override func textFieldDidEndEditing(_ textField: UITextField) {
         guard let text = textField.text else { return }
-        if regex.isValidId(id: text) {
+        if regex.isValidPassword(pw: text) {
             textField.layer.borderColor = UIColor.systemGreen.cgColor
         }else {
             textField.layer.borderColor = UIColor.systemRed.cgColor

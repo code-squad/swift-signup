@@ -22,6 +22,7 @@ class BasicButton: UIButton {
     func configure() {
         self.layer.cornerRadius = 10
         self.layer.borderWidth = 1.0
-        self.layer.borderColor = UIColor.systemGray.cgColor
+        self.isEnabled = false
+        self.setTitleColor(.gray, for: .normal)
     }
 }

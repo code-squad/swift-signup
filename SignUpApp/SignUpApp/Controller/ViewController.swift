@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     private let pwTextFieldDelegate = PwTextFieldDelegate()
     private let pwCheckFieldDelegate = PwCheckTextFieldDelegate()
     private let nameTextFieldDelegate = NameTextFieldDelegate()
+    private var trueCount: Int = 0
     
     //MARK: - LifeCycle
     override func viewDidLoad() {
@@ -42,16 +43,16 @@ class ViewController: UIViewController {
     }
     
     func setAddTarger() {
-        idTextField.addTarget(self, action: #selector(checkIdLabel), for: .editingChanged)
-        passwordTextField.addTarget(self, action: #selector(checkPasswordLabel), for: .editingChanged)
-        passwordCheckTextField.addTarget(self, action: #selector(checkPasswordCheckLabel), for: .editingChanged)
-        nameTextField.addTarget(self, action: #selector(checkNameLabel), for: .editingChanged)
+        idTextField.addTarget(self, action: #selector(checkIdLabel), for: .editingDidEnd)
+        passwordTextField.addTarget(self, action: #selector(checkPasswordLabel), for: .editingDidEnd)
+        passwordCheckTextField.addTarget(self, action: #selector(checkPasswordCheckLabel), for: .editingDidEnd)
+        nameTextField.addTarget(self, action: #selector(checkNameLabel), for: .editingDidEnd)
+        nameTextField.addTarget(self, action: #selector(checkNextButton), for: .editingDidEnd)
     }
     
     func compareText() -> Bool {
         return passwordTextField.text == passwordCheckTextField.text
     }
-    
     
     //MARK: - Label state method
     @objc func checkIdLabel() {
@@ -60,6 +61,8 @@ class ViewController: UIViewController {
         case true:
             idCheckLabel.text = CheckLabelState.IdState.Pass.rawValue
             idCheckLabel.textColor = .systemGreen
+            trueCount += 1
+            print(trueCount)
         case false:
             idCheckLabel.text = CheckLabelState.IdState.Invalid.rawValue
             idCheckLabel.textColor = .systemRed
@@ -85,6 +88,8 @@ class ViewController: UIViewController {
         default:
             pwCheckLabel.text = CheckLabelState.PwState.Pass.rawValue
             pwCheckLabel.textColor = .systemGreen
+            trueCount += 1
+            print(trueCount)
         }
 
     }
@@ -94,6 +99,8 @@ class ViewController: UIViewController {
         if passwordTextField.text == text {
             pwReCheckLabel.text = CheckLabelState.PwCheckState.Pass.rawValue
             pwReCheckLabel.textColor = .systemGreen
+            trueCount += 1
+            print(trueCount)
         }else{
             pwReCheckLabel.text = CheckLabelState.PwCheckState.Invalid.rawValue
             pwReCheckLabel.textColor = .systemRed
@@ -108,6 +115,15 @@ class ViewController: UIViewController {
         }else{
             nameCheckLabel.text = CheckLabelState.NameState.Pass.rawValue
             nameCheckLabel.textColor = .systemGreen
+            trueCount += 1
+            print(trueCount)
+        }
+    }
+    
+    @objc func checkNextButton() {
+        if trueCount >= 4 {
+            nextButton.isEnabled = true
+            nextButton.setTitleColor(.systemGreen, for: .normal)
         }
     }
 }

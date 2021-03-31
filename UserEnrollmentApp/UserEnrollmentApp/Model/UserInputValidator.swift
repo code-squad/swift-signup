@@ -17,6 +17,26 @@ class UserInputValidator {
         case ValidName = "[a-z0-9A-Z!\"#$%&'()*+,-./:;<=>?@\\[\\\\\\]^_`{|}~]+"
     }
     
+    public static func lookupId(_ testingInput: String, completionHandler: @escaping (Bool) -> ()) {
+        let urlString: String = "https://8r6ruzgzve.execute-api.ap-northeast-2.amazonaws.com/default/SwiftCamp"
+    
+        if let url = URL(string: urlString) {
+            let session = URLSession(configuration: URLSessionConfiguration.default)
+            let task = session.dataTask(with: url) { (data, response, error) in
+                guard error == nil else { return }
+                guard let safeData = data else { return }
+                let decoder = JSONDecoder()
+                do {
+                    let result = try decoder.decode([String].self, from: safeData).contains(testingInput)
+                    completionHandler(result)
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
+            task.resume()
+        }
+    }
+    
     public static func validateId(_ testingInput: String) -> Bool {
         let regexResult = testingInput ~= ValidationPattern.ValidId.rawValue
         

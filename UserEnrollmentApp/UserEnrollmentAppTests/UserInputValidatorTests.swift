@@ -77,4 +77,14 @@ class UserInputValidatorTests: XCTestCase {
         XCTAssertFalse(UserInputValidator.validateName(emptyName))
         XCTAssertTrue(UserInputValidator.validateName(validName))
     }
+    
+    func test_id_is_not_duplicated() {
+        let existingId1 = "jkhome"
+        let existingId2 = "sarah"
+        let newId = "jeje"
+        
+        XCTAssertTrue(UserInputValidator.IdIsNotDuplicated(newId))
+        XCTAssertFalse(UserInputValidator.IdIsNotDuplicated(existingId1))
+        XCTAssertFalse(UserInputValidator.IdIsNotDuplicated(existingId2))
+    }
 }

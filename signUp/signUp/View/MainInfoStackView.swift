@@ -34,6 +34,8 @@ class MainInfoStackView: UIStackView {
         self.addArrangedSubview(infoPasswordView)
         self.addArrangedSubview(doubleCheckPassWordView)
         self.addArrangedSubview(nameCheckView)
+        infoPasswordView.inputTextField.isSecureTextEntry = true
+        doubleCheckPassWordView.inputTextField.isSecureTextEntry = true
     }
 }
 

@@ -187,6 +187,8 @@
                     <connections>
                         <outlet property="idResultLabel" destination="Cia-CL-4p7" id="l3Z-kd-680"/>
                         <outlet property="idTextField" destination="BhC-Tc-jeG" id="MI9-5s-sGz"/>
+                        <outlet property="pwResultLabel" destination="YB5-CS-cub" id="XY4-YA-2MZ"/>
+                        <outlet property="pwTextFiled" destination="Mt9-I6-B86" id="IIQ-KB-YDc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

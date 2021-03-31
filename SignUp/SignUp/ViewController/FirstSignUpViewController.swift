@@ -8,33 +8,54 @@
 import UIKit
 
 class FirstSignUpViewController: UIViewController {
-
+    
     @IBOutlet weak var idTextField: SignUpTextField!
+    @IBOutlet weak var pwTextFiled: SignUpTextField!
     @IBOutlet weak var idResultLabel: UILabel!
+    @IBOutlet weak var pwResultLabel: UILabel!
     
     let idTextFieldDelegate = IdTextFieldDelegate()
+    let pwTextFieldDelegate = PwTextFieldDelegate()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         idTextField.delegate = idTextFieldDelegate
+        pwTextFiled.delegate = pwTextFieldDelegate
         
         NotificationCenter.default.addObserver(self, selector: #selector(updateIdResultLabel), name: IdTextFieldDelegate.notificationName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updatePwResultLabel), name: PwTextFieldDelegate.notificationName, object: nil)
     }
 
-    @objc private func updateIdResultLabel(notification: Notification) {
-        guard let userInfo = notification.userInfo,
-              let isCorrectId = userInfo["correctId"] as? Bool else {
+    @objc
+    private func updateIdResultLabel(notification: Notification) {
+        guard let tempUserInfo = notification.userInfo,
+              let userInfo = tempUserInfo as? [Bool : String] else {
             return
         }
 
-        idResultLabel.isHidden = false
-        if !isCorrectId {
-            idResultLabel.text = "5~20자의 영문 소문자, 숫자와 특수기호(_)(-) 만 사용 가능합니다."
-            idResultLabel.textColor = .systemRed
+        updateLabel(idResultLabel, condition: userInfo)
+    }
+    
+    @objc
+    private func updatePwResultLabel(notification: Notification) {
+        guard let tempUserInfo = notification.userInfo,
+              let userInfo = tempUserInfo as? [Bool : String] else {
+            return
+        }
+
+        updateLabel(pwResultLabel, condition: userInfo)
+    }
+    
+    private func updateLabel(_ label: UILabel, condition: [Bool:String]) {
+        label.isHidden = false
+        
+        if let message = condition[true] {
+            label.text = message
+            label.textColor = .systemGreen
         }
         else {
-            idResultLabel.text = "사용 가능한 아이디입니다."
-            idResultLabel.textColor = .systemGreen
+            label.text = condition[false]
+            label.textColor = .systemRed
         }
     }
 }

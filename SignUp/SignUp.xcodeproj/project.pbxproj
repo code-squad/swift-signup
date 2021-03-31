@@ -19,6 +19,8 @@
 		1E87F1FA2612F3F80063A1B4 /* SignUpTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E87F1F92612F3F80063A1B4 /* SignUpTextField.swift */; };
 		1E87F20326130B560063A1B4 /* IdTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E87F20226130B560063A1B4 /* IdTextFieldDelegate.swift */; };
 		1E87F209261348520063A1B4 /* SignUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E87F208261348520063A1B4 /* SignUpButton.swift */; };
+		1E87F20D261350450063A1B4 /* PwTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E87F20C261350450063A1B4 /* PwTextFieldDelegate.swift */; };
+		1E87F2132614C2C70063A1B4 /* RegularExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E87F2122614C2C70063A1B4 /* RegularExpression.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		1E87F1F92612F3F80063A1B4 /* SignUpTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTextField.swift; sourceTree = "<group>"; };
 		1E87F20226130B560063A1B4 /* IdTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdTextFieldDelegate.swift; sourceTree = "<group>"; };
 		1E87F208261348520063A1B4 /* SignUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpButton.swift; sourceTree = "<group>"; };
+		1E87F20C261350450063A1B4 /* PwTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PwTextFieldDelegate.swift; sourceTree = "<group>"; };
+		1E87F2122614C2C70063A1B4 /* RegularExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpression.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 			children = (
 				1E87F1EC2611A7320063A1B4 /* Member.swift */,
 				1E87F1F626122D700063A1B4 /* Validater.swift */,
+				1E87F2122614C2C70063A1B4 /* RegularExpression.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 			children = (
 				1E87F1F326121E770063A1B4 /* BaseTextFieldDelegate.swift */,
 				1E87F20226130B560063A1B4 /* IdTextFieldDelegate.swift */,
+				1E87F20C261350450063A1B4 /* PwTextFieldDelegate.swift */,
 			);
 			path = TextFiledDelegate;
 			sourceTree = "<group>";
@@ -202,6 +208,8 @@
 				1E87F1D72611A1770063A1B4 /* AppDelegate.swift in Sources */,
 				1E87F1D92611A1770063A1B4 /* SceneDelegate.swift in Sources */,
 				1E87F20326130B560063A1B4 /* IdTextFieldDelegate.swift in Sources */,
+				1E87F2132614C2C70063A1B4 /* RegularExpression.swift in Sources */,
+				1E87F20D261350450063A1B4 /* PwTextFieldDelegate.swift in Sources */,
 				1E87F1F426121E770063A1B4 /* BaseTextFieldDelegate.swift in Sources */,
 				1E87F1ED2611A7320063A1B4 /* Member.swift in Sources */,
 			);
@@ -351,6 +359,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SignUp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -369,6 +378,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SignUp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

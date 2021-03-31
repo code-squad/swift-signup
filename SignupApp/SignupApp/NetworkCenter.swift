@@ -8,6 +8,8 @@
 import Foundation
 
 class NetworkCenter {
+    static let shared: NetworkCenter = NetworkCenter()
+    
     public func receiveIDList(url: URL, callback: @escaping ([String]) -> ()) {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"

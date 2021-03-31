@@ -36,6 +36,9 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <connections>
+                                    <outlet property="delegate" destination="P7O-NR-PdM" id="YMT-Mq-zOI"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJM-f1-isJ">
                                 <rect key="frame" x="44" y="178" width="302" height="21"/>
@@ -51,12 +54,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="영문 대/소문자, 숫자, 특수문자(!@#$%) 8~16자" minimumFontSize="18" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dZ6-it-xZa" customClass="CustomTextField" customModule="SignupApp" customModuleProvider="target">
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="영문 대/소문자, 숫자, 특수문자(!@#$%) 8~16자" minimumFontSize="18" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dZ6-it-xZa" customClass="CustomTextField" customModule="SignupApp" customModuleProvider="target">
                                 <rect key="frame" x="45" y="240" width="301" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="P7O-NR-PdM" id="9jH-g1-c3r"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugq-pf-gBH">
                                 <rect key="frame" x="45" y="274" width="301" height="21"/>
@@ -72,12 +78,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="18" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cfG-up-POd" customClass="CustomTextField" customModule="SignupApp" customModuleProvider="target">
+                            <textField opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="18" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cfG-up-POd" customClass="CustomTextField" customModule="SignupApp" customModuleProvider="target">
                                 <rect key="frame" x="45" y="335" width="301" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="P7O-NR-PdM" id="EK1-Jg-BfO"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sy3-VM-com">
                                 <rect key="frame" x="45" y="369" width="301" height="21"/>
@@ -93,12 +102,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="18" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hlU-j4-gef" customClass="CustomTextField" customModule="SignupApp" customModuleProvider="target">
+                            <textField opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="18" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hlU-j4-gef" customClass="CustomTextField" customModule="SignupApp" customModuleProvider="target">
                                 <rect key="frame" x="45" y="430" width="301" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <connections>
+                                    <outlet property="delegate" destination="P7O-NR-PdM" id="BVe-8A-bTk"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5V-fM-pMO">
                                 <rect key="frame" x="45" y="464" width="301" height="21"/>
@@ -129,26 +141,35 @@
                     </view>
                     <navigationItem key="navigationItem" id="UNX-Sc-C2W"/>
                     <connections>
-                        <outlet property="IDField" destination="Z8r-8h-16C" id="I80-ds-lhT"/>
-                        <outlet property="IDMessageLabel" destination="eJM-f1-isJ" id="8JO-Gx-XVQ"/>
-                        <outlet property="checkPasswordField" destination="cfG-up-POd" id="Aex-jH-Ni4"/>
-                        <outlet property="checkPasswordMessageLabel" destination="sy3-VM-com" id="X6T-yz-KM2"/>
-                        <outlet property="nameField" destination="hlU-j4-gef" id="sXS-yF-6Hm"/>
-                        <outlet property="nameMessageLabel" destination="x5V-fM-pMO" id="ngF-jv-UBS"/>
-                        <outlet property="nextButton" destination="ngs-xc-zH8" id="BLN-4j-oic"/>
-                        <outlet property="passwordField" destination="dZ6-it-xZa" id="v9R-hx-FYC"/>
-                        <outlet property="passwordMessageLabel" destination="Ugq-pf-gBH" id="k0g-SO-9JU"/>
-                        <outletCollection property="textFields" destination="Z8r-8h-16C" collectionClass="NSMutableArray" id="YcJ-Sy-cdt"/>
-                        <outletCollection property="textFields" destination="dZ6-it-xZa" collectionClass="NSMutableArray" id="VHY-79-zPa"/>
-                        <outletCollection property="textFields" destination="cfG-up-POd" collectionClass="NSMutableArray" id="1HS-NT-GD8"/>
-                        <outletCollection property="textFields" destination="hlU-j4-gef" collectionClass="NSMutableArray" id="Yd9-za-2DK"/>
-                        <outletCollection property="messageLabel" destination="eJM-f1-isJ" collectionClass="NSMutableArray" id="bSe-5t-uzb"/>
-                        <outletCollection property="messageLabel" destination="Ugq-pf-gBH" collectionClass="NSMutableArray" id="4ef-QF-CnJ"/>
-                        <outletCollection property="messageLabel" destination="sy3-VM-com" collectionClass="NSMutableArray" id="yKM-gl-g3w"/>
-                        <outletCollection property="messageLabel" destination="x5V-fM-pMO" collectionClass="NSMutableArray" id="SWL-Ox-KyD"/>
+                        <outlet property="basicInfomationLabelViewModel" destination="viu-1L-WA5" id="oUh-Fv-4RA"/>
+                        <outlet property="basicInfomationTextFieldViewModel" destination="P7O-NR-PdM" id="gBS-Vr-tqS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="viu-1L-WA5" userLabel="Basic Infomation Label ViewModel" customClass="BasicInfomationLabelViewModel" customModule="SignupApp" customModuleProvider="target">
+                    <connections>
+                        <outlet property="IDMessageLabel" destination="eJM-f1-isJ" id="kZ1-Ct-eSS"/>
+                        <outlet property="checkPasswordMessageLabel" destination="sy3-VM-com" id="Mhe-mF-k43"/>
+                        <outlet property="nameMessageLabel" destination="x5V-fM-pMO" id="bMh-1x-bfG"/>
+                        <outlet property="passwordMessageLabel" destination="Ugq-pf-gBH" id="Jfo-Z2-dDL"/>
+                        <outletCollection property="messageLabels" destination="eJM-f1-isJ" collectionClass="NSMutableArray" id="bqB-R2-qxL"/>
+                        <outletCollection property="messageLabels" destination="Ugq-pf-gBH" collectionClass="NSMutableArray" id="RWI-BS-CXt"/>
+                        <outletCollection property="messageLabels" destination="sy3-VM-com" collectionClass="NSMutableArray" id="1LG-C6-GK5"/>
+                        <outletCollection property="messageLabels" destination="x5V-fM-pMO" collectionClass="NSMutableArray" id="LlC-bx-F9K"/>
+                    </connections>
+                </customObject>
+                <customObject id="P7O-NR-PdM" userLabel="Basic Infomation TextField ViewModel" customClass="BasicInfomationTextFieldViewModel" customModule="SignupApp" customModuleProvider="target">
+                    <connections>
+                        <outlet property="IDField" destination="Z8r-8h-16C" id="GvO-3B-V3k"/>
+                        <outlet property="checkPasswordField" destination="cfG-up-POd" id="4J6-7W-R6C"/>
+                        <outlet property="nameField" destination="hlU-j4-gef" id="xaC-la-FyU"/>
+                        <outlet property="passwordField" destination="dZ6-it-xZa" id="wC9-PX-Ze9"/>
+                        <outletCollection property="textFields" destination="Z8r-8h-16C" collectionClass="NSMutableArray" id="arG-fI-bLx"/>
+                        <outletCollection property="textFields" destination="dZ6-it-xZa" collectionClass="NSMutableArray" id="zh5-rY-ITY"/>
+                        <outletCollection property="textFields" destination="cfG-up-POd" collectionClass="NSMutableArray" id="bWj-nm-joY"/>
+                        <outletCollection property="textFields" destination="hlU-j4-gef" collectionClass="NSMutableArray" id="hOf-MP-YV3"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="1047.6923076923076" y="118.00947867298578"/>
         </scene>

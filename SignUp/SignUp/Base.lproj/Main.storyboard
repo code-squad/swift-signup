@@ -33,7 +33,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="4fn-Fd-m0g">
                                 <rect key="frame" x="20" y="116.33333333333334" width="350" height="386.33333333333326"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hru-KS-PqE">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hru-KS-PqE" customClass="SignUpStackView" customModule="SignUp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="85.333333333333329"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아이디" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4SD-CG-d4L">
@@ -42,15 +42,18 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="영문 소문자, 숫자, 특수기호(_,-), 5~20자" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zpp-0n-bP8" customClass="InputTextField" customModule="SignUp" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="영문 소문자, 숫자, 특수기호(_,-), 5~20자" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zpp-0n-bP8">
                                                 <rect key="frame" x="0.0" y="25.333333333333329" width="350" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="5D0-Gg-FZC"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                <connections>
+                                                    <action selector="idTextField:" destination="BYU-4K-b7Z" eventType="editingDidEnd" id="VI2-6O-ogR"/>
+                                                </connections>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZD-ip-VOM" customClass="MessageLabel" customModule="SignUp" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZD-ip-VOM">
                                                 <rect key="frame" x="0.0" y="70.333333333333329" width="350" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15" id="XuI-sW-zyI"/>
@@ -60,8 +63,12 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <connections>
+                                            <outlet property="textField" destination="Zpp-0n-bP8" id="5QX-se-ePK"/>
+                                            <outlet property="validLabel" destination="wZD-ip-VOM" id="YLK-kq-uvd"/>
+                                        </connections>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TeO-6j-ffj">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TeO-6j-ffj" customClass="SignUpStackView" customModule="SignUp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="100.33333333333334" width="350" height="85.333333333333343"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ts1-iV-76h">
@@ -88,8 +95,12 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <connections>
+                                            <outlet property="textField" destination="6kA-yw-8iB" id="gcP-xn-WxP"/>
+                                            <outlet property="validLabel" destination="8cA-3C-T8j" id="VSa-32-V2c"/>
+                                        </connections>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bLw-26-KKx">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bLw-26-KKx" customClass="SignUpStackView" customModule="SignUp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="200.66666666666669" width="350" height="85.333333333333314"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호 재확인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKg-QH-mE9">
@@ -116,8 +127,12 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <connections>
+                                            <outlet property="textField" destination="Cc7-9g-fgu" id="K0e-ey-0TX"/>
+                                            <outlet property="validLabel" destination="nrq-Ny-A52" id="JjR-33-uF8"/>
+                                        </connections>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fME-rE-KHJ">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fME-rE-KHJ" customClass="SignUpStackView" customModule="SignUp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="301" width="350" height="85.333333333333314"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbI-rO-BeZ">
@@ -144,6 +159,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <connections>
+                                            <outlet property="textField" destination="ZBx-x8-ZBr" id="U6d-6b-ndy"/>
+                                            <outlet property="validLabel" destination="O0i-c1-r7i" id="CkR-Bd-Cap"/>
+                                        </connections>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -162,18 +181,15 @@
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Btu-Ge-yfp"/>
                     <connections>
-                        <outlet property="idTextField" destination="Zpp-0n-bP8" id="ZRU-GQ-vUN"/>
-                        <outlet property="idValidLabel" destination="wZD-ip-VOM" id="isX-uL-dIe"/>
-                        <outlet property="nameTextField" destination="ZBx-x8-ZBr" id="70j-N9-Mgb"/>
-                        <outlet property="nameValidLabel" destination="O0i-c1-r7i" id="Mkb-dA-8cg"/>
+                        <outlet property="idStackView" destination="hru-KS-PqE" id="1Cs-bN-mjC"/>
+                        <outlet property="nameStackView" destination="fME-rE-KHJ" id="yVj-S1-7A3"/>
                         <outlet property="nextButton" destination="7yk-ZQ-LyN" id="4sS-Xd-qMa"/>
-                        <outlet property="passwordConfirmTextField" destination="Cc7-9g-fgu" id="Eve-Zj-WpG"/>
-                        <outlet property="passwordConfirmVaildLabel" destination="nrq-Ny-A52" id="16f-aI-TDU"/>
-                        <outlet property="passwordTextField" destination="6kA-yw-8iB" id="IEx-4C-Ka5"/>
-                        <outlet property="passwordValidLabel" destination="8cA-3C-T8j" id="p3p-YC-VKG"/>
+                        <outlet property="passwordConfirmStackView" destination="bLw-26-KKx" id="IHz-fY-fXS"/>
+                        <outlet property="passwordStackView" destination="TeO-6j-ffj" id="2bK-1H-4zB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="BYU-4K-b7Z" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="783.07692307692309" y="93.838862559241704"/>
         </scene>

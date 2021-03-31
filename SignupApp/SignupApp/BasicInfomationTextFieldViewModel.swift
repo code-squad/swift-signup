@@ -32,10 +32,17 @@ class BasicInfomationTextFieldViewModel: NSObject {
 
         //MARK:서버의 부담을 막기 위해 load 시 한 번만 불러오도록 함
         let url = URL(string: "https://8r6ruzgzve.execute-api.ap-northeast-2.amazonaws.com/default/SwiftCamp")!
-        NetworkCenter.shared.receiveIDList(url: url) { (existIDs) in
-            //JSON을 따로 처리해보기!!!!!!!
-            self.existIDs = existIDs
+        
+        NetworkCenter.shared.receiveIDData(url: url) { (data) in
+            do {
+                self.existIDs = try JSONResponseDecoder().decode(data)
+            } catch {
+                self.existIDs = [String]()
+                print(error.localizedDescription)
+                return
+            }
         }
+        
     }
     
     @objc func changeFieldStyle() {

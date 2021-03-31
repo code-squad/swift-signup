@@ -30,6 +30,8 @@ class BasicInfoViewController: UIViewController {
         passwordConfirmTextField.delegate = self
         nameTextField.delegate = self
         
+        passwordTextField.passwordRules = UITextInputPasswordRules(descriptor: "required: upper; allowed: lower; required: digit; required: [!@#$%]; minlength: 8; maxlength: 16;")
+        
         performRequest(with: "https://8r6ruzgzve.execute-api.ap-northeast-2.amazonaws.com/default/SwiftCamp")
         
         idMessageLabel.text = ""
@@ -89,9 +91,13 @@ extension BasicInfoViewController: UITextFieldDelegate {
         let passwordLengthRegex = ".{8,16}"
         let passwordUppercaseRegex = "[^A-Z]*[A-Z].*"
         let passwordDigitRegex = "[^0-9]*[0-9].*"
+        let passwordSpecialCharacterRegex = "[^!@#$%]*[!@#$%].*"
+        let passwordRegex = "[A-Za-z0-9!@#$%]*"
         let passwordLengthValidation = password.validate(with: passwordLengthRegex)
         let passwordUppercaseValidation = password.validate(with: passwordUppercaseRegex)
         let passwordDigitValidation = password.validate(with: passwordDigitRegex)
+        let passwordSpecialCharacterValidation = password.validate(with: passwordSpecialCharacterRegex)
+        let passwordValidation = password.validate(with: passwordRegex)
         if !passwordLengthValidation {
             passwordMessageLabel.text = "8자 이상 16자 이하로 입력해주세요."
             passwordMessageLabel.textColor = UIColor(named: "redErrorMessage")
@@ -101,7 +107,10 @@ extension BasicInfoViewController: UITextFieldDelegate {
         } else if !passwordDigitValidation {
             passwordMessageLabel.text = "숫자를 최소 1자 이상 포함해주세요."
             passwordMessageLabel.textColor = UIColor(named: "redErrorMessage")
-        } else {
+        } else if !passwordSpecialCharacterValidation {
+            passwordMessageLabel.text = "특수문자를 최소 1자 이상 포함해주세요."
+            passwordMessageLabel.textColor = UIColor(named: "redErrorMessage")
+        } else if passwordValidation {
             passwordMessageLabel.text = "안전한 비밀번호입니다."
             passwordMessageLabel.textColor = UIColor(named: "greenText")
         }

@@ -3,11 +3,9 @@ import UIKit
 
 class MainTitleLabel: UILabel {
     
-    var titleInfo: String!
     
-    init(frame: CGRect, title: String) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
-        titleInfo = title
         configureSelfLabel()
     }
     
@@ -17,10 +15,7 @@ class MainTitleLabel: UILabel {
     }
     
     private func configureSelfLabel() {
-        let fontSize = UIFont.boldSystemFont(ofSize: 40)
-        let attributedString = NSMutableAttributedString(string: titleInfo)
-        attributedString.addAttribute(.font, value: fontSize, range: NSRange(location: 0, length: titleInfo.count))
-        attributedText = attributedString
+        font = UIFont.boldSystemFont(ofSize: 40)
         textAlignment = .center
         textColor = UIColor.systemGreen
     }

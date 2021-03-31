@@ -10,10 +10,16 @@ class NetworkManager {
     private let url = URL.init(string: "https://8r6ruzgzve.execute-api.ap-northeast-2.amazonaws.com/default/SwiftCamp")
     
     func getUserList(closure : @escaping ([String]?) -> Void) {
-        var request = URLRequest(url: self.url!)
+        guard let url = self.url else {
+            return
+        }
+        var request = URLRequest(url: url)
         request.httpMethod = "GET"
         URLSession.shared.dataTask(with: request, completionHandler: {(data,response,error) in
-            let decoder = try? JSONSerialization.jsonObject(with: data!, options: []) as? Array<String>
+            guard let data = data else {
+                return
+            }
+            let decoder = try? JSONSerialization.jsonObject(with: data, options: []) as? Array<String>
             guard let userList = decoder?.compactMap({$0}) else { return }
             
             closure(userList)
@@ -21,13 +27,19 @@ class NetworkManager {
     }
     
     func postUser(userInfo : UserInformation) {
+        guard let url = self.url else {
+            return
+        }
         let sendData = try? JSONEncoder().encode(userInfo)
-        var request = URLRequest(url: self.url!)
+        var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.httpBody = sendData
         
         URLSession.shared.dataTask(with: request, completionHandler: {(data,response,error) in
-            let decoder = try? JSONDecoder().decode(NetworkResponse.self, from: data!)
+            guard let data = data else {
+                return
+            }
+            let decoder = try? JSONDecoder().decode(NetworkResponse.self, from: data)
             guard let returnData = decoder else {
                 return
             }

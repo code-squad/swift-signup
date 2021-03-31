@@ -1,6 +1,6 @@
 import UIKit
 
-class MoveToNextPage: UIButton {
+class NextVCButton: UIButton {
     
     enum buttonState {
         case on

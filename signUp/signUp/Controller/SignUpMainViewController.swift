@@ -4,7 +4,7 @@ class SignUpMainViewController: UIViewController {
     
     private var mainViewTitle: MainTitleLabel!
     private var mainStackView = MainInfoStackView()
-    private var buttonForMove = MoveToNextPage(type: .system)
+    private var buttonForMove = NextVCButton(type: .system)
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -30,6 +30,10 @@ class MainInfoStackView: UIStackView {
         setUpPassWordInfoView()
         setUpDoubleCheckInfoView()
         setUpnameCheckInfoView()
+        infoIDView.inputTextField.delegate = self
+        infoPasswordView.inputTextField.delegate = self
+        dobleCheckPassWordView.inputTextField.delegate = self
+        nameCheckView.inputTextField.delegate = self
     }
 }
 
@@ -44,7 +48,7 @@ extension MainInfoStackView {
 
     private func setUpPassWordInfoView() {
         infoPasswordView.infoLabel.text = "비밀번호"
-        infoPasswordView.inputTextField.attributedPlaceholder = NSAttributedString(string: " 영문 대/소문자, 숫자, 특수문자(!@#$%), 8~16자")
+        infoPasswordView.inputTextField.attributedPlaceholder = NSAttributedString(string: " 영문 대/소문자, 숫자, 특수기호(!@#$%), 8~16자")
         self.addArrangedSubview(infoPasswordView)
     }
 
@@ -60,37 +64,72 @@ extension MainInfoStackView {
 }
 
 //MARK: -Condition & Regex
-extension MainInfoStackView {
-    private func conditionForID() -> Bool {
-        return checkTextForID(infoIDView.inputTextField.text)
-    }
+extension MainInfoStackView: UITextFieldDelegate {
     
-    private func conditionForPassWord() -> Bool {
-        let password = infoPasswordView.inputTextField.text ?? "a"
-        let passwordCheck = dobleCheckPassWordView.inputTextField.text ?? "b"
-        return checkTextForPassWord(password) && password == passwordCheck
-    }
-    
-    private func conditionForName() -> Bool {
-        return checkTextForName(nameCheckView.inputTextField.text)
-    }
-    
-    private func checkTextForID(_ id: String?) -> Bool {
-        let idTest = id?.getArrayAfterRegex(regex: "[a-z0-9_-]").count ?? 0
-        return idTest >= 5 && idTest <= 20
-    }
-    
-    private func checkTextForPassWord(_ password: String?) -> Bool {
-        let passwordTest = password?.getArrayAfterRegex(regex: "[a-zA-Z0-9!@#$%]").count ?? 0
-        return passwordTest >= 8 && passwordTest <= 16
-    }
-    
-    private func checkTextForName(_ name: String?) -> Bool {
-        let nameTest = name?.getArrayAfterRegex(regex: "[가-힣]").count ?? 0
-        return nameTest >= 2
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        infoIDView.inputTextField.layer.borderWidth = 1.0
+        let _ = enableCheckForNextPage()
+        return true
     }
     
     func enableCheckForNextPage() -> Bool {
         return conditionForID() && conditionForPassWord() && conditionForName()
+    }
+    
+    func conditionForID() -> Bool {
+        if infoIDView.inputTextField.text?.count == 0 {
+            infoIDView.checkLabel.text = ""
+            return false
+        } else if !checkValidElementForID(infoIDView.inputTextField.text) {
+            infoIDView.checkLabel.text = IdCheck.nonSupportedValue.description
+            infoIDView.inputTextField.layer.borderColor = UIColor.red.cgColor
+            infoIDView.checkLabel.textColor = UIColor.red
+            return false
+        } else if !checkValidCountForID(infoIDView.inputTextField.text) {
+            infoIDView.checkLabel.text = IdCheck.idCount.description
+            infoIDView.inputTextField.layer.borderColor = UIColor.red.cgColor
+            infoIDView.checkLabel.textColor = UIColor.red
+            return false
+        } else {
+            infoIDView.inputTextField.layer.borderWidth = 0
+            infoIDView.checkLabel.text = IdCheck.valid.description
+            infoIDView.checkLabel.textColor = UIColor.systemGreen
+            return true
+        }
+    }
+    
+    func conditionForPassWord() -> Bool {
+        let password = infoPasswordView.inputTextField.text ?? "a"
+        let passwordCheck = dobleCheckPassWordView.inputTextField.text ?? "b"
+        return password==passwordCheck && checkValidPasswordElement(password) && checkValidCountForPassWord(password)
+    }
+    
+    func conditionForName() -> Bool {
+        return checkValidNameCount(nameCheckView.inputTextField.text)
+    }
+    
+    func checkValidCountForID(_ id: String?) -> Bool {
+        let idCount = id?.getArrayAfterRegex(regex: "[a-z0-9_-]").count ?? 0
+        return idCount>=5 && idCount<=20
+    }
+    
+    func checkValidElementForID(_ id: String?) -> Bool {
+        let idElement = id?.getArrayAfterRegex(regex: "[A-Z!@#$%]").count ?? 0
+        return idElement == 0
+    }
+    
+    func checkValidCountForPassWord(_ password: String?) -> Bool {
+        let passCount = password?.getArrayAfterRegex(regex: "[a-zA-Z0-9!@#$%]").count ?? 0
+        return passCount >= 8 && passCount <= 16
+    }
+    
+    func checkValidPasswordElement(_ password: String?) -> Bool {
+        let element = password?.getArrayAfterRegex(regex: "[!@#$%]").count ?? 0
+        return element >= 1
+    }
+    
+    func checkValidNameCount(_ name: String?) -> Bool {
+        let nameTest = name?.getArrayAfterRegex(regex: "[가-힣]").count ?? 0
+        return nameTest >= 2
     }
 }

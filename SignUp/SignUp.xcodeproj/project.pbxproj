@@ -21,6 +21,8 @@
 		B34322772611BFCF0094C04A /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34322762611BFCF0094C04A /* StringExtension.swift */; };
 		B34322982611D0470094C04A /* PWTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34322972611D0470094C04A /* PWTextFieldDelegate.swift */; };
 		B343229D2611FA000094C04A /* LabelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B343229C2611FA000094C04A /* LabelManager.swift */; };
+		B393560C2614429D00529AD3 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B393560B2614429D00529AD3 /* RequestManager.swift */; };
+		B393561126144FFF00529AD3 /* IdentifierData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B393561026144FFF00529AD3 /* IdentifierData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		B34322762611BFCF0094C04A /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		B34322972611D0470094C04A /* PWTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWTextFieldDelegate.swift; sourceTree = "<group>"; };
 		B343229C2611FA000094C04A /* LabelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelManager.swift; sourceTree = "<group>"; };
+		B393560B2614429D00529AD3 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		B393561026144FFF00529AD3 /* IdentifierData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifierData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,8 @@
 				B31EC8302612C76800832DD0 /* PWRTextFieldDelegate.swift */,
 				B31EC8382612F41900832DD0 /* NameTextFieldDelegate.swift */,
 				B34322422611A0CA0094C04A /* ViewController.swift */,
+				B393560B2614429D00529AD3 /* RequestManager.swift */,
+				B393561026144FFF00529AD3 /* IdentifierData.swift */,
 				B343229C2611FA000094C04A /* LabelManager.swift */,
 				B34322762611BFCF0094C04A /* StringExtension.swift */,
 				B34322442611A0CA0094C04A /* Main.storyboard */,
@@ -278,9 +284,11 @@
 			files = (
 				B34322432611A0CA0094C04A /* ViewController.swift in Sources */,
 				B34322982611D0470094C04A /* PWTextFieldDelegate.swift in Sources */,
+				B393561126144FFF00529AD3 /* IdentifierData.swift in Sources */,
 				B31EC8312612C76800832DD0 /* PWRTextFieldDelegate.swift in Sources */,
 				B34322722611AD790094C04A /* IDTextFieldDelegate.swift in Sources */,
 				B343223F2611A0CA0094C04A /* AppDelegate.swift in Sources */,
+				B393560C2614429D00529AD3 /* RequestManager.swift in Sources */,
 				B343229D2611FA000094C04A /* LabelManager.swift in Sources */,
 				B31EC8392612F41900832DD0 /* NameTextFieldDelegate.swift in Sources */,
 				B34322772611BFCF0094C04A /* StringExtension.swift in Sources */,

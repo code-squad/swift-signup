@@ -133,6 +133,24 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <state key="disabled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="􀁵 ">
+                                            <attributes>
+                                                <color key="NSColor" red="0.55294117647058827" green="0.55294117647058827" blue="0.55294117647058827" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="17" name="SFProText-Medium"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="다음">
+                                            <attributes>
+                                                <color key="NSColor" red="0.55294117647058827" green="0.55294117647058827" blue="0.55294117647058827" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="17" name="AppleSDGothicNeo-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="1"/>
@@ -214,6 +232,7 @@
                         <outlet property="PasswordValidationResultLabel" destination="B6c-Mo-EB4" id="3r2-fq-EpS"/>
                         <outlet property="idTextField" destination="fJ4-DQ-TSD" id="JDW-6h-WR7"/>
                         <outlet property="nameTextField" destination="t7O-88-SBV" id="ugP-rI-6zo"/>
+                        <outlet property="nextButton" destination="fGg-Ug-Nvy" id="Uaf-zR-O40"/>
                         <outlet property="passwordReconfirmTextField" destination="2sk-3r-tPS" id="BeL-XN-aBR"/>
                         <outlet property="passwordTextField" destination="wsy-Ob-Oh3" id="izp-fR-xm6"/>
                     </connections>

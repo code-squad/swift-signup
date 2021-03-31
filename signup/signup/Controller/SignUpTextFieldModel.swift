@@ -6,21 +6,18 @@
 //
 
 import UIKit
-
+//뷰 모델과 일반 모델
 class SignUpTextFieldModel: NSObject {
 
     @IBOutlet var textFieldCollection: [UITextField]!
     @IBOutlet var infoLabelCollection: [UILabel]!
-    
-    private let okMessage = ["사용 가능한 아이디입니다",
-                             "안전한 비밀번호입니다",
-                             "비밀번호가 일치합니다",
-                             "좋은 이름이네요 :)"]
-    
-    private let signUpErrorManager: ErrorManager
+    private let validateManagerList: [ValidateManager]
     
     override init() {
-        signUpErrorManager = SignUpErrorManager()
+        validateManagerList = [IDValidateManager(),
+                               PasswordValidateManager(),
+                               PasswordConfirmManager(),
+                               UserNameValidateManager()]
         super.init()
     }
     
@@ -32,31 +29,11 @@ class SignUpTextFieldModel: NSObject {
     }
     
     func isAllFieldValidate() -> Bool {
-        for textField in textFieldCollection {
-            if errorMessage(for: textField) != nil {
-                return false
-            }
-        }
+//        for textField in textFieldCollection {
+//            let validateManager = validateManagerList[textField]!
+//
+//        }
         return true
-    }
-    
-    private func errorMessage(for textField: UITextField) -> String? {
-        let input = textField.text ?? ""
-        let index = collectionIndex(for: textField)
-        
-        switch index {
-        case 0:
-            return signUpErrorManager.id(input)
-        case 1:
-            return signUpErrorManager.password(input)
-        case 2:
-            let password = textFieldCollection[1].text ?? ""
-            return signUpErrorManager.passwordDoubleCheck(first: password, second: input)
-        case 3:
-            return signUpErrorManager.name(input)
-        default:
-            return nil
-        }
     }
     
     private func collectionIndex(for textField: UITextField) -> Int {
@@ -75,43 +52,48 @@ extension SignUpTextFieldModel: UITextFieldDelegate {
         return true
     }
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if let errorMessage = errorMessage(for: textField) {
-            updateToErrorState(for: textField, with: errorMessage)
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        let status = configureStatus(for: textField)
+        changeInfoLabel(for: textField, with: status)
+    }
+    
+    private func configureStatus(for textField: UITextField) -> Status {
+        var status: Status
+        let targetIdx = collectionIndex(for: textField)
+        let validateManager = validateManagerList[targetIdx]
+        
+        if let passwordConfirmManager = validateManager as? PasswordConfirmManager {
+            let password = textFieldCollection[1].text ?? ""
+            let confirm = textField.text ?? ""
+            status = passwordConfirmManager.check([password, confirm])
         } else {
-            updateToValidateState(for: textField)
+            status = validateManager.check([textField.text ?? ""])
         }
-        return true
+        return status
     }
 
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if let errorMessage = errorMessage(for: textField) {
-            updateToErrorState(for: textField, with: errorMessage)
-            textField.becomeFirstResponder()
-        } else {
-            updateToValidateState(for: textField)
+        let status = configureStatus(for: textField)
+        changeInfoLabel(for: textField, with: status)
+        
+        if status.isValidated {
             if let nextField = findNextTextField(from: textField) {
                 nextField.becomeFirstResponder()
             }
+        } else {
+            textField.becomeFirstResponder()
         }
     }
     
-    private func updateToErrorState(for textField: UITextField, with errorMessage: String) {
+    private func changeInfoLabel(for textField: UITextField, with status: Status) {
         let targetIdx = collectionIndex(for: textField)
         let labelToChange = infoLabelCollection[targetIdx]
         
-        labelToChange.text = errorMessage
-        labelToChange.textColor = UIColor(named: ColorSet.red)
-        textField.layer.borderColor = UIColor(named: ColorSet.red)?.cgColor
-    }
-    
-    private func updateToValidateState(for textField: UITextField) {
-        let targetIdx = collectionIndex(for: textField)
-        let labelToChange = infoLabelCollection[targetIdx]
+        let color = status.isValidated ? UIColor(named: ColorSet.green) : UIColor(named: ColorSet.red)
+        labelToChange.textColor = color
+        textField.layer.borderColor = color?.cgColor
         
-        labelToChange.text = okMessage[targetIdx]
-        labelToChange.textColor = UIColor(named: ColorSet.green)
-        textField.layer.borderColor = UIColor(named: ColorSet.grey)?.cgColor
+        labelToChange.text = status.message
     }
     
     private func findNextTextField(from textField: UITextField) -> UITextField? {

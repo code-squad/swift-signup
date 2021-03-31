@@ -18,4 +18,5 @@ class NameTextFieldDelegate: NSObject, UITextFieldDelegate {
         NotificationCenter.default.post(name: NSNotification.Name("name"), object: nil)
         return true
     }
+    
 }

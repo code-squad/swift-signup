@@ -90,6 +90,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDf-Xa-1Bu">
+                                <rect key="frame" x="39" y="301" width="319" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdX-EY-Tyi">
+                                <rect key="frame" x="39" y="390" width="319" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPk-gU-Jyi">
+                                <rect key="frame" x="39" y="479" width="319" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -97,12 +118,21 @@
                     <connections>
                         <outlet property="idLabel" destination="xW2-PY-hv1" id="gZh-F6-sGh"/>
                         <outlet property="idViewModel" destination="reM-3e-mV9" id="w5W-b5-fRl"/>
+                        <outlet property="nameLabel" destination="XPk-gU-Jyi" id="iIm-Fz-L4h"/>
+                        <outlet property="passwordLabel" destination="dDf-Xa-1Bu" id="vOd-rO-D5R"/>
+                        <outlet property="passwordViewModel" destination="hPc-kh-kzZ" id="GNg-J0-NWI"/>
+                        <outlet property="repaasswordLabel" destination="gdX-EY-Tyi" id="e7I-iR-id1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <customObject id="reM-3e-mV9" customClass="IDViewModel" customModule="SignUp" customModuleProvider="target">
                     <connections>
                         <outlet property="id" destination="5Hl-Vj-YKj" id="jzR-aG-IDu"/>
+                    </connections>
+                </customObject>
+                <customObject id="hPc-kh-kzZ" customClass="PasswordViewModel" customModule="SignUp" customModuleProvider="target">
+                    <connections>
+                        <outlet property="password" destination="N4b-5a-Pm2" id="JZi-0z-ztU"/>
                     </connections>
                 </customObject>
             </objects>

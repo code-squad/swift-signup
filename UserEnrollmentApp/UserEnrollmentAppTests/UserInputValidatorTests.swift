@@ -83,8 +83,14 @@ class UserInputValidatorTests: XCTestCase {
         let existingId2 = "sarah"
         let newId = "jeje"
         
-        XCTAssertTrue(UserInputValidator.IdIsNotDuplicated(newId))
-        XCTAssertFalse(UserInputValidator.IdIsNotDuplicated(existingId1))
-        XCTAssertFalse(UserInputValidator.IdIsNotDuplicated(existingId2))
+        let _ = UserInputValidator.lookupId(existingId1, completionHandler: { (isDuplicated) in
+            XCTAssertTrue(isDuplicated)
+        })
+        let _ = UserInputValidator.lookupId(existingId2, completionHandler: { (isDuplicated) in
+            XCTAssertTrue(isDuplicated)
+        })
+        let _ = UserInputValidator.lookupId(newId, completionHandler: { (isDuplicated) in
+            XCTAssertFalse(isDuplicated)
+        })
     }
 }

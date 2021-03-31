@@ -23,4 +23,29 @@ class TextFieldDelegate: NSObject, UITextFieldDelegate {
             return
         }
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        let optionalFieldArray = textField.superview?.subviews.filter({
+            let item = $0 as? UITextField
+            guard let textField = item else {
+                return false
+            }
+            return true
+        })
+        
+        guard let fieldArray = optionalFieldArray else {
+            return true
+        }
+        
+        let currentIndex = fieldArray.firstIndex(of: textField)!
+        if currentIndex == fieldArray.count - 1 {
+            textField.endEditing(true)
+        }
+        else{
+            textField.endEditing(true)
+            fieldArray[currentIndex+1].becomeFirstResponder()
+        }
+        
+        return true
+    }
 }

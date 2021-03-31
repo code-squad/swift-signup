@@ -32,26 +32,28 @@ class ViewController: UIViewController {
     func configureBind() {
 
         idStackView.textField.textPublisher.assign(to: &viewModel.idViewModel.$idText)
-        passwordStackView.textField.textPublisher.assign(to: &viewModel.$passwordText)
+        
+        passwordStackView.textField.textPublisher.assign(to: &viewModel.passwordViewModel.$passwordText)
         
         passwordConfirmStackView.textField.textPublisher
-            .assign(to: &viewModel.$passwordConfirmText)
+            .assign(to: &viewModel.passwordViewModel.$passwordConfirmText)
+        
         nameStackView.textField.textPublisher
-            .assign(to: &viewModel.$nameText)
+            .assign(to: &viewModel.nameViewModel.$nameText)
         
         viewModel.isIdMatchValid.sink { state in
             self.idStackView.setText(state.description)
             state == .valid ? self.idStackView.succeed() : self.idStackView.fail()
         }.store(in: &cancellable)
         
-        viewModel.isMatchPasswordValid.sink { state in
-            self.passwordConfirmStackView.setText(state.description)
-            state == .valid ? self.passwordConfirmStackView.succeed() : self.passwordConfirmStackView.fail()
-        }.store(in: &cancellable)
-        
         viewModel.isPasswordValid.sink { state in
             self.passwordStackView.setText(state.description)
             state == .valid ? self.passwordStackView.succeed() : self.passwordStackView.fail()
+        }.store(in: &cancellable)
+
+        viewModel.isMatchPasswordValid.sink { state in
+            self.passwordConfirmStackView.setText(state.description)
+            state == .valid ? self.passwordConfirmStackView.succeed() : self.passwordConfirmStackView.fail()
         }.store(in: &cancellable)
         
         viewModel.isNameValid.sink { state in

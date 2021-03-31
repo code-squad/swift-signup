@@ -6,6 +6,7 @@ class MainInfoStackView: UIStackView {
     private(set) var infoPasswordView = EachInfoView()
     private(set) var dobleCheckPassWordView = EachInfoView()
     private(set) var nameCheckView = EachInfoView()
+    private var idList = [String]()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,6 +27,9 @@ class MainInfoStackView: UIStackView {
     }
     
     private func setUpSubViews() {
+        NetworkHandler.getData { serverIdList in
+            self.idList = serverIdList
+        }
         setUpIDInfoView()
         setUpPassWordInfoView()
         setUpDoubleCheckInfoView()
@@ -69,7 +73,11 @@ extension MainInfoStackView {
     func conditionForID() -> Bool {
         if infoIDView.inputTextField.text?.count == 0 {
             infoIDView.checkLabel.text = ""
-        } else if !checkValidElementForID(infoIDView.inputTextField.text) {
+        } else if !doubleCheckID(infoIDView.inputTextField.text ){
+            infoIDView.inputTextField.layer.borderColor = UIColor.red.cgColor
+            infoIDView.checkLabel.textColor = UIColor.red
+            infoIDView.checkLabel.text = IdCheck.doubleCheck.description
+        }else if !checkValidElementForID(infoIDView.inputTextField.text) {
             infoIDView.checkLabel.text = IdCheck.nonSupportedValue.description
             infoIDView.inputTextField.layer.borderColor = UIColor.red.cgColor
             infoIDView.checkLabel.textColor = UIColor.red
@@ -143,6 +151,15 @@ extension MainInfoStackView {
     func checkValidCountForID(_ id: String?) -> Bool {
         let idCount = id?.getArrayAfterRegex(regex: "[a-z0-9_-]").count ?? 0
         return idCount>=5 && idCount<=20
+    }
+    
+    func doubleCheckID(_ id: String?) -> Bool {
+        if let userID = id {
+            if !idList.contains(userID) {
+                return true
+            }
+        }
+        return false
     }
     
     func checkValidElementForID(_ id: String?) -> Bool {

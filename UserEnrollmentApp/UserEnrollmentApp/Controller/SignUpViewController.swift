@@ -8,10 +8,10 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
-    let idFieldDelegate = SignUpSceneIdFieldDelegate()
-    let passwordFieldDelegate = SignUpScenePasswordFieldDelegate()
-    let passwordReconfirmFieldDelegate = SignUpScenePasswordReconfirmFieldDelegate()
-    let nameFieldDelegate = SignUpSceneNameFieldDelegate()
+    let idTextFieldDelegate = SignUpSceneIdTextFieldDelegate()
+    let passwordTextFieldDelegate = SignUpScenePasswordTextFieldDelegate()
+    let passwordReconfirmTextFieldDelegate = SignUpScenePasswordReconfirmTextFieldDelegate()
+    let nameTextFieldDelegate = SignUpSceneNameTextFieldDelegate()
     
     @IBOutlet weak var nextButton: DesignableButton!
     
@@ -20,25 +20,25 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordReconfirmTextField: DesignableTextField!
     @IBOutlet weak var nameTextField: DesignableTextField!
     
-    @IBOutlet weak var IDValidationResultLabel: ResultExplanationLabel!
-    @IBOutlet weak var PasswordValidationResultLabel: ResultExplanationLabel!
-    @IBOutlet weak var PasswordReconfirmValidationResultLabel: ResultExplanationLabel!
-    @IBOutlet weak var NameValidationResultLabel: ResultExplanationLabel!
+    @IBOutlet weak var idValidationResultLabel: ResultExplanationLabel!
+    @IBOutlet weak var passwordValidationResultLabel: ResultExplanationLabel!
+    @IBOutlet weak var passwordReconfirmValidationResultLabel: ResultExplanationLabel!
+    @IBOutlet weak var nameValidationResultLabel: ResultExplanationLabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.nextButton.isEnabled = false
         
-        self.idTextField.delegate = idFieldDelegate
-        self.passwordTextField.delegate = passwordFieldDelegate
-        self.passwordReconfirmTextField.delegate = passwordReconfirmFieldDelegate
-        self.nameTextField.delegate = nameFieldDelegate
+        self.idTextField.delegate = idTextFieldDelegate
+        self.passwordTextField.delegate = passwordTextFieldDelegate
+        self.passwordReconfirmTextField.delegate = passwordReconfirmTextFieldDelegate
+        self.nameTextField.delegate = nameTextFieldDelegate
         
-        self.idFieldDelegate.resultNotifyingDelegate = self
-        self.passwordFieldDelegate.resultNotifyingDelegate = self
-        self.passwordReconfirmFieldDelegate.resultNotifyingDelegate = self
-        self.nameFieldDelegate.resultNotifyingDelegate = self
+        self.idTextFieldDelegate.resultNotifyingDelegate = self
+        self.passwordTextFieldDelegate.resultNotifyingDelegate = self
+        self.passwordReconfirmTextFieldDelegate.resultNotifyingDelegate = self
+        self.nameTextFieldDelegate.resultNotifyingDelegate = self
     }
     
     @IBAction func NextButtonPressed(_ sender: DesignableButton) {
@@ -54,7 +54,7 @@ class SignUpViewController: UIViewController {
         self.present(newViewController, animated: false, completion: nil)
     }
     
-    func enableNextButtonIfValid() {
+    func enableNextButtonIfAllValid() {
         self.nextButton.isEnabled = idTextField.isValid && passwordTextField.isValid && passwordReconfirmTextField.isValid && nameTextField.isValid
     }
 }
@@ -62,42 +62,42 @@ class SignUpViewController: UIViewController {
 extension SignUpViewController: ResultNotifyingDelegate {
     func passTextFieldValue(sender: UITextFieldDelegate, value: String) {
         switch sender {
-        case is SignUpScenePasswordReconfirmFieldDelegate:
+        case is SignUpScenePasswordReconfirmTextFieldDelegate:
             let result = value == passwordTextField.text
-            PasswordReconfirmValidationResultLabel.setTextColor(isGoodExplanation: result)
-            passwordReconfirmTextField.setBorderColor(wasValidInput: result)
+            passwordReconfirmValidationResultLabel.setTextColor(isGoodExplanation: result)
+            passwordReconfirmTextField.setBorderColor(withValidInput: result)
             passwordReconfirmTextField.isValid = result
             if result == true {
-                PasswordReconfirmValidationResultLabel.text = "비밀번호가 일치합니다."
+                passwordReconfirmValidationResultLabel.text = "비밀번호가 일치합니다."
             } else {
-                PasswordReconfirmValidationResultLabel.text = "비밀번호가 일치하지 않습니다."
+                passwordReconfirmValidationResultLabel.text = "비밀번호가 일치하지 않습니다."
             }
         default: return
         }
-        enableNextButtonIfValid()
+        enableNextButtonIfAllValid()
     }
     
     func passValidationResult(sender: UITextFieldDelegate, result: Bool, explanation: String) {
         switch sender {
-        case is SignUpSceneIdFieldDelegate:
-            IDValidationResultLabel.text = explanation
-            IDValidationResultLabel.setTextColor(isGoodExplanation: result)
+        case is SignUpSceneIdTextFieldDelegate:
+            idValidationResultLabel.text = explanation
+            idValidationResultLabel.setTextColor(isGoodExplanation: result)
             idTextField.isValid = result
-            idTextField.setBorderColor(wasValidInput: result)
+            idTextField.setBorderColor(withValidInput: result)
             
-        case is SignUpScenePasswordFieldDelegate:
-            PasswordValidationResultLabel.text = explanation
-            PasswordValidationResultLabel.setTextColor(isGoodExplanation: result)
+        case is SignUpScenePasswordTextFieldDelegate:
+            passwordValidationResultLabel.text = explanation
+            passwordValidationResultLabel.setTextColor(isGoodExplanation: result)
             passwordTextField.isValid = result
-            passwordTextField.setBorderColor(wasValidInput: result)
+            passwordTextField.setBorderColor(withValidInput: result)
             
-        case is SignUpSceneNameFieldDelegate:
-            NameValidationResultLabel.text = explanation
-            NameValidationResultLabel.setTextColor(isGoodExplanation: result)
+        case is SignUpSceneNameTextFieldDelegate:
+            nameValidationResultLabel.text = explanation
+            nameValidationResultLabel.setTextColor(isGoodExplanation: result)
             nameTextField.isValid = result
-            nameTextField.setBorderColor(wasValidInput: result)
+            nameTextField.setBorderColor(withValidInput: result)
         default: return
         }
-        enableNextButtonIfValid()
+        enableNextButtonIfAllValid()
     }
 }

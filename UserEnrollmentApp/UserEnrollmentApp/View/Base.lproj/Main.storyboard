@@ -23,7 +23,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아이디" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEA-sP-Oxf">
-                                <rect key="frame" x="36" y="135" width="36.333333333333343" height="17"/>
+                                <rect key="frame" x="36" y="135" width="36.666666666666657" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -45,8 +45,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID validation result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SV3-o5-Cch" customClass="ResultExplanationLabel" customModule="UserEnrollmentApp" customModuleProvider="target">
-                                <rect key="frame" x="36.666666666666657" y="195" width="105" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SV3-o5-Cch" customClass="ResultExplanationLabel" customModule="UserEnrollmentApp" customModuleProvider="target">
+                                <rect key="frame" x="36.666666666666664" y="195" width="3.6666666666666643" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -72,7 +72,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호 재확인" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIt-Yx-4va">
-                                <rect key="frame" x="36.999999999999993" y="303" width="88.333333333333314" height="17"/>
+                                <rect key="frame" x="37.000000000000007" y="303" width="88.666666666666686" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -92,7 +92,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDG-LN-BOR">
-                                <rect key="frame" x="37" y="387" width="24.333333333333329" height="17"/>
+                                <rect key="frame" x="37" y="387" width="24.666666666666671" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -163,20 +163,20 @@
                                     <action selector="NextButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OE1-U2-7iy"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password Validation result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6c-Mo-EB4" customClass="ResultExplanationLabel" customModule="UserEnrollmentApp" customModuleProvider="target">
-                                <rect key="frame" x="36" y="279" width="148.66666666666666" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6c-Mo-EB4" customClass="ResultExplanationLabel" customModule="UserEnrollmentApp" customModuleProvider="target">
+                                <rect key="frame" x="36" y="279" width="3.6666666666666643" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password reconfirm validation result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6PE-Iu-l6H" customClass="ResultExplanationLabel" customModule="UserEnrollmentApp" customModuleProvider="target">
-                                <rect key="frame" x="37.000000000000014" y="363" width="205.33333333333337" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6PE-Iu-l6H" customClass="ResultExplanationLabel" customModule="UserEnrollmentApp" customModuleProvider="target">
+                                <rect key="frame" x="37" y="363" width="3.6666666666666643" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name validation result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ade-Kd-MEt" customClass="ResultExplanationLabel" customModule="UserEnrollmentApp" customModuleProvider="target">
-                                <rect key="frame" x="37" y="447" width="126" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ade-Kd-MEt" customClass="ResultExplanationLabel" customModule="UserEnrollmentApp" customModuleProvider="target">
+                                <rect key="frame" x="37" y="447" width="3.6666666666666643" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -226,15 +226,15 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="IDValidationResultLabel" destination="SV3-o5-Cch" id="suA-dI-tYU"/>
-                        <outlet property="NameValidationResultLabel" destination="ade-Kd-MEt" id="FWB-Vh-xFc"/>
-                        <outlet property="PasswordReconfirmValidationResultLabel" destination="6PE-Iu-l6H" id="2Bx-8o-Ci3"/>
-                        <outlet property="PasswordValidationResultLabel" destination="B6c-Mo-EB4" id="3r2-fq-EpS"/>
                         <outlet property="idTextField" destination="fJ4-DQ-TSD" id="JDW-6h-WR7"/>
+                        <outlet property="idValidationResultLabel" destination="SV3-o5-Cch" id="suA-dI-tYU"/>
                         <outlet property="nameTextField" destination="t7O-88-SBV" id="ugP-rI-6zo"/>
+                        <outlet property="nameValidationResultLabel" destination="ade-Kd-MEt" id="FWB-Vh-xFc"/>
                         <outlet property="nextButton" destination="fGg-Ug-Nvy" id="Uaf-zR-O40"/>
                         <outlet property="passwordReconfirmTextField" destination="2sk-3r-tPS" id="BeL-XN-aBR"/>
+                        <outlet property="passwordReconfirmValidationResultLabel" destination="6PE-Iu-l6H" id="2Bx-8o-Ci3"/>
                         <outlet property="passwordTextField" destination="wsy-Ob-Oh3" id="izp-fR-xm6"/>
+                        <outlet property="passwordValidationResultLabel" destination="B6c-Mo-EB4" id="3r2-fq-EpS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

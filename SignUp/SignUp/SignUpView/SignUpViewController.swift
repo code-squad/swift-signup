@@ -34,12 +34,6 @@ class SignUpViewController: UIViewController {
         for textfield in textFieldCollection {
             textfield.borderStyle = .line
             textfield.delegate = textFieldDelegate
-            
-            let identifier = textfield.accessibilityIdentifier ?? ""
-            if identifier == "PWTextField" ||
-               identifier == "PW2TextField" {
-                textfield.isSecureTextEntry = true
-            }
         }
     }
     
@@ -71,19 +65,24 @@ class SignUpViewController: UIViewController {
             return
         }
         
-        label.isHidden = false
-        
-        switch complianceChecker.checkIdTextForm(with: text) {
-        case .ok:
-            textField.changeBorderColor(color: UIColor.green.cgColor)
-            label.changeTextNColor(color: UIColor.green, text: "사용 가능한 아이디입니다.")
-        case .used:
-            textField.changeBorderColor(color: UIColor.red.cgColor)
-            label.changeTextNColor(color: UIColor.red, text: "이미 사용중인 아이디입니다.")
-        case .wrong:
-            textField.changeBorderColor(color: UIColor.red.cgColor)
-            label.changeTextNColor(color: UIColor.red, text: "5~20자의 영문 소문자, 숫자와 특수기호(_,-)만 사용 가능합니다.")
-        }
+        complianceChecker.checkIdTextForm(with: text, closure : { usedCheck in
+            DispatchQueue.main.async {
+                label.isHidden = false
+                switch usedCheck {
+                case .ok:
+                    textField.changeBorderColor(color: UIColor.green.cgColor)
+                    label.changeTextNColor(color: UIColor.green, text: "사용 가능한 아이디입니다.")
+                case .used:
+                    textField.changeBorderColor(color: UIColor.red.cgColor)
+                    label.changeTextNColor(color: UIColor.red, text: "이미 사용중인 아이디입니다.")
+                case .wrong:
+                    textField.changeBorderColor(color: UIColor.red.cgColor)
+                    label.changeTextNColor(color: UIColor.red, text: "5~20자의 영문 소문자, 숫자와 특수기호(_,-)만 사용 가능합니다.")
+                case .none:
+                    return
+                }
+            }
+            })
     }
     
     @objc private func pwTextFieldEdited(_ notification : Notification) {
@@ -179,7 +178,9 @@ class SignUpViewController: UIViewController {
             label.changeTextNColor(color: UIColor.red, text: "이름은 필수 입력 항목입니다.")
         }
     }
+    
     @IBAction func nextButtonTouched(_ sender: Any) {
+        
     }
 }
 

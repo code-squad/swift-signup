@@ -11,6 +11,7 @@ enum IdTextFormError {
     case ok
     case used
     case wrong
+    case none
 }
 
 enum PwTextFormError {

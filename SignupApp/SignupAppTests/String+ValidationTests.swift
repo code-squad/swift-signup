@@ -62,15 +62,30 @@ class String_ValidationTests: XCTestCase {
         XCTAssertFalse("aaaa%%%%".validate(with: passwordDigitRegex))
     }
     
-    func test_SignupApp_Password_정규표현식_검증() throws {
-        let passwordRegex = "(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*\\W)[\\S]{8,16}"
+    func test_SignupApp_Password_특수문자포함_정규표현식_검증() throws {
+        let passwordSpecialCharacterRegex = "[^!@#$%]*[!@#$%].*"
         
-        XCTAssertFalse("12345678".validate(with: passwordRegex))
-        XCTAssertFalse("AAAAAAAA".validate(with: passwordRegex))
-        XCTAssertFalse("aaaaaaaa".validate(with: passwordRegex))
-        XCTAssertFalse("%%%%%%%%".validate(with: passwordRegex))
+        XCTAssertTrue("%%%%%%%%".validate(with: passwordSpecialCharacterRegex))
+        XCTAssertTrue("aaaa%%%%".validate(with: passwordSpecialCharacterRegex))
+        XCTAssertTrue("12345Ab%".validate(with: passwordSpecialCharacterRegex))
+        XCTAssertTrue("12345Ab%   ".validate(with: passwordSpecialCharacterRegex))
+        XCTAssertFalse("12345678".validate(with: passwordSpecialCharacterRegex))
+        XCTAssertFalse("1234AAAA".validate(with: passwordSpecialCharacterRegex))
+        XCTAssertFalse("1234aaaa".validate(with: passwordSpecialCharacterRegex))
+        XCTAssertFalse("AAAAAAAA".validate(with: passwordSpecialCharacterRegex))
+        XCTAssertFalse("aaaaaaaa".validate(with: passwordSpecialCharacterRegex))
+    }
+    
+    func test_SignupApp_Password_정규표현식_검증() throws {
+        let passwordRegex = "[A-Za-z0-9!@#$%]*"
+        
+        XCTAssertTrue("12345678".validate(with: passwordRegex))
+        XCTAssertTrue("AAAAAAAA".validate(with: passwordRegex))
+        XCTAssertTrue("aaaaaaaa".validate(with: passwordRegex))
+        XCTAssertTrue("%%%%%%%%".validate(with: passwordRegex))
+        XCTAssertTrue("1234AAAA".validate(with: passwordRegex))
+        XCTAssertTrue("aaaa%%%%".validate(with: passwordRegex))
         XCTAssertFalse("12345Ab%   ".validate(with: passwordRegex))
-        XCTAssertFalse("1234AAAA".validate(with: passwordRegex))
-        XCTAssertFalse("aaaa%%%%".validate(with: passwordRegex))
+        XCTAssertFalse("12345Ab_".validate(with: passwordRegex))
     }
 }

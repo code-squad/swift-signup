@@ -83,14 +83,30 @@
                                     <action selector="didTouchNextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8kb-Ux-G8e"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xW2-PY-hv1">
+                                <rect key="frame" x="39" y="213" width="319" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="idLabel" destination="xW2-PY-hv1" id="gZh-F6-sGh"/>
+                        <outlet property="idViewModel" destination="reM-3e-mV9" id="w5W-b5-fRl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="reM-3e-mV9" customClass="IDViewModel" customModule="SignUp" customModuleProvider="target">
+                    <connections>
+                        <outlet property="id" destination="5Hl-Vj-YKj" id="jzR-aG-IDu"/>
+                    </connections>
+                </customObject>
             </objects>
-            <point key="canvasLocation" x="-197.10144927536234" y="130.58035714285714"/>
+            <point key="canvasLocation" x="-198.46153846153845" y="130.09478672985782"/>
         </scene>
         <!--Person Inform View Controller-->
         <scene sceneID="VLi-dQ-3ed">

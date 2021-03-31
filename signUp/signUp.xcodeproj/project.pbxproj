@@ -24,6 +24,7 @@
 		719125982612B890008D1DC2 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719125972612B890008D1DC2 /* Regex.swift */; };
 		71C598B526144D6C0097ED4C /* NetwordHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C598B426144D6C0097ED4C /* NetwordHandler.swift */; };
 		71C598BA261465EB0097ED4C /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C598B9261465EB0097ED4C /* TextFieldDelegate.swift */; };
+		71C598C026146D7D0097ED4C /* LabelContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C598BF26146D7D0097ED4C /* LabelContents.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		719125972612B890008D1DC2 /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
 		71C598B426144D6C0097ED4C /* NetwordHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetwordHandler.swift; sourceTree = "<group>"; };
 		71C598B9261465EB0097ED4C /* TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
+		71C598BF26146D7D0097ED4C /* LabelContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelContents.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 		712DBC1026119DCF00F853A7 /* signUp */ = {
 			isa = PBXGroup;
 			children = (
+				71C598BE26146D610097ED4C /* enum */,
 				71C598A826144D2E0097ED4C /* Network */,
 				719125962612B878008D1DC2 /* Extension */,
 				712DBC572611B2CE00F853A7 /* View */,
@@ -127,7 +130,6 @@
 				712DBC1A26119DCF00F853A7 /* Assets.xcassets */,
 				712DBC1C26119DCF00F853A7 /* LaunchScreen.storyboard */,
 				712DBC1F26119DCF00F853A7 /* Info.plist */,
-				712CCAC22613FAAB0025DE00 /* InfoCheck.swift */,
 			);
 			path = signUp;
 			sourceTree = "<group>";
@@ -185,6 +187,15 @@
 				71C598B426144D6C0097ED4C /* NetwordHandler.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		71C598BE26146D610097ED4C /* enum */ = {
+			isa = PBXGroup;
+			children = (
+				712CCAC22613FAAB0025DE00 /* InfoCheck.swift */,
+				71C598BF26146D7D0097ED4C /* LabelContents.swift */,
+			);
+			path = enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +339,7 @@
 				719125982612B890008D1DC2 /* Regex.swift in Sources */,
 				712DBC662611B81100F853A7 /* EachInfoView.swift in Sources */,
 				712DBC612611B44B00F853A7 /* MainInfoStackView.swift in Sources */,
+				71C598C026146D7D0097ED4C /* LabelContents.swift in Sources */,
 				712DBC1426119DCF00F853A7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,11 +7,10 @@
 
 import UIKit
 
-class SignUpScenePasswordFieldDelegate: NSObject, UITextFieldDelegate {
+class SignUpScenePasswordTextFieldDelegate: NSObject, UITextFieldDelegate {
     public var resultNotifyingDelegate: ResultNotifyingDelegate?
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        print("textFieldDidBeginEditing: \((textField.text) ?? "Empty")")
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -27,7 +26,6 @@ class SignUpScenePasswordFieldDelegate: NSObject, UITextFieldDelegate {
             }
             
             guard UserInputValidator.validatePasswordContainsCapitalLetter(inputText) else {
-                print("sdfsdf")
                 explanation = "영문 대문자를 최소 1자 이상 포함해주세요."
                 validationResult = false
                 resultNotifyingDelegate?.passValidationResult(sender: self, result: validationResult, explanation: "\(explanation)")
@@ -56,7 +54,6 @@ class SignUpScenePasswordFieldDelegate: NSObject, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        print("textFieldShouldReturn \((textField.text) ?? "Empty")")
         textField.resignFirstResponder()
         return true
     }

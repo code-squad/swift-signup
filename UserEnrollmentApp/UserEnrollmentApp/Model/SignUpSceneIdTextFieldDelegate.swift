@@ -7,11 +7,10 @@
 
 import UIKit
 
-class SignUpSceneIdFieldDelegate: NSObject, UITextFieldDelegate {
+class SignUpSceneIdTextFieldDelegate: NSObject, UITextFieldDelegate {
     public var resultNotifyingDelegate: ResultNotifyingDelegate?
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        print("textFieldDidBeginEditing: \((textField.text) ?? "Empty")")
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -44,7 +43,6 @@ class SignUpSceneIdFieldDelegate: NSObject, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        print("textFieldShouldReturn \((textField.text) ?? "Empty")")
         textField.resignFirstResponder()
         return true
     }

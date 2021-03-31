@@ -38,6 +38,8 @@ class BasicInfoViewController: UIViewController {
         passwordTextField.text = ""
         passwordConfirmTextField.text = ""
         nameTextField.text = ""
+        
+        navigationController?.navigationBar.isHidden = true
     }
     
     func performRequest(with urlString: String) {

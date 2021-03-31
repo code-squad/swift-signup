@@ -7,18 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82385C88261352E400568728 /* PasswordTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82385C87261352E400568728 /* PasswordTextfield.swift */; };
+		82385C91261356FC00568728 /* MainTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82385C90261356FC00568728 /* MainTitleLabel.swift */; };
+		82385C962613591A00568728 /* ReEnterPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82385C952613591A00568728 /* ReEnterPasswordTextField.swift */; };
+		82385CA826135FF800568728 /* NameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82385CA726135FF800568728 /* NameTextField.swift */; };
+		82385CAC2613666900568728 /* PasswordTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82385CAB2613666900568728 /* PasswordTextFieldDelegate.swift */; };
+		82385CB0261366FA00568728 /* ReEnterPasswordTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82385CAF261366FA00568728 /* ReEnterPasswordTextFieldDelegate.swift */; };
+		82385CB3261367D400568728 /* NameTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82385CB2261367D400568728 /* NameTextFieldDelegate.swift */; };
+		826E4F8E2612FC60002A84FE /* IDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826E4F8D2612FC60002A84FE /* IDTextField.swift */; };
+		826E4F912612FC6E002A84FE /* IDTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826E4F902612FC6E002A84FE /* IDTextFieldDelegate.swift */; };
+		826E4F9926130A34002A84FE /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826E4F9826130A34002A84FE /* AlertMessage.swift */; };
 		826E504E26119F610003BD21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826E504D26119F610003BD21 /* AppDelegate.swift */; };
 		826E505026119F610003BD21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826E504F26119F610003BD21 /* SceneDelegate.swift */; };
 		826E505226119F610003BD21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826E505126119F610003BD21 /* ViewController.swift */; };
 		826E505526119F610003BD21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 826E505326119F610003BD21 /* Main.storyboard */; };
 		826E505726119F620003BD21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 826E505626119F620003BD21 /* Assets.xcassets */; };
 		826E505A26119F620003BD21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 826E505826119F620003BD21 /* LaunchScreen.storyboard */; };
-		826E506326119FFC0003BD21 /* UserRegisterFormElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826E506226119FFC0003BD21 /* UserRegisterFormElement.swift */; };
-		826E50672611B1BB0003BD21 /* UserRegisterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826E50662611B1BB0003BD21 /* UserRegisterState.swift */; };
-		82C4FBF72611B549002C4B3E /* UserRegisterForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C4FBF62611B549002C4B3E /* UserRegisterForm.swift */; };
+		827DADAA2614A6BD00F76E9E /* ValidString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827DADA92614A6BD00F76E9E /* ValidString.swift */; };
+		828EFF2C2613467200B93662 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828EFF2B2613467200B93662 /* SignUpView.swift */; };
+		828EFF33261347BE00B93662 /* ObjectTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828EFF32261347BD00B93662 /* ObjectTitle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		82385C87261352E400568728 /* PasswordTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextfield.swift; sourceTree = "<group>"; };
+		82385C90261356FC00568728 /* MainTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTitleLabel.swift; sourceTree = "<group>"; };
+		82385C952613591A00568728 /* ReEnterPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReEnterPasswordTextField.swift; sourceTree = "<group>"; };
+		82385CA726135FF800568728 /* NameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextField.swift; sourceTree = "<group>"; };
+		82385CAB2613666900568728 /* PasswordTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextFieldDelegate.swift; sourceTree = "<group>"; };
+		82385CAF261366FA00568728 /* ReEnterPasswordTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReEnterPasswordTextFieldDelegate.swift; sourceTree = "<group>"; };
+		82385CB2261367D400568728 /* NameTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextFieldDelegate.swift; sourceTree = "<group>"; };
+		826E4F8D2612FC60002A84FE /* IDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDTextField.swift; sourceTree = "<group>"; };
+		826E4F902612FC6E002A84FE /* IDTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDTextFieldDelegate.swift; sourceTree = "<group>"; };
+		826E4F9826130A34002A84FE /* AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
 		826E504A26119F610003BD21 /* swift-signup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-signup.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		826E504D26119F610003BD21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		826E504F26119F610003BD21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,9 +47,9 @@
 		826E505626119F620003BD21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		826E505926119F620003BD21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		826E505B26119F620003BD21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		826E506226119FFC0003BD21 /* UserRegisterFormElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegisterFormElement.swift; sourceTree = "<group>"; };
-		826E50662611B1BB0003BD21 /* UserRegisterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegisterState.swift; sourceTree = "<group>"; };
-		82C4FBF62611B549002C4B3E /* UserRegisterForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegisterForm.swift; sourceTree = "<group>"; };
+		827DADA92614A6BD00F76E9E /* ValidString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidString.swift; sourceTree = "<group>"; };
+		828EFF2B2613467200B93662 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		828EFF32261347BD00B93662 /* ObjectTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTitle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,16 +82,26 @@
 		826E504C26119F610003BD21 /* swift-signup */ = {
 			isa = PBXGroup;
 			children = (
+				82385C90261356FC00568728 /* MainTitleLabel.swift */,
+				828EFF32261347BD00B93662 /* ObjectTitle.swift */,
+				826E4F9826130A34002A84FE /* AlertMessage.swift */,
+				826E4F8D2612FC60002A84FE /* IDTextField.swift */,
+				826E4F902612FC6E002A84FE /* IDTextFieldDelegate.swift */,
+				82385C87261352E400568728 /* PasswordTextfield.swift */,
+				82385CAB2613666900568728 /* PasswordTextFieldDelegate.swift */,
+				82385C952613591A00568728 /* ReEnterPasswordTextField.swift */,
+				82385CAF261366FA00568728 /* ReEnterPasswordTextFieldDelegate.swift */,
+				82385CA726135FF800568728 /* NameTextField.swift */,
+				82385CB2261367D400568728 /* NameTextFieldDelegate.swift */,
 				826E504D26119F610003BD21 /* AppDelegate.swift */,
 				826E504F26119F610003BD21 /* SceneDelegate.swift */,
 				826E505126119F610003BD21 /* ViewController.swift */,
-				82C4FBF62611B549002C4B3E /* UserRegisterForm.swift */,
-				826E506226119FFC0003BD21 /* UserRegisterFormElement.swift */,
-				826E50662611B1BB0003BD21 /* UserRegisterState.swift */,
+				828EFF2B2613467200B93662 /* SignUpView.swift */,
 				826E505326119F610003BD21 /* Main.storyboard */,
 				826E505626119F620003BD21 /* Assets.xcassets */,
 				826E505826119F620003BD21 /* LaunchScreen.storyboard */,
 				826E505B26119F620003BD21 /* Info.plist */,
+				827DADA92614A6BD00F76E9E /* ValidString.swift */,
 			);
 			path = "swift-signup";
 			sourceTree = "<group>";
@@ -146,12 +176,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82385C962613591A00568728 /* ReEnterPasswordTextField.swift in Sources */,
+				827DADAA2614A6BD00F76E9E /* ValidString.swift in Sources */,
+				82385CA826135FF800568728 /* NameTextField.swift in Sources */,
+				828EFF2C2613467200B93662 /* SignUpView.swift in Sources */,
+				826E4F8E2612FC60002A84FE /* IDTextField.swift in Sources */,
+				82385C88261352E400568728 /* PasswordTextfield.swift in Sources */,
 				826E505226119F610003BD21 /* ViewController.swift in Sources */,
-				826E506326119FFC0003BD21 /* UserRegisterFormElement.swift in Sources */,
-				826E50672611B1BB0003BD21 /* UserRegisterState.swift in Sources */,
+				82385CAC2613666900568728 /* PasswordTextFieldDelegate.swift in Sources */,
 				826E504E26119F610003BD21 /* AppDelegate.swift in Sources */,
+				82385CB0261366FA00568728 /* ReEnterPasswordTextFieldDelegate.swift in Sources */,
+				82385C91261356FC00568728 /* MainTitleLabel.swift in Sources */,
+				82385CB3261367D400568728 /* NameTextFieldDelegate.swift in Sources */,
 				826E505026119F610003BD21 /* SceneDelegate.swift in Sources */,
-				82C4FBF72611B549002C4B3E /* UserRegisterForm.swift in Sources */,
+				826E4F9926130A34002A84FE /* AlertMessage.swift in Sources */,
+				826E4F912612FC6E002A84FE /* IDTextFieldDelegate.swift in Sources */,
+				828EFF33261347BE00B93662 /* ObjectTitle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

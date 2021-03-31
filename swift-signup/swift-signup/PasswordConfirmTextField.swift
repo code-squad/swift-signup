@@ -19,18 +19,10 @@ class PasswordConfirmTextField : CustomTextField {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        guard var text = textField.text else {
-            return false
-        }
-        
-        if range.length != 0 {
-            let removeRange = text.index(text.startIndex, offsetBy: range.location)..<text.index(text.startIndex, offsetBy: range.location + range.length)
-            text.removeSubrange(removeRange)
-        } else {
-            text.insert(contentsOf: string, at: text.index(text.startIndex, offsetBy: range.location))
-        }
+        let text = (textField.text ?? "") as NSString
+        let newText = text.replacingCharacters(in: range, with: string)
                 
-        isValid(password: text)
+        isValid(password: newText)
         stateToColor()
         return true
     }

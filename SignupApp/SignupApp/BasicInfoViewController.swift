@@ -40,6 +40,9 @@ class BasicInfoViewController: UIViewController {
         nameTextField.text = ""
         
         navigationController?.navigationBar.isHidden = true
+        
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        view.addGestureRecognizer(tap)
     }
     
     func performRequest(with urlString: String) {

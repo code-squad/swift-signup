@@ -1,9 +1,10 @@
 import UIKit
 
-class EachInfoView: UIView {
+class EachInfoView: UIView, UITextFieldDelegate {
     
     var infoLabel = UILabel()
     var inputTextField = UITextField()
+    var checkLabel = UILabel()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -16,13 +17,15 @@ class EachInfoView: UIView {
     }
     
     private func setUpSubViews() {
+        inputTextField.delegate = self
         setUpInfoLabel()
         setUpTextField()
+        setUpCheckLabel()
         configrueSelfView()
     }
     
     private func configrueSelfView() {
-        let height = NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 80)
+        let height = NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 100)
         addConstraint(height)
     }
     
@@ -41,5 +44,12 @@ class EachInfoView: UIView {
         inputTextField.font = UIFont.systemFont(ofSize: 12)
         inputTextField.frame = CGRect(x: 0, y: 40, width: 300, height: 40)
         addSubview(inputTextField)
+    }
+    private func setUpCheckLabel() {
+        checkLabel.textAlignment = .left
+        checkLabel.textColor = UIColor.black
+        checkLabel.font = UIFont.boldSystemFont(ofSize: 10)
+        checkLabel.frame = CGRect(x: 0, y: 80, width: 300, height: 10)
+        addSubview(checkLabel)
     }
 }

@@ -65,4 +65,5 @@ extension CustomTextField {
     static let idState = Notification.Name("idState")
     static let passwordState = Notification.Name("passwordState")
     static let passwordConfirmState = Notification.Name("passwordConfirmState")
+    static let nameState = Notification.Name("nameState")
 }

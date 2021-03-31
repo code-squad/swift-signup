@@ -19,6 +19,8 @@
 		CE366C3426123A5A00506D3F /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366C3326123A5A00506D3F /* PasswordTextField.swift */; };
 		CE366C3F2612470800506D3F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366C3E2612470800506D3F /* CustomTextField.swift */; };
 		CE366C5A2613495D00506D3F /* PasswordConfirmTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366C592613495D00506D3F /* PasswordConfirmTextField.swift */; };
+		CE366C622613EEDC00506D3F /* NameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366C612613EEDC00506D3F /* NameTextField.swift */; };
+		CE366C6A261401E900506D3F /* ButtonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366C69261401E900506D3F /* ButtonManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		CE366C3326123A5A00506D3F /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		CE366C3E2612470800506D3F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		CE366C592613495D00506D3F /* PasswordConfirmTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordConfirmTextField.swift; sourceTree = "<group>"; };
+		CE366C612613EEDC00506D3F /* NameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextField.swift; sourceTree = "<group>"; };
+		CE366C69261401E900506D3F /* ButtonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,11 +113,13 @@
 			children = (
 				CE366BD32611BA8D00506D3F /* AppDelegate.swift */,
 				CE366BD52611BA8D00506D3F /* SceneDelegate.swift */,
+				CE366C69261401E900506D3F /* ButtonManager.swift */,
 				CE366BD72611BA8D00506D3F /* ViewController.swift */,
 				CE366C3E2612470800506D3F /* CustomTextField.swift */,
 				CE366C2B2611F9CF00506D3F /* IdTextField.swift */,
 				CE366C3326123A5A00506D3F /* PasswordTextField.swift */,
 				CE366C592613495D00506D3F /* PasswordConfirmTextField.swift */,
+				CE366C612613EEDC00506D3F /* NameTextField.swift */,
 				CE366BD92611BA8D00506D3F /* Main.storyboard */,
 				CE366BDC2611BA8E00506D3F /* Assets.xcassets */,
 				CE366BDE2611BA8E00506D3F /* LaunchScreen.storyboard */,
@@ -270,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE366C622613EEDC00506D3F /* NameTextField.swift in Sources */,
 				CE366C3426123A5A00506D3F /* PasswordTextField.swift in Sources */,
 				CE366BD82611BA8D00506D3F /* ViewController.swift in Sources */,
 				CE366C3F2612470800506D3F /* CustomTextField.swift in Sources */,
@@ -277,6 +284,7 @@
 				CE366C5A2613495D00506D3F /* PasswordConfirmTextField.swift in Sources */,
 				CE366C2C2611F9CF00506D3F /* IdTextField.swift in Sources */,
 				CE366BD62611BA8D00506D3F /* SceneDelegate.swift in Sources */,
+				CE366C6A261401E900506D3F /* ButtonManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +461,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B3PWYBKFUK;
 				INFOPLIST_FILE = "swift-signup/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -471,6 +480,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B3PWYBKFUK;
 				INFOPLIST_FILE = "swift-signup/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

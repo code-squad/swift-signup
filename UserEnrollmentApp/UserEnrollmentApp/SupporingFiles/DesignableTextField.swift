@@ -21,6 +21,8 @@ class DesignableTextField: UITextField {
         }
     }
     
+    var isValid: Bool = false
+    
     func setBorderColor(wasValidInput: Bool) {
         if wasValidInput {
             self.layer.borderColor = UIColor.systemGreen.cgColor

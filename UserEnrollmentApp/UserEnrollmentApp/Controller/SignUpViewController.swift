@@ -13,6 +13,8 @@ class SignUpViewController: UIViewController {
     let passwordReconfirmFieldDelegate = SignUpScenePasswordReconfirmFieldDelegate()
     let nameFieldDelegate = SignUpSceneNameFieldDelegate()
     
+    @IBOutlet weak var nextButton: DesignableButton!
+    
     @IBOutlet weak var idTextField: DesignableTextField!
     @IBOutlet weak var passwordTextField: DesignableTextField!
     @IBOutlet weak var passwordReconfirmTextField: DesignableTextField!
@@ -25,6 +27,8 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.nextButton.isEnabled = false
         
         self.idTextField.delegate = idFieldDelegate
         self.passwordTextField.delegate = passwordFieldDelegate
@@ -49,6 +53,10 @@ class SignUpViewController: UIViewController {
         view.window!.layer.add(transition, forKey: kCATransition)
         self.present(newViewController, animated: false, completion: nil)
     }
+    
+    func enableNextButtonIfValid() {
+        self.nextButton.isEnabled = idTextField.isValid && passwordTextField.isValid && passwordReconfirmTextField.isValid && nameTextField.isValid
+    }
 }
 
 extension SignUpViewController: ResultNotifyingDelegate {
@@ -58,6 +66,7 @@ extension SignUpViewController: ResultNotifyingDelegate {
             let result = value == passwordTextField.text
             PasswordReconfirmValidationResultLabel.setTextColor(isGoodExplanation: result)
             passwordReconfirmTextField.setBorderColor(wasValidInput: result)
+            passwordReconfirmTextField.isValid = result
             if result == true {
                 PasswordReconfirmValidationResultLabel.text = "비밀번호가 일치합니다."
             } else {
@@ -65,6 +74,7 @@ extension SignUpViewController: ResultNotifyingDelegate {
             }
         default: return
         }
+        enableNextButtonIfValid()
     }
     
     func passValidationResult(sender: UITextFieldDelegate, result: Bool, explanation: String) {
@@ -72,18 +82,22 @@ extension SignUpViewController: ResultNotifyingDelegate {
         case is SignUpSceneIdFieldDelegate:
             IDValidationResultLabel.text = explanation
             IDValidationResultLabel.setTextColor(isGoodExplanation: result)
+            idTextField.isValid = result
             idTextField.setBorderColor(wasValidInput: result)
             
         case is SignUpScenePasswordFieldDelegate:
             PasswordValidationResultLabel.text = explanation
             PasswordValidationResultLabel.setTextColor(isGoodExplanation: result)
+            passwordTextField.isValid = result
             passwordTextField.setBorderColor(wasValidInput: result)
             
         case is SignUpSceneNameFieldDelegate:
             NameValidationResultLabel.text = explanation
             NameValidationResultLabel.setTextColor(isGoodExplanation: result)
+            nameTextField.isValid = result
             nameTextField.setBorderColor(wasValidInput: result)
         default: return
         }
+        enableNextButtonIfValid()
     }
 }

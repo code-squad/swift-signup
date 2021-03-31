@@ -35,16 +35,17 @@ struct ComplianceChecker {
     func checkIdTextForm(with text : String, closure : @escaping (IdTextFormError)->Void ) {
         var usedCheck : IdTextFormError = .none
         
-        if !regexChekcing(target: text, pattern: "([^A-Z][0-9a-z-_]).{3,18}") {
-            closure(.wrong)
-        }
-        
         networkManager.getUserList(closure: { userList in
             if let userList = userList {
+                
                 if userList.contains(text) {
                     usedCheck = .used
                 } else {
                     usedCheck = .ok
+                }
+                
+                if !regexChekcing(target: text, pattern: "([^A-Z][0-9a-z-_]).{3,18}") {
+                    usedCheck = .wrong
                 }
                 closure(usedCheck)
             }

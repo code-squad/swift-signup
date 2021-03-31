@@ -87,7 +87,7 @@ extension SignUpMainViewController {
     private func textEdittingForTextField() {
         mainStackView.infoIDView.inputTextField.addTarget(self, action: #selector(textFieldEddtingChanged(textField:)), for: .editingChanged)
         mainStackView.infoPasswordView.inputTextField.addTarget(self, action: #selector(textFieldEddtingChanged(textField:)), for: .editingChanged)
-        mainStackView.dobleCheckPassWordView.inputTextField.addTarget(self, action: #selector(textFieldEddtingChanged(textField:)), for: .editingChanged)
+        mainStackView.doubleCheckPassWordView.inputTextField.addTarget(self, action: #selector(textFieldEddtingChanged(textField:)), for: .editingChanged)
         mainStackView.nameCheckView.inputTextField.addTarget(self, action: #selector(textFieldEddtingChanged(textField:)), for: .editingChanged)
     }
 }

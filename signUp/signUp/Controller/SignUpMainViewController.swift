@@ -83,7 +83,7 @@ extension SignUpMainViewController {
     private func addTargetForButton() {
         buttonForMove.addTarget(self, action: #selector(nextMoveButtonTouched(button:)), for: .touchUpInside)
     }
-    
+
     private func textEdittingForTextField() {
         mainStackView.infoIDView.inputTextField.addTarget(self, action: #selector(textFieldEddtingChanged(textField:)), for: .editingChanged)
         mainStackView.infoPasswordView.inputTextField.addTarget(self, action: #selector(textFieldEddtingChanged(textField:)), for: .editingChanged)
@@ -91,4 +91,3 @@ extension SignUpMainViewController {
         mainStackView.nameCheckView.inputTextField.addTarget(self, action: #selector(textFieldEddtingChanged(textField:)), for: .editingChanged)
     }
 }
-

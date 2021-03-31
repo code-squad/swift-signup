@@ -22,6 +22,7 @@
 		712DBC732611C51100F853A7 /* NextVCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DBC722611C51100F853A7 /* NextVCButton.swift */; };
 		712DBC782611CBD500F853A7 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DBC772611CBD500F853A7 /* PrivacyViewController.swift */; };
 		719125982612B890008D1DC2 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719125972612B890008D1DC2 /* Regex.swift */; };
+		71C598B526144D6C0097ED4C /* NetwordHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C598B426144D6C0097ED4C /* NetwordHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		712DBC722611C51100F853A7 /* NextVCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextVCButton.swift; sourceTree = "<group>"; };
 		712DBC772611CBD500F853A7 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
 		719125972612B890008D1DC2 /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
+		71C598B426144D6C0097ED4C /* NetwordHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetwordHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		712DBC1026119DCF00F853A7 /* signUp */ = {
 			isa = PBXGroup;
 			children = (
+				71C598A826144D2E0097ED4C /* Network */,
 				719125962612B878008D1DC2 /* Extension */,
 				712DBC572611B2CE00F853A7 /* View */,
 				712DBC4726119F3500F853A7 /* Controller */,
@@ -171,6 +174,14 @@
 				719125972612B890008D1DC2 /* Regex.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		71C598A826144D2E0097ED4C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				71C598B426144D6C0097ED4C /* NetwordHandler.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,6 +318,7 @@
 				712DBC1226119DCF00F853A7 /* AppDelegate.swift in Sources */,
 				712DBC732611C51100F853A7 /* NextVCButton.swift in Sources */,
 				712DBC782611CBD500F853A7 /* PrivacyViewController.swift in Sources */,
+				71C598B526144D6C0097ED4C /* NetwordHandler.swift in Sources */,
 				712CCAC32613FAAB0025DE00 /* InfoCheck.swift in Sources */,
 				712DBC592611B2D900F853A7 /* MainTitleLabel.swift in Sources */,
 				719125982612B890008D1DC2 /* Regex.swift in Sources */,

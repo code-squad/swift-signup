@@ -9,19 +9,14 @@ import Foundation
 class NetworkManager {
     private let url = URL.init(string: "https://8r6ruzgzve.execute-api.ap-northeast-2.amazonaws.com/default/SwiftCamp")
     
-    private var completionHandler : [() -> Void] = []
-    var usedUserList = [String]()
-    
-    func getUserList() {
+    func getUserList(closure : @escaping ([String]?) -> Void) {
         var request = URLRequest(url: self.url!)
         request.httpMethod = "GET"
         URLSession.shared.dataTask(with: request, completionHandler: {(data,response,error) in
             let decoder = try? JSONSerialization.jsonObject(with: data!, options: []) as? Array<String>
             guard let userList = decoder?.compactMap({$0}) else { return }
             
-            self.networkCompletionHandler() {
-                self.usedUserList = userList
-            }
+            closure(userList)
         }).resume()
     }
     
@@ -40,10 +35,6 @@ class NetworkManager {
             }
             // 필요한 내용 하단에 구현
         }).resume()
-    }
-    
-    func networkCompletionHandler(completion: @escaping () -> Void) {
-        completionHandler.append(completion)
     }
 }
 

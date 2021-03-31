@@ -44,7 +44,7 @@
                                 <rect key="frame" x="50" y="266" width="314" height="34"/>
                                 <accessibility key="accessibilityConfiguration" identifier="PWTextField"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호 재확인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iqj-1i-dPb">
                                 <rect key="frame" x="50" y="340" width="107.5" height="21"/>
@@ -56,7 +56,7 @@
                                 <rect key="frame" x="50" y="371" width="314" height="34"/>
                                 <accessibility key="accessibilityConfiguration" identifier="PW2TextField"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nrg-5E-qXq">
                                 <rect key="frame" x="50" y="445" width="29.5" height="21"/>

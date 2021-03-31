@@ -8,6 +8,8 @@
 import Foundation
 
 struct ComplianceChecker {
+    let networkManager = NetworkManager()
+    
     private func regexChekcing(target : String, pattern : String) -> Bool {
         do {
             let regex = try NSRegularExpression(pattern: pattern)
@@ -30,20 +32,23 @@ struct ComplianceChecker {
         return true
     }
     
-    func checkIdTextForm(with text : String) -> IdTextFormError {
+    func checkIdTextForm(with text : String, closure : @escaping (IdTextFormError)->Void ) {
+        var usedCheck : IdTextFormError = .none
+        
         if !regexChekcing(target: text, pattern: "([^A-Z][0-9a-z-_]).{3,18}") {
-            return .wrong
+            closure(.wrong)
         }
-        // id 중복 시 case return 내용 필요함.
-        let networkManager = NetworkManager()
-        networkManager.getUserList()
-        let response = networkManager.usedUserList
-        print(response)
-        if response.contains(text) { // 비정상 작동 중, 비동기 network작업이 완료되기 전에 해당 구문이 실행됨.
-            return .used
-        } else {
-            return .ok
-        }
+        
+        networkManager.getUserList(closure: { userList in
+            if let userList = userList {
+                if userList.contains(text) {
+                    usedCheck = .used
+                } else {
+                    usedCheck = .ok
+                }
+                closure(usedCheck)
+            }
+        })
     }
     
     func checkPwTextForm(with text : String) -> PwTextFormError {

@@ -8,6 +8,7 @@
 import UIKit
 
 class TextFieldDelegate: NSObject, UITextFieldDelegate {
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         switch textField.accessibilityIdentifier ?? "" {
         case "PWTextField":

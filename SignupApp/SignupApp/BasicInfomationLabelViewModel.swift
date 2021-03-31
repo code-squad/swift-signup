@@ -19,54 +19,54 @@ class BasicInfomationLabelViewModel: NSObject {
     public func changeIDStyle(result: ResultIDChecking) {
         switch result {
         case .blank:
-            self.changeStyle(label: IDMessageLabel, message: "", result: false)
+            self.changeStyle(to: IDMessageLabel, message: "", result: false)
         case .existID:
-            self.changeStyle(label: IDMessageLabel, message: LabelMessage.existedID, result: false)
+            self.changeStyle(to: IDMessageLabel, message: LabelMessage.existedID, result: false)
         case .incorrectID:
-            self.changeStyle(label: IDMessageLabel, message: LabelMessage.incorrectID, result: false)
+            self.changeStyle(to: IDMessageLabel, message: LabelMessage.incorrectID, result: false)
         case .correct:
-            self.changeStyle(label: IDMessageLabel, message: LabelMessage.correctID, result: true)
+            self.changeStyle(to: IDMessageLabel, message: LabelMessage.correctID, result: true)
         }
     }
     
     func changePasswordStyle(result: ResultPasswordChecking) {
         switch result {
         case .blank:
-            self.changeStyle(label: passwordMessageLabel, message: "", result: false)
+            self.changeStyle(to: passwordMessageLabel, message: "", result: false)
         case .notIncludeDigit:
-            self.changeStyle(label: passwordMessageLabel, message: LabelMessage.requireMinimumDigit, result: false)
+            self.changeStyle(to: passwordMessageLabel, message: LabelMessage.requireMinimumDigit, result: false)
         case .notIncludeSpecialCharacter:
-            self.changeStyle(label: passwordMessageLabel, message: LabelMessage.requireMinimumSpecialCharacter, result: false)
+            self.changeStyle(to: passwordMessageLabel, message: LabelMessage.requireMinimumSpecialCharacter, result: false)
         case .notIncludeUppercaseLetter:
-            self.changeStyle(label: passwordMessageLabel, message: LabelMessage.requireMinimumUpperCase, result: false)
+            self.changeStyle(to: passwordMessageLabel, message: LabelMessage.requireMinimumUpperCase, result: false)
         case .outOfCharacterLimit:
-            self.changeStyle(label: passwordMessageLabel, message: LabelMessage.outOfCharacterLimitPassword, result: false)
+            self.changeStyle(to: passwordMessageLabel, message: LabelMessage.outOfCharacterLimitPassword, result: false)
         case .correct:
-            self.changeStyle(label: passwordMessageLabel, message: LabelMessage.correctPassword, result: true)
+            self.changeStyle(to: passwordMessageLabel, message: LabelMessage.correctPassword, result: true)
         }
     }
     
     func changeCheckPasswordStyle(result: ResultEqualPasswordChecking) {
         switch result {
         case .blank:
-            self.changeStyle(label: checkPasswordMessageLabel, message: "", result: false)
+            self.changeStyle(to: checkPasswordMessageLabel, message: "", result: false)
         case .notEqual:
-            self.changeStyle(label: checkPasswordMessageLabel, message: LabelMessage.notEqualPassword, result: false)
+            self.changeStyle(to: checkPasswordMessageLabel, message: LabelMessage.notEqualPassword, result: false)
         case .equal:
-            self.changeStyle(label: checkPasswordMessageLabel, message: LabelMessage.equalPassword, result: true)
+            self.changeStyle(to: checkPasswordMessageLabel, message: LabelMessage.equalPassword, result: true)
         }
     }
     
     func changeNameStyle(result: ResultNameChecking) {
         switch result {
         case .blank:
-            self.changeStyle(label: nameMessageLabel, message: LabelMessage.requireFillNameIn, result: false)
+            self.changeStyle(to: nameMessageLabel, message: LabelMessage.requireFillNameIn, result: false)
         case .correct:
-            self.changeStyle(label: nameMessageLabel, message: "", result: true)
+            self.changeStyle(to: nameMessageLabel, message: "", result: true)
         }
     }
     
-    func changeStyle(label: UILabel, message: String, result: Bool) {
+    func changeStyle(to label: UILabel, message: String, result: Bool) {
         label.text = message
         label.textColor = result ? #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1) : #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
     }

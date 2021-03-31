@@ -54,10 +54,10 @@ class BasicInfomationTextFieldViewModel: NSObject {
     }
     
     func initTarget() {
-        self.IDField.addTarget(self, action: #selector(changeFieldStyle), for: .editingChanged)
-        self.passwordField.addTarget(self, action: #selector(changeFieldStyle), for: .editingChanged)
-        self.checkPasswordField.addTarget(self, action: #selector(changeFieldStyle), for: .editingChanged)
-        self.nameField.addTarget(self, action: #selector(changeFieldStyle), for: .editingChanged)
+        self.IDField.addTarget(self, action: #selector(changeFieldStyle), for: .editingDidEnd)
+        self.passwordField.addTarget(self, action: #selector(changeFieldStyle), for: .editingDidEnd)
+        self.checkPasswordField.addTarget(self, action: #selector(changeFieldStyle), for: .editingDidEnd)
+        self.nameField.addTarget(self, action: #selector(changeFieldStyle), for: .editingDidEnd)
     }
     
     func bind(present action: @escaping (ResultTextfieldValidate) -> ()) {

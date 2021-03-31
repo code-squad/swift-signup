@@ -73,39 +73,81 @@ extension MainInfoStackView: UITextFieldDelegate {
     }
     
     func enableCheckForNextPage() -> Bool {
-        return conditionForID() && conditionForPassWord() && conditionForName()
+        return conditionForID() && conditionForPassWord() && conditionForPasswordConfirm() && conditionForName()
     }
     
     func conditionForID() -> Bool {
         if infoIDView.inputTextField.text?.count == 0 {
             infoIDView.checkLabel.text = ""
-            return false
         } else if !checkValidElementForID(infoIDView.inputTextField.text) {
             infoIDView.checkLabel.text = IdCheck.nonSupportedValue.description
             infoIDView.inputTextField.layer.borderColor = UIColor.red.cgColor
             infoIDView.checkLabel.textColor = UIColor.red
-            return false
         } else if !checkValidCountForID(infoIDView.inputTextField.text) {
             infoIDView.checkLabel.text = IdCheck.idCount.description
             infoIDView.inputTextField.layer.borderColor = UIColor.red.cgColor
             infoIDView.checkLabel.textColor = UIColor.red
-            return false
         } else {
             infoIDView.inputTextField.layer.borderWidth = 0
             infoIDView.checkLabel.text = IdCheck.valid.description
             infoIDView.checkLabel.textColor = UIColor.systemGreen
             return true
         }
+        return false
     }
     
     func conditionForPassWord() -> Bool {
-        let password = infoPasswordView.inputTextField.text ?? "a"
-        let passwordCheck = dobleCheckPassWordView.inputTextField.text ?? "b"
-        return password==passwordCheck && checkValidPasswordElement(password) && checkValidCountForPassWord(password)
+        if infoPasswordView.inputTextField.text?.count == 0 {
+            infoPasswordView.checkLabel.text = ""
+        } else if !checkValidPasswordElement(infoPasswordView.inputTextField.text) {
+            infoPasswordView.checkLabel.text = PasswordCheck.notContainedSpecialCharacters.description
+            infoPasswordView.checkLabel.textColor = UIColor.red
+            infoPasswordView.inputTextField.layer.borderColor = UIColor.red.cgColor
+        } else if !checkValidCountForPassWord(infoPasswordView.inputTextField.text) {
+            infoPasswordView.checkLabel.text = PasswordCheck.passwordCount.description
+            infoPasswordView.checkLabel.textColor = UIColor.red
+            infoPasswordView.inputTextField.layer.borderColor = UIColor.red.cgColor
+        } else {
+            infoPasswordView.inputTextField.layer.borderWidth = 0
+            infoPasswordView.checkLabel.text = PasswordCheck.valid.description
+            infoPasswordView.checkLabel.textColor = UIColor.systemGreen
+            return true
+        }
+        return  false
+    }
+    
+    func conditionForPasswordConfirm() -> Bool {
+        if dobleCheckPassWordView.inputTextField.text?.count == 0 {
+            dobleCheckPassWordView.inputTextField.layer.borderWidth = 0
+            dobleCheckPassWordView.checkLabel.text = ""
+        } else if infoPasswordView.inputTextField.text != dobleCheckPassWordView.inputTextField.text {
+            dobleCheckPassWordView.inputTextField.layer.borderColor = UIColor.red.cgColor
+            dobleCheckPassWordView.checkLabel.textColor = UIColor.red
+            dobleCheckPassWordView.checkLabel.text = PasswordConfirmCheck.notEqul.description
+        } else {
+            dobleCheckPassWordView.inputTextField.layer.borderWidth = 0
+            dobleCheckPassWordView.checkLabel.text = PasswordConfirmCheck.valid.description
+            dobleCheckPassWordView.checkLabel.textColor = UIColor.systemGreen
+            return true
+        }
+        return false
     }
     
     func conditionForName() -> Bool {
-        return checkValidNameCount(nameCheckView.inputTextField.text)
+        if nameCheckView.inputTextField.text?.count == 0 {
+            nameCheckView.inputTextField.layer.borderWidth = 0
+            nameCheckView.checkLabel.text = ""
+        } else if !checkValidNameCount(nameCheckView.inputTextField.text) {
+            nameCheckView.inputTextField.layer.borderColor = UIColor.red.cgColor
+            nameCheckView.checkLabel.textColor = UIColor.red
+            nameCheckView.checkLabel.text = NameCheck.nameCount.description
+        } else {
+            nameCheckView.inputTextField.layer.borderWidth = 0
+            nameCheckView.checkLabel.text = NameCheck.valid.description
+            nameCheckView.checkLabel.textColor = UIColor.systemGreen
+            return true
+        }
+        return false
     }
     
     func checkValidCountForID(_ id: String?) -> Bool {

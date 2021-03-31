@@ -1,6 +1,6 @@
 # (회원가입 프로젝트)swift-signup
 ## Major Implementation
-### 1. (branch sign-up) Beverage 클래스와 각 음료수별 하위 클래스 구현 2021.03.31 19:54:12
+### 1. (branch sign-up) 회원가입 초기 화면 구현 2021.03.31 19:54:12
 #### Major features
 - [x] 회원가입 화면을 구성한다 
 - [x] Place holder로 텍스트 필드의 필요 조건을 표시한다

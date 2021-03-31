@@ -19,8 +19,10 @@
 		BF11F6782611AB3C006AC76C /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF11F6772611AB3C006AC76C /* SignUpViewModel.swift */; };
 		BF11F67C2611C18E006AC76C /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF11F67B2611C18E006AC76C /* UITextField+Extension.swift */; };
 		BF11F6862611C2A4006AC76C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF11F6852611C2A4006AC76C /* Service.swift */; };
-		BFC925ED261452D700D4FBD0 /* IdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC925EC261452D700D4FBD0 /* IdViewModel.swift */; };
 		BFC925F02614754C00D4FBD0 /* SignUpStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC925EF2614754C00D4FBD0 /* SignUpStackView.swift */; };
+		BFC925FB2614980E00D4FBD0 /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC925FA2614980E00D4FBD0 /* PasswordViewModel.swift */; };
+		BFC925FE26149A5800D4FBD0 /* NameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC925FD26149A5800D4FBD0 /* NameViewModel.swift */; };
+		BFC926082614A47B00D4FBD0 /* IdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC926072614A47B00D4FBD0 /* IdViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +40,10 @@
 		BF11F6772611AB3C006AC76C /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		BF11F67B2611C18E006AC76C /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		BF11F6852611C2A4006AC76C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		BFC925EC261452D700D4FBD0 /* IdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdViewModel.swift; sourceTree = "<group>"; };
 		BFC925EF2614754C00D4FBD0 /* SignUpStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStackView.swift; sourceTree = "<group>"; };
+		BFC925FA2614980E00D4FBD0 /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
+		BFC925FD26149A5800D4FBD0 /* NameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewModel.swift; sourceTree = "<group>"; };
+		BFC926072614A47B00D4FBD0 /* IdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +91,7 @@
 				BF11F6622611996F006AC76C /* AppDelegate.swift */,
 				BF11F6642611996F006AC76C /* SceneDelegate.swift */,
 				BF11F6662611996F006AC76C /* ViewController.swift */,
-				BFC925EC261452D700D4FBD0 /* IdViewModel.swift */,
-				BF11F6772611AB3C006AC76C /* SignUpViewModel.swift */,
+				BFC9260026149B2A00D4FBD0 /* ViewModel */,
 				BF0E7534261333B200D513B4 /* State.swift */,
 				BF0E75292612B6AA00D513B4 /* View */,
 				BF11F6682611996F006AC76C /* Main.storyboard */,
@@ -113,6 +116,17 @@
 				BF11F6852611C2A4006AC76C /* Service.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		BFC9260026149B2A00D4FBD0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BF11F6772611AB3C006AC76C /* SignUpViewModel.swift */,
+				BFC925FA2614980E00D4FBD0 /* PasswordViewModel.swift */,
+				BFC925FD26149A5800D4FBD0 /* NameViewModel.swift */,
+				BFC926072614A47B00D4FBD0 /* IdViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,15 +200,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF0E75272612B58000D513B4 /* InputTextField.swift in Sources */,
+				BFC925FB2614980E00D4FBD0 /* PasswordViewModel.swift in Sources */,
 				BF11F6672611996F006AC76C /* ViewController.swift in Sources */,
+				BFC926082614A47B00D4FBD0 /* IdViewModel.swift in Sources */,
 				BF0E753226132D7200D513B4 /* MessageLabel.swift in Sources */,
+				BFC925FE26149A5800D4FBD0 /* NameViewModel.swift in Sources */,
 				BF11F67C2611C18E006AC76C /* UITextField+Extension.swift in Sources */,
 				BF11F6632611996F006AC76C /* AppDelegate.swift in Sources */,
 				BF0E7535261333B200D513B4 /* State.swift in Sources */,
 				BFC925F02614754C00D4FBD0 /* SignUpStackView.swift in Sources */,
 				BF11F6862611C2A4006AC76C /* Service.swift in Sources */,
 				BF11F6782611AB3C006AC76C /* SignUpViewModel.swift in Sources */,
-				BFC925ED261452D700D4FBD0 /* IdViewModel.swift in Sources */,
 				BF11F6652611996F006AC76C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

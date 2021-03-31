@@ -160,8 +160,8 @@
                                             </label>
                                         </subviews>
                                         <connections>
-                                            <outlet property="textField" destination="ZBx-x8-ZBr" id="U6d-6b-ndy"/>
-                                            <outlet property="validLabel" destination="O0i-c1-r7i" id="CkR-Bd-Cap"/>
+                                            <outlet property="textField" destination="ZBx-x8-ZBr" id="c7v-gS-dje"/>
+                                            <outlet property="validLabel" destination="O0i-c1-r7i" id="dDi-js-W00"/>
                                         </connections>
                                     </stackView>
                                 </subviews>

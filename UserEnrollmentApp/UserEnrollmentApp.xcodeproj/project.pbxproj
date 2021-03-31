@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		88477D9D26131A6F00C7FED3 /* ResultExplanationLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88477D9C26131A6E00C7FED3 /* ResultExplanationLabel.swift */; };
+		88477DA3261405D800C7FED3 /* PrivateInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88477DA2261405D800C7FED3 /* PrivateInfoViewController.swift */; };
 		8877AB552611A28B005314EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877AB542611A28B005314EC /* AppDelegate.swift */; };
 		8877AB572611A28B005314EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877AB562611A28B005314EC /* SceneDelegate.swift */; };
 		8877AB592611A28B005314EC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877AB582611A28B005314EC /* SignUpViewController.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		88477D9C26131A6E00C7FED3 /* ResultExplanationLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultExplanationLabel.swift; sourceTree = "<group>"; };
+		88477DA2261405D800C7FED3 /* PrivateInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateInfoViewController.swift; sourceTree = "<group>"; };
 		8877AB512611A28B005314EC /* UserEnrollmentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserEnrollmentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8877AB542611A28B005314EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8877AB562611A28B005314EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				8877AB582611A28B005314EC /* SignUpViewController.swift */,
+				88477DA2261405D800C7FED3 /* PrivateInfoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88477DA3261405D800C7FED3 /* PrivateInfoViewController.swift in Sources */,
 				8877ABD826120FD0005314EC /* ResultNotifyiingDelegate.swift in Sources */,
 				88477D9D26131A6F00C7FED3 /* ResultExplanationLabel.swift in Sources */,
 				8877ABBD2611DF48005314EC /* SignUpSceneNameFieldDelegate.swift in Sources */,

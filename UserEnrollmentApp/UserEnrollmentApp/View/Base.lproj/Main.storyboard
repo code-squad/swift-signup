@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -140,6 +141,9 @@
                                         <color key="value" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="NextButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OE1-U2-7iy"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password Validation result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6c-Mo-EB4" customClass="ResultExplanationLabel" customModule="UserEnrollmentApp" customModuleProvider="target">
                                 <rect key="frame" x="36" y="279" width="148.66666666666666" height="15"/>
@@ -218,6 +222,22 @@
             </objects>
             <point key="canvasLocation" x="-275.38461538461536" y="79.620853080568722"/>
         </scene>
+        <!--Private Info View Controller-->
+        <scene sceneID="JNv-pa-Ozx">
+            <objects>
+                <viewController storyboardIdentifier="PrivateInfoViewController" id="xaA-R0-ezj" customClass="PrivateInfoViewController" customModule="UserEnrollmentApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qTJ-TK-xdX">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="V9W-x7-TPB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="flF-YZ-42E"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W2q-ih-UVz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="552" y="80"/>
+        </scene>
     </scenes>
     <designables>
         <designable name="2sk-3r-tPS">
@@ -236,4 +256,9 @@
             <size key="intrinsicContentSize" width="283" height="25"/>
         </designable>
     </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

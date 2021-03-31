@@ -2,10 +2,10 @@ import UIKit
 
 class MainInfoStackView: UIStackView {
     
-    private(set) var infoIDView = EachInfoView()
-    private(set) var infoPasswordView = EachInfoView()
-    private(set) var doubleCheckPassWordView = EachInfoView()
-    private(set) var nameCheckView = EachInfoView()
+    var infoIDView = EachInfoView()
+    var infoPasswordView = EachInfoView()
+    var doubleCheckPassWordView = EachInfoView()
+    var nameCheckView = EachInfoView()
     private var idList = [String]()
     
     override init(frame: CGRect) {
@@ -30,35 +30,9 @@ class MainInfoStackView: UIStackView {
         NetworkHandler.getData { serverIdList in
             self.idList = serverIdList
         }
-        setUpIDInfoView()
-        setUpPassWordInfoView()
-        setUpDoubleCheckInfoView()
-        setUpnameCheckInfoView()
-    }
-}
-
-//MARK: -setUp Elements Of StackView
-extension MainInfoStackView {
-    
-    private func setUpIDInfoView() {
-        infoIDView.infoLabel.text = "아이디"
-        infoIDView.inputTextField.attributedPlaceholder = NSAttributedString(string: " 영문 소문자, 숫자, 특수기호(_,-), 5~20자")
         self.addArrangedSubview(infoIDView)
-    }
-
-    private func setUpPassWordInfoView() {
-        infoPasswordView.infoLabel.text = "비밀번호"
-        infoPasswordView.inputTextField.attributedPlaceholder = NSAttributedString(string: " 영문 대/소문자, 숫자, 특수기호(!@#$%), 8~16자")
         self.addArrangedSubview(infoPasswordView)
-    }
-
-    private func setUpDoubleCheckInfoView() {
-        doubleCheckPassWordView.infoLabel.text = "비밀번호 재확인"
         self.addArrangedSubview(doubleCheckPassWordView)
-    }
-    
-    private func setUpnameCheckInfoView() {
-        nameCheckView.infoLabel.text = "이름"
         self.addArrangedSubview(nameCheckView)
     }
 }

@@ -21,6 +21,8 @@ class SignUpMainViewController: UIViewController {
         //MainView Background Color
         view.backgroundColor = UIColor.systemGray6
         
+        setUpLabelAndTextField()
+        
         configureTitle()
         
         configureMainStackView()
@@ -59,6 +61,15 @@ extension SignUpMainViewController {
     private func configureNextButton() {
         buttonForMove.frame = CGRect(x: 120, y: 600, width: 140, height: 50)
         view.addSubview(buttonForMove)
+    }
+    
+    private func setUpLabelAndTextField() {
+        mainStackView.infoIDView.infoLabel.text = LabelContetns.idLabel.description
+        mainStackView.infoIDView.inputTextField.placeholder = LabelContetns.idPlaceholder.description
+        mainStackView.infoPasswordView.infoLabel.text = LabelContetns.passwordLabel.description
+        mainStackView.infoPasswordView.inputTextField.placeholder = LabelContetns.passwordPlaceHolder.description
+        mainStackView.doubleCheckPassWordView.infoLabel.text = LabelContetns.passwordDoubleCheckLabel.description
+        mainStackView.nameCheckView.infoLabel.text = LabelContetns.nameLabel.description
     }
 }
 

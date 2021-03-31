@@ -36,6 +36,19 @@ class SignUpViewController: UIViewController {
         self.passwordReconfirmFieldDelegate.resultNotifyingDelegate = self
         self.nameFieldDelegate.resultNotifyingDelegate = self
     }
+    
+    @IBAction func NextButtonPressed(_ sender: DesignableButton) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "PrivateInfoViewController") as! PrivateInfoViewController
+        newViewController.modalPresentationStyle = .fullScreen
+        let transition = CATransition()
+        transition.duration = 0.5
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromRight
+        transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+        view.window!.layer.add(transition, forKey: kCATransition)
+        self.present(newViewController, animated: false, completion: nil)
+    }
 }
 
 extension SignUpViewController: ResultNotifyingDelegate {

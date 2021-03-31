@@ -114,5 +114,14 @@ extension BasicInfoViewController: UITextFieldDelegate {
             passwordMessageLabel.text = "안전한 비밀번호입니다."
             passwordMessageLabel.textColor = UIColor(named: "greenText")
         }
+        
+        guard let passwordConfirm = passwordConfirmTextField.text else { return }
+        if password == passwordConfirm {
+            passwordConfirmMessageLabel.text = "비밀번호가 일치합니다."
+            passwordConfirmMessageLabel.textColor = UIColor(named: "greenText")
+        } else {
+            passwordConfirmMessageLabel.text = "비밀번호가 일치하지 않습니다."
+            passwordConfirmMessageLabel.textColor = UIColor(named: "redErrorMessage")
+        }
     }
 }

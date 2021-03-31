@@ -68,7 +68,10 @@ class IDValidateManager: ValidateManager {
     }
     
     private func isExisting(_ id: String) -> Bool? {
-        let result = networkManager.isExisting(id: id, password: "")
-        return result
+        var isExisting: Bool?
+        networkManager.isExisting(id: id, password: "") { (result) in
+            isExisting = result
+        }
+        return isExisting
     }
 }

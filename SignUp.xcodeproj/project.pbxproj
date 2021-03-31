@@ -15,6 +15,9 @@
 		1009A99A26119FCB0089EC3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1009A99826119FCB0089EC3F /* LaunchScreen.storyboard */; };
 		1009A9A42611A5380089EC3F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1009A9A32611A5380089EC3F /* SignUpViewController.swift */; };
 		1009A9A72611A5690089EC3F /* PersonInformViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1009A9A62611A5690089EC3F /* PersonInformViewController.swift */; };
+		1019AF8826145E25005FE7C7 /* IDViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1019AF8726145E25005FE7C7 /* IDViewModel.swift */; };
+		1019AF8B26145E90005FE7C7 /* ValidStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1019AF8A26145E90005FE7C7 /* ValidStatus.swift */; };
+		1078FDA02614955900026DBD /* ValidationCheckService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1078FD9F2614955900026DBD /* ValidationCheckService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		1009A99B26119FCB0089EC3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1009A9A32611A5380089EC3F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1009A9A62611A5690089EC3F /* PersonInformViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInformViewController.swift; sourceTree = "<group>"; };
+		1019AF8726145E25005FE7C7 /* IDViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDViewModel.swift; sourceTree = "<group>"; };
+		1019AF8A26145E90005FE7C7 /* ValidStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidStatus.swift; sourceTree = "<group>"; };
+		1078FD9F2614955900026DBD /* ValidationCheckService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationCheckService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +75,9 @@
 				1009A99B26119FCB0089EC3F /* Info.plist */,
 				1009A9A32611A5380089EC3F /* SignUpViewController.swift */,
 				1009A9A62611A5690089EC3F /* PersonInformViewController.swift */,
+				1019AF8726145E25005FE7C7 /* IDViewModel.swift */,
+				1019AF8A26145E90005FE7C7 /* ValidStatus.swift */,
+				1078FD9F2614955900026DBD /* ValidationCheckService.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -144,10 +153,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1009A9A72611A5690089EC3F /* PersonInformViewController.swift in Sources */,
+				1078FDA02614955900026DBD /* ValidationCheckService.swift in Sources */,
 				1009A99226119FCA0089EC3F /* ViewController.swift in Sources */,
+				1019AF8B26145E90005FE7C7 /* ValidStatus.swift in Sources */,
 				1009A98E26119FCA0089EC3F /* AppDelegate.swift in Sources */,
 				1009A9A42611A5380089EC3F /* SignUpViewController.swift in Sources */,
 				1009A99026119FCA0089EC3F /* SceneDelegate.swift in Sources */,
+				1019AF8826145E25005FE7C7 /* IDViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,6 +20,9 @@ class BasicInfoViewController: UIViewController {
     
     @IBOutlet weak var nextButton: UIButton!
     
+    private var textFields: [UITextField] {
+        return [idTextField, passwordTextField, passwordConfirmTextField, nameTextField]
+    }
     private var userIDs: [String] = []
     
     override func viewDidLoad() {
@@ -135,5 +138,15 @@ extension BasicInfoViewController: UITextFieldDelegate {
         } else {
             nameMessageLabel.text = ""
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        guard let index = textFields.firstIndex(of: textField) else { return false }
+        if index == 3 {
+            performSegue(withIdentifier: "goToProfile", sender: self)
+        } else {
+            textFields[index + 1].becomeFirstResponder()
+        }
+        return false
     }
 }

@@ -49,7 +49,8 @@ class SignUpMainViewController: UIViewController {
 extension SignUpMainViewController {
     
     private func configureTitle() {
-        mainViewTitle = MainTitleLabel(frame: CGRect(x: 125, y: 60, width: 150, height: 40), title: "회원가입")
+        mainViewTitle = MainTitleLabel(frame: CGRect(x: 125, y: 60, width: 150, height: 40))
+        mainViewTitle.text = "회원가입"
         view.addSubview(mainViewTitle)
     }
     

@@ -23,6 +23,7 @@
 		712DBC782611CBD500F853A7 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DBC772611CBD500F853A7 /* PrivacyViewController.swift */; };
 		719125982612B890008D1DC2 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719125972612B890008D1DC2 /* Regex.swift */; };
 		71C598B526144D6C0097ED4C /* NetwordHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C598B426144D6C0097ED4C /* NetwordHandler.swift */; };
+		71C598BA261465EB0097ED4C /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C598B9261465EB0097ED4C /* TextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		712DBC772611CBD500F853A7 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
 		719125972612B890008D1DC2 /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
 		71C598B426144D6C0097ED4C /* NetwordHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetwordHandler.swift; sourceTree = "<group>"; };
+		71C598B9261465EB0097ED4C /* TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 			children = (
 				712DBC1526119DCF00F853A7 /* SignUpMainViewController.swift */,
 				712DBC772611CBD500F853A7 /* PrivacyViewController.swift */,
+				71C598B9261465EB0097ED4C /* TextFieldDelegate.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 			files = (
 				712DBC1626119DCF00F853A7 /* SignUpMainViewController.swift in Sources */,
 				712DBC1226119DCF00F853A7 /* AppDelegate.swift in Sources */,
+				71C598BA261465EB0097ED4C /* TextFieldDelegate.swift in Sources */,
 				712DBC732611C51100F853A7 /* NextVCButton.swift in Sources */,
 				712DBC782611CBD500F853A7 /* PrivacyViewController.swift in Sources */,
 				71C598B526144D6C0097ED4C /* NetwordHandler.swift in Sources */,

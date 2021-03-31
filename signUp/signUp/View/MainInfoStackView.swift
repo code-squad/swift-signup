@@ -30,10 +30,6 @@ class MainInfoStackView: UIStackView {
         setUpPassWordInfoView()
         setUpDoubleCheckInfoView()
         setUpnameCheckInfoView()
-        infoIDView.inputTextField.delegate = self
-        infoPasswordView.inputTextField.delegate = self
-        dobleCheckPassWordView.inputTextField.delegate = self
-        nameCheckView.inputTextField.delegate = self
     }
 }
 
@@ -64,13 +60,7 @@ extension MainInfoStackView {
 }
 
 //MARK: -Condition & Regex
-extension MainInfoStackView: UITextFieldDelegate {
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        infoIDView.inputTextField.layer.borderWidth = 1.0
-        let _ = enableCheckForNextPage()
-        return true
-    }
+extension MainInfoStackView {
     
     func enableCheckForNextPage() -> Bool {
         return conditionForID() && conditionForPassWord() && conditionForPasswordConfirm() && conditionForName()

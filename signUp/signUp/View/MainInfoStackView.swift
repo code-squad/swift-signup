@@ -4,7 +4,7 @@ class MainInfoStackView: UIStackView {
     
     private(set) var infoIDView = EachInfoView()
     private(set) var infoPasswordView = EachInfoView()
-    private(set) var dobleCheckPassWordView = EachInfoView()
+    private(set) var doubleCheckPassWordView = EachInfoView()
     private(set) var nameCheckView = EachInfoView()
     private var idList = [String]()
     
@@ -53,8 +53,8 @@ extension MainInfoStackView {
     }
 
     private func setUpDoubleCheckInfoView() {
-        dobleCheckPassWordView.infoLabel.text = "비밀번호 재확인"
-        self.addArrangedSubview(dobleCheckPassWordView)
+        doubleCheckPassWordView.infoLabel.text = "비밀번호 재확인"
+        self.addArrangedSubview(doubleCheckPassWordView)
     }
     
     private func setUpnameCheckInfoView() {
@@ -115,17 +115,17 @@ extension MainInfoStackView {
     }
     
     func conditionForPasswordConfirm() -> Bool {
-        if dobleCheckPassWordView.inputTextField.text?.count == 0 {
-            dobleCheckPassWordView.inputTextField.layer.borderWidth = 0
-            dobleCheckPassWordView.checkLabel.text = ""
-        } else if infoPasswordView.inputTextField.text != dobleCheckPassWordView.inputTextField.text {
-            dobleCheckPassWordView.inputTextField.layer.borderColor = UIColor.red.cgColor
-            dobleCheckPassWordView.checkLabel.textColor = UIColor.red
-            dobleCheckPassWordView.checkLabel.text = PasswordConfirmCheck.notEqul.description
+        if doubleCheckPassWordView.inputTextField.text?.count == 0 {
+            doubleCheckPassWordView.inputTextField.layer.borderWidth = 0
+            doubleCheckPassWordView.checkLabel.text = ""
+        } else if infoPasswordView.inputTextField.text != doubleCheckPassWordView.inputTextField.text {
+            doubleCheckPassWordView.inputTextField.layer.borderColor = UIColor.red.cgColor
+            doubleCheckPassWordView.checkLabel.textColor = UIColor.red
+            doubleCheckPassWordView.checkLabel.text = PasswordConfirmCheck.notEqul.description
         } else {
-            dobleCheckPassWordView.inputTextField.layer.borderWidth = 0
-            dobleCheckPassWordView.checkLabel.text = PasswordConfirmCheck.valid.description
-            dobleCheckPassWordView.checkLabel.textColor = UIColor.systemGreen
+            doubleCheckPassWordView.inputTextField.layer.borderWidth = 0
+            doubleCheckPassWordView.checkLabel.text = PasswordConfirmCheck.valid.description
+            doubleCheckPassWordView.checkLabel.textColor = UIColor.systemGreen
             return true
         }
         return false

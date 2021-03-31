@@ -21,8 +21,6 @@ class NetworkManager {
     }
     
     func postUser(userInfo : UserInformation) {
-        var networkResponse = NetworkResponse(result: "", status: "")
-        
         let sendData = try? JSONEncoder().encode(userInfo)
         var request = URLRequest(url: self.url!)
         request.httpMethod = "POST"

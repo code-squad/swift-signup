@@ -52,7 +52,6 @@ class SignUpViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(nameTextFieldEdited(_:)), name: .nameTextField, object: nil)
     }
     
-    
     @objc private func idTextFieldEdited(_ notification : Notification) {
         let textField = notification.object as! UITextField
         guard let text = textField.text else {
@@ -180,7 +179,7 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func nextButtonTouched(_ sender: Any) {
-        
+        //nextView
     }
 }
 

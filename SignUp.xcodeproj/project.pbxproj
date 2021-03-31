@@ -72,20 +72,68 @@
 			children = (
 				1009A98D26119FCA0089EC3F /* AppDelegate.swift */,
 				1009A98F26119FCA0089EC3F /* SceneDelegate.swift */,
-				1009A99126119FCA0089EC3F /* ViewController.swift */,
-				1009A99326119FCA0089EC3F /* Main.storyboard */,
 				1009A99626119FCB0089EC3F /* Assets.xcassets */,
 				1009A99826119FCB0089EC3F /* LaunchScreen.storyboard */,
 				1009A99B26119FCB0089EC3F /* Info.plist */,
-				1009A9A32611A5380089EC3F /* SignUpViewController.swift */,
-				1009A9A62611A5690089EC3F /* PersonInformViewController.swift */,
-				1019AF8726145E25005FE7C7 /* IDViewModel.swift */,
-				1019AF8A26145E90005FE7C7 /* IDValidState.swift */,
-				1078FD9F2614955900026DBD /* ValidationCheckService.swift */,
-				1078FDA52614974F00026DBD /* PasswordViewModel.swift */,
-				1078FDA8261497D500026DBD /* PasswordValidState.swift */,
+				1078FDB32614A3E600026DBD /* Controller */,
+				1078FDB72614A40800026DBD /* Service */,
+				1078FDB82614A41F00026DBD /* Model */,
+				1078FDB42614A3F100026DBD /* ViewModel */,
+				1078FDB52614A3F800026DBD /* StoryBoard */,
+				1078FDB62614A40200026DBD /* Utility */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		1078FDB32614A3E600026DBD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1009A9A32611A5380089EC3F /* SignUpViewController.swift */,
+				1009A9A62611A5690089EC3F /* PersonInformViewController.swift */,
+				1009A99126119FCA0089EC3F /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1078FDB42614A3F100026DBD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1019AF8726145E25005FE7C7 /* IDViewModel.swift */,
+				1078FDA52614974F00026DBD /* PasswordViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1078FDB52614A3F800026DBD /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				1009A99326119FCA0089EC3F /* Main.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		1078FDB62614A40200026DBD /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		1078FDB72614A40800026DBD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				1078FD9F2614955900026DBD /* ValidationCheckService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		1078FDB82614A41F00026DBD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1078FDA8261497D500026DBD /* PasswordValidState.swift */,
+				1019AF8A26145E90005FE7C7 /* IDValidState.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

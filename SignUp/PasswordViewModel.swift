@@ -1,5 +1,5 @@
 //
-//  IDViewModel.swift
+//  PasswordViewModel.swift
 //  SignUp
 //
 //  Created by 박혜원 on 2021/03/31.
@@ -8,20 +8,12 @@
 import UIKit
 import Combine
 
-protocol ValidCheckViewModel {
-    associatedtype State
-    typealias ControlActionClosure = (State) -> ()
+class PasswordViewModel: NSObject, ValidCheckViewModel{
     
-    var isValid : State { get set }
-    func checkValidation() -> Bool
-    func bind(control : @escaping ControlActionClosure)
-}
-
-class IDViewModel: NSObject, ValidCheckViewModel {
     
-    @IBOutlet weak var id: UITextField!
+    @IBOutlet weak var password: UITextField!
     
-    typealias State = IDValidState
+    typealias State = PasswordValidState
     
     var isValid : State
     
@@ -34,28 +26,26 @@ class IDViewModel: NSObject, ValidCheckViewModel {
         
         NotificationCenter.default.addObserver(
             self,
-            selector: #selector(idTextFieldEditingChanged(textField:)),
-            name: UITextField.textDidEndEditingNotification,
+            selector: #selector(passwordTextFieldEditingChanged(textField:)),
+            name: UITextField.textDidChangeNotification,
             object: nil)
         
         cancellable = isValid.objectWillChange.sink {
             self.actionHandler?(self.isValid)
         }
     }
-    
     func checkValidation() -> Bool {
-        guard let text = id.text else { return false }
-        return ValidationCheckService.isValidId(input: text)
+        guard let text = password.text else { return false }
+        return ValidationCheckService.isValidPassword(input: text)
     }
     func bind(control : @escaping ControlActionClosure) {
         self.actionHandler = control
     }
-    @objc func idTextFieldEditingChanged(textField : UITextField){
+    @objc func passwordTextFieldEditingChanged(textField : UITextField){
         if checkValidation() {
             isValid.setValid()
         } else {
-            isValid.setNotValid()
+            isValid.setInValid()
         }
     }
 }
-

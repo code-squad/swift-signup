@@ -29,7 +29,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
-        
         NotificationCenter.default.addObserver(self, selector: #selector(idGuideText), name: CustomTextField.idState, object: idText)
         NotificationCenter.default.addObserver(self, selector: #selector(passwordGuideText), name: CustomTextField.passwordState, object: passwordText)
         NotificationCenter.default.addObserver(self, selector: #selector(passwordConfirmGuideText), name: CustomTextField.passwordConfirmState, object: passwordConfirmText)
@@ -54,6 +53,7 @@ class ViewController: UIViewController {
         self.buttonManager.update(textField: type(of: nameText), state: nameText.currentState)
     }
     
+    //MARK: @objc 처리
     @objc
     func idGuideText(notification: Notification) {
         guard let text = notification.userInfo?[CustomTextField.MessageInfo.text] as? String,

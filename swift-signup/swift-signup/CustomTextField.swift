@@ -27,6 +27,7 @@ class CustomTextField : UITextField, UITextFieldDelegate {
         stateToColor()
     }
     
+    //MARK: 상태에 따라 텍스트필드 테두리 색 변경
     func stateToColor() {
         switch self.currentState {
         case .begin:
@@ -42,11 +43,13 @@ class CustomTextField : UITextField, UITextFieldDelegate {
         }
     }
     
+    //MARK: 선택이 되면 파란색 테두리
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         self.layer.borderColor = UIColor.systemBlue.cgColor
         return true
     }
     
+    //MARK: 선택이 끝나면 상태에 따라 테두리 색 변경
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         if self.currentState == .valid || self.currentState == .end {
             self.currentState = .end

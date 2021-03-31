@@ -36,7 +36,7 @@
                                     <constraint firstAttribute="height" constant="38" id="nua-rR-WzX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" name="PointGrey"/>
@@ -86,7 +86,7 @@
                                     <constraint firstAttribute="height" constant="38" id="hoM-gI-DEp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" name="PointGrey"/>
@@ -116,7 +116,7 @@
                                     <constraint firstAttribute="height" constant="38" id="TF7-XR-H4n"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" name="PointGrey"/>
@@ -156,7 +156,7 @@
                                     <constraint firstAttribute="height" constant="38" id="Nvb-gt-fwn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" name="PointGrey"/>
@@ -279,10 +279,10 @@
             <size key="intrinsicContentSize" width="263.66666666666669" height="26.666666666666668"/>
         </designable>
         <designable name="Gs4-B8-4BV">
-            <size key="intrinsicContentSize" width="303" height="26.666666666666668"/>
+            <size key="intrinsicContentSize" width="303" height="25"/>
         </designable>
         <designable name="JuD-77-4MF">
-            <size key="intrinsicContentSize" width="32" height="26.666666666666668"/>
+            <size key="intrinsicContentSize" width="32" height="25"/>
         </designable>
         <designable name="hwv-bd-Xx4">
             <size key="intrinsicContentSize" width="53.666666666666664" height="21"/>

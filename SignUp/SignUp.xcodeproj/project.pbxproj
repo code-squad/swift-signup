@@ -16,9 +16,11 @@
 		BF11F66A2611996F006AC76C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF11F6682611996F006AC76C /* Main.storyboard */; };
 		BF11F66C26119971006AC76C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF11F66B26119971006AC76C /* Assets.xcassets */; };
 		BF11F66F26119971006AC76C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF11F66D26119971006AC76C /* LaunchScreen.storyboard */; };
-		BF11F6782611AB3C006AC76C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF11F6772611AB3C006AC76C /* ViewModel.swift */; };
+		BF11F6782611AB3C006AC76C /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF11F6772611AB3C006AC76C /* SignUpViewModel.swift */; };
 		BF11F67C2611C18E006AC76C /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF11F67B2611C18E006AC76C /* UITextField+Extension.swift */; };
 		BF11F6862611C2A4006AC76C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF11F6852611C2A4006AC76C /* Service.swift */; };
+		BFC925ED261452D700D4FBD0 /* IdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC925EC261452D700D4FBD0 /* IdViewModel.swift */; };
+		BFC925F02614754C00D4FBD0 /* SignUpStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC925EF2614754C00D4FBD0 /* SignUpStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,9 +35,11 @@
 		BF11F66B26119971006AC76C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF11F66E26119971006AC76C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF11F67026119971006AC76C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF11F6772611AB3C006AC76C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		BF11F6772611AB3C006AC76C /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		BF11F67B2611C18E006AC76C /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		BF11F6852611C2A4006AC76C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		BFC925EC261452D700D4FBD0 /* IdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdViewModel.swift; sourceTree = "<group>"; };
+		BFC925EF2614754C00D4FBD0 /* SignUpStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				BF0E75262612B58000D513B4 /* InputTextField.swift */,
+				BFC925EF2614754C00D4FBD0 /* SignUpStackView.swift */,
 				BF0E753126132D7200D513B4 /* MessageLabel.swift */,
 			);
 			path = View;
@@ -82,7 +87,8 @@
 				BF11F6622611996F006AC76C /* AppDelegate.swift */,
 				BF11F6642611996F006AC76C /* SceneDelegate.swift */,
 				BF11F6662611996F006AC76C /* ViewController.swift */,
-				BF11F6772611AB3C006AC76C /* ViewModel.swift */,
+				BFC925EC261452D700D4FBD0 /* IdViewModel.swift */,
+				BF11F6772611AB3C006AC76C /* SignUpViewModel.swift */,
 				BF0E7534261333B200D513B4 /* State.swift */,
 				BF0E75292612B6AA00D513B4 /* View */,
 				BF11F6682611996F006AC76C /* Main.storyboard */,
@@ -185,8 +191,10 @@
 				BF11F67C2611C18E006AC76C /* UITextField+Extension.swift in Sources */,
 				BF11F6632611996F006AC76C /* AppDelegate.swift in Sources */,
 				BF0E7535261333B200D513B4 /* State.swift in Sources */,
+				BFC925F02614754C00D4FBD0 /* SignUpStackView.swift in Sources */,
 				BF11F6862611C2A4006AC76C /* Service.swift in Sources */,
-				BF11F6782611AB3C006AC76C /* ViewModel.swift in Sources */,
+				BF11F6782611AB3C006AC76C /* SignUpViewModel.swift in Sources */,
+				BFC925ED261452D700D4FBD0 /* IdViewModel.swift in Sources */,
 				BF11F6652611996F006AC76C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

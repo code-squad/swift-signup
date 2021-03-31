@@ -10,20 +10,15 @@ import Combine
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var idTextField: InputTextField!
-    @IBOutlet weak var passwordTextField: InputTextField!
-    @IBOutlet weak var passwordConfirmTextField: InputTextField!
-    @IBOutlet weak var nameTextField: InputTextField!
-    
-    @IBOutlet weak var idValidLabel: MessageLabel!
-    @IBOutlet weak var passwordValidLabel: MessageLabel!
-    @IBOutlet weak var passwordConfirmVaildLabel: MessageLabel!
-    @IBOutlet weak var nameValidLabel: MessageLabel!
+    @IBOutlet weak var idStackView: SignUpStackView!
+    @IBOutlet weak var passwordStackView: SignUpStackView!
+    @IBOutlet weak var passwordConfirmStackView: SignUpStackView!
+    @IBOutlet weak var nameStackView: SignUpStackView!
     
     @IBOutlet weak var nextButton: UIButton!
     
-    var cancellable = Set<AnyCancellable>()
-    var viewModel = ViewModel()
+    private var cancellable = Set<AnyCancellable>()
+    private var viewModel = SignUpViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,62 +31,32 @@ class ViewController: UIViewController {
     
     func configureBind() {
 
-        idTextField.textPublisher
-            .assign(to: &viewModel.$idText)
-        passwordTextField.textPublisher
-            .assign(to: &viewModel.$passwordText)
-        passwordConfirmTextField.textPublisher
+        idStackView.textField.textPublisher.assign(to: &viewModel.idViewModel.$idText)
+        passwordStackView.textField.textPublisher.assign(to: &viewModel.$passwordText)
+        
+        passwordConfirmStackView.textField.textPublisher
             .assign(to: &viewModel.$passwordConfirmText)
-        nameTextField.textPublisher
+        nameStackView.textField.textPublisher
             .assign(to: &viewModel.$nameText)
         
         viewModel.isIdMatchValid.sink { state in
-            self.idValidLabel.setText(state.description)
-            switch state {
-            case .notStandard, .idExist :
-                self.idValidLabel.fail()
-                self.idTextField.fail()
-            case .valid :
-                self.idValidLabel.succeed()
-                self.idTextField.succeed()
-            }
+            self.idStackView.setText(state.description)
+            state == .valid ? self.idStackView.succeed() : self.idStackView.fail()
         }.store(in: &cancellable)
         
         viewModel.isMatchPasswordValid.sink { state in
-            self.passwordConfirmVaildLabel.setText(state.description)
-            switch state {
-            case .notEqual :
-                self.passwordConfirmVaildLabel.fail()
-                self.passwordConfirmTextField.fail()
-            case .valid :
-                self.passwordConfirmVaildLabel.succeed()
-                self.passwordConfirmTextField.succeed()
-            }
+            self.passwordConfirmStackView.setText(state.description)
+            state == .valid ? self.passwordConfirmStackView.succeed() : self.passwordConfirmStackView.fail()
         }.store(in: &cancellable)
         
         viewModel.isPasswordValid.sink { state in
-            self.passwordValidLabel.setText(state.description)
-            switch state {
-            case .notEnoughCount, .notNumber, .notUpperWord, .notSymbol :
-                self.passwordValidLabel.fail()
-                self.passwordTextField.fail()
-            case .valid :
-                self.passwordValidLabel.succeed()
-                self.passwordTextField.succeed()
-            }
+            self.passwordStackView.setText(state.description)
+            state == .valid ? self.passwordStackView.succeed() : self.passwordStackView.fail()
         }.store(in: &cancellable)
         
-        
         viewModel.isNameValid.sink { state in
-            self.nameValidLabel.setText(state.description)
-            switch state {
-            case .empty :
-                self.nameValidLabel.fail()
-                self.nameTextField.fail()
-            case .valid :
-                self.nameValidLabel.succeed()
-                self.nameTextField.succeed()
-            }
+            self.nameStackView.setText(state.description)
+            state == .valid ? self.nameStackView.succeed() : self.nameStackView.fail()
         }.store(in: &cancellable)
         
         viewModel.isInputValid.receive(on: RunLoop.main)

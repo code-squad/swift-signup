@@ -57,7 +57,7 @@ extension SignUpMainViewController {
     }
     
     private func configureNextButton() {
-        buttonForMove.frame = CGRect(x: 120, y: 500, width: 140, height: 50)
+        buttonForMove.frame = CGRect(x: 120, y: 600, width: 140, height: 50)
         view.addSubview(buttonForMove)
     }
 }

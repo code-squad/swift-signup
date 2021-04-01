@@ -7,7 +7,11 @@
 
 import Foundation
 
-enum PasswordState : CustomStringConvertible {
+protocol Validable {
+    func isValid() -> Bool
+}
+
+enum PasswordState : Validable, CustomStringConvertible {
     case notEnoughCount
     case notUpperWord
     case notNumber
@@ -28,9 +32,13 @@ enum PasswordState : CustomStringConvertible {
         return "안전한 비밀번호 입니다"
       }
     }
+    
+    func isValid() -> Bool {
+        self == .valid ? true : false
+    }
 }
 
-enum PasswordConfirmState : CustomStringConvertible {
+enum PasswordConfirmState : Validable, CustomStringConvertible {
     case notEqual
     case valid
     
@@ -42,10 +50,14 @@ enum PasswordConfirmState : CustomStringConvertible {
         return "비밀번호가 일치합니다"
       }
     }
+    
+    func isValid() -> Bool {
+        self == .valid ? true : false
+    }
 }
 
 
-enum IdState : CustomStringConvertible {
+enum IdState : Validable, CustomStringConvertible {
     case idExist
     case notStandard
     case valid
@@ -60,9 +72,13 @@ enum IdState : CustomStringConvertible {
         return "사용 가능한 아이디입니다"
       }
     }
+    
+    func isValid() -> Bool {
+        self == .valid ? true : false
+    }
 }
 
-enum NameState : CustomStringConvertible {
+enum NameState : Validable, CustomStringConvertible {
     case empty
     case valid
     
@@ -73,5 +89,9 @@ enum NameState : CustomStringConvertible {
       case .valid :
         return ""
       }
+    }
+    
+    func isValid() -> Bool {
+        self == .valid ? true : false
     }
 }

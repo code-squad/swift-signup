@@ -25,40 +25,39 @@ class ViewController: UIViewController {
         configureBind()
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
+            super.touchesBegan(touches, with: nil)
             self.view.endEditing(true)
     }
     
     func configureBind() {
 
         idStackView.textField.textPublisher.assign(to: &viewModel.idViewModel.$idText)
-        
         passwordStackView.textField.textPublisher.assign(to: &viewModel.passwordViewModel.$passwordText)
-        
         passwordConfirmStackView.textField.textPublisher
             .assign(to: &viewModel.passwordViewModel.$passwordConfirmText)
-        
         nameStackView.textField.textPublisher
             .assign(to: &viewModel.nameViewModel.$nameText)
         
         viewModel.isIdMatchValid.sink { state in
             self.idStackView.setText(state.description)
-            state == .valid ? self.idStackView.succeed() : self.idStackView.fail()
+            self.idStackView.updateUI(state.isValid())
         }.store(in: &cancellable)
         
         viewModel.isPasswordValid.sink { state in
             self.passwordStackView.setText(state.description)
-            state == .valid ? self.passwordStackView.succeed() : self.passwordStackView.fail()
+            self.passwordStackView.updateUI(state.isValid())
         }.store(in: &cancellable)
 
         viewModel.isMatchPasswordValid.sink { state in
             self.passwordConfirmStackView.setText(state.description)
-            state == .valid ? self.passwordConfirmStackView.succeed() : self.passwordConfirmStackView.fail()
+            self.passwordConfirmStackView.updateUI(state.isValid())
         }.store(in: &cancellable)
         
         viewModel.isNameValid.sink { state in
             self.nameStackView.setText(state.description)
-            state == .valid ? self.nameStackView.succeed() : self.nameStackView.fail()
+            self.nameStackView.updateUI(state.isValid())
         }.store(in: &cancellable)
         
         viewModel.isInputValid.receive(on: RunLoop.main)

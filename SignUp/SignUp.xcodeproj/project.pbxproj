@@ -87,7 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				BF11F6802611C1F6006AC76C /* Network */,
-				BF11F67A2611C178006AC76C /* Extension */,
 				BF11F6622611996F006AC76C /* AppDelegate.swift */,
 				BF11F6642611996F006AC76C /* SceneDelegate.swift */,
 				BF11F6662611996F006AC76C /* ViewController.swift */,
@@ -114,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				BF11F6852611C2A4006AC76C /* Service.swift */,
+				BF11F67A2611C178006AC76C /* Extension */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -122,9 +122,9 @@
 			isa = PBXGroup;
 			children = (
 				BF11F6772611AB3C006AC76C /* SignUpViewModel.swift */,
+				BFC926072614A47B00D4FBD0 /* IdViewModel.swift */,
 				BFC925FA2614980E00D4FBD0 /* PasswordViewModel.swift */,
 				BFC925FD26149A5800D4FBD0 /* NameViewModel.swift */,
-				BFC926072614A47B00D4FBD0 /* IdViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";

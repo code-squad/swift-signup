@@ -18,6 +18,13 @@
 		E403570A2612FD66005D4D36 /* String+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40357092612FD66005D4D36 /* String+Validation.swift */; };
 		E40357172612FDEE005D4D36 /* String+ValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40357162612FDEE005D4D36 /* String+ValidationTests.swift */; };
 		E403571D2612FF45005D4D36 /* String+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40357092612FD66005D4D36 /* String+Validation.swift */; };
+		E48A7EBC26144D3D00E1E71F /* UsernameListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48A7EBB26144D3D00E1E71F /* UsernameListManager.swift */; };
+		E48A7EC42614538500E1E71F /* ValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48A7EC32614538500E1E71F /* ValidationManager.swift */; };
+		E48A7EC9261458F300E1E71F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48A7EC8261458F300E1E71F /* Constants.swift */; };
+		E48A7EDB2614688B00E1E71F /* UsernameTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48A7EDA2614688B00E1E71F /* UsernameTextFieldDelegate.swift */; };
+		E48A7EE626147AB200E1E71F /* PasswordTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48A7EE526147AB200E1E71F /* PasswordTextFieldDelegate.swift */; };
+		E48A7EEB26147E0500E1E71F /* ConfirmPasswordTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48A7EEA26147E0500E1E71F /* ConfirmPasswordTextFieldDelegate.swift */; };
+		E48A7EF02614932200E1E71F /* NameTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48A7EEF2614932200E1E71F /* NameTextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +61,13 @@
 		E40356C62611AB90005D4D36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E40357092612FD66005D4D36 /* String+Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validation.swift"; sourceTree = "<group>"; };
 		E40357162612FDEE005D4D36 /* String+ValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ValidationTests.swift"; sourceTree = "<group>"; };
+		E48A7EBB26144D3D00E1E71F /* UsernameListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameListManager.swift; sourceTree = "<group>"; };
+		E48A7EC32614538500E1E71F /* ValidationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationManager.swift; sourceTree = "<group>"; };
+		E48A7EC8261458F300E1E71F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E48A7EDA2614688B00E1E71F /* UsernameTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameTextFieldDelegate.swift; sourceTree = "<group>"; };
+		E48A7EE526147AB200E1E71F /* PasswordTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextFieldDelegate.swift; sourceTree = "<group>"; };
+		E48A7EEA26147E0500E1E71F /* ConfirmPasswordTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPasswordTextFieldDelegate.swift; sourceTree = "<group>"; };
+		E48A7EEF2614932200E1E71F /* NameTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +121,15 @@
 				E40356A22611AB8E005D4D36 /* AppDelegate.swift */,
 				E40356A42611AB8E005D4D36 /* SceneDelegate.swift */,
 				E40356A62611AB8E005D4D36 /* BasicInfoViewController.swift */,
+				E48A7EDA2614688B00E1E71F /* UsernameTextFieldDelegate.swift */,
+				E48A7EE526147AB200E1E71F /* PasswordTextFieldDelegate.swift */,
+				E48A7EEA26147E0500E1E71F /* ConfirmPasswordTextFieldDelegate.swift */,
+				E48A7EEF2614932200E1E71F /* NameTextFieldDelegate.swift */,
+				E48A7EBB26144D3D00E1E71F /* UsernameListManager.swift */,
+				E48A7EC32614538500E1E71F /* ValidationManager.swift */,
 				E40356A82611AB8E005D4D36 /* Main.storyboard */,
 				E40357092612FD66005D4D36 /* String+Validation.swift */,
+				E48A7EC8261458F300E1E71F /* Constants.swift */,
 				E40356AB2611AB90005D4D36 /* Assets.xcassets */,
 				E40356AD2611AB90005D4D36 /* LaunchScreen.storyboard */,
 				E40356B02611AB90005D4D36 /* Info.plist */,
@@ -268,7 +289,14 @@
 				E40356A72611AB8E005D4D36 /* BasicInfoViewController.swift in Sources */,
 				E40356A32611AB8E005D4D36 /* AppDelegate.swift in Sources */,
 				E40356A52611AB8E005D4D36 /* SceneDelegate.swift in Sources */,
+				E48A7EF02614932200E1E71F /* NameTextFieldDelegate.swift in Sources */,
 				E403570A2612FD66005D4D36 /* String+Validation.swift in Sources */,
+				E48A7EBC26144D3D00E1E71F /* UsernameListManager.swift in Sources */,
+				E48A7EC42614538500E1E71F /* ValidationManager.swift in Sources */,
+				E48A7EEB26147E0500E1E71F /* ConfirmPasswordTextFieldDelegate.swift in Sources */,
+				E48A7EDB2614688B00E1E71F /* UsernameTextFieldDelegate.swift in Sources */,
+				E48A7EC9261458F300E1E71F /* Constants.swift in Sources */,
+				E48A7EE626147AB200E1E71F /* PasswordTextFieldDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

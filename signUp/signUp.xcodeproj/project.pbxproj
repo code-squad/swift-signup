@@ -172,14 +172,30 @@
 		712DBC572611B2CE00F853A7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				712DBC582611B2D900F853A7 /* MainTitleLabel.swift */,
-				712DBC602611B44B00F853A7 /* MainInfoStackView.swift */,
-				712DBC652611B81100F853A7 /* EachInfoView.swift */,
 				712DBC722611C51100F853A7 /* NextVCButton.swift */,
+				712DBC582611B2D900F853A7 /* MainTitleLabel.swift */,
+				717F73612615B30F0034E697 /* PrivacyView */,
+				717F73602615B2F20034E697 /* MainView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		717F73602615B2F20034E697 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				712DBC652611B81100F853A7 /* EachInfoView.swift */,
+				712DBC602611B44B00F853A7 /* MainInfoStackView.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		717F73612615B30F0034E697 /* PrivacyView */ = {
+			isa = PBXGroup;
+			children = (
 				717F73532615AECF0034E697 /* PrivacyStackView.swift */,
 				717F735B2615B24C0034E697 /* GenderSegmentedControl.swift */,
 			);
-			path = View;
+			path = PrivacyView;
 			sourceTree = "<group>";
 		};
 		719125962612B878008D1DC2 /* Extension */ = {

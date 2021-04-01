@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
     {
-            super.touchesBegan(touches, with: nil)
+            super.touchesBegan(touches, with: event)
             self.view.endEditing(true)
     }
     
@@ -41,22 +41,22 @@ class ViewController: UIViewController {
             .assign(to: &viewModel.nameViewModel.$nameText)
         
         viewModel.isIdMatchValid.sink { state in
-            self.idStackView.setText(state.description)
+            self.idStackView.setText(state.message)
             self.idStackView.updateUI(state.isValid())
         }.store(in: &cancellable)
         
         viewModel.isPasswordValid.sink { state in
-            self.passwordStackView.setText(state.description)
+            self.passwordStackView.setText(state.message)
             self.passwordStackView.updateUI(state.isValid())
         }.store(in: &cancellable)
 
         viewModel.isMatchPasswordValid.sink { state in
-            self.passwordConfirmStackView.setText(state.description)
+            self.passwordConfirmStackView.setText(state.message)
             self.passwordConfirmStackView.updateUI(state.isValid())
         }.store(in: &cancellable)
         
         viewModel.isNameValid.sink { state in
-            self.nameStackView.setText(state.description)
+            self.nameStackView.setText(state.message)
             self.nameStackView.updateUI(state.isValid())
         }.store(in: &cancellable)
         

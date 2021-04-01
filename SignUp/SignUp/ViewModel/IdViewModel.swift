@@ -15,33 +15,11 @@ class IdViewModel {
     private var idList : [String] = []
     private var service : Service
     private var cancellable : AnyCancellable?
+    
     init() {
         service = Service()
-        service.request { (resultList) in
-            switch resultList {
-            case .success(let data):
-                self.idList = self.match(text: data)
-            case .failure(let errr):
-                print("err")
-            }
-            //self.idList = self.match(text: resultList)
-        }
-//        let stream = service.request.sink { (resultList) in
-//            self.idList = self.match(text: resultList)
-//        }
-        
-//        cancellable = AnyCancellable(stream)
+        requestIdList()
     }
-    
-//    enum IdState : String, Validable {
-//        func isValid() -> Bool {
-//            self == .valid ? true : false
-//        }
-//        
-//        case idExist = "이미 사용중인 아이디입니다"
-//        case notStandard = "5~20자의 영문 소문자, 숫자와 특수기호(_)(-) 만 사용 가능합니다"
-//        case valid = "사용 가능한 아이디입니다"
-//    }
     
     var isIdMatchValid : AnyPublisher<IdState , Never> {
         Publishers.Zip(setTextRule,isIdexist)
@@ -52,6 +30,11 @@ class IdViewModel {
             }.eraseToAnyPublisher()
     }
     
+    private func requestIdList() {
+        cancellable = service.request(EndPoint.url).sink { (list) in
+            self.idList = self.match(text: list)
+        }
+    }
     
     private var setTextRule : AnyPublisher<Bool, Never> {
         let pattern = "^[a-z0-9_-]{5,20}$"

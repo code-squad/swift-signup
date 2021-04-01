@@ -11,14 +11,14 @@ protocol Validable {
     func isValid() -> Bool
 }
 
-enum PasswordState : Validable, CustomStringConvertible {
+enum PasswordState : Validable{
     case notEnoughCount
     case notUpperWord
     case notNumber
     case notSymbol
     case valid
     
-    var description: String {
+    var message: String {
       switch self {
       case .notEnoughCount:
         return "8자 이상 16자 이하로 입력해주세요"
@@ -38,11 +38,11 @@ enum PasswordState : Validable, CustomStringConvertible {
     }
 }
 
-enum PasswordConfirmState : Validable, CustomStringConvertible {
+enum PasswordConfirmState : Validable {
     case notEqual
     case valid
     
-    var description: String {
+    var message: String {
       switch self {
       case .notEqual:
         return "비밀번호가 일치하지 않습니다"
@@ -57,12 +57,12 @@ enum PasswordConfirmState : Validable, CustomStringConvertible {
 }
 
 
-enum IdState : Validable, CustomStringConvertible {
+enum IdState : Validable {
     case idExist
     case notStandard
     case valid
     
-    var description: String {
+    var message: String {
       switch self {
       case .idExist:
         return "이미 사용중인 아이디입니다"
@@ -78,11 +78,11 @@ enum IdState : Validable, CustomStringConvertible {
     }
 }
 
-enum NameState : Validable, CustomStringConvertible {
+enum NameState : Validable {
     case empty
     case valid
     
-    var description: String {
+    var message: String {
       switch self {
       case .empty:
         return "이름은 필수 입력 항목입니다"

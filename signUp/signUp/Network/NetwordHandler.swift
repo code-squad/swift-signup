@@ -23,9 +23,33 @@ class NetworkHandler {
             
             let result = String(data: data, encoding: .utf8) ?? ""
             
-            idData = result.components(separatedBy: [",", "[", "\"", " ", "]"]).filter{$0.count > 0}
+            idData = stringParshing(text: result)
             completion(idData)
         }
         dataTask.resume()
     }
+    
+    static func stringParshing(text: String) -> [String] {
+        let result = text.components(separatedBy: [",", "[", "]", "\"", " "]).filter{$0.count > 0}
+        return result
+    }
 }
+
+/*
+ How to parse jsonData to String????
+ 
+ guard let jsonString = try? JSONSerialization.jsonObject(with: data, options: []) else { return }
+ 
+ (
+     jkhome,
+     crongro,
+     honux1984,
+     klipsh1,
+     chocopie,
+     codesquad,
+     swiftking,
+     harrybutter,
+     sarah
+ )
+ NSArrayI
+ */

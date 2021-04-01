@@ -3,6 +3,7 @@ import UIKit
 class PrivacyStackView: UIStackView {
     
     var birthdayInfo = EachInfoView()
+    var genderInfo = GenderSegmentedControl()
     var emailInfo = EachInfoView()
     var cellPhoneInfo = EachInfoView()
     
@@ -25,6 +26,7 @@ class PrivacyStackView: UIStackView {
     
     private func setUpSubViews() {
         self.addArrangedSubview(birthdayInfo)
+        self.addArrangedSubview(genderInfo)
         self.addArrangedSubview(emailInfo)
         self.addArrangedSubview(cellPhoneInfo)
     }

@@ -12,7 +12,8 @@ class SignUpStackView : UIStackView {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var validLabel: UILabel!
     
-    func updateUI(_ state: Bool) {
+    func updateUI(_ text : String ,_ state: Bool) {
+        setText(text)
         state ? succeed() : fail()
     }
     

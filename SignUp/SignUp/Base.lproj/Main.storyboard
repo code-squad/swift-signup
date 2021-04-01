@@ -239,7 +239,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uMn-nS-Inh">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uMn-nS-Inh" customClass="BirthDateTextField" customModule="SignUp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="25.333333333333329" width="350" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="wb3-9n-CFT"/>
@@ -392,6 +392,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="LXQ-u5-8bI"/>
                     <connections>
+                        <outlet property="birthDateTextField" destination="uMn-nS-Inh" id="veM-nx-2RO"/>
                         <outlet property="emailStackView" destination="Ovf-Wu-4nf" id="spr-1E-szS"/>
                         <outlet property="phoneStackView" destination="Pna-Vz-d2X" id="BiP-mD-0Ra"/>
                     </connections>

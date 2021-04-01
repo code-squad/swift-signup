@@ -10,6 +10,7 @@ import Combine
 
 class PrivateDataViewController: BaseViewController {
 
+    @IBOutlet weak var birthDateTextField: BirthDateTextField!
     @IBOutlet weak var emailStackView: SignUpStackView!
     @IBOutlet weak var phoneStackView: SignUpStackView!
     
@@ -26,13 +27,11 @@ class PrivateDataViewController: BaseViewController {
         phoneStackView.textField.textPublisher.assign(to: &privateDataViewModel.phoneViewModel.$phoneText)
         
         privateDataViewModel.isEmailMatchValid.sink { (state) in
-            self.emailStackView.setText(state.message)
-            self.emailStackView.updateUI(state.isValid())
+            self.emailStackView.updateUI(state.message, state.isValid())
         }.store(in: &cancellable)
         
         privateDataViewModel.isPhoneValid.sink { (state) in
-            self.phoneStackView.setText(state.message)
-            self.phoneStackView.updateUI(state.isValid())
+            self.phoneStackView.updateUI(state.message, state.isValid())
         }.store(in: &cancellable)
     }
     

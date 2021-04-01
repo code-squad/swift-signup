@@ -31,6 +31,7 @@
 		BFCBC7932615B40E009A9F0F /* EmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCBC7922615B40E009A9F0F /* EmailViewModel.swift */; };
 		BFCBC7962615B417009A9F0F /* PhoneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCBC7952615B417009A9F0F /* PhoneViewModel.swift */; };
 		BFCBC7992615D68B009A9F0F /* BirthDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCBC7982615D68B009A9F0F /* BirthDatePicker.swift */; };
+		BFCBC79D2615E74D009A9F0F /* BirthDateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCBC79C2615E74D009A9F0F /* BirthDateTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		BFCBC7922615B40E009A9F0F /* EmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewModel.swift; sourceTree = "<group>"; };
 		BFCBC7952615B417009A9F0F /* PhoneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewModel.swift; sourceTree = "<group>"; };
 		BFCBC7982615D68B009A9F0F /* BirthDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthDatePicker.swift; sourceTree = "<group>"; };
+		BFCBC79C2615E74D009A9F0F /* BirthDateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthDateTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				BFC925EF2614754C00D4FBD0 /* SignUpStackView.swift */,
 				BF0E753126132D7200D513B4 /* MessageLabel.swift */,
 				BFCBC7982615D68B009A9F0F /* BirthDatePicker.swift */,
+				BFCBC79C2615E74D009A9F0F /* BirthDateTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF0E75272612B58000D513B4 /* InputTextField.swift in Sources */,
+				BFCBC79D2615E74D009A9F0F /* BirthDateTextField.swift in Sources */,
 				BFC925FB2614980E00D4FBD0 /* PasswordViewModel.swift in Sources */,
 				BF11F6672611996F006AC76C /* ViewController.swift in Sources */,
 				BFC926082614A47B00D4FBD0 /* IdViewModel.swift in Sources */,

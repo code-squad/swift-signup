@@ -41,7 +41,7 @@ class SignUpMainViewController: UIViewController {
     }
     
     private func enableButton() {
-        if mainStackView.enableCheckForNextPage() {
+        if enableCheckforButtion() {
             buttonForMove.isOn = .on
         } else {
             buttonForMove.isOn = .off
@@ -114,5 +114,84 @@ extension SignUpMainViewController {
         mainStackView.infoPasswordView.inputTextField.addTarget(self, action: #selector(textFieldEddtingChanged(textField:)), for: .editingChanged)
         mainStackView.doubleCheckPassWordView.inputTextField.addTarget(self, action: #selector(textFieldEddtingChanged(textField:)), for: .editingChanged)
         mainStackView.nameCheckView.inputTextField.addTarget(self, action: #selector(textFieldEddtingChanged(textField:)), for: .editingChanged)
+    }
+}
+
+//MARK: -Regex
+
+extension SignUpMainViewController {
+    
+    private func enableCheckforButtion() -> Bool {
+        return isValidConditionForID() && isValidConditionForPassword() && isValidConditionForPasswordConfirm() && isValidConditionForName()
+    }
+    
+    private func isValidConditionForID() -> Bool {
+        let userIdView = mainStackView.infoIDView
+        if validateManager.isEmptyTextField(userIdView.inputTextField.text) {
+            mainStackView.defaultStateFor(textField: userIdView.inputTextField, label: userIdView.checkLabel)
+        } else if !validateManager.isOverlappedID(userIdView.inputTextField.text) {
+            mainStackView.overlappedIDFor(checkLabel: userIdView.checkLabel)
+            mainStackView.invalidTextFieldBoarder(textField: userIdView.inputTextField)
+        } else if !validateManager.isValidElementForID(userIdView.inputTextField.text) {
+            mainStackView.invalidElementIDFor(checkLabel: userIdView.checkLabel)
+            mainStackView.invalidTextFieldBoarder(textField: userIdView.inputTextField)
+        } else if !validateManager.isValidCountForID(userIdView.inputTextField.text) {
+            mainStackView.invalidIDCountFor(checkLabel: userIdView.checkLabel)
+            mainStackView.invalidTextFieldBoarder(textField: userIdView.inputTextField)
+        } else {
+            mainStackView.validIdStateFor(checkLabel: userIdView.checkLabel)
+            mainStackView.validTextFieldBoarder(textField: userIdView.inputTextField)
+            return true
+        }
+        return false
+    }
+    
+    private func isValidConditionForPassword() -> Bool {
+        let userPasswordView = mainStackView.infoPasswordView
+        if validateManager.isEmptyTextField(userPasswordView.inputTextField.text) {
+            mainStackView.defaultStateFor(textField: userPasswordView.inputTextField, label: userPasswordView.checkLabel)
+        } else if !validateManager.isValidElementForPassword(userPasswordView.inputTextField.text) {
+            mainStackView.invalidElementPasswordFor(checkLabel: userPasswordView.checkLabel)
+            mainStackView.invalidTextFieldBoarder(textField: userPasswordView.inputTextField)
+        } else if !validateManager.isValidCountForPassWord(userPasswordView.inputTextField.text) {
+            mainStackView.invalidCountPasswordFor(checkLabel: userPasswordView.checkLabel)
+            mainStackView.invalidTextFieldBoarder(textField: userPasswordView.inputTextField)
+        } else {
+            mainStackView.validPasswordStateFor(checkLabel: userPasswordView.checkLabel)
+            mainStackView.validTextFieldBoarder(textField: userPasswordView.inputTextField)
+            return true
+        }
+        return false
+    }
+    
+    private func isValidConditionForPasswordConfirm() -> Bool {
+        let userPasswordConfirmView = mainStackView.doubleCheckPassWordView
+        let userPasswordView = mainStackView.infoPasswordView
+        if validateManager.isEmptyTextField(userPasswordConfirmView.inputTextField.text) {
+            mainStackView.defaultStateFor(textField: userPasswordConfirmView.inputTextField, label: userPasswordConfirmView.checkLabel)
+        } else if !validateManager.isEqualForPassword(userPasswordView.inputTextField.text, userPasswordConfirmView.inputTextField.text) {
+            mainStackView.incorrectPasswordFor(checkLabel: userPasswordConfirmView.checkLabel)
+            mainStackView.invalidTextFieldBoarder(textField: userPasswordConfirmView.inputTextField)
+        } else {
+            mainStackView.correctPasswordFor(checkLabel: userPasswordConfirmView.checkLabel)
+            mainStackView.validTextFieldBoarder(textField: userPasswordConfirmView.inputTextField)
+            return true
+        }
+        return false
+    }
+    
+    private func isValidConditionForName() -> Bool {
+        let userNameView = mainStackView.nameCheckView
+        if validateManager.isEmptyTextField(userNameView.inputTextField.text) {
+            mainStackView.defaultStateFor(textField: userNameView.inputTextField, label: userNameView.checkLabel)
+        } else if !validateManager.isValidNameCount(userNameView.inputTextField.text) {
+            mainStackView.invalidNameCountFor(checkLabel: userNameView.checkLabel)
+            mainStackView.invalidTextFieldBoarder(textField: userNameView.inputTextField)
+        } else {
+            mainStackView.validNameStateFor(checkLabel: userNameView.checkLabel)
+            mainStackView.validTextFieldBoarder(textField: userNameView.inputTextField)
+            return true
+        }
+        return false
     }
 }

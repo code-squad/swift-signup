@@ -9,12 +9,14 @@ class RegexValidManager {
         }
     }
     
-    func isEmptyTextField(text: String?) -> Bool {
+    // Common Method
+    func isEmptyTextField(_ text: String?) -> Bool {
         let textCount = text?.count ?? 0
         return textCount == 0
     }
     
-    func isOverlappedID(id: String?) -> Bool {
+    // ID Method
+    func isOverlappedID(_ id: String?) -> Bool {
         guard let userId = id else { return false }
         if !idList.contains(userId) { return true }
         return false
@@ -30,7 +32,8 @@ class RegexValidManager {
         return idCount>=5 && idCount<=20
     }
     
-    func isValidPasswordElement(_ password: String?) -> Bool {
+    // Password Method
+    func isValidElementForPassword(_ password: String?) -> Bool {
         let element = password?.getArrayAfterRegex(regex: "[!@#$%]").count ?? 0
         return element >= 1
     }
@@ -40,6 +43,7 @@ class RegexValidManager {
         return passCount >= 8 && passCount <= 16
     }
     
+    // PasswordConfirm Method
     func isEqualForPassword(_ firstPassword: String?, _ secondPassword: String?) -> Bool {
         if let password1 = firstPassword, let password2 = secondPassword {
             return password1 == password2
@@ -47,7 +51,8 @@ class RegexValidManager {
         return false
     }
     
-    func checkValidNameCount(_ name: String?) -> Bool {
+    // Name Method
+    func isValidNameCount(_ name: String?) -> Bool {
         let nameTest = name?.getArrayAfterRegex(regex: "[가-힣]").count ?? 0
         return nameTest >= 2
     }

@@ -13,6 +13,5 @@ protocol ValidCheckProtocol {
     typealias ControlActionClosure = (ValidState) -> ()
     
     var isValid : ValidState { get set }
-    func checkValidation() -> Bool
     func bind(control : @escaping ControlActionClosure)
 }

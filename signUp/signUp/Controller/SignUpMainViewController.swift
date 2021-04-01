@@ -6,9 +6,11 @@ class SignUpMainViewController: UIViewController {
     private var mainStackView = MainInfoStackView()
     private var buttonForMove = NextVCButton(type: .system)
     private let delegate = TextFieldDelegate()
+    private var validateManager: RegexValidManager!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        validateManager = RegexValidManager()
         setUpMainView()
         enableButton()
     }
@@ -69,12 +71,12 @@ extension SignUpMainViewController {
     }
     
     private func setUpLabelAndTextField() {
-        mainStackView.infoIDView.infoLabel.text = LabelContetns.idLabel.description
-        mainStackView.infoIDView.inputTextField.placeholder = LabelContetns.idPlaceholder.description
-        mainStackView.infoPasswordView.infoLabel.text = LabelContetns.passwordLabel.description
-        mainStackView.infoPasswordView.inputTextField.placeholder = LabelContetns.passwordPlaceHolder.description
-        mainStackView.doubleCheckPassWordView.infoLabel.text = LabelContetns.passwordDoubleCheckLabel.description
-        mainStackView.nameCheckView.infoLabel.text = LabelContetns.nameLabel.description
+        mainStackView.infoIDView.infoLabel.text = LabelContents.idLabel
+        mainStackView.infoIDView.inputTextField.placeholder = LabelContents.idPlaceholder
+        mainStackView.infoPasswordView.infoLabel.text = LabelContents.passwordLabel
+        mainStackView.infoPasswordView.inputTextField.placeholder = LabelContents.passwordPlaceHolder
+        mainStackView.doubleCheckPassWordView.infoLabel.text = LabelContents.passwordDoubleCheckLabel
+        mainStackView.nameCheckView.infoLabel.text = LabelContents.nameLabel
     }
     
     private func setUpTextFieldDelegate() {

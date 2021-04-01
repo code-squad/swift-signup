@@ -23,6 +23,7 @@
 		BFC925FB2614980E00D4FBD0 /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC925FA2614980E00D4FBD0 /* PasswordViewModel.swift */; };
 		BFC925FE26149A5800D4FBD0 /* NameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC925FD26149A5800D4FBD0 /* NameViewModel.swift */; };
 		BFC926082614A47B00D4FBD0 /* IdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC926072614A47B00D4FBD0 /* IdViewModel.swift */; };
+		BFCBC77F26156495009A9F0F /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCBC77E26156495009A9F0F /* EndPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		BFC925FA2614980E00D4FBD0 /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
 		BFC925FD26149A5800D4FBD0 /* NameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewModel.swift; sourceTree = "<group>"; };
 		BFC926072614A47B00D4FBD0 /* IdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdViewModel.swift; sourceTree = "<group>"; };
+		BFCBC77E26156495009A9F0F /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +92,8 @@
 				BF11F6622611996F006AC76C /* AppDelegate.swift */,
 				BF11F6642611996F006AC76C /* SceneDelegate.swift */,
 				BF11F6662611996F006AC76C /* ViewController.swift */,
-				BFC9260026149B2A00D4FBD0 /* ViewModel */,
 				BF0E7534261333B200D513B4 /* State.swift */,
+				BFC9260026149B2A00D4FBD0 /* ViewModel */,
 				BF0E75292612B6AA00D513B4 /* View */,
 				BF11F6682611996F006AC76C /* Main.storyboard */,
 				BF11F66B26119971006AC76C /* Assets.xcassets */,
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				BF11F6852611C2A4006AC76C /* Service.swift */,
+				BFCBC77E26156495009A9F0F /* EndPoint.swift */,
 				BF11F67A2611C178006AC76C /* Extension */,
 			);
 			path = Network;
@@ -211,6 +214,7 @@
 				BFC925F02614754C00D4FBD0 /* SignUpStackView.swift in Sources */,
 				BF11F6862611C2A4006AC76C /* Service.swift in Sources */,
 				BF11F6782611AB3C006AC76C /* SignUpViewModel.swift in Sources */,
+				BFCBC77F26156495009A9F0F /* EndPoint.swift in Sources */,
 				BF11F6652611996F006AC76C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

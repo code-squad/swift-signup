@@ -10,6 +10,26 @@ import Foundation
 struct ComplianceChecker {
     let networkManager = NetworkManager()
     
+    func check(target textField: SignUpTextField, closure : @escaping (TextFormError)->Void = {_ in }) -> TextFormError {
+        
+        guard let text = textField.text else {
+            return .none
+        }
+        
+        switch textField.textFieldType {
+        case .id:
+            return checkIdTextForm(with: text, closure: closure)
+        case .pw:
+            return checkPwTextForm(with: text)
+        case .pw2:
+            return checkPwDuplicated(with: textField)
+        case .name:
+            return checkNameIsNil(with: text)
+        default:
+            return .none
+        }
+    }
+    
     private func regexChekcing(target : String, pattern : String) -> Bool {
         do {
             let regex = try NSRegularExpression(pattern: pattern)
@@ -32,44 +52,71 @@ struct ComplianceChecker {
         return true
     }
     
-    func checkIdTextForm(with text : String, closure : @escaping (IdTextFormError)->Void ) {
-        var usedCheck : IdTextFormError = .none
+    private func checkIdTextForm(with text : String, closure: @escaping (TextFormError)->Void) -> TextFormError{
+        var errorChecker : TextFormError = .none
         
         networkManager.getUserList(closure: { userList in
             if let userList = userList {
                 
                 if userList.contains(text) {
-                    usedCheck = .used
+                    errorChecker = .wrong(.idUsed)
                 } else {
-                    usedCheck = .ok
+                    errorChecker = .ok
                 }
                 
                 if !regexChekcing(target: text, pattern: "([^A-Z][0-9a-z-_]).{3,18}") {
-                    usedCheck = .wrong
+                    errorChecker = .wrong(.idIneligible)
                 }
-                closure(usedCheck)
+                closure(errorChecker)
             }
         })
+        return errorChecker
     }
     
-    func checkPwTextForm(with text : String) -> PwTextFormError {
+    private func checkPwTextForm(with text : String) -> TextFormError {
         if !regexChekcing(target: text, pattern :"([A-Za-z0-9!@#$%]).{7,15}") {
-            return .outOfIndex
+            return .wrong(.pwOutOfIndex)
         }
         
         if !regexChekcing(target: text, pattern :"^.*(?=.*[A-Z])[A-Za-z0-9!@#$%].*$") {
-            return .noUpperCase
+            return .wrong(.pwNoUpperCase)
         }
         
         if !regexChekcing(target: text, pattern :"^.*(?=.*[0-9])[A-Za-z0-9!@#$%].*$") {
-            return .noNumber
+            return .wrong(.pwNoNumber)
         }
         
         if !regexChekcing(target: text, pattern :"^.*(?=.*[!@#$%])[A-Za-z0-9!@#$%].*$") {
-            return .noSpecialCharacter
+            return .wrong(.pwNoSpecialCharacter)
         }
         
         return .ok
+    }
+    
+    private func checkPwDuplicated(with textField : SignUpTextField) -> TextFormError {
+        
+        let optionalFieldArray = textField.superview?.subviews.filter({
+            let item = $0 as? SignUpTextField
+            guard let textField = item else {
+                return false
+            }
+            return true
+        }) as? [SignUpTextField]
+    
+        guard let fieldArray = optionalFieldArray else {
+            return .none
+        }
+        
+        if fieldArray[1].text == fieldArray[2].text {
+            return .ok
+        } else {
+            return .wrong(.pwDifferent)
+        }
+        
+    }
+    
+    private func checkNameIsNil(with text: String) -> TextFormError {
+        return text == "" ? .wrong(.nameIsNil) : .ok
     }
 }
 

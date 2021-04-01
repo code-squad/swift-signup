@@ -9,7 +9,15 @@ import UIKit
 
 class TextFieldDelegate: NSObject, UITextFieldDelegate {
     
+    let complianceChecker = ComplianceChecker()
+    
     func textFieldDidEndEditing(_ textField: SignUpTextField) {
+        complianceChecker.check(target: textField, closure: { errorChecker in
+            errorChecker
+            
+        })
+        
+        // 반환된 값을 가지고 UI를 수정.
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

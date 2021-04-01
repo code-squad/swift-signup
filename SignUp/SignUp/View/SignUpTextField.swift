@@ -26,6 +26,8 @@ enum TextFormError {
         case pwNoUpperCase
         case pwNoNumber
         case pwNoSpecialCharacter
+        case nameIsNil
+        case pwDifferent
     }
 }
 
@@ -42,5 +44,20 @@ class SignUpTextField: UITextField {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         self.borderStyle = .line
+    }
+    
+    func changeStyle(with type: TextFieldType?, with error : TextFormError) {
+        guard let type = type else {
+            return
+        }
+        
+        switch error {
+        case .ok:
+            <#code#>
+        case .wrong(<#T##field: TextFormError.WrongType##TextFormError.WrongType#>):
+            <#code#>
+        default:
+            <#code#>
+        }
     }
 }

@@ -40,7 +40,7 @@ class BasicInfomationTextFieldViewModel: NSObject {
 
         let result: ResultValidate = (validator.checkID(of: IDText),
                                       validator.checkPassword(of: passwordText),
-                                      validator.checkEqualPassword(of: checkPasswordText, anotherPassword: passwordText),
+                                      validator.checkEqualPassword(of: passwordText, anotherPassword: checkPasswordText),
                                       validator.checkFillNameIn(name: nameText, anotherText: [IDText, passwordText, checkPasswordText]))
 
         self.resultHandler((result.ID,
@@ -68,18 +68,8 @@ class BasicInfomationTextFieldViewModel: NSObject {
 
 extension BasicInfomationTextFieldViewModel: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        guard let textField = textField as? CustomTextField else { return }
-        textField.typingStyle()
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        if let textField = textField as? CustomTextField {
-            if textField == nameField && nameField.text == "" {
-                textField.failorStyle()
-            } else {
-                textField.defaultStyle()
-            }
-        }
+        textField.layer.borderColor = #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)
+        textField.layer.borderWidth = 1
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -99,16 +89,6 @@ extension BasicInfomationTextFieldViewModel: UITextFieldDelegate {
         }
         return true
     }
-    
-//    func textFieldDidChangeSelection(_ textField: UITextField) {
-//        for textField in textFields {
-//            if textField.text == "" || textField.layer.borderColor == #colorLiteral(red: 0.7830513277, green: 0.2840242443, blue: 0.3156971657, alpha: 1) {
-//                self.nextButton.isEnabled = false
-//                return
-//            }
-//        }
-//        self.nextButton.isEnabled = true
-//    }
 }
 
 extension BasicInfomationTextFieldViewModel {
@@ -134,6 +114,7 @@ extension BasicInfomationTextFieldViewModel {
         switch result {
         case .notEqual:
             incorrectStyle(of: self.checkPasswordField)
+            break
         case .blank, .equal:
             defaultStyle(of: self.checkPasswordField)
         }
@@ -150,12 +131,12 @@ extension BasicInfomationTextFieldViewModel {
     
     //MARK:Style
     private func incorrectStyle(of textField: UITextField) {
-        guard let textField = textField as? CustomTextField else { return }
-        textField.failorStyle()
+        textField.layer.borderColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
+        textField.layer.borderWidth = 1
     }
     
     private func defaultStyle(of textField: UITextField) {
-        guard let textField = textField as? CustomTextField else { return }
-        textField.defaultStyle()
+        textField.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        textField.layer.borderWidth = 1
     }
 }

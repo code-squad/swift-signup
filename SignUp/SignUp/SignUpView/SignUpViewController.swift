@@ -19,22 +19,12 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTextField()
-        configureInformationLabel()
         configureObserver()
     }
     
     private func configureTextField() {
         for textfield in textFieldCollection {
-            textfield.borderStyle = .line
             textfield.delegate = textFieldDelegate
-        }
-    }
-    
-    private func configureInformationLabel() {
-        for label in informationLabelCollection {
-            label.font = .systemFont(ofSize: 12)
-            label.isHidden = true
-            label.adjustsFontSizeToFitWidth = true
         }
     }
 

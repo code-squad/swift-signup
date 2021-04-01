@@ -36,9 +36,11 @@ class SignUpTextField: UITextField {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.borderStyle = .line
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        self.borderStyle = .line
     }
 }

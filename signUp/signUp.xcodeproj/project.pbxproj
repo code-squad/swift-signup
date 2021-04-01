@@ -21,6 +21,7 @@
 		712DBC662611B81100F853A7 /* EachInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DBC652611B81100F853A7 /* EachInfoView.swift */; };
 		712DBC732611C51100F853A7 /* NextVCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DBC722611C51100F853A7 /* NextVCButton.swift */; };
 		712DBC782611CBD500F853A7 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DBC772611CBD500F853A7 /* PrivacyViewController.swift */; };
+		717F73542615AECF0034E697 /* PrivacyStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717F73532615AECF0034E697 /* PrivacyStackView.swift */; };
 		719125982612B890008D1DC2 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719125972612B890008D1DC2 /* Regex.swift */; };
 		71A3C2282615701D0028A2B7 /* RegexValidManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A3C2272615701D0028A2B7 /* RegexValidManager.swift */; };
 		71C598B526144D6C0097ED4C /* NetwordHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C598B426144D6C0097ED4C /* NetwordHandler.swift */; };
@@ -66,6 +67,7 @@
 		712DBC652611B81100F853A7 /* EachInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EachInfoView.swift; sourceTree = "<group>"; };
 		712DBC722611C51100F853A7 /* NextVCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextVCButton.swift; sourceTree = "<group>"; };
 		712DBC772611CBD500F853A7 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
+		717F73532615AECF0034E697 /* PrivacyStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyStackView.swift; sourceTree = "<group>"; };
 		719125972612B890008D1DC2 /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
 		71A3C2272615701D0028A2B7 /* RegexValidManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexValidManager.swift; sourceTree = "<group>"; };
 		71C598B426144D6C0097ED4C /* NetwordHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetwordHandler.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				712DBC602611B44B00F853A7 /* MainInfoStackView.swift */,
 				712DBC652611B81100F853A7 /* EachInfoView.swift */,
 				712DBC722611C51100F853A7 /* NextVCButton.swift */,
+				717F73532615AECF0034E697 /* PrivacyStackView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				712DBC662611B81100F853A7 /* EachInfoView.swift in Sources */,
 				71A3C2282615701D0028A2B7 /* RegexValidManager.swift in Sources */,
 				712DBC612611B44B00F853A7 /* MainInfoStackView.swift in Sources */,
+				717F73542615AECF0034E697 /* PrivacyStackView.swift in Sources */,
 				71C598C026146D7D0097ED4C /* LabelContents.swift in Sources */,
 				712DBC1426119DCF00F853A7 /* SceneDelegate.swift in Sources */,
 			);

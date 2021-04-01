@@ -19,55 +19,70 @@ class ViewController: UIViewController {
     @IBOutlet weak var pwReCheckLabel: BasicStateLabel!
     @IBOutlet weak var nameCheckLabel: BasicStateLabel!
     @IBOutlet weak var nextButton: BasicButton!
-    
     private let regex = RegularExpression()
-    private let idTextFieldDelegate = IdTextFieldDelegate()
-    private let pwTextFieldDelegate = PwTextFieldDelegate()
-    private let pwCheckFieldDelegate = PwCheckTextFieldDelegate()
-    private let nameTextFieldDelegate = NameTextFieldDelegate()
-    private var trueCount: Int = 0
+    private let textFieldDelegate = TextFieldDelegate()
     
     //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        idTextField.delegate = idTextFieldDelegate
-        passwordTextField.delegate = pwTextFieldDelegate
-        passwordCheckTextField.delegate = pwCheckFieldDelegate
-        nameTextField.delegate = nameTextFieldDelegate
-        setAddTarger()
-        pwCheckFieldDelegate.checkBool = compareText()
+        setDelegate()
+        setAddTargerForlabel()
+        setAddTargerForButton()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
     
-    func setAddTarger() {
-        idTextField.addTarget(self, action: #selector(checkIdLabel), for: .editingDidEnd)
-        passwordTextField.addTarget(self, action: #selector(checkPasswordLabel), for: .editingDidEnd)
-        passwordCheckTextField.addTarget(self, action: #selector(checkPasswordCheckLabel), for: .editingDidEnd)
-        nameTextField.addTarget(self, action: #selector(checkNameLabel), for: .editingDidEnd)
-        nameTextField.addTarget(self, action: #selector(checkNextButton), for: .editingDidEnd)
+    //MARK: - Setting Delegate, Setting Addtarget
+    func setDelegate() {
+        idTextField.delegate = textFieldDelegate
+        passwordTextField.delegate = textFieldDelegate
+        passwordCheckTextField.delegate = textFieldDelegate
+        nameTextField.delegate = textFieldDelegate
     }
     
-    func compareText() -> Bool {
-        return passwordTextField.text == passwordCheckTextField.text
+    func setAddTargerForlabel() {
+        idTextField.addTarget(self, action: #selector(checkIdLabel), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(checkPasswordLabel), for: .editingChanged)
+        passwordCheckTextField.addTarget(self, action: #selector(checkPasswordCheckLabel), for: .editingChanged)
+        nameTextField.addTarget(self, action: #selector(checkNameLabel), for: .editingChanged)
     }
     
-    //MARK: - Label state method
+    func setAddTargerForButton() {
+        idTextField.addTarget(self, action: #selector(checkNextButton), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(checkNextButton), for: .editingChanged)
+        passwordCheckTextField.addTarget(self, action: #selector(checkNextButton), for: .editingChanged)
+        nameTextField.addTarget(self, action: #selector(checkNextButton), for: .editingChanged)
+    }
+    
+    //MARK: - UI Change method
     @objc func checkIdLabel() {
         guard let text = idTextField.text else { return }
-        switch regex.isValidId(id: text) {
-        case true:
-            idCheckLabel.text = CheckLabelState.IdState.Pass.rawValue
-            idCheckLabel.textColor = .systemGreen
-            trueCount += 1
-            print(trueCount)
-        case false:
-            idCheckLabel.text = CheckLabelState.IdState.Invalid.rawValue
-            idCheckLabel.textColor = .systemRed
-            idCheckLabel.sizeToFit()
-        }
+        var duplicateCheckBool: Bool = false
+        NetworkManager.getData(completionHandler: { (users) in
+            if users.contains(text) {
+                duplicateCheckBool = true
+            }else {
+                duplicateCheckBool = false
+            }
+            DispatchQueue.main.async {
+                if duplicateCheckBool == false  && self.regex.isValidId(id: text) == true {
+                    self.idCheckLabel.text = CheckLabelState.IdState.Pass.rawValue
+                    self.idTextField.layer.borderColor = UIColor.systemGreen.cgColor
+                    self.idCheckLabel.textColor = .systemGreen
+                }else if duplicateCheckBool == true {
+                    self.idCheckLabel.text = CheckLabelState.IdState.Duplicate.rawValue
+                    self.idCheckLabel.textColor = .systemRed
+                    self.idTextField.layer.borderColor = UIColor.systemRed.cgColor
+                }else{
+                    self.idCheckLabel.text = CheckLabelState.IdState.Invalid.rawValue
+                    self.idCheckLabel.textColor = .systemRed
+                    self.idTextField.layer.borderColor = UIColor.systemRed.cgColor
+                    self.idCheckLabel.sizeToFit()
+                }
+            }
+        })
     }
     
     @objc func checkPasswordLabel() {
@@ -76,34 +91,37 @@ class ViewController: UIViewController {
         case 1:
             pwCheckLabel.text = CheckLabelState.PwState.Invalid.rawValue
             pwCheckLabel.textColor = .systemRed
+            passwordTextField.layer.borderColor = UIColor.systemRed.cgColor
         case 2:
             pwCheckLabel.text = CheckLabelState.PwState.MinimumEnglish.rawValue
             pwCheckLabel.textColor = .systemRed
+            passwordTextField.layer.borderColor = UIColor.systemRed.cgColor
         case 3:
             pwCheckLabel.text = CheckLabelState.PwState.InvalidNumber.rawValue
             pwCheckLabel.textColor = .systemRed
+            passwordTextField.layer.borderColor = UIColor.systemRed.cgColor
         case 4:
             pwCheckLabel.text = CheckLabelState.PwState.InvalidSpecialCharacter.rawValue
             pwCheckLabel.textColor = .systemRed
+            passwordTextField.layer.borderColor = UIColor.systemRed.cgColor
         default:
             pwCheckLabel.text = CheckLabelState.PwState.Pass.rawValue
             pwCheckLabel.textColor = .systemGreen
-            trueCount += 1
-            print(trueCount)
+            passwordTextField.layer.borderColor = UIColor.systemGreen.cgColor
         }
 
     }
     
     @objc func checkPasswordCheckLabel() {
         guard let text = passwordCheckTextField.text else { return }
-        if passwordTextField.text == text {
+        if passwordTextField.text == text && !text.isEmpty {
             pwReCheckLabel.text = CheckLabelState.PwCheckState.Pass.rawValue
             pwReCheckLabel.textColor = .systemGreen
-            trueCount += 1
-            print(trueCount)
+            passwordCheckTextField.layer.borderColor = UIColor.systemGreen.cgColor
         }else{
             pwReCheckLabel.text = CheckLabelState.PwCheckState.Invalid.rawValue
             pwReCheckLabel.textColor = .systemRed
+            passwordCheckTextField.layer.borderColor = UIColor.systemRed.cgColor
         }
     }
     
@@ -112,18 +130,33 @@ class ViewController: UIViewController {
         if text.isEmpty {
             nameCheckLabel.text = CheckLabelState.NameState.None.rawValue
             nameCheckLabel.textColor = .systemRed
+            nameTextField.layer.borderColor = UIColor.systemRed.cgColor
         }else{
             nameCheckLabel.text = CheckLabelState.NameState.Pass.rawValue
             nameCheckLabel.textColor = .systemGreen
-            trueCount += 1
-            print(trueCount)
+            nameTextField.layer.borderColor = UIColor.systemGreen.cgColor
         }
     }
     
     @objc func checkNextButton() {
-        if trueCount >= 4 {
+        let idPass: Bool = {
+            return idCheckLabel.text == CheckLabelState.IdState.Pass.rawValue
+        }()
+        let pwPass: Bool = {
+            return pwCheckLabel.text == CheckLabelState.PwState.Pass.rawValue
+        }()
+        let pwCheckPass: Bool = {
+            return pwReCheckLabel.text == CheckLabelState.PwCheckState.Pass.rawValue
+        }()
+        let namePass: Bool = {
+            return nameCheckLabel.text == CheckLabelState.NameState.Pass.rawValue
+        }()
+        if idPass && pwPass && pwCheckPass && namePass {
             nextButton.isEnabled = true
             nextButton.setTitleColor(.systemGreen, for: .normal)
+        }else {
+            nextButton.isEnabled = false
+            nextButton.setTitleColor(.gray, for: .normal)
         }
     }
 }

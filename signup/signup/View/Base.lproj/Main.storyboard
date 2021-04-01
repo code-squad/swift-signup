@@ -48,11 +48,8 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="delegate" destination="3hE-T8-7WA" id="sKp-8u-7F0"/>
-                                </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNm-R7-lKb" userLabel="idInfoLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNm-R7-lKb" userLabel="idInfoLabel" customClass="InfoLabel" customModule="signup" customModuleProvider="target">
                                 <rect key="frame" x="36.666666666666657" y="195" width="317" height="15.666666666666657"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15.67" id="TSc-qL-1Y7"/>
@@ -68,7 +65,7 @@
                                 <color key="textColor" name="LabelBlack"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caX-jM-VxQ" userLabel="pwInfoLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caX-jM-VxQ" userLabel="pwInfoLabel" customClass="InfoLabel" customModule="signup" customModuleProvider="target">
                                 <rect key="frame" x="36.666666666666657" y="279" width="317" height="15.666666666666686"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15.67" id="1Bj-YS-GaS"/>
@@ -98,9 +95,6 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="delegate" destination="3hE-T8-7WA" id="OVa-zL-Sdg"/>
-                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호 재확인" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8lJ-sA-mCY">
                                 <rect key="frame" x="36.666666666666657" y="303" width="103" height="17"/>
@@ -128,11 +122,8 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="delegate" destination="3hE-T8-7WA" id="Aaz-AT-sB0"/>
-                                </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKa-pr-Fmh" userLabel="pwCheckInfoLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKa-pr-Fmh" userLabel="pwCheckInfoLabel" customClass="InfoLabel" customModule="signup" customModuleProvider="target">
                                 <rect key="frame" x="36.666666666666657" y="363" width="317" height="15.666666666666686"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="317" id="jRd-xf-pTY"/>
@@ -168,9 +159,6 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="delegate" destination="3hE-T8-7WA" id="TfA-BL-zc9"/>
-                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwv-bd-Xx4" customClass="SignUpButton" customModule="signup" customModuleProvider="target">
                                 <rect key="frame" x="145" y="476" width="100" height="44"/>
@@ -195,7 +183,7 @@
                                     <action selector="nextButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tKO-bl-Hdb"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtf-OI-quJ" userLabel="namekInfoLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtf-OI-quJ" userLabel="namekInfoLabel" customClass="InfoLabel" customModule="signup" customModuleProvider="target">
                                 <rect key="frame" x="36.666666666666657" y="447" width="317" height="15.666666666666686"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15.67" id="EKt-5O-diT"/>
@@ -254,41 +242,37 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="signUpTextFieldModel" destination="3hE-T8-7WA" id="3Dg-yK-ITJ"/>
+                        <outlet property="nextButton" destination="hwv-bd-Xx4" id="MP7-uV-9IE"/>
+                        <outletCollection property="signUptextFieldCollection" destination="F5n-ze-Prd" collectionClass="NSMutableArray" id="drn-ia-rsg"/>
+                        <outletCollection property="signUptextFieldCollection" destination="Gs4-B8-4BV" collectionClass="NSMutableArray" id="ZbO-3L-Jua"/>
+                        <outletCollection property="signUptextFieldCollection" destination="JuD-77-4MF" collectionClass="NSMutableArray" id="rDr-cD-w9j"/>
+                        <outletCollection property="signUptextFieldCollection" destination="j28-ec-IYi" collectionClass="NSMutableArray" id="Pby-Yz-kwn"/>
+                        <outletCollection property="infoLabelCollection" destination="iNm-R7-lKb" collectionClass="NSMutableArray" id="hrW-ie-HeE"/>
+                        <outletCollection property="infoLabelCollection" destination="caX-jM-VxQ" collectionClass="NSMutableArray" id="K9I-Fn-20G"/>
+                        <outletCollection property="infoLabelCollection" destination="FKa-pr-Fmh" collectionClass="NSMutableArray" id="V9n-sO-Qih"/>
+                        <outletCollection property="infoLabelCollection" destination="jtf-OI-quJ" collectionClass="NSMutableArray" id="E89-kd-cpK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <customObject id="3hE-T8-7WA" userLabel="SignupTextFieldViewModel" customClass="SignUpTextFieldModel" customModule="signup" customModuleProvider="target">
-                    <connections>
-                        <outletCollection property="textFieldCollection" destination="F5n-ze-Prd" collectionClass="NSMutableArray" id="oRH-gR-PY6"/>
-                        <outletCollection property="textFieldCollection" destination="Gs4-B8-4BV" collectionClass="NSMutableArray" id="g5H-xN-S0d"/>
-                        <outletCollection property="textFieldCollection" destination="JuD-77-4MF" collectionClass="NSMutableArray" id="cMn-Jk-Bg3"/>
-                        <outletCollection property="textFieldCollection" destination="j28-ec-IYi" collectionClass="NSMutableArray" id="sp1-z4-EAo"/>
-                        <outletCollection property="infoLabelCollection" destination="iNm-R7-lKb" collectionClass="NSMutableArray" id="pV7-Xs-7tB"/>
-                        <outletCollection property="infoLabelCollection" destination="caX-jM-VxQ" collectionClass="NSMutableArray" id="2sr-pb-97k"/>
-                        <outletCollection property="infoLabelCollection" destination="FKa-pr-Fmh" collectionClass="NSMutableArray" id="LOf-qC-Ugv"/>
-                        <outletCollection property="infoLabelCollection" destination="jtf-OI-quJ" collectionClass="NSMutableArray" id="ryD-bB-lFH"/>
-                    </connections>
-                </customObject>
             </objects>
             <point key="canvasLocation" x="-275.38461538461536" y="93.838862559241704"/>
         </scene>
     </scenes>
     <designables>
         <designable name="F5n-ze-Prd">
-            <size key="intrinsicContentSize" width="263.66666666666669" height="26.666666666666668"/>
+            <size key="intrinsicContentSize" width="243.66666666666666" height="26.666666666666668"/>
         </designable>
         <designable name="Gs4-B8-4BV">
-            <size key="intrinsicContentSize" width="303" height="25"/>
+            <size key="intrinsicContentSize" width="283" height="25"/>
         </designable>
         <designable name="JuD-77-4MF">
-            <size key="intrinsicContentSize" width="32" height="25"/>
+            <size key="intrinsicContentSize" width="12" height="25"/>
         </designable>
         <designable name="hwv-bd-Xx4">
             <size key="intrinsicContentSize" width="53.666666666666664" height="21"/>
         </designable>
         <designable name="j28-ec-IYi">
-            <size key="intrinsicContentSize" width="32" height="26.666666666666668"/>
+            <size key="intrinsicContentSize" width="12" height="26.666666666666668"/>
         </designable>
     </designables>
     <resources>

@@ -12,14 +12,17 @@ class SignUpStackView : UIStackView {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var validLabel: UILabel!
     
+    func updateUI(_ state: Bool) {
+        state ? succeed() : fail()
+    }
     
-    func succeed() {
+    private func succeed() {
         textField.layer.borderColor = nil
         textField.layer.borderWidth = 0
         validLabel.textColor = .systemGreen
     }
     
-    func fail() {
+    private func fail() {
         textField.layer.borderColor = UIColor.red.cgColor
         textField.layer.borderWidth = 1
         validLabel.textColor = .red

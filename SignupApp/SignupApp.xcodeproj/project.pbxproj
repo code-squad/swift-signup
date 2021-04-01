@@ -120,14 +120,10 @@
 			children = (
 				E40356A22611AB8E005D4D36 /* AppDelegate.swift */,
 				E40356A42611AB8E005D4D36 /* SceneDelegate.swift */,
-				E40356A62611AB8E005D4D36 /* BasicInfoViewController.swift */,
-				E48A7EDA2614688B00E1E71F /* UsernameTextFieldDelegate.swift */,
-				E48A7EE526147AB200E1E71F /* PasswordTextFieldDelegate.swift */,
-				E48A7EEA26147E0500E1E71F /* ConfirmPasswordTextFieldDelegate.swift */,
-				E48A7EEF2614932200E1E71F /* NameTextFieldDelegate.swift */,
-				E48A7EBB26144D3D00E1E71F /* UsernameListManager.swift */,
-				E48A7EC32614538500E1E71F /* ValidationManager.swift */,
-				E40356A82611AB8E005D4D36 /* Main.storyboard */,
+				E48A7F1D2615749000E1E71F /* Models */,
+				E48A7F1C2615748500E1E71F /* Views */,
+				E48A7F182615746E00E1E71F /* Controllers */,
+				E48A7F212615749D00E1E71F /* Delegates */,
 				E40357092612FD66005D4D36 /* String+Validation.swift */,
 				E48A7EC8261458F300E1E71F /* Constants.swift */,
 				E40356AB2611AB90005D4D36 /* Assets.xcassets */,
@@ -154,6 +150,42 @@
 				E40356C62611AB90005D4D36 /* Info.plist */,
 			);
 			path = SignupAppUITests;
+			sourceTree = "<group>";
+		};
+		E48A7F182615746E00E1E71F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E40356A62611AB8E005D4D36 /* BasicInfoViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E48A7F1C2615748500E1E71F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E40356A82611AB8E005D4D36 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E48A7F1D2615749000E1E71F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E48A7EBB26144D3D00E1E71F /* UsernameListManager.swift */,
+				E48A7EC32614538500E1E71F /* ValidationManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E48A7F212615749D00E1E71F /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				E48A7EDA2614688B00E1E71F /* UsernameTextFieldDelegate.swift */,
+				E48A7EE526147AB200E1E71F /* PasswordTextFieldDelegate.swift */,
+				E48A7EEA26147E0500E1E71F /* ConfirmPasswordTextFieldDelegate.swift */,
+				E48A7EEF2614932200E1E71F /* NameTextFieldDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet var nameCheckLabel: UILabel!
     @IBOutlet var nextButton: UIButton!
     
-    var IdTextFieldDelegate = IDTextFieldDelegate()
+    lazy var IdTextFieldDelegate = IDTextFieldDelegate(label: IDCheckLabel)
     var pwTextFieldDelegate = PWTextFieldDelegate()
     var pwrTextFieldDelegate = PWRTextFieldDelegate()
     var nameTextFieldDelegate = NameTextFieldDelegate()
@@ -31,20 +31,14 @@ class ViewController: UIViewController {
         PWTextField.delegate = pwTextFieldDelegate
         PWRTextField.delegate = pwrTextFieldDelegate
         nameTextField.delegate = nameTextFieldDelegate
-        NotificationCenter.default.addObserver(self, selector: #selector(showIDLabel), name: NSNotification.Name.init(rawValue: "identifier"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(showPWLabel), name: NSNotification.Name.init(rawValue: "password"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(showPWRLabel), name: NSNotification.Name.init(rawValue: "passwordReconfirm"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(showNameLabel), name: NSNotification.Name.init(rawValue: "name"), object: nil)
 
     }
 
-    @objc func showIDLabel(notification: Notification) {
-        let getValue = notification.object as! IDTextFieldState
-        labelManager.checkCorrectID(label: IDCheckLabel, state: getValue)
-    }
-
     @objc func showPWLabel(notification: Notification) {
-        let getValue = notification.object as! PasswordTextFieldState
+        let getValue = notification.object as! PasswordState
         labelManager.checkPassword(label: PWCheckLabel, state: getValue)
     }
     

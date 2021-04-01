@@ -23,7 +23,7 @@ class LabelManager {
         }
     }
     
-    func checkPassword(label: UILabel, state: PasswordTextFieldState) {
+    func checkPassword(label: UILabel, state: PasswordState) {
         switch state {
         case .correct:
             label.text = "안전한 비밀번호입니다."

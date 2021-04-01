@@ -58,8 +58,11 @@ extension PasswordTextField {
         isValid.chageState(to: result)
     }
     @objc func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.layer.borderColor = UIColor.gray.cgColor
-        textField.layer.borderWidth = 0.18
+        if isValid.state == .valid {
+            textField.layer.borderColor = UIColor.myGreen.cgColor
+        } else {
+            textField.layer.borderColor = UIColor.red.cgColor
+        }
         return false
     }
 }

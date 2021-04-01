@@ -8,7 +8,7 @@
 import UIKit
 
 extension UITextField {
-    func changeBorderColor(color : CGColor) {
+    func changeBorder(color : CGColor) {
         self.layer.borderWidth = 1
         self.layer.borderColor = color
     }

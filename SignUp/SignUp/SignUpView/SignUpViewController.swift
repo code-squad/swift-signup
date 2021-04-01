@@ -10,7 +10,7 @@ import UIKit
 class SignUpViewController: UIViewController {
 
     @IBOutlet var categoryLabelCollection: [UILabel]!
-    @IBOutlet var textFieldCollection: [UITextField]!
+    @IBOutlet var textFieldCollection: [SignUpTextField]!
     @IBOutlet var informationLabelCollection: [UILabel]!
     
     private let textFieldDelegate = TextFieldDelegate()
@@ -23,8 +23,10 @@ class SignUpViewController: UIViewController {
     }
     
     private func configureTextField() {
-        for textfield in textFieldCollection {
-            textfield.delegate = textFieldDelegate
+        for index in 0..<textFieldCollection.count {
+            textFieldCollection[index].textFieldType = TextFieldType(rawValue: index)
+            textFieldCollection[index].delegate = textFieldDelegate
+            textFieldCollection[index].relatedLabel = informationLabelCollection[index]
         }
     }
 
@@ -52,13 +54,13 @@ class SignUpViewController: UIViewController {
                 label.isHidden = false
                 switch usedCheck {
                 case .ok:
-                    textField.changeBorderColor(color: UIColor.green.cgColor)
+                    textField.changeBorder(color: UIColor.green.cgColor)
                     label.changeStyle(color: UIColor.green, text: "사용 가능한 아이디입니다.")
                 case .used:
-                    textField.changeBorderColor(color: UIColor.red.cgColor)
+                    textField.changeBorder(color: UIColor.red.cgColor)
                     label.changeStyle(color: UIColor.red, text: "이미 사용중인 아이디입니다.")
                 case .wrong:
-                    textField.changeBorderColor(color: UIColor.red.cgColor)
+                    textField.changeBorder(color: UIColor.red.cgColor)
                     label.changeStyle(color: UIColor.red, text: "5~20자의 영문 소문자, 숫자와 특수기호(_,-)만 사용 가능합니다.")
                 case .none:
                     return
@@ -83,23 +85,23 @@ class SignUpViewController: UIViewController {
         
         switch complianceChecker.checkPwTextForm(with: text) {
         case .ok:
-            textField.changeBorderColor(color: UIColor.green.cgColor)
+            textField.changeBorder(color: UIColor.green.cgColor)
             label.changeStyle(color: UIColor.green, text: "안전한 비밀번호입니다.")
             
         case .outOfIndex:
-            textField.changeBorderColor(color: UIColor.red.cgColor)
+            textField.changeBorder(color: UIColor.red.cgColor)
             label.changeStyle(color: UIColor.red, text: "8자 이상 16자 이하로 입력해주세요.")
             
         case .noUpperCase:
-            textField.changeBorderColor(color: UIColor.red.cgColor)
+            textField.changeBorder(color: UIColor.red.cgColor)
             label.changeStyle(color: UIColor.red, text: "영문 대문자를 최소 1자 이상 포함해주세요.")
         
         case .noNumber:
-            textField.changeBorderColor(color: UIColor.red.cgColor)
+            textField.changeBorder(color: UIColor.red.cgColor)
             label.changeStyle(color: UIColor.red, text: "숫자를 최소 1자 이상 포함해주세요.")
         
         case .noSpecialCharacter:
-            textField.changeBorderColor(color: UIColor.red.cgColor)
+            textField.changeBorder(color: UIColor.red.cgColor)
             label.changeStyle(color: UIColor.red, text: "특수문자를 최소 1자 이상 포함해주세요.")
         }
         
@@ -129,10 +131,10 @@ class SignUpViewController: UIViewController {
         
         switch pwCoincidenceCheck {
         case .ok:
-            textField.changeBorderColor(color: UIColor.green.cgColor)
+            textField.changeBorder(color: UIColor.green.cgColor)
             label.changeStyle(color: UIColor.green, text: "비밀번호가 일치합니다.")
         case .wrong:
-            textField.changeBorderColor(color: UIColor.red.cgColor)
+            textField.changeBorder(color: UIColor.red.cgColor)
             label.changeStyle(color: UIColor.red, text: "비밀번호가 일치하지 않습니다..")
         }
     }
@@ -153,10 +155,10 @@ class SignUpViewController: UIViewController {
         switch nameTextNilCheck {
         case .ok:
             label.isHidden = true
-            textField.changeBorderColor(color: UIColor.black.cgColor)
+            textField.changeBorder(color: UIColor.black.cgColor)
         case .wrong:
             label.isHidden = false
-            textField.changeBorderColor(color: UIColor.red.cgColor)
+            textField.changeBorder(color: UIColor.red.cgColor)
             label.changeStyle(color: UIColor.red, text: "이름은 필수 입력 항목입니다.")
         }
     }

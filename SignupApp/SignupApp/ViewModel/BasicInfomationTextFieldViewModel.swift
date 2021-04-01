@@ -14,11 +14,6 @@ class BasicInfomationTextFieldViewModel: NSObject {
     @IBOutlet weak var checkPasswordField: CustomTextField!
     @IBOutlet weak var nameField: CustomTextField!
     
-    typealias ResultValidate = (ID: ResultIDChecking,
-                                password: ResultPasswordChecking,
-                                equalPassword: ResultEqualPasswordChecking,
-                                name: ResultNameChecking)
-    
     private var resultHandler: (ResultValidate) -> ()
     
     @IBOutlet var textFields: [CustomTextField]!

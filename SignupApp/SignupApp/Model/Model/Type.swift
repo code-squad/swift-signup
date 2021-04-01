@@ -7,6 +7,11 @@
 
 import Foundation
 
+typealias ResultValidate = (ID: ResultIDChecking,
+                            password: ResultPasswordChecking,
+                            equalPassword: ResultEqualPasswordChecking,
+                            name: ResultNameChecking)
+
 enum ResultEqualPasswordChecking {
     case blank
     case equal

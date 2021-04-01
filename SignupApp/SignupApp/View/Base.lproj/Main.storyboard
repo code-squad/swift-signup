@@ -134,6 +134,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Cma-X8-VXQ" kind="show" id="e9c-rR-h2J"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -141,6 +144,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="UNX-Sc-C2W"/>
                     <connections>
+                        <outlet property="basicInfomationButtonViewModel" destination="at5-n5-8Jl" id="rpJ-l6-bgO"/>
                         <outlet property="basicInfomationLabelViewModel" destination="viu-1L-WA5" id="oUh-Fv-4RA"/>
                         <outlet property="basicInfomationTextFieldViewModel" destination="P7O-NR-PdM" id="gBS-Vr-tqS"/>
                     </connections>
@@ -162,7 +166,7 @@
                     <connections>
                         <outlet property="IDField" destination="Z8r-8h-16C" id="GvO-3B-V3k"/>
                         <outlet property="checkPasswordField" destination="cfG-up-POd" id="4J6-7W-R6C"/>
-                        <outlet property="nameField" destination="hlU-j4-gef" id="xaC-la-FyU"/>
+                        <outlet property="nameField" destination="hlU-j4-gef" id="DTX-A4-PG4"/>
                         <outlet property="passwordField" destination="dZ6-it-xZa" id="wC9-PX-Ze9"/>
                         <outletCollection property="textFields" destination="Z8r-8h-16C" collectionClass="NSMutableArray" id="arG-fI-bLx"/>
                         <outletCollection property="textFields" destination="dZ6-it-xZa" collectionClass="NSMutableArray" id="zh5-rY-ITY"/>
@@ -170,8 +174,29 @@
                         <outletCollection property="textFields" destination="hlU-j4-gef" collectionClass="NSMutableArray" id="hOf-MP-YV3"/>
                     </connections>
                 </customObject>
+                <customObject id="at5-n5-8Jl" userLabel="Basic Infomation Button View Model" customClass="BasicInfomationButtonViewModel" customModule="SignupApp" customModuleProvider="target">
+                    <connections>
+                        <outlet property="nextButton" destination="ngs-xc-zH8" id="uUd-wm-f0r"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="1047.6923076923076" y="118.00947867298578"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hO4-ua-tLS">
+            <objects>
+                <viewController id="Cma-X8-VXQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U12-bs-UhL">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Uwe-YM-nxW"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0tl-gZ-dBi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kcS-6X-X4T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1860" y="118"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZEA-tr-1nQ">

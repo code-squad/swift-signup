@@ -9,23 +9,19 @@ import UIKit
 
 class SignUpViewController: UIViewController {
     
-    @IBOutlet var signUpViewModel : SignUpViewModel!
+    @IBOutlet var signUpTextFields : SignUpViewModel!
+    @IBOutlet var signUpLabels: SignUpLabelViewModel!
     
     var activateTextField : UITextField? = nil
-    
-    @IBOutlet weak var idLabel: UILabel!
-    @IBOutlet weak var passwordLabel: UILabel!
-    @IBOutlet weak var repasswordLabel: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        signUpViewModel.id.bind(control: { [weak self] (state) in
-            self?.idLabel.text = state.state.rawValue
+        signUpTextFields.id.bind(control: { [weak self] (state) in
+            self?.signUpLabels.id.text = state.state.rawValue
         })
-        signUpViewModel.password.bind(control: { [weak self] (state) in
-            self?.passwordLabel.text = state.state.rawValue
+        signUpTextFields.password.bind(control: { [weak self] (state) in
+            self?.signUpLabels.password.text = state.state.rawValue
         })
         configureDelegate()
     }
@@ -49,12 +45,12 @@ extension SignUpViewController : UITextFieldDelegate {
         activateTextField = textField
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if textField == signUpViewModel.id {
-            self.signUpViewModel.password.becomeFirstResponder()
-        } else if textField == signUpViewModel.password {
-            self.signUpViewModel.repassword.becomeFirstResponder()
-        } else if textField == signUpViewModel.repassword {
-            self.signUpViewModel.name.becomeFirstResponder()
+        if textField == signUpTextFields.id {
+            self.signUpTextFields.password.becomeFirstResponder()
+        } else if textField == signUpTextFields.password {
+            self.signUpTextFields.repassword.becomeFirstResponder()
+        } else if textField == signUpTextFields.repassword {
+            self.signUpTextFields.name.becomeFirstResponder()
         }else {
             activateTextField = nil
         }

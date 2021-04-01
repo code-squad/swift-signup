@@ -23,6 +23,7 @@
 		10F1D49E26155CD4005665E9 /* ValidCheckProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F1D49D26155CD4005665E9 /* ValidCheckProtocol.swift */; };
 		10F1D4A726157CBE005665E9 /* IDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F1D4A626157CBE005665E9 /* IDTextField.swift */; };
 		10F1D4AA26157CD3005665E9 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F1D4A926157CD3005665E9 /* PasswordTextField.swift */; };
+		10F1D4AE26157DD0005665E9 /* SignUpLabelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F1D4AD26157DD0005665E9 /* SignUpLabelViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		10F1D49D26155CD4005665E9 /* ValidCheckProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidCheckProtocol.swift; sourceTree = "<group>"; };
 		10F1D4A626157CBE005665E9 /* IDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDTextField.swift; sourceTree = "<group>"; };
 		10F1D4A926157CD3005665E9 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
+		10F1D4AD26157DD0005665E9 /* SignUpLabelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpLabelViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				10F1D49526155B0E005665E9 /* SignUpViewModel.swift */,
+				10F1D4AD26157DD0005665E9 /* SignUpLabelViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				1009A9A72611A5690089EC3F /* PersonInformViewController.swift in Sources */,
 				10F1D49626155B0E005665E9 /* SignUpViewModel.swift in Sources */,
 				1078FDA02614955900026DBD /* ValidationCheckService.swift in Sources */,
+				10F1D4AE26157DD0005665E9 /* SignUpLabelViewModel.swift in Sources */,
 				1009A99226119FCA0089EC3F /* ViewController.swift in Sources */,
 				1019AF8B26145E90005FE7C7 /* IDValidState.swift in Sources */,
 				1078FDA9261497D500026DBD /* PasswordValidState.swift in Sources */,

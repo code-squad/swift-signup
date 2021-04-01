@@ -50,7 +50,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KH6-vJ-R25" customClass="NameTextField" customModule="swift_signup" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KH6-vJ-R25">
                                 <rect key="frame" x="30" y="454" width="330" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Ra5-Pu-q37"/>
@@ -189,6 +189,7 @@
                         <outlet property="idTextField" destination="kns-LJ-zCP" id="315-FK-PbV"/>
                         <outlet property="nameLabel" destination="hKc-Y1-zFG" id="WU7-8J-8h3"/>
                         <outlet property="nameText" destination="KH6-vJ-R25" id="i9o-Bd-vCV"/>
+                        <outlet property="nameTextField" destination="KH6-vJ-R25" id="lO2-c3-kf6"/>
                         <outlet property="nextButton" destination="bJ7-iC-Wms" id="RTu-bG-j83"/>
                         <outlet property="passwordConfirmLabel" destination="MZF-5u-wdE" id="Iwo-Zx-fId"/>
                         <outlet property="passwordConfirmText" destination="jMQ-Qe-L3i" id="DFu-o4-9b8"/>

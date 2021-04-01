@@ -35,6 +35,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordConfirmTextField: UITextField!
     private var passwordConfirmTextFieldDelegate = PasswordConfirmTextFieldDelegate()
     
+    @IBOutlet weak var nameTextField: UITextField!
+    private var nameTextFieldDelegate = NameTextFieldDelegate()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -42,7 +45,7 @@ class ViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(idGuideText), name: IdTextFieldDelegate.idTextFieldInfo, object: idTextFieldDelegate)
         NotificationCenter.default.addObserver(self, selector: #selector(passwordGuideText), name: PasswordTextFieldDelegate.passwordTextFieldInfo, object: passwordTextFieldDelegate)
         NotificationCenter.default.addObserver(self, selector: #selector(passwordConfirmGuideText), name: PasswordConfirmTextFieldDelegate.passwordConfirmTextFieldInfo, object: passwordConfirmTextFieldDelegate)
-        NotificationCenter.default.addObserver(self, selector: #selector(nameGuideText), name: CustomTextField.nameState, object: nameText)
+        NotificationCenter.default.addObserver(self, selector: #selector(nameGuideText), name: NameTextFieldDelegate.nameTextFieldInfo, object: nameTextFieldDelegate)
         NotificationCenter.default.addObserver(self, selector: #selector(buttonState), name: ButtonManager.buttonState, object: buttonManager)
         
         registerDelegate()
@@ -53,14 +56,14 @@ class ViewController: UIViewController {
         self.idTextField.delegate = idTextFieldDelegate
         self.passwordTextField.delegate = passwordTextFieldDelegate
         self.passwordConfirmTextField.delegate = passwordConfirmTextFieldDelegate
-        self.nameText.delegate = nameText
+        self.nameTextField.delegate = nameTextFieldDelegate
     }
     
     func registerTextField() {
 //        self.buttonManager.update(textField: type(of: idText), state: idText.currentState)
 //        self.buttonManager.update(textField: type(of: passwordText), state: passwordText.currentState)
 //        self.buttonManager.update(textField: type(of: passwordConfirmText), state: passwordConfirmText.currentState)
-        self.buttonManager.update(textField: type(of: nameText), state: nameText.currentState)
+//        self.buttonManager.update(textField: type(of: nameText), state: nameText.currentState)
     }
     
     //MARK: @objc 처리
@@ -104,14 +107,14 @@ class ViewController: UIViewController {
     
     @objc
     func nameGuideText(notification: Notification) {
-        guard let text = notification.userInfo?[CustomTextField.MessageInfo.text] as? String,
-              let color = notification.userInfo?[CustomTextField.MessageInfo.color] as? UIColor
+        guard let text = notification.userInfo?[NameValidater.MessageInfo.text] as? String,
+              let color = notification.userInfo?[NameValidater.MessageInfo.color] as? UIColor
         else {
             return
         }
         self.nameLabel.text = text
         self.nameLabel.textColor = color
-        buttonManager.update(textField: type(of: nameText), state: nameText.currentState)
+//        buttonManager.update(textField: type(of: nameText), state: nameText.currentState)
     }
     
     @objc

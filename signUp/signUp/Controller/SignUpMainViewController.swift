@@ -5,6 +5,7 @@ class SignUpMainViewController: UIViewController {
     private var mainViewTitle: MainTitleLabel!
     private var mainStackView = MainInfoStackView()
     private var buttonForMove = NextVCButton(type: .system)
+    private let delegate = TextFieldDelegate()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,8 @@ class SignUpMainViewController: UIViewController {
         
         setUpLabelAndTextField()
         
+        setUpTextFieldDelegate()
+        
         configureTitle()
         
         configureMainStackView()
@@ -32,6 +35,7 @@ class SignUpMainViewController: UIViewController {
         addTargetForButton()
         
         textEdittingForTextField()
+        
     }
     
     private func enableButton() {
@@ -71,6 +75,13 @@ extension SignUpMainViewController {
         mainStackView.infoPasswordView.inputTextField.placeholder = LabelContetns.passwordPlaceHolder.description
         mainStackView.doubleCheckPassWordView.infoLabel.text = LabelContetns.passwordDoubleCheckLabel.description
         mainStackView.nameCheckView.infoLabel.text = LabelContetns.nameLabel.description
+    }
+    
+    private func setUpTextFieldDelegate() {
+        mainStackView.infoIDView.inputTextField.delegate = delegate
+        mainStackView.infoPasswordView.inputTextField.delegate = delegate
+        mainStackView.doubleCheckPassWordView.inputTextField.delegate = delegate
+        mainStackView.nameCheckView.inputTextField.delegate = delegate
     }
 }
 

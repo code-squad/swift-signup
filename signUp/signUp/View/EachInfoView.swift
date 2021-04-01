@@ -5,7 +5,6 @@ class EachInfoView: UIView {
     var infoLabel = UILabel()
     var inputTextField = UITextField()
     var checkLabel = UILabel()
-    private let delegate = TextFieldDelegate()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,7 +20,6 @@ class EachInfoView: UIView {
         setUpInfoLabel()
         setUpTextField()
         setUpCheckLabel()
-        inputTextField.delegate = delegate
         configrueSelfView()
     }
     

@@ -8,7 +8,7 @@
 import UIKit
 
 extension UILabel {
-    func changeTextNColor(color : UIColor, text : String) {
+    func changeStyle(color : UIColor, text : String) {
         self.textColor = color
         self.text = text
     }

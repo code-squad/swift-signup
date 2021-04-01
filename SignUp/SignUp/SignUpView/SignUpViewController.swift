@@ -18,16 +18,9 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureCategorylabel()
         configureTextField()
         configureInformationLabel()
         configureObserver()
-    }
-
-    private func configureCategorylabel() {
-        for label in categoryLabelCollection {
-            label.font = .boldSystemFont(ofSize: 17)
-        }
     }
     
     private func configureTextField() {
@@ -70,13 +63,13 @@ class SignUpViewController: UIViewController {
                 switch usedCheck {
                 case .ok:
                     textField.changeBorderColor(color: UIColor.green.cgColor)
-                    label.changeTextNColor(color: UIColor.green, text: "사용 가능한 아이디입니다.")
+                    label.changeStyle(color: UIColor.green, text: "사용 가능한 아이디입니다.")
                 case .used:
                     textField.changeBorderColor(color: UIColor.red.cgColor)
-                    label.changeTextNColor(color: UIColor.red, text: "이미 사용중인 아이디입니다.")
+                    label.changeStyle(color: UIColor.red, text: "이미 사용중인 아이디입니다.")
                 case .wrong:
                     textField.changeBorderColor(color: UIColor.red.cgColor)
-                    label.changeTextNColor(color: UIColor.red, text: "5~20자의 영문 소문자, 숫자와 특수기호(_,-)만 사용 가능합니다.")
+                    label.changeStyle(color: UIColor.red, text: "5~20자의 영문 소문자, 숫자와 특수기호(_,-)만 사용 가능합니다.")
                 case .none:
                     return
                 }
@@ -101,23 +94,23 @@ class SignUpViewController: UIViewController {
         switch complianceChecker.checkPwTextForm(with: text) {
         case .ok:
             textField.changeBorderColor(color: UIColor.green.cgColor)
-            label.changeTextNColor(color: UIColor.green, text: "안전한 비밀번호입니다.")
+            label.changeStyle(color: UIColor.green, text: "안전한 비밀번호입니다.")
             
         case .outOfIndex:
             textField.changeBorderColor(color: UIColor.red.cgColor)
-            label.changeTextNColor(color: UIColor.red, text: "8자 이상 16자 이하로 입력해주세요.")
+            label.changeStyle(color: UIColor.red, text: "8자 이상 16자 이하로 입력해주세요.")
             
         case .noUpperCase:
             textField.changeBorderColor(color: UIColor.red.cgColor)
-            label.changeTextNColor(color: UIColor.red, text: "영문 대문자를 최소 1자 이상 포함해주세요.")
+            label.changeStyle(color: UIColor.red, text: "영문 대문자를 최소 1자 이상 포함해주세요.")
         
         case .noNumber:
             textField.changeBorderColor(color: UIColor.red.cgColor)
-            label.changeTextNColor(color: UIColor.red, text: "숫자를 최소 1자 이상 포함해주세요.")
+            label.changeStyle(color: UIColor.red, text: "숫자를 최소 1자 이상 포함해주세요.")
         
         case .noSpecialCharacter:
             textField.changeBorderColor(color: UIColor.red.cgColor)
-            label.changeTextNColor(color: UIColor.red, text: "특수문자를 최소 1자 이상 포함해주세요.")
+            label.changeStyle(color: UIColor.red, text: "특수문자를 최소 1자 이상 포함해주세요.")
         }
         
     }
@@ -147,10 +140,10 @@ class SignUpViewController: UIViewController {
         switch pwCoincidenceCheck {
         case .ok:
             textField.changeBorderColor(color: UIColor.green.cgColor)
-            label.changeTextNColor(color: UIColor.green, text: "비밀번호가 일치합니다.")
+            label.changeStyle(color: UIColor.green, text: "비밀번호가 일치합니다.")
         case .wrong:
             textField.changeBorderColor(color: UIColor.red.cgColor)
-            label.changeTextNColor(color: UIColor.red, text: "비밀번호가 일치하지 않습니다..")
+            label.changeStyle(color: UIColor.red, text: "비밀번호가 일치하지 않습니다..")
         }
     }
     
@@ -174,7 +167,7 @@ class SignUpViewController: UIViewController {
         case .wrong:
             label.isHidden = false
             textField.changeBorderColor(color: UIColor.red.cgColor)
-            label.changeTextNColor(color: UIColor.red, text: "이름은 필수 입력 항목입니다.")
+            label.changeStyle(color: UIColor.red, text: "이름은 필수 입력 항목입니다.")
         }
     }
     

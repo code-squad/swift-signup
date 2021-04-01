@@ -99,6 +99,7 @@ extension SignUpMainViewController {
     
     @objc func textFieldEddtingChanged(textField: UITextField) {
         enableButton()
+        let _ = isValidConditionForID() || isValidConditionForPassword() || isValidConditionForPasswordConfirm() || isValidConditionForName()
     }
 }
 

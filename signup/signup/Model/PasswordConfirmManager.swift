@@ -29,9 +29,11 @@ class PasswordConfirmManager: ValidateManager {
     }
     
     func isValid(_ input: String, completionHandler: @escaping (Status) -> Void) {
-        let password = "" //이건 어떻게..?
-        let confirm = input
         status.isValidated = false
+        
+        let passwordKey = ObjectIdentifier(PasswordValidateManager.self)
+        let password = SignUpInfo.list[passwordKey] ?? ""
+        let confirm = input
         
         if !isSame(password, confirm) {
             status.message = invalidMessages[0]

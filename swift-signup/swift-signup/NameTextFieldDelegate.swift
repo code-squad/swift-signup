@@ -2,7 +2,7 @@
 import Foundation
 import UIKit
 
-class NameTextFieldDelegate : NSObject, UITextFieldDelegate {
+class NameTextFieldDelegate : NSObject, UITextFieldDelegate, UserInfoValidable {
 
     private var validater : NameValidater
     
@@ -46,6 +46,10 @@ class NameTextFieldDelegate : NSObject, UITextFieldDelegate {
         }
         
         return true
+    }
+    
+    func isUserInfoValid() -> Bool {
+        return (validater.state() == .valid || validater.state() == .end) ? true : false
     }
 }
 

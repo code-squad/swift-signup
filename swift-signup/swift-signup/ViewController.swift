@@ -10,16 +10,16 @@ import UIKit
 class ViewController: UIViewController {
     
     
-    @IBOutlet weak var idText: IdTextField!
+//    @IBOutlet weak var idText: IdTextField!
     @IBOutlet weak var idLabel: UILabel!
     
-    @IBOutlet weak var passwordText: PasswordTextField!
+//    @IBOutlet weak var passwordText: PasswordTextField!
     @IBOutlet weak var passwordLabel: UILabel!
     
-    @IBOutlet weak var passwordConfirmText: PasswordConfirmTextField!
+//    @IBOutlet weak var passwordConfirmText: PasswordConfirmTextField!
     @IBOutlet weak var passwordConfirmLabel: UILabel!
     
-    @IBOutlet weak var nameText: NameTextField!
+//    @IBOutlet weak var nameText: NameTextField!
     @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var nextButton: UIButton!

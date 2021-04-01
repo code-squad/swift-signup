@@ -2,7 +2,12 @@
 import Foundation
 import UIKit
 
-class IdTextFieldDelegate : NSObject, UITextFieldDelegate {
+protocol UserInfoValidable  {
+    func isUserInfoValid() -> Bool
+}
+
+
+class IdTextFieldDelegate : NSObject, UITextFieldDelegate, UserInfoValidable {
 
     private var validater : IdValidater
     
@@ -46,6 +51,10 @@ class IdTextFieldDelegate : NSObject, UITextFieldDelegate {
         }
         
         return true
+    }
+    
+    func isUserInfoValid() -> Bool {
+        return (validater.state() == .valid || validater.state() == .end) ? true : false
     }
 }
 

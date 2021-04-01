@@ -2,7 +2,7 @@
 import Foundation
 import UIKit
 
-class PasswordTextFieldDelegate : NSObject, UITextFieldDelegate {
+class PasswordTextFieldDelegate : NSObject, UITextFieldDelegate, UserInfoValidable {
 
     private var validater : PasswordValidater
     
@@ -46,6 +46,10 @@ class PasswordTextFieldDelegate : NSObject, UITextFieldDelegate {
         }
         
         return true
+    }
+    
+    func isUserInfoValid() -> Bool {
+        return (validater.state() == .valid || validater.state() == .end) ? true : false
     }
 }
 

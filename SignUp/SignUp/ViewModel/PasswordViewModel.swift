@@ -13,13 +13,6 @@ class PasswordViewModel {
     @Published var passwordText = ""
     @Published var passwordConfirmText = ""
     
-    private var isPasswordCount : AnyPublisher<Bool, Never> {
-        $passwordText
-            .dropFirst()
-            .map{ $0.count < 7 || $0.count > 16 }
-            .eraseToAnyPublisher()
-    }
-    
     var isPasswordValid : AnyPublisher<PasswordState, Never> {
         Publishers.Zip4(isPasswordCount, isPasswordUpperword, isPasswordNumber, isPasswordSymbol)
             .map {
@@ -61,6 +54,13 @@ class PasswordViewModel {
         return $passwordText
             .dropFirst()
             .map{ $0.range(of: pattern, options: .regularExpression) == nil }
+            .eraseToAnyPublisher()
+    }
+    
+    private var isPasswordCount : AnyPublisher<Bool, Never> {
+        $passwordText
+            .dropFirst()
+            .map{ $0.count < 7 || $0.count > 16 }
             .eraseToAnyPublisher()
     }
     

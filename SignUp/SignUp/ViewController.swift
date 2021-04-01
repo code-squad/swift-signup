@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-class ViewController: UIViewController {
+class ViewController: BaseViewController {
 
     @IBOutlet weak var idStackView: SignUpStackView!
     @IBOutlet weak var passwordStackView: SignUpStackView!
@@ -23,12 +23,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureBind()
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
-    {
-            super.touchesBegan(touches, with: event)
-            self.view.endEditing(true)
     }
     
     func configureBind() {

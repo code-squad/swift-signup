@@ -17,8 +17,5 @@ class NameTextFieldDelegate : NSObject, UITextFieldDelegate{
         textField.layer.borderColor = UIColor.black.cgColor
         textField.layer.borderWidth = 1
     }
-    
-    func isVaild(){
-    }
 }
 

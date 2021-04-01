@@ -14,7 +14,6 @@
 		B075D0F326119A7F00731DAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B075D0F226119A7F00731DAC /* Assets.xcassets */; };
 		B075D0F626119A7F00731DAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B075D0F426119A7F00731DAC /* LaunchScreen.storyboard */; };
 		B075D1012611BBC700731DAC /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B075D1002611BBC700731DAC /* TextFieldDelegate.swift */; };
-		B075D1072611D07800731DAC /* textFormError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B075D1062611D07800731DAC /* textFormError.swift */; };
 		B075D10B261207A600731DAC /* ComplianceChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B075D10A261207A600731DAC /* ComplianceChecker.swift */; };
 		B075D10E261209C300731DAC /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B075D10D261209C300731DAC /* UITextField+Extension.swift */; };
 		B075D11126120A5900731DAC /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B075D11026120A5900731DAC /* UILabel+Extension.swift */; };
@@ -33,7 +32,6 @@
 		B075D0F526119A7F00731DAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B075D0F726119A7F00731DAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B075D1002611BBC700731DAC /* TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
-		B075D1062611D07800731DAC /* textFormError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textFormError.swift; sourceTree = "<group>"; };
 		B075D10A261207A600731DAC /* ComplianceChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplianceChecker.swift; sourceTree = "<group>"; };
 		B075D10D261209C300731DAC /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		B075D11026120A5900731DAC /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
@@ -90,7 +88,6 @@
 				B075D0ED26119A7D00731DAC /* SignUpViewController.swift */,
 				B075D0EF26119A7D00731DAC /* Main.storyboard */,
 				B075D1002611BBC700731DAC /* TextFieldDelegate.swift */,
-				B075D1062611D07800731DAC /* textFormError.swift */,
 				B075D10A261207A600731DAC /* ComplianceChecker.swift */,
 				B075D119261300FB00731DAC /* NetworkManager.swift */,
 				B075D1152612F4AD00731DAC /* UserInfomation.swift */,
@@ -189,7 +186,6 @@
 				B075D0EE26119A7D00731DAC /* SignUpViewController.swift in Sources */,
 				B075D0EA26119A7D00731DAC /* AppDelegate.swift in Sources */,
 				B075D12026158BED00731DAC /* SignUpTextField.swift in Sources */,
-				B075D1072611D07800731DAC /* textFormError.swift in Sources */,
 				B075D11A261300FB00731DAC /* NetworkManager.swift in Sources */,
 				B075D1162612F4AD00731DAC /* UserInfomation.swift in Sources */,
 				B075D1012611BBC700731DAC /* TextFieldDelegate.swift in Sources */,

@@ -27,6 +27,9 @@
 		BFCBC78526159DB7009A9F0F /* PrivateDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCBC78426159DB7009A9F0F /* PrivateDataViewController.swift */; };
 		BFCBC7882615A423009A9F0F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCBC7872615A423009A9F0F /* BaseViewController.swift */; };
 		BFCBC78B2615A745009A9F0F /* Serviceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCBC78A2615A745009A9F0F /* Serviceable.swift */; };
+		BFCBC7902615B3CF009A9F0F /* PrivateDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCBC78F2615B3CF009A9F0F /* PrivateDataViewModel.swift */; };
+		BFCBC7932615B40E009A9F0F /* EmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCBC7922615B40E009A9F0F /* EmailViewModel.swift */; };
+		BFCBC7962615B417009A9F0F /* PhoneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCBC7952615B417009A9F0F /* PhoneViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,9 @@
 		BFCBC78426159DB7009A9F0F /* PrivateDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateDataViewController.swift; sourceTree = "<group>"; };
 		BFCBC7872615A423009A9F0F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BFCBC78A2615A745009A9F0F /* Serviceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serviceable.swift; sourceTree = "<group>"; };
+		BFCBC78F2615B3CF009A9F0F /* PrivateDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateDataViewModel.swift; sourceTree = "<group>"; };
+		BFCBC7922615B40E009A9F0F /* EmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewModel.swift; sourceTree = "<group>"; };
+		BFCBC7952615B417009A9F0F /* PhoneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,9 +150,20 @@
 		BFCBC78326159D68009A9F0F /* PrivateDataView */ = {
 			isa = PBXGroup;
 			children = (
+				BFCBC78E2615B3B8009A9F0F /* ViewModel */,
 				BFCBC78426159DB7009A9F0F /* PrivateDataViewController.swift */,
 			);
 			path = PrivateDataView;
+			sourceTree = "<group>";
+		};
+		BFCBC78E2615B3B8009A9F0F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BFCBC78F2615B3CF009A9F0F /* PrivateDataViewModel.swift */,
+				BFCBC7922615B40E009A9F0F /* EmailViewModel.swift */,
+				BFCBC7952615B417009A9F0F /* PhoneViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,11 +246,14 @@
 				BF11F67C2611C18E006AC76C /* UITextField+Extension.swift in Sources */,
 				BF11F6632611996F006AC76C /* AppDelegate.swift in Sources */,
 				BF0E7535261333B200D513B4 /* State.swift in Sources */,
+				BFCBC7932615B40E009A9F0F /* EmailViewModel.swift in Sources */,
 				BFC925F02614754C00D4FBD0 /* SignUpStackView.swift in Sources */,
 				BF11F6862611C2A4006AC76C /* Service.swift in Sources */,
 				BF11F6782611AB3C006AC76C /* SignUpViewModel.swift in Sources */,
 				BFCBC77F26156495009A9F0F /* EndPoint.swift in Sources */,
+				BFCBC7902615B3CF009A9F0F /* PrivateDataViewModel.swift in Sources */,
 				BFCBC7882615A423009A9F0F /* BaseViewController.swift in Sources */,
+				BFCBC7962615B417009A9F0F /* PhoneViewModel.swift in Sources */,
 				BFCBC78526159DB7009A9F0F /* PrivateDataViewController.swift in Sources */,
 				BF11F6652611996F006AC76C /* SceneDelegate.swift in Sources */,
 			);

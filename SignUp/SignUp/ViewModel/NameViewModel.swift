@@ -12,7 +12,7 @@ class NameViewModel {
     
     @Published var nameText = ""
     
-    var isNameValid : AnyPublisher<NameState, Never> {
+    var isValid : AnyPublisher<NameState, Never> {
         $nameText
             .dropFirst()
             .map { $0.isEmpty ? NameState.empty : NameState.valid }

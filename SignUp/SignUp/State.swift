@@ -95,3 +95,39 @@ enum NameState : Validable {
         self == .valid ? true : false
     }
 }
+
+enum EmailState : Validable {
+    case notCorrect
+    case valid
+    
+    var message: String {
+      switch self {
+      case .notCorrect:
+        return "이메일 주소를 다시 확인해주세요"
+      case .valid :
+        return ""
+      }
+    }
+    
+    func isValid() -> Bool {
+        self == .valid ? true : false
+    }
+}
+
+enum PhoneState : Validable {
+    case notCorrect
+    case valid
+    
+    var message: String {
+      switch self {
+      case .notCorrect:
+        return "형식에 맞지 않는 번호입니다"
+      case .valid :
+        return ""
+      }
+    }
+    
+    func isValid() -> Bool {
+        self == .valid ? true : false
+    }
+}

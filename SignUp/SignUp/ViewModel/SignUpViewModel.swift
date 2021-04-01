@@ -10,8 +10,6 @@ import Combine
 
 class SignUpViewModel {
     
-    private var cancellable = Set<AnyCancellable>()
-    
     var idViewModel : IdViewModel
     var passwordViewModel : PasswordViewModel
     var nameViewModel : NameViewModel
@@ -26,10 +24,10 @@ class SignUpViewModel {
         passwordViewModel = PasswordViewModel()
         nameViewModel = NameViewModel()
         
-        isIdMatchValid = idViewModel.isIdMatchValid
-        isPasswordValid = passwordViewModel.isPasswordValid
-        isMatchPasswordValid = passwordViewModel.isMatchPasswordValid
-        isNameValid = nameViewModel.isNameValid
+        isIdMatchValid = idViewModel.isValid
+        isPasswordValid = passwordViewModel.isValid
+        isMatchPasswordValid = passwordViewModel.isMatchValid
+        isNameValid = nameViewModel.isValid
     }
     
     var isInputValid : AnyPublisher<Bool, Never> {

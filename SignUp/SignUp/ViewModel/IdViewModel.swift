@@ -21,7 +21,7 @@ class IdViewModel {
         requestIdList()
     }
     
-    var isIdMatchValid : AnyPublisher<IdState , Never> {
+    var isValid : AnyPublisher<IdState , Never> {
         Publishers.Zip(setTextRule,isIdexist)
             .map {
                 if $0 { return IdState.notStandard }

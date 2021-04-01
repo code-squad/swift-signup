@@ -17,7 +17,6 @@ class ConfirmPasswordTextFieldDelegate: NSObject, UITextFieldDelegate {
         self.validConfirmPassword = validConfirmPassword
         self.invalidConfirmPassword = invalidConfirmPassword
         super.init()
-        //NotificationCenter.default.addObserver(self, selector: #selector(onDidChangePassword(_:)), name: PasswordTextFieldDelegate.Notification.DidChangePassword, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(onDidChangePassword(_:)), name: NotificationName.DidChangePassword, object: nil)
     }
     

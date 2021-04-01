@@ -3,7 +3,7 @@ import UIKit
 class PrivacyViewController: UIViewController {
     
     private var privacyViewTitle: MainTitleLabel!
-    private var privacyStackView = MainInfoStackView()
+    private var privacyStackView = PrivacyStackView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,6 +15,7 @@ class PrivacyViewController: UIViewController {
         view.backgroundColor = UIColor.systemGray6
         configureTitle()
         configureMainStackView()
+        setUpLabelAndTextField()
     }
 }
 
@@ -28,5 +29,12 @@ extension PrivacyViewController {
     private func configureMainStackView() {
         privacyStackView.frame = CGRect(x: 40, y: 120, width: 300, height: 400)
         view.addSubview(privacyStackView)
+    }
+    
+    private func setUpLabelAndTextField() {
+        privacyStackView.birthdayInfo.infoLabel.text = PrivacyLabelContents.birthday
+        privacyStackView.emailInfo.infoLabel.text = PrivacyLabelContents.email
+        privacyStackView.cellPhoneInfo.infoLabel.text = PrivacyLabelContents.cellPhone
+        privacyStackView.cellPhoneInfo.inputTextField.placeholder = PrivacyLabelContents.cellPhonePlaceholder
     }
 }

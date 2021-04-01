@@ -196,7 +196,7 @@
                         <outlet property="nameResultLabel" destination="lH2-Tj-sRW" id="QmW-cD-eA7"/>
                         <outlet property="nameTextField" destination="md5-Sj-qtw" id="lyQ-SP-u2q"/>
                         <outlet property="pwResultLabel" destination="YB5-CS-cub" id="XY4-YA-2MZ"/>
-                        <outlet property="pwTextFiled" destination="Mt9-I6-B86" id="IIQ-KB-YDc"/>
+                        <outlet property="pwTextField" destination="Mt9-I6-B86" id="IIQ-KB-YDc"/>
                         <outlet property="recheckPwResultLabel" destination="kJ7-Bs-cau" id="Nzv-O4-7rp"/>
                         <outlet property="recheckingPwTextField" destination="1e6-RB-dX6" id="NYY-A3-QTx"/>
                     </connections>

@@ -10,7 +10,7 @@ import UIKit
 class FirstSignUpViewController: UIViewController {
     
     @IBOutlet weak var idTextField: SignUpTextField!
-    @IBOutlet weak var pwTextFiled: SignUpTextField!
+    @IBOutlet weak var pwTextField: SignUpTextField!
     @IBOutlet weak var recheckingPwTextField: SignUpTextField!
     @IBOutlet weak var nameTextField: SignUpTextField!
     
@@ -25,41 +25,42 @@ class FirstSignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         idTextField.delegate = idTextFieldDelegate
-        pwTextFiled.delegate = pwTextFieldDelegate
+        pwTextField.delegate = pwTextFieldDelegate
         
-        NotificationCenter.default.addObserver(self, selector: #selector(updateIdResultLabel), name: IdTextFieldDelegate.notificationName, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(updatePwResultLabel), name: PwTextFieldDelegate.notificationName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateIdResultLabel), name: IdTextFieldDelegate.notificationName, object: idTextFieldDelegate)
+        NotificationCenter.default.addObserver(self, selector: #selector(updatePwResultLabel), name: PwTextFieldDelegate.notificationName, object: pwTextFieldDelegate)
     }
     
     @objc
     private func updateIdResultLabel(notification: Notification) {
-        guard let tempUserInfo = notification.userInfo,
-              let userInfo = tempUserInfo as? [Bool : String] else {
+        ///result = [텍스트필드 올바르게 작성했는지  : 그에 해당하는 메세지 ]
+        guard let userInfo = notification.userInfo,
+              let result = userInfo as? [Bool : String] else {
             return
         }
 
-        updateLabel(idResultLabel, condition: userInfo)
+        updateLabel(idResultLabel, condition: result)
     }
     
     @objc
     private func updatePwResultLabel(notification: Notification) {
-        guard let tempUserInfo = notification.userInfo,
-              let userInfo = tempUserInfo as? [Bool : String] else {
+        guard let userInfo = notification.userInfo,
+              let result = userInfo as? [Bool : String] else {
             return
         }
 
-        updateLabel(pwResultLabel, condition: userInfo)
+        updateLabel(pwResultLabel, condition: result)
     }
     
-    @IBAction func editingChangedRecheckingPwTextField(_ sender: Any) {
+    @IBAction func editingChangedRecheckingPwTextField(_ sender: SignUpTextField) {
 
-        let result = Validator.isSameText(first: pwTextFiled.text!, second: recheckingPwTextField.text!)
+        let result = Validator.isSameText(first: pwTextField.text!, second: recheckingPwTextField.text!)
         
             updateLabel(recheckPwResultLabel, condition: result)
     }
     
     @IBAction func didTabNextButton(_ sender: SignUpButton) {
-        canGoNextPage().forEach { label, result in
+        ValidateAllTextField().forEach { label, result in
             result.keys.forEach { isCorrect in
                 if isCorrect == false { updateLabel(label, condition: result) }
             }
@@ -78,11 +79,11 @@ class FirstSignUpViewController: UIViewController {
         }
     }
     
-    private func canGoNextPage() -> [UILabel : [Bool:String]] {
-        let canGoNextPage = [idResultLabel! : Validator.isCorrected(id: idTextField.text!),
-                             pwResultLabel! : Validator.isCorrected(pw: pwTextFiled.text!),
+    private func ValidateAllTextField() -> [UILabel : [Bool:String]] {
+        let results = [idResultLabel! : Validator.isCorrected(id: idTextField.text!),
+                             pwResultLabel! : Validator.isCorrected(pw: pwTextField.text!),
                              recheckPwResultLabel! : Validator.isSameText(first: pwResultLabel.text!, second: recheckPwResultLabel.text!),
                              nameResultLabel! : Validator.isEmpty(nameTextField.text!)]
-        return canGoNextPage
+        return results
     }
 }

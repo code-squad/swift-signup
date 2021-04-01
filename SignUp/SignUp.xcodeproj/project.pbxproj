@@ -13,7 +13,6 @@
 		1E87F1DE2611A1770063A1B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E87F1DC2611A1770063A1B4 /* Main.storyboard */; };
 		1E87F1E02611A17A0063A1B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E87F1DF2611A17A0063A1B4 /* Assets.xcassets */; };
 		1E87F1E32611A17A0063A1B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E87F1E12611A17A0063A1B4 /* LaunchScreen.storyboard */; };
-		1E87F1ED2611A7320063A1B4 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E87F1EC2611A7320063A1B4 /* Member.swift */; };
 		1E87F1F426121E770063A1B4 /* BaseTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E87F1F326121E770063A1B4 /* BaseTextFieldDelegate.swift */; };
 		1E87F1F726122D700063A1B4 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E87F1F626122D700063A1B4 /* Validator.swift */; };
 		1E87F1FA2612F3F80063A1B4 /* SignUpTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E87F1F92612F3F80063A1B4 /* SignUpTextField.swift */; };
@@ -21,7 +20,6 @@
 		1E87F209261348520063A1B4 /* SignUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E87F208261348520063A1B4 /* SignUpButton.swift */; };
 		1E87F20D261350450063A1B4 /* PwTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E87F20C261350450063A1B4 /* PwTextFieldDelegate.swift */; };
 		1E87F2132614C2C70063A1B4 /* RegularExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E87F2122614C2C70063A1B4 /* RegularExpression.swift */; };
-		1E87F2172615843C0063A1B4 /* ReCheckingPwTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E87F2162615843C0063A1B4 /* ReCheckingPwTextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +31,6 @@
 		1E87F1DF2611A17A0063A1B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E87F1E22611A17A0063A1B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E87F1E42611A17A0063A1B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1E87F1EC2611A7320063A1B4 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		1E87F1F326121E770063A1B4 /* BaseTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextFieldDelegate.swift; sourceTree = "<group>"; };
 		1E87F1F626122D700063A1B4 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		1E87F1F92612F3F80063A1B4 /* SignUpTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTextField.swift; sourceTree = "<group>"; };
@@ -41,7 +38,6 @@
 		1E87F208261348520063A1B4 /* SignUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpButton.swift; sourceTree = "<group>"; };
 		1E87F20C261350450063A1B4 /* PwTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PwTextFieldDelegate.swift; sourceTree = "<group>"; };
 		1E87F2122614C2C70063A1B4 /* RegularExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpression.swift; sourceTree = "<group>"; };
-		1E87F2162615843C0063A1B4 /* ReCheckingPwTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReCheckingPwTextFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +85,6 @@
 		1E87F1EF2611A73E0063A1B4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1E87F1EC2611A7320063A1B4 /* Member.swift */,
 				1E87F1F626122D700063A1B4 /* Validator.swift */,
 				1E87F2122614C2C70063A1B4 /* RegularExpression.swift */,
 			);
@@ -129,7 +124,6 @@
 				1E87F1F326121E770063A1B4 /* BaseTextFieldDelegate.swift */,
 				1E87F20226130B560063A1B4 /* IdTextFieldDelegate.swift */,
 				1E87F20C261350450063A1B4 /* PwTextFieldDelegate.swift */,
-				1E87F2162615843C0063A1B4 /* ReCheckingPwTextFieldDelegate.swift */,
 			);
 			path = TextFiledDelegate;
 			sourceTree = "<group>";
@@ -204,7 +198,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E87F2172615843C0063A1B4 /* ReCheckingPwTextFieldDelegate.swift in Sources */,
 				1E87F209261348520063A1B4 /* SignUpButton.swift in Sources */,
 				1E87F1F726122D700063A1B4 /* Validator.swift in Sources */,
 				1E87F1DB2611A1770063A1B4 /* FirstSignUpViewController.swift in Sources */,
@@ -215,7 +208,6 @@
 				1E87F2132614C2C70063A1B4 /* RegularExpression.swift in Sources */,
 				1E87F20D261350450063A1B4 /* PwTextFieldDelegate.swift in Sources */,
 				1E87F1F426121E770063A1B4 /* BaseTextFieldDelegate.swift in Sources */,
-				1E87F1ED2611A7320063A1B4 /* Member.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

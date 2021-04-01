@@ -9,9 +9,7 @@ import UIKit
 
 class SignUpViewController: UIViewController {
     
-    @IBOutlet var idViewModel: IDViewModel!
-    @IBOutlet var passwordViewModel: PasswordViewModel!
-    @IBOutlet var nameViewModel: NameViewModel!
+    @IBOutlet var signUpViewModel : SignUpViewModel!
     
     var activateTextField : UITextField? = nil
     
@@ -23,16 +21,12 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        idViewModel.bind(control: { [weak self] (state) in
+        signUpViewModel.id.bind(control: { [weak self] (state) in
             self?.idLabel.text = state.state.rawValue
         })
-        passwordViewModel.bind(control: { [weak self] (state) in
+        signUpViewModel.password.bind(control: { [weak self] (state) in
             self?.passwordLabel.text = state.state.rawValue
         })
-        nameViewModel.bind(control: { [weak self] (state) in
-            self?.nameLabel.text = state.state.rawValue
-        })
-        
         configureDelegate()
     }
     @IBAction func didTouchNextButton(_ sender: Any) {
@@ -45,8 +39,7 @@ class SignUpViewController: UIViewController {
         present(personInfoVC, animated: true, completion: nil)
     }
     func configureDelegate(){
-        idViewModel.id.delegate = self
-        passwordViewModel.password.delegate = self
+        
     }
 }
 
@@ -56,11 +49,13 @@ extension SignUpViewController : UITextFieldDelegate {
         activateTextField = textField
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if textField == idViewModel.id {
-            self.passwordViewModel.password.becomeFirstResponder()
-        } else if textField == passwordViewModel.password {
-            self.nameViewModel.name.becomeFirstResponder()
-        } else {
+        if textField == signUpViewModel.id {
+            self.signUpViewModel.password.becomeFirstResponder()
+        } else if textField == signUpViewModel.password {
+            self.signUpViewModel.repassword.becomeFirstResponder()
+        } else if textField == signUpViewModel.repassword {
+            self.signUpViewModel.name.becomeFirstResponder()
+        }else {
             activateTextField = nil
         }
     }

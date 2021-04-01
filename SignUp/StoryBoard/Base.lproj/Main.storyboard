@@ -23,7 +23,7 @@
                                 <color key="textColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="영문, 소문자, 특수기호(!@#$%), 8-16자" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N4b-5a-Pm2">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="영문, 소문자, 특수기호(!@#$%), 8-16자" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N4b-5a-Pm2" customClass="PasswordTextField" customModule="SignUp" customModuleProvider="target">
                                 <rect key="frame" x="39" y="271" width="319" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -36,7 +36,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="영문, 소문자, 특수기호(_,-), 5-20자" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Hl-Vj-YKj">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="영문, 소문자, 특수기호(_,-), 5-20자" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Hl-Vj-YKj" customClass="IDTextField" customModule="SignUp" customModuleProvider="target">
                                 <rect key="frame" x="39" y="180" width="319" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -117,28 +117,19 @@
                     </view>
                     <connections>
                         <outlet property="idLabel" destination="xW2-PY-hv1" id="gZh-F6-sGh"/>
-                        <outlet property="idViewModel" destination="reM-3e-mV9" id="w5W-b5-fRl"/>
                         <outlet property="nameLabel" destination="XPk-gU-Jyi" id="iIm-Fz-L4h"/>
-                        <outlet property="nameViewModel" destination="9hK-E3-oWE" id="iYN-1y-UAU"/>
                         <outlet property="passwordLabel" destination="dDf-Xa-1Bu" id="vOd-rO-D5R"/>
-                        <outlet property="passwordViewModel" destination="hPc-kh-kzZ" id="GNg-J0-NWI"/>
                         <outlet property="repasswordLabel" destination="gdX-EY-Tyi" id="e7I-iR-id1"/>
+                        <outlet property="signUpViewModel" destination="HF8-kz-ePc" id="LUq-Kh-G9R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <customObject id="reM-3e-mV9" customClass="IDViewModel" customModule="SignUp" customModuleProvider="target">
+                <customObject id="HF8-kz-ePc" customClass="SignUpViewModel" customModule="SignUp" customModuleProvider="target">
                     <connections>
-                        <outlet property="id" destination="5Hl-Vj-YKj" id="jzR-aG-IDu"/>
-                    </connections>
-                </customObject>
-                <customObject id="hPc-kh-kzZ" customClass="PasswordViewModel" customModule="SignUp" customModuleProvider="target">
-                    <connections>
-                        <outlet property="password" destination="N4b-5a-Pm2" id="JZi-0z-ztU"/>
-                    </connections>
-                </customObject>
-                <customObject id="9hK-E3-oWE" customClass="NameViewModel" customModule="SignUp" customModuleProvider="target">
-                    <connections>
-                        <outlet property="name" destination="5w5-Dc-laj" id="6ri-lF-yGK"/>
+                        <outlet property="id" destination="5Hl-Vj-YKj" id="l0r-L4-I47"/>
+                        <outlet property="name" destination="5w5-Dc-laj" id="28f-ST-Bn1"/>
+                        <outlet property="password" destination="N4b-5a-Pm2" id="zcs-8r-4Sj"/>
+                        <outlet property="repassword" destination="cc6-R4-y4d" id="Lr7-0b-ZvY"/>
                     </connections>
                 </customObject>
             </objects>

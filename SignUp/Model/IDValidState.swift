@@ -6,12 +6,11 @@
 //
 
 import Foundation
-import Combine
 
 class IDValidState : ObservableObject{
     
     enum State : String {
-        case notValid = "이미 사용중인 아이디입니다."
+        case inValid = "이미 사용중인 아이디입니다."
         case valid = "사용 가능한 아이디입니다."
     }
     
@@ -21,12 +20,9 @@ class IDValidState : ObservableObject{
         }
     }
     init(){
-        state = .notValid
+        state = .inValid
     }
-    func setValid(){
-        state = State.valid
-    }
-    func setNotValid(){
-        state = State.notValid
+    func chageState(to state : State){
+        self.state = state
     }
 }

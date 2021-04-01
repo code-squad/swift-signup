@@ -214,10 +214,10 @@
             </objects>
             <point key="canvasLocation" x="-146.15384615384616" y="93.838862559241704"/>
         </scene>
-        <!--View Controller-->
+        <!--Private Data View Controller-->
         <scene sceneID="CZH-s6-EFe">
             <objects>
-                <viewController id="9F8-JU-a0a" sceneMemberID="viewController">
+                <viewController id="9F8-JU-a0a" customClass="PrivateDataViewController" customModule="SignUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y3U-We-n0P">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -358,6 +358,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="tintColor" red="0.2901960784" green="0.63921568630000003" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title=" 이전" image="arrow.left.circle.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="goBackButtonTouched:" destination="9F8-JU-a0a" eventType="touchUpInside" id="fAq-jt-IXH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9A-cM-OTy">
                                         <rect key="frame" x="134.33333333333331" y="0.0" width="64.333333333333314" height="44"/>

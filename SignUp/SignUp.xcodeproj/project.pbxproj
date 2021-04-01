@@ -24,6 +24,8 @@
 		BFC925FE26149A5800D4FBD0 /* NameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC925FD26149A5800D4FBD0 /* NameViewModel.swift */; };
 		BFC926082614A47B00D4FBD0 /* IdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC926072614A47B00D4FBD0 /* IdViewModel.swift */; };
 		BFCBC77F26156495009A9F0F /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCBC77E26156495009A9F0F /* EndPoint.swift */; };
+		BFCBC78526159DB7009A9F0F /* PrivateDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCBC78426159DB7009A9F0F /* PrivateDataViewController.swift */; };
+		BFCBC7882615A423009A9F0F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCBC7872615A423009A9F0F /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		BFC925FD26149A5800D4FBD0 /* NameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewModel.swift; sourceTree = "<group>"; };
 		BFC926072614A47B00D4FBD0 /* IdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdViewModel.swift; sourceTree = "<group>"; };
 		BFCBC77E26156495009A9F0F /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		BFCBC78426159DB7009A9F0F /* PrivateDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateDataViewController.swift; sourceTree = "<group>"; };
+		BFCBC7872615A423009A9F0F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +96,10 @@
 				BF11F6622611996F006AC76C /* AppDelegate.swift */,
 				BF11F6642611996F006AC76C /* SceneDelegate.swift */,
 				BF11F6662611996F006AC76C /* ViewController.swift */,
+				BFCBC7872615A423009A9F0F /* BaseViewController.swift */,
 				BF0E7534261333B200D513B4 /* State.swift */,
 				BFC9260026149B2A00D4FBD0 /* ViewModel */,
+				BFCBC78326159D68009A9F0F /* PrivateDataView */,
 				BF0E75292612B6AA00D513B4 /* View */,
 				BF11F6682611996F006AC76C /* Main.storyboard */,
 				BF11F66B26119971006AC76C /* Assets.xcassets */,
@@ -130,6 +136,14 @@
 				BFC925FD26149A5800D4FBD0 /* NameViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BFCBC78326159D68009A9F0F /* PrivateDataView */ = {
+			isa = PBXGroup;
+			children = (
+				BFCBC78426159DB7009A9F0F /* PrivateDataViewController.swift */,
+			);
+			path = PrivateDataView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +229,8 @@
 				BF11F6862611C2A4006AC76C /* Service.swift in Sources */,
 				BF11F6782611AB3C006AC76C /* SignUpViewModel.swift in Sources */,
 				BFCBC77F26156495009A9F0F /* EndPoint.swift in Sources */,
+				BFCBC7882615A423009A9F0F /* BaseViewController.swift in Sources */,
+				BFCBC78526159DB7009A9F0F /* PrivateDataViewController.swift in Sources */,
 				BF11F6652611996F006AC76C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

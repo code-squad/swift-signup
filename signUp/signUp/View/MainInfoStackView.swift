@@ -49,21 +49,21 @@ extension MainInfoStackView {
     func conditionForID() -> Bool {
         if infoIDView.inputTextField.text?.count == 0 {
             infoIDView.checkLabel.text = ""
-        } else if !doubleCheckID(infoIDView.inputTextField.text ){
+        } else if !isOverlappedId(infoIDView.inputTextField.text ){
             infoIDView.inputTextField.layer.borderColor = UIColor.red.cgColor
             infoIDView.checkLabel.textColor = UIColor.red
-            infoIDView.checkLabel.text = IdCheck.doubleCheck.description
+            infoIDView.checkLabel.text = IdCheck.doubleCheck
         }else if !checkValidElementForID(infoIDView.inputTextField.text) {
-            infoIDView.checkLabel.text = IdCheck.nonSupportedValue.description
+            infoIDView.checkLabel.text = IdCheck.nonSupportedValue
             infoIDView.inputTextField.layer.borderColor = UIColor.red.cgColor
             infoIDView.checkLabel.textColor = UIColor.red
-        } else if !checkValidCountForID(infoIDView.inputTextField.text) {
-            infoIDView.checkLabel.text = IdCheck.idCount.description
+        } else if !isValidCountForID(infoIDView.inputTextField.text) {
+            infoIDView.checkLabel.text = IdCheck.idCount
             infoIDView.inputTextField.layer.borderColor = UIColor.red.cgColor
             infoIDView.checkLabel.textColor = UIColor.red
         } else {
             infoIDView.inputTextField.layer.borderWidth = 0
-            infoIDView.checkLabel.text = IdCheck.valid.description
+            infoIDView.checkLabel.text = IdCheck.valid
             infoIDView.checkLabel.textColor = UIColor.systemGreen
             return true
         }
@@ -74,16 +74,16 @@ extension MainInfoStackView {
         if infoPasswordView.inputTextField.text?.count == 0 {
             infoPasswordView.checkLabel.text = ""
         } else if !checkValidPasswordElement(infoPasswordView.inputTextField.text) {
-            infoPasswordView.checkLabel.text = PasswordCheck.notContainedSpecialCharacters.description
+            infoPasswordView.checkLabel.text = PasswordCheck.notContainedSpecialCharacters
             infoPasswordView.checkLabel.textColor = UIColor.red
             infoPasswordView.inputTextField.layer.borderColor = UIColor.red.cgColor
         } else if !checkValidCountForPassWord(infoPasswordView.inputTextField.text) {
-            infoPasswordView.checkLabel.text = PasswordCheck.passwordCount.description
+            infoPasswordView.checkLabel.text = PasswordCheck.passwordCount
             infoPasswordView.checkLabel.textColor = UIColor.red
             infoPasswordView.inputTextField.layer.borderColor = UIColor.red.cgColor
         } else {
             infoPasswordView.inputTextField.layer.borderWidth = 0
-            infoPasswordView.checkLabel.text = PasswordCheck.valid.description
+            infoPasswordView.checkLabel.text = PasswordCheck.valid
             infoPasswordView.checkLabel.textColor = UIColor.systemGreen
             return true
         }
@@ -97,10 +97,10 @@ extension MainInfoStackView {
         } else if infoPasswordView.inputTextField.text != doubleCheckPassWordView.inputTextField.text {
             doubleCheckPassWordView.inputTextField.layer.borderColor = UIColor.red.cgColor
             doubleCheckPassWordView.checkLabel.textColor = UIColor.red
-            doubleCheckPassWordView.checkLabel.text = PasswordConfirmCheck.notEqul.description
+            doubleCheckPassWordView.checkLabel.text = PasswordConfirmCheck.notEqul
         } else {
             doubleCheckPassWordView.inputTextField.layer.borderWidth = 0
-            doubleCheckPassWordView.checkLabel.text = PasswordConfirmCheck.valid.description
+            doubleCheckPassWordView.checkLabel.text = PasswordConfirmCheck.valid
             doubleCheckPassWordView.checkLabel.textColor = UIColor.systemGreen
             return true
         }
@@ -114,22 +114,22 @@ extension MainInfoStackView {
         } else if !checkValidNameCount(nameCheckView.inputTextField.text) {
             nameCheckView.inputTextField.layer.borderColor = UIColor.red.cgColor
             nameCheckView.checkLabel.textColor = UIColor.red
-            nameCheckView.checkLabel.text = NameCheck.nameCount.description
+            nameCheckView.checkLabel.text = NameCheck.nameCount
         } else {
             nameCheckView.inputTextField.layer.borderWidth = 0
-            nameCheckView.checkLabel.text = NameCheck.valid.description
+            nameCheckView.checkLabel.text = NameCheck.valid
             nameCheckView.checkLabel.textColor = UIColor.systemGreen
             return true
         }
         return false
     }
     
-    func checkValidCountForID(_ id: String?) -> Bool {
+    func isValidCountForID(_ id: String?) -> Bool {
         let idCount = id?.getArrayAfterRegex(regex: "[a-z0-9_-]").count ?? 0
         return idCount>=5 && idCount<=20
     }
     
-    func doubleCheckID(_ id: String?) -> Bool {
+    func isOverlappedId(_ id: String?) -> Bool {
         if let userID = id {
             if !idList.contains(userID) {
                 return true

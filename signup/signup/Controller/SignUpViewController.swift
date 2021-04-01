@@ -52,12 +52,12 @@ class SignUpViewController: UIViewController {
     private func addObservers() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(didStateUpdate(_:)),
-                                               name: Notification.Name("stateChanged"),
+                                               name: SignUpTextFieldDelegate.NotiKeys.stateChanged,
                                                object: nil)
         
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(didValidateTextField(_:)),
-                                               name: Notification.Name("validateDone"),
+                                               name: SignUpTextFieldDelegate.NotiKeys.validateDone,
                                                object: nil)
     }
     

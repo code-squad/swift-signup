@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Combine
 
 class PasswordValidState : ObservableObject {
     
@@ -27,10 +26,7 @@ class PasswordValidState : ObservableObject {
     init(){
         state = .none
     }
-    func setValid(){
-        state = .valid
-    }
-    func setInValid(){
-        state = .none
+    func chageState(to state : State){
+        self.state = state
     }
 }

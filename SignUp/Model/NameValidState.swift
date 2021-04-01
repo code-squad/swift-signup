@@ -6,12 +6,11 @@
 //
 
 import Foundation
-import Combine
 
 class NameValidState : ObservableObject{
     
     enum State : String {
-        case notValid = "필수 항목입니다."
+        case inValid = "필수 항목입니다."
         case valid = ""
     }
     
@@ -21,12 +20,9 @@ class NameValidState : ObservableObject{
         }
     }
     init(){
-        state = .notValid
+        state = .inValid
     }
-    func setValid(){
-        state = State.valid
-    }
-    func setNotValid(){
-        state = State.notValid
+    func chageState(to state : State){
+        self.state = state
     }
 }

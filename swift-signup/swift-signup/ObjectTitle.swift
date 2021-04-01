@@ -8,7 +8,6 @@
 import UIKit
 
 class ObjectTitle : UILabel {
-    
     init(frame: CGRect, text : String) {
         super.init(frame: frame)
         self.text = text

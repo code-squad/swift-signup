@@ -8,6 +8,19 @@
 import UIKit
 
 class ReEnterPasswordTextFieldDelegate : NSObject, UITextFieldDelegate{
+    let PassWordTextField : UITextField
+    let alertMessage : AlertMessage
+    
+    init(passWordTextField : UITextField, alertMessage: AlertMessage){
+        self.PassWordTextField = passWordTextField
+        self.alertMessage = alertMessage
+        super.init()
+    }
+    
+    enum reEnterPasswordErrorCase : String{
+        case Wrong = "비밀번호가 일치하지 않습니다", Correct = "비밀번호가 일치합니다"
+    }
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.layer.borderColor = UIColor.systemBlue.cgColor
         textField.layer.borderWidth = 1
@@ -18,6 +31,12 @@ class ReEnterPasswordTextFieldDelegate : NSObject, UITextFieldDelegate{
         textField.layer.borderWidth = 1
     }
     
-    func isVaild(){
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        if textField.text != PassWordTextField.text {
+            alertMessage.UpdateAlertMessage(text: reEnterPasswordErrorCase.Wrong.rawValue)
+        }
+        else{
+            alertMessage.UpdateCorrectMessage(text: reEnterPasswordErrorCase.Correct.rawValue)
+        }
     }
 }

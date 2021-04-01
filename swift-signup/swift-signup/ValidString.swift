@@ -8,7 +8,6 @@
 import Foundation
 
 extension String{
-    
     func isValidString(regex: String) -> Bool {
         do{
             let regex = try NSRegularExpression(pattern: regex, options: [])

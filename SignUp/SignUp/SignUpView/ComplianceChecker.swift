@@ -30,25 +30,27 @@ struct ComplianceChecker {
         }
     }
     
-    private func regexChekcing(target : String, pattern : String) -> Bool {
-        do {
-            let regex = try NSRegularExpression(pattern: pattern)
-            
-            let regexedTarget = regex.matches(in: target, options: [], range: NSRange(location: 0, length: target.utf16.count))
-            let resultString = regexedTarget.map({
-                String(describing: target[Range($0.range, in: target)!])
-            }).joined()
-            
-            if resultString == "" {
-                return false
-            }
-            
-            if resultString != target {
-                return false
-            }
-        } catch {
-            print(error)
+    private func generateRegexString(target : String, pattern : String) -> String {
+        guard let regex = try? NSRegularExpression(pattern: pattern) else {
+            return ""
         }
+        
+        let regexedTarget = regex.matches(in: target, options: [], range: NSRange(location: 0, length: target.utf16.count))
+        let resultString = regexedTarget.map({
+            String(describing: target[Range($0.range, in: target)!])
+        }).joined()
+        
+        return resultString
+    }
+    
+    private func regexChekcing(target : String, pattern : String) -> Bool {
+        
+        let resultString = generateRegexString(target: target, pattern: pattern)
+        
+        if resultString != target {
+            return false
+        }
+        
         return true
     }
     

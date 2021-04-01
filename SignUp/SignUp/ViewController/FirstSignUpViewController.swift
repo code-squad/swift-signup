@@ -82,7 +82,7 @@ class FirstSignUpViewController: UIViewController {
     private func ValidateAllTextField() -> [UILabel : [Bool:String]] {
         let results = [idResultLabel! : Validator.isCorrected(id: idTextField.text!),
                              pwResultLabel! : Validator.isCorrected(pw: pwTextField.text!),
-                             recheckPwResultLabel! : Validator.isSameText(first: pwResultLabel.text!, second: recheckPwResultLabel.text!),
+                             recheckPwResultLabel! : Validator.isSameText(first: pwTextField.text!, second: recheckingPwTextField.text!),
                              nameResultLabel! : Validator.isEmpty(nameTextField.text!)]
         return results
     }

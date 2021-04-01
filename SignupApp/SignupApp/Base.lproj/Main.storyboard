@@ -195,15 +195,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="aBn-hq-7tP"/>
                     <connections>
-                        <outlet property="idMessageLabel" destination="12X-mQ-5jP" id="9n4-Ii-HVK"/>
-                        <outlet property="idTextField" destination="k8O-Ui-Cdq" id="jYV-to-a8U"/>
+                        <outlet property="confirmPasswordMessageLabel" destination="FkX-Dy-iXK" id="5p3-NQ-pSR"/>
+                        <outlet property="confirmPasswordTextField" destination="dyn-7P-e6d" id="8Yv-DW-psD"/>
                         <outlet property="nameMessageLabel" destination="iI7-6g-dJr" id="Mtk-gT-qwZ"/>
                         <outlet property="nameTextField" destination="lvG-KH-7Te" id="3NA-Bl-WCa"/>
                         <outlet property="nextButton" destination="iWq-we-Q0o" id="dD4-7q-fVT"/>
-                        <outlet property="passwordConfirmMessageLabel" destination="FkX-Dy-iXK" id="5p3-NQ-pSR"/>
-                        <outlet property="passwordConfirmTextField" destination="dyn-7P-e6d" id="8Yv-DW-psD"/>
                         <outlet property="passwordMessageLabel" destination="L47-qg-LDR" id="hsR-pU-b2a"/>
                         <outlet property="passwordTextField" destination="Mqm-wf-V42" id="Ya6-RL-qi5"/>
+                        <outlet property="usernameMessageLabel" destination="12X-mQ-5jP" id="9n4-Ii-HVK"/>
+                        <outlet property="usernameTextField" destination="k8O-Ui-Cdq" id="jYV-to-a8U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -8,7 +8,7 @@
 import Foundation
 
 class UserNameValidateManager: ValidateManager {
-    
+
     private var status: Status
     private let invalidMessages: [String]
     private let validMessage: String
@@ -28,8 +28,8 @@ class UserNameValidateManager: ValidateManager {
                   validMessage: userNameValid)
     }
     
-    func check(_ inputs: [String]) -> Status {
-        let userName = inputs[0]
+    func isValid(_ input: String, completionHandler: @escaping (Status) -> Void) {
+        let userName = input
         status.isValidated = false
         
         if !isCountValid(userName) {
@@ -38,9 +38,9 @@ class UserNameValidateManager: ValidateManager {
             status.isValidated = true
             status.message = validMessage
         }
-        return status
+        completionHandler(status)
     }
-    
+
     private func isCountValid(_ userName: String) -> Bool {
         return userName.count >= 1 ? true : false
     }

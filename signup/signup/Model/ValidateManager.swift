@@ -9,7 +9,7 @@ import Foundation
 
 protocol ValidateManager {
 
-    func check(_ inputs: [String]) -> Status
+    func isValid(_ input: String, completionHandler: @escaping (Status) -> Void)
     
 }
 

@@ -28,10 +28,9 @@ class PasswordConfirmManager: ValidateManager {
                   validMessage: passwordConfirm)
     }
     
-    
-    func check(_ inputs: [String]) -> Status {
-        let password = inputs[0]
-        let confirm = inputs[1]
+    func isValid(_ input: String, completionHandler: @escaping (Status) -> Void) {
+        let password = "" //이건 어떻게..?
+        let confirm = input
         status.isValidated = false
         
         if !isSame(password, confirm) {
@@ -40,7 +39,7 @@ class PasswordConfirmManager: ValidateManager {
             status.isValidated = true
             status.message = validMessage
         }
-        return status
+        completionHandler(status)
     }
     
     private func isSame(_ password: String, _ confirm: String) -> Bool {

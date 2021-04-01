@@ -20,6 +20,7 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureValidators()
         configureDelegates()
         
         nextButton.configureColors()
@@ -28,12 +29,17 @@ class SignUpViewController: UIViewController {
         addObservers()
     }
     
-    private func configureDelegates() {
-        validateManagers = [IDValidateManager(),
-                            PasswordValidateManager(),
-                            PasswordConfirmManager(),
-                            UserNameValidateManager()]
+    private func configureValidators() {
+        let IDValidator = IDValidateManager()
+        let passwordValidator = PasswordValidateManager()
+        let passwordReturner: ValidReturnable = passwordValidator
+        let passwordConfirmer = PasswordConfirmManager(validPasswordReturner: passwordReturner)
+        let userNameValidator = UserNameValidateManager()
         
+        validateManagers = [IDValidator, passwordValidator, passwordConfirmer, userNameValidator]
+    }
+    
+    private func configureDelegates() {
         validateManagers.forEach { (manager) in
             textFieldDelegates.append(SignUpTextFieldDelegate(validateManager: manager))
         }
@@ -46,7 +52,6 @@ class SignUpViewController: UIViewController {
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         //다음으로!
     }
-    
     
     //MARK: - Notification Methods
     private func addObservers() {
@@ -75,11 +80,9 @@ class SignUpViewController: UIViewController {
         
         let isValidated = status.isValidated
         let message = status.message
-        let value = info["input"] as? String
         
         DispatchQueue.main.async {
             targetLabel.update(isValidated: isValidated, text: message)
-            self.updateSignUpInfoList(value: value, key: senderID)
             self.updateButtonState()
         }
     }
@@ -97,12 +100,9 @@ class SignUpViewController: UIViewController {
         return targetIdx
     }
     
-    private func updateSignUpInfoList(value: String?, key: ObjectIdentifier) {
-        SignUpInfo.list[key] = value
-    }
-    
     private func updateButtonState() {
-        let validCount = validateManagers.map{ ObjectIdentifier(type(of: $0)) }.compactMap{ SignUpInfo.list[$0] }.count
+        let validReturners = validateManagers.map{ $0 as? ValidReturnable }
+        let validCount = validReturners.compactMap{ $0?.validatedInput() }.count
         validCount == 4 ? nextButton.enable() : nextButton.disable()
     }
     

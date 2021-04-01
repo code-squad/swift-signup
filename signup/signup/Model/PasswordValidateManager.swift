@@ -7,11 +7,13 @@
 
 import Foundation
 
-class PasswordValidateManager: ValidateManager {
+class PasswordValidateManager: ValidateManager, ValidReturnable {
 
     private var status: Status
     private let invalidMessages: [String]
     private let validMessage: String
+    
+    private var validPassword: String?
 
     init(status: Status, invalidMessages: [String], validMessage: String) {
         self.status = status
@@ -35,9 +37,15 @@ class PasswordValidateManager: ValidateManager {
                   validMessage: passwordValid)
     }
     
+    func validatedInput() -> String? {
+        return validPassword
+    }
+    
     func isValid(_ input: String, completionHandler: @escaping (Status) -> Void) {
-        let password = input
+        validPassword = nil
         status.isValidated = false
+        
+        let password = input
         
         if !isCountValid(password) {
             status.message = invalidMessages[0]
@@ -50,6 +58,7 @@ class PasswordValidateManager: ValidateManager {
         } else {
             status.isValidated = true
             status.message = validMessage
+            validPassword = password
         }
         completionHandler(status)
     }

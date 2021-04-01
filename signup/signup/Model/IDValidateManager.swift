@@ -38,24 +38,27 @@ class IDValidateManager: ValidateManager {
                   networkManager: NetworkManager(baseAddress: baseAddress))
     }
     
-    func check(_ inputs: [String]) -> Status {
-        let id = inputs[0]
+    func isValid(_ input: String, completionHandler: @escaping (Status) -> Void) {
+        let id = input
         status.isValidated = false
         
-        guard let isExisting = isExisting(id) else {
-            status.message = invalidMessages[1]
-            return status
+        isExisting(id) { (result) in
+            guard let result = result else {
+                self.status.message = self.invalidMessages[1]
+                completionHandler(self.status)
+                return
+            }
+            
+            if !self.isStyleValid(id) {
+                self.status.message = self.invalidMessages[0]
+            } else if result {
+                self.status.message = self.invalidMessages[2]
+            } else {
+                self.status.isValidated = true
+                self.status.message = self.validMessage
+            }
+            completionHandler(self.status)
         }
-        
-        if !isStyleValid(id) {
-            status.message = invalidMessages[0]
-        } else if isExisting {
-            status.message = invalidMessages[2]
-        } else {
-            status.isValidated = true
-            status.message = validMessage
-        }
-        return status
     }
     
     private func isStyleValid(_ id: String) -> Bool {
@@ -67,11 +70,9 @@ class IDValidateManager: ValidateManager {
         return match != nil ? true : false
     }
     
-    private func isExisting(_ id: String) -> Bool? {
-        var isExisting: Bool?
+    private func isExisting(_ id: String, completionHandler: @escaping (Bool?) -> Void) {
         networkManager.isExisting(id: id, password: "") { (result) in
-            isExisting = result
+            completionHandler(result)
         }
-        return isExisting
     }
 }

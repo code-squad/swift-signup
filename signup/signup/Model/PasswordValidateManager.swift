@@ -8,7 +8,7 @@
 import Foundation
 
 class PasswordValidateManager: ValidateManager {
-    
+
     private var status: Status
     private let invalidMessages: [String]
     private let validMessage: String
@@ -35,8 +35,8 @@ class PasswordValidateManager: ValidateManager {
                   validMessage: passwordValid)
     }
     
-    func check(_ inputs: [String]) -> Status {
-        let password = inputs[0]
+    func isValid(_ input: String, completionHandler: @escaping (Status) -> Void) {
+        let password = input
         status.isValidated = false
         
         if !isCountValid(password) {
@@ -51,7 +51,7 @@ class PasswordValidateManager: ValidateManager {
             status.isValidated = true
             status.message = validMessage
         }
-        return status
+        completionHandler(status)
     }
     
     private func isCountValid(_ password: String) -> Bool {

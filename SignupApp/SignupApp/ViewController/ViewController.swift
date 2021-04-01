@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {    
     @IBOutlet var basicInfomationLabelViewModel: BasicInfomationLabelViewModel!
     @IBOutlet var basicInfomationTextFieldViewModel: BasicInfomationTextFieldViewModel!
+    @IBOutlet var basicInfomationButtonViewModel: BasicInfomationButtonViewModel!
     
     var existIDs = [String]()
     
@@ -22,6 +23,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             self.basicInfomationLabelViewModel.changePasswordStyle(result: result.password)
             self.basicInfomationLabelViewModel.changeCheckPasswordStyle(result:result.equalPassword)
             self.basicInfomationLabelViewModel.changeNameStyle(result: result.name)
+            self.basicInfomationButtonViewModel.checkActivatedOrNot(result: result)
         }
     }
 }

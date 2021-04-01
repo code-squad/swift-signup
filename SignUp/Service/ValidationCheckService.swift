@@ -29,4 +29,7 @@ struct ValidationCheckService {
             return false
         }
     }
+    static func isValidName(input text: String) -> Bool {
+        return !text.isEmpty
+    }
 }

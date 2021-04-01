@@ -11,12 +11,13 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet var idViewModel: IDViewModel!
     @IBOutlet var passwordViewModel: PasswordViewModel!
+    @IBOutlet var nameViewModel: NameViewModel!
     
     var activateTextField : UITextField? = nil
     
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var passwordLabel: UILabel!
-    @IBOutlet weak var repaasswordLabel: UILabel!
+    @IBOutlet weak var repasswordLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     
     override func viewDidLoad() {
@@ -27,6 +28,9 @@ class SignUpViewController: UIViewController {
         })
         passwordViewModel.bind(control: { [weak self] (state) in
             self?.passwordLabel.text = state.state.rawValue
+        })
+        nameViewModel.bind(control: { [weak self] (state) in
+            self?.nameLabel.text = state.state.rawValue
         })
         
         configureDelegate()
@@ -55,8 +59,8 @@ extension SignUpViewController : UITextFieldDelegate {
         if textField == idViewModel.id {
             self.passwordViewModel.password.becomeFirstResponder()
         } else if textField == passwordViewModel.password {
-
-        }  else {
+            self.nameViewModel.name.becomeFirstResponder()
+        } else {
             activateTextField = nil
         }
     }

@@ -13,7 +13,7 @@ class IdViewModel {
     @Published var idText = ""
     
     private var idList : [String] = []
-    private var service : Service
+    private var service : Serviceable
     private var cancellable : AnyCancellable?
     
     init() {

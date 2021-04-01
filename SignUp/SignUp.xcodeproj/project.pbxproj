@@ -26,6 +26,7 @@
 		BFCBC77F26156495009A9F0F /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCBC77E26156495009A9F0F /* EndPoint.swift */; };
 		BFCBC78526159DB7009A9F0F /* PrivateDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCBC78426159DB7009A9F0F /* PrivateDataViewController.swift */; };
 		BFCBC7882615A423009A9F0F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCBC7872615A423009A9F0F /* BaseViewController.swift */; };
+		BFCBC78B2615A745009A9F0F /* Serviceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCBC78A2615A745009A9F0F /* Serviceable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		BFCBC77E26156495009A9F0F /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		BFCBC78426159DB7009A9F0F /* PrivateDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateDataViewController.swift; sourceTree = "<group>"; };
 		BFCBC7872615A423009A9F0F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		BFCBC78A2615A745009A9F0F /* Serviceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serviceable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				BF11F6852611C2A4006AC76C /* Service.swift */,
+				BFCBC78A2615A745009A9F0F /* Serviceable.swift */,
 				BFCBC77E26156495009A9F0F /* EndPoint.swift */,
 				BF11F67A2611C178006AC76C /* Extension */,
 			);
@@ -221,6 +224,7 @@
 				BF11F6672611996F006AC76C /* ViewController.swift in Sources */,
 				BFC926082614A47B00D4FBD0 /* IdViewModel.swift in Sources */,
 				BF0E753226132D7200D513B4 /* MessageLabel.swift in Sources */,
+				BFCBC78B2615A745009A9F0F /* Serviceable.swift in Sources */,
 				BFC925FE26149A5800D4FBD0 /* NameViewModel.swift in Sources */,
 				BF11F67C2611C18E006AC76C /* UITextField+Extension.swift in Sources */,
 				BF11F6632611996F006AC76C /* AppDelegate.swift in Sources */,

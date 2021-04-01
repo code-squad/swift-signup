@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class Service {
+class Service : Serviceable {
     
     func request(_ url: URL?) -> Future<String, Never> {
         return Future<String, Never> { promise in
@@ -18,7 +18,7 @@ class Service {
         }
     }
       
-    private func getResource(url : URL?, complete: @escaping (Data) -> ())  {
+    func getResource(url : URL?, complete: @escaping (Data) -> ())  {
         guard let url = url else {
             return }
 

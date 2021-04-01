@@ -19,6 +19,7 @@ class PrivacyViewController: UIViewController {
     }
 }
 
+//MARK: -configuration && Setup
 extension PrivacyViewController {
     
     private func configureTitle() {

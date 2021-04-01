@@ -30,8 +30,8 @@ class IDTextField : UITextField, ValidCheckProtocol {
             self?.handler?(self!.isValid)
         }
     }
-    func checkValidation() -> Bool {
-        guard let text = self.text else { return false }
+    func checkValidation() -> ValidState.State {
+        guard let text = self.text else { return isValid.state }
         let result = ValidationCheckService.isValidId(input: text)
         return result
     }

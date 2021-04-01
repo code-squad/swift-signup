@@ -31,8 +31,8 @@ class PasswordTextField : UITextField, ValidCheckProtocol {
             self?.handler?(self!.isValid)
         }
     }
-    func checkValidation() -> Bool {
-        guard let text = self.text else { return false }
+    func checkValidation() -> ValidState.State {
+        guard let text = self.text else { return .none }
         let result = ValidationCheckService.isValidPassword(input: text)
         return result
     }
@@ -55,11 +55,7 @@ extension PasswordTextField {
     }
     @objc func textFieldDidEndEditing(_ textField: UITextField) {
         let result = checkValidation()
-        if result {
-            isValid.chageState(to: .valid)
-        } else {
-            isValid.chageState(to: .inValidRange)
-        }
+        isValid.chageState(to: result)
     }
     @objc func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.layer.borderColor = UIColor.gray.cgColor

@@ -7,11 +7,14 @@
 
 import Foundation
 
-class IDValidateManager: ValidateManager {
+class IDValidateManager: ValidateManager, ValidReturnable {
     
     private var status: Status
     private let invalidMessages: [String]
     private let validMessage: String
+    
+    private var validID: String?
+    
     private let networkManager: NetworkManager
     
     init(status: Status, invalidMessages: [String], validMessage: String, networkManager: NetworkManager) {
@@ -38,9 +41,15 @@ class IDValidateManager: ValidateManager {
                   networkManager: NetworkManager(baseAddress: baseAddress))
     }
     
+    func validatedInput() -> String? {
+        return validID
+    }
+    
     func isValid(_ input: String, completionHandler: @escaping (Status) -> Void) {
-        let id = input
+        validID = nil
         status.isValidated = false
+        
+        let id = input
         
         isExisting(id) { (result) in
             guard let result = result else {
@@ -56,6 +65,7 @@ class IDValidateManager: ValidateManager {
             } else {
                 self.status.isValidated = true
                 self.status.message = self.validMessage
+                self.validID = id
             }
             completionHandler(self.status)
         }

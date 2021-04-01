@@ -7,12 +7,14 @@
 
 import Foundation
 
-class UserNameValidateManager: ValidateManager {
+class UserNameValidateManager: ValidateManager, ValidReturnable {
 
     private var status: Status
     private let invalidMessages: [String]
     private let validMessage: String
 
+    private var validUserName: String?
+    
     init(status: Status, invalidMessages: [String], validMessage: String) {
         self.status = status
         self.invalidMessages = invalidMessages
@@ -28,15 +30,22 @@ class UserNameValidateManager: ValidateManager {
                   validMessage: userNameValid)
     }
     
+    func validatedInput() -> String? {
+        return validUserName
+    }
+    
     func isValid(_ input: String, completionHandler: @escaping (Status) -> Void) {
-        let userName = input
+        validUserName = nil
         status.isValidated = false
+        
+        let userName = input
         
         if !isCountValid(userName) {
             status.message = invalidMessages[0]
         } else {
             status.isValidated = true
             status.message = validMessage
+            validUserName = userName
         }
         completionHandler(status)
     }

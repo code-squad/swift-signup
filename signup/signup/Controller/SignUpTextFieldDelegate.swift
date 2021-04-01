@@ -66,11 +66,10 @@ extension SignUpTextFieldDelegate: UITextFieldDelegate {
         let input = textField.text ?? ""
         
         validateManager.isValid(input) { (status) in
-            var userInfo: [String: Any] = ["status": status]
+            let userInfo: [String: Any] = ["status": status]
             
             if status.isValidated {
                 self.changeBorderColor(of: textField, to: ColorSet.PointGreen)
-                userInfo["input"] = input
                 self.postNotiValidateDone()
             } else {
                 DispatchQueue.main.async {

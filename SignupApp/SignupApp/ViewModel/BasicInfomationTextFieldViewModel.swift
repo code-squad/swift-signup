@@ -65,6 +65,7 @@ extension BasicInfomationTextFieldViewModel: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.layer.borderColor = #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)
         textField.layer.borderWidth = 1
+        textField.becomeFirstResponder()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -87,6 +88,7 @@ extension BasicInfomationTextFieldViewModel: UITextFieldDelegate {
 }
 
 extension BasicInfomationTextFieldViewModel {
+    //MARK:Style
     private func changeIDStyle(caseOf result: ResultIDChecking) {
         switch result {
         case .existID, .incorrectID:
@@ -124,7 +126,6 @@ extension BasicInfomationTextFieldViewModel {
         }
     }
     
-    //MARK:Style
     private func incorrectStyle(of textField: UITextField) {
         textField.layer.borderColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
         textField.layer.borderWidth = 1

@@ -12,7 +12,7 @@ class EmailViewModel {
     @Published var emailText = ""
     
     var isValid : AnyPublisher<EmailState, Never> {
-        let pattern = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9]+\\.[A-Za-z]{2,3}$"
+        let pattern = "^[A-Za-z0-9._-]+@[A-Za-z0-9]+\\.[A-Za-z]{2,3}$"
         return $emailText
             .dropFirst()
             .map { $0.range(of : pattern, options: .regularExpression) == nil }

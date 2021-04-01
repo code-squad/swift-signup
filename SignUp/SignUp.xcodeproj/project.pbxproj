@@ -30,6 +30,7 @@
 		BFCBC7902615B3CF009A9F0F /* PrivateDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCBC78F2615B3CF009A9F0F /* PrivateDataViewModel.swift */; };
 		BFCBC7932615B40E009A9F0F /* EmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCBC7922615B40E009A9F0F /* EmailViewModel.swift */; };
 		BFCBC7962615B417009A9F0F /* PhoneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCBC7952615B417009A9F0F /* PhoneViewModel.swift */; };
+		BFCBC7992615D68B009A9F0F /* BirthDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCBC7982615D68B009A9F0F /* BirthDatePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		BFCBC78F2615B3CF009A9F0F /* PrivateDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateDataViewModel.swift; sourceTree = "<group>"; };
 		BFCBC7922615B40E009A9F0F /* EmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewModel.swift; sourceTree = "<group>"; };
 		BFCBC7952615B417009A9F0F /* PhoneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewModel.swift; sourceTree = "<group>"; };
+		BFCBC7982615D68B009A9F0F /* BirthDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthDatePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				BF0E75262612B58000D513B4 /* InputTextField.swift */,
 				BFC925EF2614754C00D4FBD0 /* SignUpStackView.swift */,
 				BF0E753126132D7200D513B4 /* MessageLabel.swift */,
+				BFCBC7982615D68B009A9F0F /* BirthDatePicker.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -101,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				BF11F6802611C1F6006AC76C /* Network */,
+				BF11F67A2611C178006AC76C /* Extension */,
 				BF11F6622611996F006AC76C /* AppDelegate.swift */,
 				BF11F6642611996F006AC76C /* SceneDelegate.swift */,
 				BF11F6662611996F006AC76C /* ViewController.swift */,
@@ -131,7 +135,6 @@
 				BF11F6852611C2A4006AC76C /* Service.swift */,
 				BFCBC78A2615A745009A9F0F /* Serviceable.swift */,
 				BFCBC77E26156495009A9F0F /* EndPoint.swift */,
-				BF11F67A2611C178006AC76C /* Extension */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				BFC925F02614754C00D4FBD0 /* SignUpStackView.swift in Sources */,
 				BF11F6862611C2A4006AC76C /* Service.swift in Sources */,
 				BF11F6782611AB3C006AC76C /* SignUpViewModel.swift in Sources */,
+				BFCBC7992615D68B009A9F0F /* BirthDatePicker.swift in Sources */,
 				BFCBC77F26156495009A9F0F /* EndPoint.swift in Sources */,
 				BFCBC7902615B3CF009A9F0F /* PrivateDataViewModel.swift in Sources */,
 				BFCBC7882615A423009A9F0F /* BaseViewController.swift in Sources */,

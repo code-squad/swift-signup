@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E42F75732614BD35001D6B3A /* SignUpInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42F75722614BD35001D6B3A /* SignUpInfo.swift */; };
 		E42F75842615692F001D6B3A /* IDValidateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42F75832615692F001D6B3A /* IDValidateManager.swift */; };
 		E42F758826156A86001D6B3A /* InfoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42F758726156A86001D6B3A /* InfoLabel.swift */; };
 		E42F758B2615739D001D6B3A /* ColorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42F758A2615739D001D6B3A /* ColorSet.swift */; };
+		E42F759026158DBE001D6B3A /* ValidReturnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42F758F26158DBD001D6B3A /* ValidReturnable.swift */; };
 		E479EC4926132D22000AEB21 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E479EC4826132D22000AEB21 /* NetworkManager.swift */; };
 		E479EC5026144ABC000AEB21 /* ValidateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E479EC4F26144ABC000AEB21 /* ValidateManager.swift */; };
 		E479EC56261456FE000AEB21 /* PasswordValidateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E479EC55261456FE000AEB21 /* PasswordValidateManager.swift */; };
@@ -28,10 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E42F75722614BD35001D6B3A /* SignUpInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInfo.swift; sourceTree = "<group>"; };
 		E42F75832615692F001D6B3A /* IDValidateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDValidateManager.swift; sourceTree = "<group>"; };
 		E42F758726156A86001D6B3A /* InfoLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoLabel.swift; sourceTree = "<group>"; };
 		E42F758A2615739D001D6B3A /* ColorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSet.swift; sourceTree = "<group>"; };
+		E42F758F26158DBD001D6B3A /* ValidReturnable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidReturnable.swift; sourceTree = "<group>"; };
 		E479EC4826132D22000AEB21 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E479EC4F26144ABC000AEB21 /* ValidateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateManager.swift; sourceTree = "<group>"; };
 		E479EC55261456FE000AEB21 /* PasswordValidateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidateManager.swift; sourceTree = "<group>"; };
@@ -81,7 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				E4C7F0A526119F21004CD200 /* AppCycle */,
-				E42F75722614BD35001D6B3A /* SignUpInfo.swift */,
 				E42F758A2615739D001D6B3A /* ColorSet.swift */,
 				E4C7F0A926119F5F004CD200 /* Model */,
 				E4C7F0A726119F45004CD200 /* Controller */,
@@ -134,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				E479EC4F26144ABC000AEB21 /* ValidateManager.swift */,
+				E42F758F26158DBD001D6B3A /* ValidReturnable.swift */,
 				E42F75832615692F001D6B3A /* IDValidateManager.swift */,
 				E479EC4826132D22000AEB21 /* NetworkManager.swift */,
 				E479EC55261456FE000AEB21 /* PasswordValidateManager.swift */,
@@ -217,6 +217,7 @@
 				E4C7F09526119EFC004CD200 /* SignUpViewController.swift in Sources */,
 				E479EC5926145A89000AEB21 /* UserNameValidateManager.swift in Sources */,
 				E4C7F09126119EFC004CD200 /* AppDelegate.swift in Sources */,
+				E42F759026158DBE001D6B3A /* ValidReturnable.swift in Sources */,
 				E42F758B2615739D001D6B3A /* ColorSet.swift in Sources */,
 				E42F75842615692F001D6B3A /* IDValidateManager.swift in Sources */,
 				E479EC5026144ABC000AEB21 /* ValidateManager.swift in Sources */,
@@ -225,7 +226,6 @@
 				E479EC5E26146072000AEB21 /* PasswordConfirmManager.swift in Sources */,
 				E479EC56261456FE000AEB21 /* PasswordValidateManager.swift in Sources */,
 				E42F758826156A86001D6B3A /* InfoLabel.swift in Sources */,
-				E42F75732614BD35001D6B3A /* SignUpInfo.swift in Sources */,
 				E4BCE3F92611FF080058640D /* SignUpTextFieldDelegate.swift in Sources */,
 				E4C7F0B02611AEE6004CD200 /* SignUpButton.swift in Sources */,
 			);

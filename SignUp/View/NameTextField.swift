@@ -19,11 +19,13 @@ class NameTextField : UITextField, ValidCheckProtocol {
     override init(frame : CGRect){
         super.init(frame: frame)
         setCancellable()
+        addTarget()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setCancellable()
+        addTarget()
     }
     func setCancellable(){
         cancellable = isValid.objectWillChange.sink { [weak self] in
@@ -39,15 +41,28 @@ class NameTextField : UITextField, ValidCheckProtocol {
     func bind(control: @escaping ControlActionClosure) {
         self.handler = control
     }
+    func addTarget(){
+        self.addTarget(self, action: #selector(NameTextField.textFieldDidBeginEditing(_:)), for: .editingChanged)
+        self.addTarget(self, action: #selector(NameTextField.textFieldDidEndEditing(_:)), for: .editingDidEndOnExit)
+        self.addTarget(self, action: #selector(NameTextField.textFieldShouldReturn(_:)), for: .editingDidEnd)
+    }
 }
-//extension NameTextField : UITextFieldDelegate {
-//    func textFieldDidBeginEditing(_ textField: UITextField) {
-//        <#code#>
-//    }
-//    func textFieldDidEndEditing(_ textField: UITextField) {
-//        <#code#>
-//    }
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        <#code#>
-//    }
-//}
+extension NameTextField {
+    @objc func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.layer.borderWidth = 1.0
+        textField.layer.cornerRadius = 8
+        textField.clipsToBounds = true
+    }
+    @objc func textFieldDidEndEditing(_ textField: UITextField) {
+        let result = checkValidation()
+        isValid.chageState(to: result)
+    }
+    @objc func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if isValid.state == .valid {
+            textField.layer.borderColor = UIColor.myGreen.cgColor
+        } else {
+            textField.layer.borderColor = UIColor.red.cgColor
+        }
+        return false
+    }
+}

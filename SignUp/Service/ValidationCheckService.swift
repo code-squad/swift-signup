@@ -38,7 +38,7 @@ struct ValidationCheckService {
         
     }
     static func isValidName(input text: String) -> NameValidState.State {
-        if !text.isEmpty {
+        if text.isEmpty {
             return .inValid
         } else {
             return .valid

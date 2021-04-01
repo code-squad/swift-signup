@@ -25,6 +25,7 @@
 		10F1D4AA26157CD3005665E9 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F1D4A926157CD3005665E9 /* PasswordTextField.swift */; };
 		10F1D4AE26157DD0005665E9 /* SignUpLabelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F1D4AD26157DD0005665E9 /* SignUpLabelViewModel.swift */; };
 		10F1D4B226157FAD005665E9 /* NameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F1D4B126157FAD005665E9 /* NameTextField.swift */; };
+		10F1D4B526160BF6005665E9 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F1D4B426160BF6005665E9 /* UIColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		10F1D4A926157CD3005665E9 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		10F1D4AD26157DD0005665E9 /* SignUpLabelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpLabelViewModel.swift; sourceTree = "<group>"; };
 		10F1D4B126157FAD005665E9 /* NameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextField.swift; sourceTree = "<group>"; };
+		10F1D4B426160BF6005665E9 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 		10F1D49826155BC8005665E9 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				10F1D4B426160BF6005665E9 /* UIColorExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				10F1D4A726157CBE005665E9 /* IDTextField.swift in Sources */,
 				1009A98E26119FCA0089EC3F /* AppDelegate.swift in Sources */,
 				1009A9A42611A5380089EC3F /* SignUpViewController.swift in Sources */,
+				10F1D4B526160BF6005665E9 /* UIColorExtension.swift in Sources */,
 				10F1D4AA26157CD3005665E9 /* PasswordTextField.swift in Sources */,
 				10F1D4912615511F005665E9 /* NameValidState.swift in Sources */,
 				1009A99026119FCA0089EC3F /* SceneDelegate.swift in Sources */,

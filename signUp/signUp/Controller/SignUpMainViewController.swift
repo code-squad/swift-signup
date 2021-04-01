@@ -71,12 +71,12 @@ extension SignUpMainViewController {
     }
     
     private func setUpLabelAndTextField() {
-        mainStackView.infoIDView.infoLabel.text = LabelContents.idLabel
-        mainStackView.infoIDView.inputTextField.placeholder = LabelContents.idPlaceholder
-        mainStackView.infoPasswordView.infoLabel.text = LabelContents.passwordLabel
-        mainStackView.infoPasswordView.inputTextField.placeholder = LabelContents.passwordPlaceHolder
-        mainStackView.doubleCheckPassWordView.infoLabel.text = LabelContents.passwordDoubleCheckLabel
-        mainStackView.nameCheckView.infoLabel.text = LabelContents.nameLabel
+        mainStackView.infoIDView.infoLabel.text = MainLabelContents.idLabel
+        mainStackView.infoIDView.inputTextField.placeholder = MainLabelContents.idPlaceholder
+        mainStackView.infoPasswordView.infoLabel.text = MainLabelContents.passwordLabel
+        mainStackView.infoPasswordView.inputTextField.placeholder = MainLabelContents.passwordPlaceHolder
+        mainStackView.doubleCheckPassWordView.infoLabel.text = MainLabelContents.passwordDoubleCheckLabel
+        mainStackView.nameCheckView.infoLabel.text = MainLabelContents.nameLabel
     }
     
     private func setUpTextFieldDelegate() {

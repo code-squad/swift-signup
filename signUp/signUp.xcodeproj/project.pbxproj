@@ -26,7 +26,7 @@
 		71A3C2282615701D0028A2B7 /* RegexValidManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A3C2272615701D0028A2B7 /* RegexValidManager.swift */; };
 		71C598B526144D6C0097ED4C /* NetwordHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C598B426144D6C0097ED4C /* NetwordHandler.swift */; };
 		71C598BA261465EB0097ED4C /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C598B9261465EB0097ED4C /* TextFieldDelegate.swift */; };
-		71C598C026146D7D0097ED4C /* LabelContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C598BF26146D7D0097ED4C /* LabelContents.swift */; };
+		71C598C026146D7D0097ED4C /* MainLabelContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C598BF26146D7D0097ED4C /* MainLabelContents.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +72,7 @@
 		71A3C2272615701D0028A2B7 /* RegexValidManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexValidManager.swift; sourceTree = "<group>"; };
 		71C598B426144D6C0097ED4C /* NetwordHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetwordHandler.swift; sourceTree = "<group>"; };
 		71C598B9261465EB0097ED4C /* TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
-		71C598BF26146D7D0097ED4C /* LabelContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelContents.swift; sourceTree = "<group>"; };
+		71C598BF26146D7D0097ED4C /* MainLabelContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLabelContents.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,7 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				712CCAC22613FAAB0025DE00 /* InfoCheck.swift */,
-				71C598BF26146D7D0097ED4C /* LabelContents.swift */,
+				71C598BF26146D7D0097ED4C /* MainLabelContents.swift */,
 			);
 			path = enum;
 			sourceTree = "<group>";
@@ -355,7 +355,7 @@
 				71A3C2282615701D0028A2B7 /* RegexValidManager.swift in Sources */,
 				712DBC612611B44B00F853A7 /* MainInfoStackView.swift in Sources */,
 				717F73542615AECF0034E697 /* PrivacyStackView.swift in Sources */,
-				71C598C026146D7D0097ED4C /* LabelContents.swift in Sources */,
+				71C598C026146D7D0097ED4C /* MainLabelContents.swift in Sources */,
 				712DBC1426119DCF00F853A7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

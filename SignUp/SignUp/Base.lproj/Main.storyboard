@@ -105,6 +105,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="editingChangedRecheckingPwTextField:" destination="BYZ-38-t0r" eventType="editingChanged" id="LGh-0l-12E"/>
+                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호가 일치하지 않습니다." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJ7-Bs-cau">
                                                 <rect key="frame" x="0.0" y="76" width="133.66666666666666" height="38"/>
@@ -168,6 +171,9 @@
                                 <state key="normal" title="다음" image="greaterthan.circle.fill" catalog="system">
                                     <color key="titleColor" red="0.2894863486" green="0.64139598610000004" blue="0.18024426700000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTabNextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lDL-do-yqI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -187,8 +193,12 @@
                     <connections>
                         <outlet property="idResultLabel" destination="Cia-CL-4p7" id="l3Z-kd-680"/>
                         <outlet property="idTextField" destination="BhC-Tc-jeG" id="MI9-5s-sGz"/>
+                        <outlet property="nameResultLabel" destination="lH2-Tj-sRW" id="QmW-cD-eA7"/>
+                        <outlet property="nameTextField" destination="md5-Sj-qtw" id="lyQ-SP-u2q"/>
                         <outlet property="pwResultLabel" destination="YB5-CS-cub" id="XY4-YA-2MZ"/>
                         <outlet property="pwTextFiled" destination="Mt9-I6-B86" id="IIQ-KB-YDc"/>
+                        <outlet property="recheckPwResultLabel" destination="kJ7-Bs-cau" id="Nzv-O4-7rp"/>
+                        <outlet property="recheckingPwTextField" destination="1e6-RB-dX6" id="NYY-A3-QTx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

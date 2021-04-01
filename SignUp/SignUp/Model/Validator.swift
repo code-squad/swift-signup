@@ -42,4 +42,25 @@ struct Validator {
         
         return result
     }
+    
+    static public func isSameText(first: String, second: String) -> [Bool:String] {
+        
+        var result: [Bool : String] = [true : "비밀번호가 일치합니다."]
+        
+        if first != second {
+            result = [false : "비밀번호가 일치하지 않습니다."]
+        }
+        
+        return result
+    }
+    
+    static public func isEmpty(_ text: String) -> [Bool:String] {
+        
+        var result: [Bool : String] = [true : "사용 가능한 이름입니다."]
+        
+        if text == "" || text.isEmpty {
+            result = [false : "이름은 필수 입력 항목입니다."]
+        }
+        return result
+    }
 }

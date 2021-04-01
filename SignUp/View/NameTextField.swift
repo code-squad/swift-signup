@@ -32,7 +32,7 @@ class NameTextField : UITextField, ValidCheckProtocol {
     }
     func checkValidation() -> Bool {
         guard let text = self.text else { return false }
-        let result = ValidationCheckService.isValidId(input: text)
+        let result = ValidationCheckService.isValidName(input: text)
         return result
     }
     
@@ -40,3 +40,14 @@ class NameTextField : UITextField, ValidCheckProtocol {
         self.handler = control
     }
 }
+//extension NameTextField : UITextFieldDelegate {
+//    func textFieldDidBeginEditing(_ textField: UITextField) {
+//        <#code#>
+//    }
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//        <#code#>
+//    }
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        <#code#>
+//    }
+//}

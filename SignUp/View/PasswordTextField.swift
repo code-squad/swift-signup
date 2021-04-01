@@ -14,15 +14,17 @@ class PasswordTextField : UITextField, ValidCheckProtocol {
     var isValid = PasswordValidState.init()
     var handler : ControlActionClosure?
     private var cancellable : AnyCancellable?
-
+    
     override init(frame : CGRect){
         super.init(frame: frame)
         setCancellable()
+        addTarget()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setCancellable()
+        addTarget()
     }
     func setCancellable(){
         cancellable = isValid.objectWillChange.sink { [weak self] in
@@ -37,5 +39,31 @@ class PasswordTextField : UITextField, ValidCheckProtocol {
     
     func bind(control: @escaping ControlActionClosure) {
         self.handler = control
+    }
+    func addTarget(){
+        self.addTarget(self, action: #selector(PasswordTextField.textFieldDidBeginEditing(_:)), for: .editingChanged)
+        self.addTarget(self, action: #selector(PasswordTextField.textFieldDidEndEditing(_:)), for: .editingDidEndOnExit)
+        self.addTarget(self, action: #selector(PasswordTextField.textFieldShouldReturn(_:)), for: .editingDidEnd)
+    }
+}
+extension PasswordTextField {
+    
+    @objc func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.layer.borderWidth = 1.0
+        textField.layer.cornerRadius = 8
+        textField.clipsToBounds = true
+    }
+    @objc func textFieldDidEndEditing(_ textField: UITextField) {
+        let result = checkValidation()
+        if result {
+            isValid.chageState(to: .valid)
+        } else {
+            isValid.chageState(to: .inValidRange)
+        }
+    }
+    @objc func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.layer.borderColor = UIColor.gray.cgColor
+        textField.layer.borderWidth = 0.18
+        return false
     }
 }

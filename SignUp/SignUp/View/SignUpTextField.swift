@@ -46,18 +46,30 @@ class SignUpTextField: UITextField {
         self.borderStyle = .line
     }
     
-    func changeStyle(with type: TextFieldType?, with error : TextFormError) {
-        guard let type = type else {
+    func changeStyle(with error : TextFormError ) {
+        guard let type = self.textFieldType else {
             return
         }
         
-        switch error {
-        case .ok:
-            <#code#>
-        case .wrong(<#T##field: TextFormError.WrongType##TextFormError.WrongType#>):
-            <#code#>
-        default:
-            <#code#>
+        guard let label = relatedLabel else {
+            return
+        }
+        
+        DispatchQueue.main.async {
+            label.showMessage(type: type, error: error)
+            switch error {
+            case .ok:
+                self.changeBorder(color: UIColor.green.cgColor)
+                label.isHidden = false
+                label.textColor = UIColor.green
+            case .wrong:
+                self.changeBorder(color: UIColor.red.cgColor)
+                label.isHidden = false
+                label.textColor = UIColor.red
+            default:
+                return
+            }
         }
     }
+    
 }

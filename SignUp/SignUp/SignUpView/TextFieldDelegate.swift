@@ -11,18 +11,21 @@ class TextFieldDelegate: NSObject, UITextFieldDelegate {
     
     let complianceChecker = ComplianceChecker()
     
-    func textFieldDidEndEditing(_ textField: SignUpTextField) {
-        complianceChecker.check(target: textField, closure: { errorChecker in
-            errorChecker
-            
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let textField = textField as? SignUpTextField else {
+            return
+        }
+        
+        let checkResult = complianceChecker.check(target: textField, closure: { errorChecker in
+            textField.changeStyle(with: errorChecker)
         })
         
-        // 반환된 값을 가지고 UI를 수정.
+        textField.changeStyle(with: checkResult)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         let optionalFieldArray = textField.superview?.subviews.filter({
-            let item = $0 as? UITextField
+            let item = $0 as? SignUpTextField
             guard let textField = item else {
                 return false
             }

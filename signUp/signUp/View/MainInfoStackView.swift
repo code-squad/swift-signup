@@ -46,7 +46,7 @@ extension MainInfoStackView {
         return conditionForID() && conditionForPassWord() && conditionForPasswordConfirm() && conditionForName()
     }
     
-    func conditionForID() -> Bool {
+    func conditionForID() -> Bool { // 체크완료
         if infoIDView.inputTextField.text?.count == 0 {
             infoIDView.checkLabel.text = ""
         } else if !isOverlappedId(infoIDView.inputTextField.text ){
@@ -70,7 +70,7 @@ extension MainInfoStackView {
         return false
     }
     
-    func conditionForPassWord() -> Bool {
+    func conditionForPassWord() -> Bool { // 완료
         if infoPasswordView.inputTextField.text?.count == 0 {
             infoPasswordView.checkLabel.text = ""
         } else if !checkValidPasswordElement(infoPasswordView.inputTextField.text) {

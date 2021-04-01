@@ -122,10 +122,12 @@ extension SignUpMainViewController {
 
 extension SignUpMainViewController {
     
+    // Button State Check
     private func enableCheckforButtion() -> Bool {
         return isValidConditionForID() && isValidConditionForPassword() && isValidConditionForPasswordConfirm() && isValidConditionForName()
     }
     
+    // ID Check
     private func isValidConditionForID() -> Bool {
         let userIdView = mainStackView.infoIDView
         if validateManager.isEmptyTextField(userIdView.inputTextField.text) {
@@ -147,6 +149,7 @@ extension SignUpMainViewController {
         return false
     }
     
+    // Password Check
     private func isValidConditionForPassword() -> Bool {
         let userPasswordView = mainStackView.infoPasswordView
         if validateManager.isEmptyTextField(userPasswordView.inputTextField.text) {
@@ -165,6 +168,7 @@ extension SignUpMainViewController {
         return false
     }
     
+    // PasswordConfirm Check
     private func isValidConditionForPasswordConfirm() -> Bool {
         let userPasswordConfirmView = mainStackView.doubleCheckPassWordView
         let userPasswordView = mainStackView.infoPasswordView
@@ -181,6 +185,7 @@ extension SignUpMainViewController {
         return false
     }
     
+    // Name Check
     private func isValidConditionForName() -> Bool {
         let userNameView = mainStackView.nameCheckView
         if validateManager.isEmptyTextField(userNameView.inputTextField.text) {

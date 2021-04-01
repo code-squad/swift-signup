@@ -21,6 +21,7 @@
 		B075D11126120A5900731DAC /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B075D11026120A5900731DAC /* UILabel+Extension.swift */; };
 		B075D1162612F4AD00731DAC /* UserInfomation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B075D1152612F4AD00731DAC /* UserInfomation.swift */; };
 		B075D11A261300FB00731DAC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B075D119261300FB00731DAC /* NetworkManager.swift */; };
+		B075D12026158BED00731DAC /* SignUpTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B075D11F26158BED00731DAC /* SignUpTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		B075D11026120A5900731DAC /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		B075D1152612F4AD00731DAC /* UserInfomation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfomation.swift; sourceTree = "<group>"; };
 		B075D119261300FB00731DAC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B075D11F26158BED00731DAC /* SignUpTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		B075D0E826119A7D00731DAC /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				B075D11E26158BDA00731DAC /* View */,
 				B075D1132612121800731DAC /* Extension */,
 				B075D0FE26119C0200731DAC /* SignUpView */,
 				B075D0E926119A7D00731DAC /* AppDelegate.swift */,
@@ -105,6 +108,14 @@
 				B075D11026120A5900731DAC /* UILabel+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		B075D11E26158BDA00731DAC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B075D11F26158BED00731DAC /* SignUpTextField.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +191,7 @@
 				B075D10B261207A600731DAC /* ComplianceChecker.swift in Sources */,
 				B075D0EE26119A7D00731DAC /* SignUpViewController.swift in Sources */,
 				B075D0EA26119A7D00731DAC /* AppDelegate.swift in Sources */,
+				B075D12026158BED00731DAC /* SignUpTextField.swift in Sources */,
 				B075D1072611D07800731DAC /* textFormError.swift in Sources */,
 				B075D11A261300FB00731DAC /* NetworkManager.swift in Sources */,
 				B075D1162612F4AD00731DAC /* UserInfomation.swift in Sources */,

@@ -35,23 +35,19 @@ class ViewController: BaseViewController {
             .assign(to: &viewModel.nameViewModel.$nameText)
         
         viewModel.isIdMatchValid.sink { state in
-            self.idStackView.setText(state.message)
-            self.idStackView.updateUI(state.isValid())
+            self.idStackView.updateUI(state.message, state.isValid())
         }.store(in: &cancellable)
         
         viewModel.isPasswordValid.sink { state in
-            self.passwordStackView.setText(state.message)
-            self.passwordStackView.updateUI(state.isValid())
+            self.passwordStackView.updateUI(state.message, state.isValid())
         }.store(in: &cancellable)
 
         viewModel.isMatchPasswordValid.sink { state in
-            self.passwordConfirmStackView.setText(state.message)
-            self.passwordConfirmStackView.updateUI(state.isValid())
+            self.passwordConfirmStackView.updateUI(state.message, state.isValid())
         }.store(in: &cancellable)
         
         viewModel.isNameValid.sink { state in
-            self.nameStackView.setText(state.message)
-            self.nameStackView.updateUI(state.isValid())
+            self.nameStackView.updateUI(state.message, state.isValid())
         }.store(in: &cancellable)
         
         viewModel.isInputValid.receive(on: RunLoop.main)

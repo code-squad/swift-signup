@@ -8,7 +8,6 @@
 import UIKit
 
 class TextFieldDelegate: NSObject, UITextFieldDelegate {
-    let regex = RegularExpression()
     
      func textFieldDidBeginEditing(_ textField: UITextField) {
          textField.layer.borderColor = UIColor.systemBlue.cgColor

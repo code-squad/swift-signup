@@ -10,7 +10,7 @@ import UIKit
 class InfoLabel: UILabel {
 
     func update(isValidated: Bool, text: String){
-        let color = isValidated ? UIColor(named: "PointGreen") : UIColor(named: "PointRed")
+        let color = isValidated ? ColorSet.PointGreen : ColorSet.PointRed
         textColor = color
         self.text = text
     }

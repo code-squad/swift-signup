@@ -23,17 +23,17 @@ class SignUpButton: UIButton {
     }
     
     func configureColors() {
-        setTitleColor(UIColor(named: "PointGreen"), for: .normal)
-        setTitleColor(UIColor(named: "PointGrey"), for: .disabled)
+        setTitleColor(ColorSet.PointGreen, for: .normal)
+        setTitleColor(ColorSet.PointGrey, for: .disabled)
     }
     
     func disable() {
         isEnabled = false
-        tintColor = UIColor(named: "PointGrey")
+        tintColor = ColorSet.PointGrey
     }
     
     func enable() {
         isEnabled = true
-        tintColor = UIColor(named: "PointGreen")
+        tintColor = ColorSet.PointGreen
     }
 }

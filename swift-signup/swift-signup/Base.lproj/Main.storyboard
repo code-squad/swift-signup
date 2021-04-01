@@ -185,17 +185,13 @@
                     </view>
                     <connections>
                         <outlet property="idLabel" destination="uKS-IN-ds0" id="1H8-aH-tJG"/>
-                        <outlet property="idText" destination="kns-LJ-zCP" id="8pT-S5-hk6"/>
                         <outlet property="idTextField" destination="kns-LJ-zCP" id="315-FK-PbV"/>
                         <outlet property="nameLabel" destination="hKc-Y1-zFG" id="WU7-8J-8h3"/>
-                        <outlet property="nameText" destination="KH6-vJ-R25" id="i9o-Bd-vCV"/>
                         <outlet property="nameTextField" destination="KH6-vJ-R25" id="lO2-c3-kf6"/>
                         <outlet property="nextButton" destination="bJ7-iC-Wms" id="RTu-bG-j83"/>
                         <outlet property="passwordConfirmLabel" destination="MZF-5u-wdE" id="Iwo-Zx-fId"/>
-                        <outlet property="passwordConfirmText" destination="jMQ-Qe-L3i" id="DFu-o4-9b8"/>
                         <outlet property="passwordConfirmTextField" destination="jMQ-Qe-L3i" id="iI2-jD-vLN"/>
                         <outlet property="passwordLabel" destination="LQL-fd-Krx" id="Gii-kZ-WBJ"/>
-                        <outlet property="passwordText" destination="G0Q-sK-zyQ" id="vGU-2P-NQ2"/>
                         <outlet property="passwordTextField" destination="G0Q-sK-zyQ" id="OxH-5W-7Qw"/>
                     </connections>
                 </viewController>

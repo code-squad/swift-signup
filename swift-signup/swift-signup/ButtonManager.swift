@@ -3,30 +3,27 @@ import Foundation
 import UIKit
 
 class ButtonManager {
-    private var states : [ObjectIdentifier:CustomTextField.State]
-    private var activeButton : Bool
+    private var userInfo : [UserInfoValidable]
+    private var isButtonUsable : Bool
     
     init() {
-        self.states = [:]
-        self.activeButton = false
-        allElementsStateValid()
+        self.userInfo = []
+        self.isButtonUsable = false
+        isAllInfoValid()
     }
     
-    func update(textField: CustomTextField.Type, state: CustomTextField.State) {
-        self.states.updateValue(state, forKey: ObjectIdentifier(textField))
-        allElementsStateValid()
+    func register(userInfo: UserInfoValidable) {
+        self.userInfo.append(userInfo)
     }
     
-    func allElementsStateValid() {
-        for ( _, state) in self.states {
-            if state != .end && state != .valid {
-                self.activeButton = false
-                break
-            }
-            self.activeButton = true
+    func isAllInfoValid() {
+        if self.userInfo.filter({ $0.isUserInfoValid() == false }).count > 0 {
+            self.isButtonUsable = false
+        } else {
+            self.isButtonUsable = true
         }
         
-        NotificationCenter.default.post(name: ButtonManager.buttonState, object: self, userInfo: [ButtonManager.Info.state : self.activeButton])
+        NotificationCenter.default.post(name: ButtonManager.buttonState, object: self, userInfo: [ButtonManager.Info.state : self.isButtonUsable])
     }
 }
 

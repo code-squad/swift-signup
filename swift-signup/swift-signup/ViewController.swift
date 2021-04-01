@@ -1,43 +1,27 @@
-//
-//  ViewController.swift
-//  swift-signup
-//
-//  Created by user on 2021/03/29.
-//
 
 import UIKit
 
 class ViewController: UIViewController {
     
-    
-//    @IBOutlet weak var idText: IdTextField!
-    @IBOutlet weak var idLabel: UILabel!
-    
-//    @IBOutlet weak var passwordText: PasswordTextField!
-    @IBOutlet weak var passwordLabel: UILabel!
-    
-//    @IBOutlet weak var passwordConfirmText: PasswordConfirmTextField!
-    @IBOutlet weak var passwordConfirmLabel: UILabel!
-    
-//    @IBOutlet weak var nameText: NameTextField!
-    @IBOutlet weak var nameLabel: UILabel!
-    
     @IBOutlet weak var nextButton: UIButton!
     private var buttonManager = ButtonManager()
     
-    //
     @IBOutlet weak var idTextField: UITextField!
     private var idTextFieldDelegate = IdTextFieldDelegate()
+    @IBOutlet weak var idLabel: UILabel!
     
     @IBOutlet weak var passwordTextField: UITextField!
     private var passwordTextFieldDelegate = PasswordTextFieldDelegate()
-    
+    @IBOutlet weak var passwordLabel: UILabel!
+
     @IBOutlet weak var passwordConfirmTextField: UITextField!
     private var passwordConfirmTextFieldDelegate = PasswordConfirmTextFieldDelegate()
-    
+    @IBOutlet weak var passwordConfirmLabel: UILabel!
+
     @IBOutlet weak var nameTextField: UITextField!
     private var nameTextFieldDelegate = NameTextFieldDelegate()
-    
+    @IBOutlet weak var nameLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -50,6 +34,7 @@ class ViewController: UIViewController {
         
         registerDelegate()
         registerTextField()
+        buttonManager.isAllInfoValid()
     }
 
     func registerDelegate() {
@@ -60,10 +45,10 @@ class ViewController: UIViewController {
     }
     
     func registerTextField() {
-//        self.buttonManager.update(textField: type(of: idText), state: idText.currentState)
-//        self.buttonManager.update(textField: type(of: passwordText), state: passwordText.currentState)
-//        self.buttonManager.update(textField: type(of: passwordConfirmText), state: passwordConfirmText.currentState)
-//        self.buttonManager.update(textField: type(of: nameText), state: nameText.currentState)
+        self.buttonManager.register(userInfo: idTextFieldDelegate)
+        self.buttonManager.register(userInfo: passwordTextFieldDelegate)
+        self.buttonManager.register(userInfo: passwordConfirmTextFieldDelegate)
+        self.buttonManager.register(userInfo: nameTextFieldDelegate)
     }
     
     //MARK: @objc 처리
@@ -76,7 +61,7 @@ class ViewController: UIViewController {
         }
         self.idLabel.text = text
         self.idLabel.textColor = color
-//        buttonManager.update(textField: type(of: idText), state: idText.currentState)
+        buttonManager.isAllInfoValid()
     }
     
     @objc
@@ -90,7 +75,7 @@ class ViewController: UIViewController {
         self.passwordLabel.text = text
         self.passwordLabel.textColor = color
         self.passwordConfirmTextFieldDelegate.validaterUpdate(password: password)
-//        buttonManager.update(textField: type(of: passwordText), state: passwordText.currentState)
+        buttonManager.isAllInfoValid()
     }
     
     @objc
@@ -102,7 +87,7 @@ class ViewController: UIViewController {
         }
         self.passwordConfirmLabel.text = text
         self.passwordConfirmLabel.textColor = color
-//        buttonManager.update(textField: type(of: passwordConfirmText), state: passwordConfirmText.currentState)
+        buttonManager.isAllInfoValid()
     }
     
     @objc
@@ -114,7 +99,7 @@ class ViewController: UIViewController {
         }
         self.nameLabel.text = text
         self.nameLabel.textColor = color
-//        buttonManager.update(textField: type(of: nameText), state: nameText.currentState)
+        buttonManager.isAllInfoValid()
     }
     
     @objc

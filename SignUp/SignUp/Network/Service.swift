@@ -19,8 +19,7 @@ class Service : Serviceable {
     }
       
     func getResource(url : URL?, complete: @escaping (Data) -> ())  {
-        guard let url = url else {
-            return }
+        guard let url = url else { return }
 
         URLSession.shared.dataTask(with: url) { data, res, error in
             guard error == nil else {

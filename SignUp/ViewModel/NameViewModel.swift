@@ -1,5 +1,5 @@
 //
-//  IDViewModel.swift
+//  NameViewModel.swift
 //  SignUp
 //
 //  Created by 박혜원 on 2021/03/31.
@@ -8,20 +8,11 @@
 import UIKit
 import Combine
 
-protocol ValidCheckViewModel {
-    associatedtype State
-    typealias ControlActionClosure = (State) -> ()
-    
-    var isValid : State { get set }
-    func checkValidation() -> Bool
-    func bind(control : @escaping ControlActionClosure)
-}
+class NameViewModel: NSObject, ValidCheckViewModel {
 
-class IDViewModel: NSObject, ValidCheckViewModel {
+    @IBOutlet weak var name: UITextField!
     
-    @IBOutlet weak var id: UITextField!
-    
-    typealias State = IDValidState
+    typealias State = NameValidState
     
     var isValid : State
     
@@ -43,10 +34,9 @@ class IDViewModel: NSObject, ValidCheckViewModel {
         }
     }
     
-    // 아이디 유효검사는 "다음"버튼을 누른 시점으로 변경하기
     func checkValidation() -> Bool {
-        guard let text = id.text else { return false }
-        return ValidationCheckService.isValidId(input: text)
+        guard let text = name.text else { return false }
+        return ValidationCheckService.isValidName(input: text)
     }
     func bind(control : @escaping ControlActionClosure) {
         self.actionHandler = control
@@ -59,4 +49,3 @@ class IDViewModel: NSObject, ValidCheckViewModel {
         }
     }
 }
-

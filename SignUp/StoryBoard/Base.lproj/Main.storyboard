@@ -119,9 +119,10 @@
                         <outlet property="idLabel" destination="xW2-PY-hv1" id="gZh-F6-sGh"/>
                         <outlet property="idViewModel" destination="reM-3e-mV9" id="w5W-b5-fRl"/>
                         <outlet property="nameLabel" destination="XPk-gU-Jyi" id="iIm-Fz-L4h"/>
+                        <outlet property="nameViewModel" destination="9hK-E3-oWE" id="iYN-1y-UAU"/>
                         <outlet property="passwordLabel" destination="dDf-Xa-1Bu" id="vOd-rO-D5R"/>
                         <outlet property="passwordViewModel" destination="hPc-kh-kzZ" id="GNg-J0-NWI"/>
-                        <outlet property="repaasswordLabel" destination="gdX-EY-Tyi" id="e7I-iR-id1"/>
+                        <outlet property="repasswordLabel" destination="gdX-EY-Tyi" id="e7I-iR-id1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -133,6 +134,11 @@
                 <customObject id="hPc-kh-kzZ" customClass="PasswordViewModel" customModule="SignUp" customModuleProvider="target">
                     <connections>
                         <outlet property="password" destination="N4b-5a-Pm2" id="JZi-0z-ztU"/>
+                    </connections>
+                </customObject>
+                <customObject id="9hK-E3-oWE" customClass="NameViewModel" customModule="SignUp" customModuleProvider="target">
+                    <connections>
+                        <outlet property="name" destination="5w5-Dc-laj" id="6ri-lF-yGK"/>
                     </connections>
                 </customObject>
             </objects>

@@ -20,6 +20,8 @@
 		1078FDA02614955900026DBD /* ValidationCheckService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1078FD9F2614955900026DBD /* ValidationCheckService.swift */; };
 		1078FDA62614974F00026DBD /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1078FDA52614974F00026DBD /* PasswordViewModel.swift */; };
 		1078FDA9261497D500026DBD /* PasswordValidState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1078FDA8261497D500026DBD /* PasswordValidState.swift */; };
+		1078FDBB2614A75100026DBD /* NameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1078FDBA2614A75100026DBD /* NameViewModel.swift */; };
+		10F1D4912615511F005665E9 /* NameValidState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F1D4902615511F005665E9 /* NameValidState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		1078FD9F2614955900026DBD /* ValidationCheckService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationCheckService.swift; sourceTree = "<group>"; };
 		1078FDA52614974F00026DBD /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
 		1078FDA8261497D500026DBD /* PasswordValidState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidState.swift; sourceTree = "<group>"; };
+		1078FDBA2614A75100026DBD /* NameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewModel.swift; sourceTree = "<group>"; };
+		10F1D4902615511F005665E9 /* NameValidState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameValidState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 			children = (
 				1019AF8726145E25005FE7C7 /* IDViewModel.swift */,
 				1078FDA52614974F00026DBD /* PasswordViewModel.swift */,
+				1078FDBA2614A75100026DBD /* NameViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 			children = (
 				1078FDA8261497D500026DBD /* PasswordValidState.swift */,
 				1019AF8A26145E90005FE7C7 /* IDValidState.swift */,
+				10F1D4902615511F005665E9 /* NameValidState.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -209,11 +215,13 @@
 				1009A9A72611A5690089EC3F /* PersonInformViewController.swift in Sources */,
 				1078FDA62614974F00026DBD /* PasswordViewModel.swift in Sources */,
 				1078FDA02614955900026DBD /* ValidationCheckService.swift in Sources */,
+				1078FDBB2614A75100026DBD /* NameViewModel.swift in Sources */,
 				1009A99226119FCA0089EC3F /* ViewController.swift in Sources */,
 				1019AF8B26145E90005FE7C7 /* IDValidState.swift in Sources */,
 				1078FDA9261497D500026DBD /* PasswordValidState.swift in Sources */,
 				1009A98E26119FCA0089EC3F /* AppDelegate.swift in Sources */,
 				1009A9A42611A5380089EC3F /* SignUpViewController.swift in Sources */,
+				10F1D4912615511F005665E9 /* NameValidState.swift in Sources */,
 				1009A99026119FCA0089EC3F /* SceneDelegate.swift in Sources */,
 				1019AF8826145E25005FE7C7 /* IDViewModel.swift in Sources */,
 			);

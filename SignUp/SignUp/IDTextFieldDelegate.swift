@@ -9,7 +9,13 @@ import UIKit
 
 class IDTextFieldDelegate: NSObject, UITextFieldDelegate {
     
-    private var state: IDTextFieldState?
+    private var IDLabel: UILabel!
+    private var IdChecker: IDChecker
+    
+    init(label: UILabel) {
+        IDLabel = label
+        self.IdChecker = IDChecker()
+    }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.layer.borderWidth = 1
@@ -18,35 +24,29 @@ class IDTextFieldDelegate: NSObject, UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let text = textField.text else { return }
-        let extract = text.getArrayAfterRegex(regex: "[0-9a-z_-]+")[0]
-        
-        RequestManager.requestGet(id: extract) { (result) in
-            if result == .exist {
-                DispatchQueue.main.async {
-                    textField.layer.borderColor = #colorLiteral(red: 0.9967475533, green: 0.03828956559, blue: 0.05758263916, alpha: 1)
-                }
-                self.state = IDTextFieldState.alreadyUse
-            }
+        IdChecker.check(text: text) { (state) in
+            self.updateLabel(state: state, label: self.IDLabel, textField: textField)
         }
-
-        if extract != text || extract.count < 5 || extract.count > 20 {
+    }
+    
+    func updateLabel(state: IDTextFieldState, label: UILabel, textField: UITextField) {
+        switch state {
+        case .alreadyUse:
+            label.text = "이미 사용중인 아이디입니다."
+            label.textColor = #colorLiteral(red: 0.9967475533, green: 0.03828956559, blue: 0.05758263916, alpha: 1)
             textField.layer.borderColor = #colorLiteral(red: 0.9967475533, green: 0.03828956559, blue: 0.05758263916, alpha: 1)
-            state = IDTextFieldState.incorrect
-        } else if extract == textField.text && text.count > 4 && text.count < 21 {
+        case .correct:
+            label.text = "사용 가능합니다."
+            label.textColor = #colorLiteral(red: 0.1540483236, green: 0.6966413856, blue: 0.1375852525, alpha: 1)
             textField.layer.borderColor = #colorLiteral(red: 0.1540483236, green: 0.6966413856, blue: 0.1375852525, alpha: 1)
-            state = IDTextFieldState.correct
+        case .incorrect:
+            label.text = "5~20자의 영문 소문자, 숫자와 특수기호(_)(-) 만 사용 가능합니다."
+            label.textColor = #colorLiteral(red: 0.9967475533, green: 0.03828956559, blue: 0.05758263916, alpha: 1)
+            textField.layer.borderColor = #colorLiteral(red: 0.9967475533, green: 0.03828956559, blue: 0.05758263916, alpha: 1)
         }
-        
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "identifier"), object: state)
-
     }
 }
 
 enum IDTextFieldState {
-    typealias RawValue = (String, UIColor)
-
-    case incorrect
-    case correct
-    case alreadyUse
+    case incorrect, correct, alreadyUse
 }
-

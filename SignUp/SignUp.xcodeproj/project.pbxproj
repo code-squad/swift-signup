@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B3001FDF261569A900336DA2 /* IDChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3001FDE261569A900336DA2 /* IDChecker.swift */; };
 		B31EC8312612C76800832DD0 /* PWRTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31EC8302612C76800832DD0 /* PWRTextFieldDelegate.swift */; };
 		B31EC8392612F41900832DD0 /* NameTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31EC8382612F41900832DD0 /* NameTextFieldDelegate.swift */; };
 		B343223F2611A0CA0094C04A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B343223E2611A0CA0094C04A /* AppDelegate.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B3001FDE261569A900336DA2 /* IDChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDChecker.swift; sourceTree = "<group>"; };
 		B31EC8302612C76800832DD0 /* PWRTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWRTextFieldDelegate.swift; sourceTree = "<group>"; };
 		B31EC8382612F41900832DD0 /* NameTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextFieldDelegate.swift; sourceTree = "<group>"; };
 		B343223B2611A0CA0094C04A /* SignUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +120,7 @@
 				B343223E2611A0CA0094C04A /* AppDelegate.swift */,
 				B34322402611A0CA0094C04A /* SceneDelegate.swift */,
 				B34322712611AD790094C04A /* IDTextFieldDelegate.swift */,
+				B3001FDE261569A900336DA2 /* IDChecker.swift */,
 				B34322972611D0470094C04A /* PWTextFieldDelegate.swift */,
 				B31EC8302612C76800832DD0 /* PWRTextFieldDelegate.swift */,
 				B31EC8382612F41900832DD0 /* NameTextFieldDelegate.swift */,
@@ -282,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3001FDF261569A900336DA2 /* IDChecker.swift in Sources */,
 				B34322432611A0CA0094C04A /* ViewController.swift in Sources */,
 				B34322982611D0470094C04A /* PWTextFieldDelegate.swift in Sources */,
 				B393561126144FFF00529AD3 /* IdentifierData.swift in Sources */,

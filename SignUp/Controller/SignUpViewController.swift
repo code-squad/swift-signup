@@ -19,11 +19,18 @@ class SignUpViewController: UIViewController {
         
         signUpTextFields.id.bind(control: { [weak self] (state) in
             self?.signUpLabels.id.text = state.state.rawValue
+            self?.signUpLabels.id.isHidden = false
         })
         signUpTextFields.password.bind(control: { [weak self] (state) in
             self?.signUpLabels.password.text = state.state.rawValue
+            self?.signUpLabels.password.isHidden = false
         })
-        configureDelegate()
+        signUpTextFields.name.bind(control: { [weak self] (state) in
+            self?.signUpLabels.name.text = state.state.rawValue
+            self?.signUpLabels.name.isHidden = false
+        })
+        
+        signUpTextFields.setDelegate(self)
     }
     @IBAction func didTouchNextButton(_ sender: Any) {
         
@@ -33,9 +40,6 @@ class SignUpViewController: UIViewController {
         personInfoVC.modalTransitionStyle = .coverVertical
         personInfoVC.modalPresentationStyle = .fullScreen
         present(personInfoVC, animated: true, completion: nil)
-    }
-    func configureDelegate(){
-        
     }
 }
 

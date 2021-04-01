@@ -12,7 +12,7 @@ class SignUpViewModel: NSObject {
     @IBOutlet weak var id: IDTextField!
     @IBOutlet weak var password: PasswordTextField!
     @IBOutlet weak var repassword: UITextField!
-    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var name: NameTextField!
     
     private var cancellable : AnyCancellable?
     
@@ -21,7 +21,16 @@ class SignUpViewModel: NSObject {
         
         NotificationCenter.default.addObserver(self, selector: #selector(idTextDidEndEditing), name: IDTextField.textDidEndEditingNotification, object: id)
         NotificationCenter.default.addObserver(self, selector: #selector(passwordDidChange), name: PasswordTextField.textDidChangeNotification, object: password)
+        NotificationCenter.default.addObserver(self, selector: #selector(NameDidEndEditing), name: NameTextField.textDidEndEditingNotification, object: name)
     }
+    
+    func setDelegate(_ view : UITextFieldDelegate){
+        id.delegate = view
+        password.delegate = view
+        repassword.delegate = view
+        name.delegate = view
+    }
+    
     @objc func idTextDidEndEditing(){
         let result = id.checkValidation()
         if result {
@@ -39,7 +48,15 @@ class SignUpViewModel: NSObject {
         }
     }
     @objc func repasswordDidEndEditing(){
-        print("repasswordDidEndEditing")
+        
+    }
+    @objc func NameDidEndEditing(){
+        let result = name.checkValidation()
+        if result {
+            name.isValid.chageState(to: .valid)
+        } else {
+            name.isValid.chageState(to: .inValid)
+        }
     }
     
 }

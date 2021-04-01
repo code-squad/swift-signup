@@ -13,7 +13,7 @@ class PasswordViewModel {
     @Published var passwordText = ""
     @Published var passwordConfirmText = ""
     
-    var isPasswordValid : AnyPublisher<PasswordState, Never> {
+    var isValid : AnyPublisher<PasswordState, Never> {
         Publishers.Zip4(isPasswordCount, isPasswordUpperword, isPasswordNumber, isPasswordSymbol)
             .map {
                 if $0 { return PasswordState.notEnoughCount }
@@ -25,7 +25,7 @@ class PasswordViewModel {
             .eraseToAnyPublisher()
     }
     
-    var isMatchPasswordValid : AnyPublisher<PasswordConfirmState, Never> {
+    var isMatchValid : AnyPublisher<PasswordConfirmState, Never> {
         $passwordConfirmText
             .dropFirst()
             .combineLatest(self.$passwordText){

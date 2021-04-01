@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -247,9 +246,6 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
-                                                <connections>
-                                                    <action selector="idTextField:" destination="BYU-4K-b7Z" eventType="editingDidEnd" id="oK6-hA-bBm"/>
-                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7k7-l0-sM0">
                                                 <rect key="frame" x="0.0" y="70.333333333333329" width="350" height="15"/>
@@ -304,7 +300,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="xdC-fa-0Th"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQ5-yU-JTf" customClass="MessageLabel" customModule="SignUp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="70.333333333333314" width="350" height="15"/>
@@ -316,6 +312,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <connections>
+                                            <outlet property="textField" destination="QAN-dK-R6d" id="S5I-EI-NkV"/>
+                                            <outlet property="validLabel" destination="WQ5-yU-JTf" id="iQx-pu-jAK"/>
+                                        </connections>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Pna-Vz-d2X" customClass="SignUpStackView" customModule="SignUp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="297" width="350" height="85.333333333333314"/>
@@ -332,7 +332,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="AKf-7G-mgg"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2h2-dc-2Nx" customClass="MessageLabel" customModule="SignUp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="70.333333333333371" width="350" height="15"/>
@@ -344,6 +344,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <connections>
+                                            <outlet property="textField" destination="rL5-r5-vYS" id="5Uf-hj-3g2"/>
+                                            <outlet property="validLabel" destination="2h2-dc-2Nx" id="YzQ-lk-ymk"/>
+                                        </connections>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -375,7 +379,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DaQ-cf-HQD"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.96069937940000005" green="0.96476000549999996" blue="0.96851235629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="o55-AE-hf2" firstAttribute="centerX" secondItem="Y3U-We-n0P" secondAttribute="centerX" id="3FR-wL-nrl"/>
                             <constraint firstItem="o55-AE-hf2" firstAttribute="top" secondItem="0hc-eb-QcV" secondAttribute="bottom" constant="10" id="3dO-IT-5am"/>
@@ -387,6 +391,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LXQ-u5-8bI"/>
+                    <connections>
+                        <outlet property="emailStackView" destination="Ovf-Wu-4nf" id="spr-1E-szS"/>
+                        <outlet property="phoneStackView" destination="Pna-Vz-d2X" id="BiP-mD-0Ra"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y5r-EC-Ljt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -396,8 +404,5 @@
     <resources>
         <image name="arrow.left.circle.fill" catalog="system" width="128" height="121"/>
         <image name="arrow.right.circle.fill" catalog="system" width="128" height="121"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

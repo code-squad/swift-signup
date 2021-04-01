@@ -25,6 +25,7 @@ class TextValidator {
     }
     
     func checkEqualPassword(of password: String, anotherPassword: String) -> ResultEqualPasswordChecking {
+        print(password, anotherPassword)
         switch anotherPassword {
         case "": return .blank
         case _ where anotherPassword == password: return .equal

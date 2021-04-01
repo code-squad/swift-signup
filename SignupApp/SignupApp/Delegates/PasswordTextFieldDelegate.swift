@@ -8,9 +8,6 @@
 import UIKit
 
 class PasswordTextFieldDelegate: NSObject, UITextFieldDelegate {
-    //enum Notification {
-    //    static let DidChangePassword = Foundation.Notification.Name("DidChangePassword")
-    //}
     private let validationManager = ValidationManager()
     private let invalidPasswordLength: () -> ()
     private let noUppercasePassword: () -> ()

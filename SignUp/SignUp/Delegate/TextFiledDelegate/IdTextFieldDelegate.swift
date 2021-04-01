@@ -14,7 +14,7 @@ class IdTextFieldDelegate: BaseTextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let text = (textField.text ?? "") as NSString
         let newText = text.replacingCharacters(in: range, with: string)
-        let isCorrect = Validater.isCorrected(id: newText)
+        let isCorrect = Validator.isCorrected(id: newText)
         let result = isCorrect
 
             isCorrect.keys.forEach{ isCorrect in

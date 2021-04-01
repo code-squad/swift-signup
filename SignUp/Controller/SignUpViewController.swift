@@ -29,8 +29,6 @@ class SignUpViewController: UIViewController {
             self?.signUpLabels.name.text = state.state.rawValue
             self?.signUpLabels.name.isHidden = false
         })
-        
-        signUpTextFields.setDelegate(self)
     }
     @IBAction func didTouchNextButton(_ sender: Any) {
         

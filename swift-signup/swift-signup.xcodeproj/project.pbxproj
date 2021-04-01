@@ -21,6 +21,10 @@
 		CE366C5A2613495D00506D3F /* PasswordConfirmTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366C592613495D00506D3F /* PasswordConfirmTextField.swift */; };
 		CE366C622613EEDC00506D3F /* NameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366C612613EEDC00506D3F /* NameTextField.swift */; };
 		CE366C6A261401E900506D3F /* ButtonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366C69261401E900506D3F /* ButtonManager.swift */; };
+		CE366C8E2614B17100506D3F /* IdTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366C8D2614B17100506D3F /* IdTextFieldDelegate.swift */; };
+		CE366C9D261597BD00506D3F /* IdValidater.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366C9C261597BD00506D3F /* IdValidater.swift */; };
+		CE366CAE2615AF4100506D3F /* PasswordTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366CAD2615AF4100506D3F /* PasswordTextFieldDelegate.swift */; };
+		CE366CB32615AF7C00506D3F /* PasswordValidater.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366CB22615AF7C00506D3F /* PasswordValidater.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,10 @@
 		CE366C592613495D00506D3F /* PasswordConfirmTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordConfirmTextField.swift; sourceTree = "<group>"; };
 		CE366C612613EEDC00506D3F /* NameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextField.swift; sourceTree = "<group>"; };
 		CE366C69261401E900506D3F /* ButtonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonManager.swift; sourceTree = "<group>"; };
+		CE366C8D2614B17100506D3F /* IdTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdTextFieldDelegate.swift; sourceTree = "<group>"; };
+		CE366C9C261597BD00506D3F /* IdValidater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdValidater.swift; sourceTree = "<group>"; };
+		CE366CAD2615AF4100506D3F /* PasswordTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextFieldDelegate.swift; sourceTree = "<group>"; };
+		CE366CB22615AF7C00506D3F /* PasswordValidater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidater.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +132,10 @@
 				CE366BDC2611BA8E00506D3F /* Assets.xcassets */,
 				CE366BDE2611BA8E00506D3F /* LaunchScreen.storyboard */,
 				CE366BE12611BA8E00506D3F /* Info.plist */,
+				CE366C8D2614B17100506D3F /* IdTextFieldDelegate.swift */,
+				CE366C9C261597BD00506D3F /* IdValidater.swift */,
+				CE366CAD2615AF4100506D3F /* PasswordTextFieldDelegate.swift */,
+				CE366CB22615AF7C00506D3F /* PasswordValidater.swift */,
 			);
 			path = "swift-signup";
 			sourceTree = "<group>";
@@ -280,10 +292,14 @@
 				CE366C3426123A5A00506D3F /* PasswordTextField.swift in Sources */,
 				CE366BD82611BA8D00506D3F /* ViewController.swift in Sources */,
 				CE366C3F2612470800506D3F /* CustomTextField.swift in Sources */,
+				CE366C8E2614B17100506D3F /* IdTextFieldDelegate.swift in Sources */,
+				CE366CAE2615AF4100506D3F /* PasswordTextFieldDelegate.swift in Sources */,
 				CE366BD42611BA8D00506D3F /* AppDelegate.swift in Sources */,
 				CE366C5A2613495D00506D3F /* PasswordConfirmTextField.swift in Sources */,
 				CE366C2C2611F9CF00506D3F /* IdTextField.swift in Sources */,
+				CE366C9D261597BD00506D3F /* IdValidater.swift in Sources */,
 				CE366BD62611BA8D00506D3F /* SceneDelegate.swift in Sources */,
+				CE366CB32615AF7C00506D3F /* PasswordValidater.swift in Sources */,
 				CE366C6A261401E900506D3F /* ButtonManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

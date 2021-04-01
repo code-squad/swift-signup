@@ -26,7 +26,7 @@
                                 <color key="textColor" systemColor="systemGreenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="영문 소문자, 숫자, 특수기호( _, -), 5~20자" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kns-LJ-zCP" customClass="IdTextField" customModule="swift_signup" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="영문 소문자, 숫자, 특수기호( _, -), 5~20자" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kns-LJ-zCP">
                                 <rect key="frame" x="30" y="154" width="330" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="0as-Q7-rgj"/>
@@ -186,6 +186,7 @@
                     <connections>
                         <outlet property="idLabel" destination="uKS-IN-ds0" id="1H8-aH-tJG"/>
                         <outlet property="idText" destination="kns-LJ-zCP" id="8pT-S5-hk6"/>
+                        <outlet property="idTextField" destination="kns-LJ-zCP" id="315-FK-PbV"/>
                         <outlet property="nameLabel" destination="hKc-Y1-zFG" id="WU7-8J-8h3"/>
                         <outlet property="nameText" destination="KH6-vJ-R25" id="i9o-Bd-vCV"/>
                         <outlet property="nextButton" destination="bJ7-iC-Wms" id="RTu-bG-j83"/>

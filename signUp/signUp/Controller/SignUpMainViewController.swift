@@ -5,7 +5,6 @@ class SignUpMainViewController: UIViewController {
     private var mainViewTitle: MainTitleLabel!
     private var mainStackView = MainInfoStackView()
     private var buttonForMove = NextVCButton(type: .system)
-    private let delegate = TextFieldDelegate()
     private var validateManager: RegexValidManager!
 
     override func viewDidLoad() {
@@ -25,8 +24,6 @@ class SignUpMainViewController: UIViewController {
         view.backgroundColor = UIColor.systemGray6
         
         setUpLabelAndTextField()
-        
-        setUpTextFieldDelegate()
         
         configureTitle()
         
@@ -77,13 +74,6 @@ extension SignUpMainViewController {
         mainStackView.infoPasswordView.inputTextField.placeholder = MainLabelContents.passwordPlaceHolder
         mainStackView.doubleCheckPassWordView.infoLabel.text = MainLabelContents.passwordDoubleCheckLabel
         mainStackView.nameCheckView.infoLabel.text = MainLabelContents.nameLabel
-    }
-    
-    private func setUpTextFieldDelegate() {
-        mainStackView.infoIDView.inputTextField.delegate = delegate
-        mainStackView.infoPasswordView.inputTextField.delegate = delegate
-        mainStackView.doubleCheckPassWordView.inputTextField.delegate = delegate
-        mainStackView.nameCheckView.inputTextField.delegate = delegate
     }
 }
 

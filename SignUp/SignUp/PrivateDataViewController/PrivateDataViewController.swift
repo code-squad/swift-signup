@@ -19,7 +19,7 @@ class PrivateDataViewController: BaseViewController {
     private let toolbar : UIToolbar = {
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
-        let doneButton = UIBarButtonItem(title: "확인", style: .plain, target: nil, action : #selector(doneButtonTouched(_:)))
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneButtonTouched(_:)))
         toolBar.setItems([doneButton], animated: true)
         return toolBar
     }()
@@ -53,6 +53,7 @@ class PrivateDataViewController: BaseViewController {
     
     @objc func doneButtonTouched(_ sender : UIBarButtonItem) {
         birthDateTextField.setDateText(birthDatePicker.date.conventString())
+        self.view.endEditing(true)
     }
     
     @IBAction func goBackButtonTouched(_ sender: UIButton) {

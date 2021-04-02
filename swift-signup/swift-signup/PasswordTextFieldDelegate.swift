@@ -48,6 +48,20 @@ class PasswordTextFieldDelegate : NSObject, UITextFieldDelegate, UserInfoValidab
         return true
     }
     
+    //MARK: return 눌러도 상태에 따라 테두리 색 변경
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.layer.borderWidth = 1.0
+        validater.exitTextField()
+        
+        if validater.state() == .begin || validater.state() == .end {
+            textField.layer.borderColor = UIColor.systemGray3.cgColor
+        } else {
+            textField.layer.borderColor = UIColor.red.cgColor
+        }
+        
+        return true
+    }
+    
     func isUserInfoValid() -> Bool {
         return (validater.state() == .valid || validater.state() == .end) ? true : false
     }

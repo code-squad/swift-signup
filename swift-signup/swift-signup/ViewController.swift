@@ -34,6 +34,7 @@ class ViewController: UIViewController {
         
         registerDelegate()
         registerTextField()
+        setUpPasswordTextField()
         buttonManager.isAllInfoValid()
     }
 
@@ -49,6 +50,11 @@ class ViewController: UIViewController {
         self.buttonManager.register(userInfo: passwordTextFieldDelegate)
         self.buttonManager.register(userInfo: passwordConfirmTextFieldDelegate)
         self.buttonManager.register(userInfo: nameTextFieldDelegate)
+    }
+    
+    func setUpPasswordTextField() {
+        self.passwordTextField.isSecureTextEntry = true
+        self.passwordConfirmTextField.isSecureTextEntry = true
     }
     
     //MARK: @objc 처리
@@ -111,5 +117,21 @@ class ViewController: UIViewController {
         self.nextButton.isEnabled = isActive
     }
     
+    @IBAction func exitIdTextField(_ sender: Any) {
+        self.passwordTextField.becomeFirstResponder()
+        buttonManager.isAllInfoValid()
+    }
+    
+    
+    @IBAction func exitPasswordTextField(_ sender: Any) {
+        self.passwordConfirmTextField.becomeFirstResponder()
+        buttonManager.isAllInfoValid()
+    }
+    
+    
+    @IBAction func exitPasswordConfirmTextField(_ sender: Any) {
+        self.nameTextField.becomeFirstResponder()
+        buttonManager.isAllInfoValid()
+    }
 }
 

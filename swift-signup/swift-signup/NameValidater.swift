@@ -31,6 +31,9 @@ class NameValidater {
         var messageInfo : [AnyHashable:Any] = [:]
 
         switch state {
+        case .valid:
+            messageInfo.updateValue("", forKey: NameValidater.MessageInfo.text)
+            messageInfo.updateValue(UIColor.systemGreen, forKey: NameValidater.MessageInfo.color)
         case .invalid:
             messageInfo.updateValue("이름은 필수 입력 항목입니다.", forKey: NameValidater.MessageInfo.text)
             messageInfo.updateValue(UIColor.red, forKey: NameValidater.MessageInfo.color)

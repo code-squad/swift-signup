@@ -22,7 +22,7 @@ class ButtonManager {
         } else {
             self.isButtonUsable = true
         }
-        
+        print(isButtonUsable)
         NotificationCenter.default.post(name: ButtonManager.buttonState, object: self, userInfo: [ButtonManager.Info.state : self.isButtonUsable])
     }
 }

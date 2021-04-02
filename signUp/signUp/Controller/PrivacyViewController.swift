@@ -29,6 +29,7 @@ class PrivacyViewController: UIViewController {
         textEdittingForTextField()
         setDatePicker()
         configureNextButton()
+        buttonTouched()
     }
     
     private func enableButton() {
@@ -90,6 +91,7 @@ extension PrivacyViewController {
         buttonForBack.frame = CGRect(x: 50, y: 600, width: 140, height: 50)
         buttonForNext.setTitle(ButtonTitle.next, for: .normal)
         buttonForBack.setTitle(ButtonTitle.back, for: .normal)
+        buttonForNext.isOn = .off
         buttonForBack.isOn = .on
         view.addSubview(buttonForNext)
         view.addSubview(buttonForBack)
@@ -113,14 +115,27 @@ extension PrivacyViewController {
         privacyStackView.birthdayInfo.inputTextField.text = DateFormatManager.formatDateToString(datePicker.date)
         view.endEditing(true)
     }
+    @objc func backButtonToucehd() {
+        dismiss(animated: true)
+    }
+    
+    @objc func nextButtonTouched() {
+        
+    }
 }
 
 //MARK: -@Add Target
 extension PrivacyViewController {
+    
     private func textEdittingForTextField() {
         privacyStackView.birthdayInfo.inputTextField.addTarget(self, action: #selector(textFieldEddtingChanged(textField:)), for: .editingChanged)
         privacyStackView.emailInfo.inputTextField.addTarget(self, action: #selector(textFieldEddtingChanged(textField:)), for: .editingChanged)
         privacyStackView.cellPhoneInfo.inputTextField.addTarget(self, action: #selector(textFieldEddtingChanged(textField:)), for: .editingChanged)
+    }
+    
+    private func buttonTouched() {
+        buttonForBack.addTarget(self, action: #selector(backButtonToucehd), for: .touchUpInside)
+        buttonForNext.addTarget(self, action: #selector(nextButtonTouched), for: .touchUpInside)
     }
 }
 

@@ -68,6 +68,8 @@ extension PrivacyViewController {
         datePicker = UIDatePicker(frame: CGRect(x: 0, y: 0, width: 300, height: 400))
         datePicker.datePickerMode = .date
         datePicker.preferredDatePickerStyle = .wheels
+        datePicker.maximumDate = DateFormatManager.setUpMaxDateRagne()
+        datePicker.minimumDate = DateFormatManager.setUpMinDateRange()
         birthdayTextField.inputView = datePicker
 
         let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
@@ -93,9 +95,8 @@ extension PrivacyViewController {
         privacyStackView.birthdayInfo.inputTextField.resignFirstResponder()
     }
     @objc func datePickerSelected() {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        privacyStackView.birthdayInfo.inputTextField.text = dateFormatter.string(from: datePicker.date)
+        privacyStackView.birthdayInfo.inputTextField.text = DateFormatManager.formatDateToString(datePicker.date)
+        view.endEditing(true)
     }
 }
 

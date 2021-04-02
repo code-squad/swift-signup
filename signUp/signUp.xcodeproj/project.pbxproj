@@ -28,6 +28,7 @@
 		71C598B526144D6C0097ED4C /* NetwordHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C598B426144D6C0097ED4C /* NetwordHandler.swift */; };
 		71C598C026146D7D0097ED4C /* MainLabelContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C598BF26146D7D0097ED4C /* MainLabelContents.swift */; };
 		71E01A3A2616AF8600C3530A /* LabelSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E01A392616AF8600C3530A /* LabelSegmentView.swift */; };
+		71E01A4A2617011D00C3530A /* DateFormatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E01A492617011D00C3530A /* DateFormatManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		71C598B426144D6C0097ED4C /* NetwordHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetwordHandler.swift; sourceTree = "<group>"; };
 		71C598BF26146D7D0097ED4C /* MainLabelContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLabelContents.swift; sourceTree = "<group>"; };
 		71E01A392616AF8600C3530A /* LabelSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelSegmentView.swift; sourceTree = "<group>"; };
+		71E01A492617011D00C3530A /* DateFormatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				71A3C2272615701D0028A2B7 /* RegexValidManager.swift */,
+				71E01A492617011D00C3530A /* DateFormatManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				71C598B526144D6C0097ED4C /* NetwordHandler.swift in Sources */,
 				712CCAC32613FAAB0025DE00 /* InfoCheck.swift in Sources */,
 				712DBC592611B2D900F853A7 /* MainTitleLabel.swift in Sources */,
+				71E01A4A2617011D00C3530A /* DateFormatManager.swift in Sources */,
 				719125982612B890008D1DC2 /* Regex.swift in Sources */,
 				717F735C2615B24C0034E697 /* GenderSegmentedControl.swift in Sources */,
 				712DBC662611B81100F853A7 /* EachInfoView.swift in Sources */,

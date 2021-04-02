@@ -1,6 +1,6 @@
 import UIKit
 
-class NextVCButton: UIButton {
+class CustomButton: UIButton {
     
     enum buttonState {
         case on

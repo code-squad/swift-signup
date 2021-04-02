@@ -4,7 +4,7 @@ class SignUpMainViewController: UIViewController {
     
     private var mainViewTitle: MainTitleLabel!
     private var mainStackView = MainInfoStackView()
-    private var buttonForMove = NextVCButton(type: .system)
+    private var buttonForMove = CustomButton(type: .system)
     private var validateManager: RegexValidManager!
 
     override func viewDidLoad() {

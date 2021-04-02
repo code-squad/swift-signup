@@ -6,6 +6,8 @@ class PrivacyViewController: UIViewController {
     private var privacyStackView = PrivacyStackView()
     private let validateManager = RegexValidManager()
     private var datePicker = UIDatePicker()
+    private var buttonForNext = CustomButton(type: .system)
+    private var buttonForBack = CustomButton(type: .system)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,11 +28,14 @@ class PrivacyViewController: UIViewController {
         setUpSegmentControl()
         textEdittingForTextField()
         setDatePicker()
+        configureNextButton()
     }
     
     private func enableButton() {
         if enableCheckforButtion() {
-           // 버튼 구현
+            buttonForNext.isOn = .on
+        } else {
+            buttonForNext.isOn = .off
         }
     }
 }
@@ -79,6 +84,15 @@ extension PrivacyViewController {
         toolBar.setItems([cancel, flexible, done], animated: false)
         birthdayTextField.inputAccessoryView = toolBar
     }
+    
+    private func configureNextButton() {
+        buttonForNext.frame = CGRect(x: 200, y: 600, width: 140, height: 50)
+        buttonForBack.frame = CGRect(x: 50, y: 600, width: 140, height: 50)
+        buttonForBack.setTitle("이전", for: .normal)
+        buttonForBack.isOn = .on
+        view.addSubview(buttonForNext)
+        view.addSubview(buttonForBack)
+    }
 }
 
 //MARK: -@objc Action
@@ -89,7 +103,7 @@ extension PrivacyViewController {
     }
     @objc func textFieldEddtingChanged(textField: UITextField) {
         enableButton()
-        let _ = isValidStateForEmail() || isValidStateForPhone()
+        let _ = isValidStateForBirthday() || isValidStateForEmail() || isValidStateForPhone()
     }
     @objc func datePickerCancelled() {
         privacyStackView.birthdayInfo.inputTextField.resignFirstResponder()
@@ -103,6 +117,7 @@ extension PrivacyViewController {
 //MARK: -@Add Target
 extension PrivacyViewController {
     private func textEdittingForTextField() {
+        privacyStackView.birthdayInfo.inputTextField.addTarget(self, action: #selector(textFieldEddtingChanged(textField:)), for: .editingChanged)
         privacyStackView.emailInfo.inputTextField.addTarget(self, action: #selector(textFieldEddtingChanged(textField:)), for: .editingChanged)
         privacyStackView.cellPhoneInfo.inputTextField.addTarget(self, action: #selector(textFieldEddtingChanged(textField:)), for: .editingChanged)
     }
@@ -113,7 +128,15 @@ extension PrivacyViewController {
 extension PrivacyViewController {
     
     private func enableCheckforButtion() -> Bool {
-        return isValidStateForEmail() && isValidStateForPhone()
+        return  isValidStateForBirthday() && isValidStateForEmail() && isValidStateForPhone()
+    }
+    
+    private func isValidStateForBirthday() -> Bool {
+        let birthday = privacyStackView.birthdayInfo
+        if !validateManager.isEmptyTextField(birthday.inputTextField.text) {
+            return true
+        }
+        return false
     }
     
     private func isValidStateForEmail()  -> Bool {

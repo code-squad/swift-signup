@@ -134,7 +134,15 @@ class ViewController: UIViewController {
         buttonManager.isAllInfoValid()
     }
     
+    @IBAction func exitNameTextField(_ sender: Any) {
+        self.nameTextField.resignFirstResponder()
+        if self.nextButton.isEnabled, let personnalInformationViewController = self.storyboard?.instantiateViewController(identifier: "PersonnalInformationViewController") {
+            navigationController?.pushViewController(personnalInformationViewController, animated: true)
+        }
+    }
+    
     @IBAction func nextButtonPressed(_ sender: Any) {
+        self.nameTextField.resignFirstResponder()
         guard let personnalInformationViewController = self.storyboard?.instantiateViewController(identifier: "PersonnalInformationViewController")
         else {
             return

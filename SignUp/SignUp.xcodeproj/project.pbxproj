@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF0E75272612B58000D513B4 /* InputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0E75262612B58000D513B4 /* InputTextField.swift */; };
-		BF0E753226132D7200D513B4 /* MessageLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0E753126132D7200D513B4 /* MessageLabel.swift */; };
 		BF0E7535261333B200D513B4 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0E7534261333B200D513B4 /* State.swift */; };
 		BF11F6632611996F006AC76C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF11F6622611996F006AC76C /* AppDelegate.swift */; };
 		BF11F6652611996F006AC76C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF11F6642611996F006AC76C /* SceneDelegate.swift */; };
@@ -36,8 +34,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BF0E75262612B58000D513B4 /* InputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextField.swift; sourceTree = "<group>"; };
-		BF0E753126132D7200D513B4 /* MessageLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageLabel.swift; sourceTree = "<group>"; };
 		BF0E7534261333B200D513B4 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		BF11F65F2611996F006AC76C /* SignUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF11F6622611996F006AC76C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,9 +76,7 @@
 		BF0E75292612B6AA00D513B4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BF0E75262612B58000D513B4 /* InputTextField.swift */,
 				BFC925EF2614754C00D4FBD0 /* SignUpStackView.swift */,
-				BF0E753126132D7200D513B4 /* MessageLabel.swift */,
 				BFCBC7982615D68B009A9F0F /* BirthDatePicker.swift */,
 				BFCBC79C2615E74D009A9F0F /* BirthDateTextField.swift */,
 			);
@@ -110,13 +104,11 @@
 			children = (
 				BF11F6802611C1F6006AC76C /* Network */,
 				BF11F67A2611C178006AC76C /* Extension */,
-				BF11F6622611996F006AC76C /* AppDelegate.swift */,
-				BF11F6642611996F006AC76C /* SceneDelegate.swift */,
-				BF11F6662611996F006AC76C /* ViewController.swift */,
+				BFBC87352616AB53005F424B /* AppCycle */,
+				BFBC87322616AAEA005F424B /* SignUpViewController */,
 				BFCBC7872615A423009A9F0F /* BaseViewController.swift */,
 				BF0E7534261333B200D513B4 /* State.swift */,
-				BFC9260026149B2A00D4FBD0 /* ViewModel */,
-				BFCBC78326159D68009A9F0F /* PrivateDataView */,
+				BFCBC78326159D68009A9F0F /* PrivateDataViewController */,
 				BF0E75292612B6AA00D513B4 /* View */,
 				BF11F6682611996F006AC76C /* Main.storyboard */,
 				BF11F66B26119971006AC76C /* Assets.xcassets */,
@@ -145,6 +137,24 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		BFBC87322616AAEA005F424B /* SignUpViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BF11F6662611996F006AC76C /* ViewController.swift */,
+				BFC9260026149B2A00D4FBD0 /* ViewModel */,
+			);
+			path = SignUpViewController;
+			sourceTree = "<group>";
+		};
+		BFBC87352616AB53005F424B /* AppCycle */ = {
+			isa = PBXGroup;
+			children = (
+				BF11F6622611996F006AC76C /* AppDelegate.swift */,
+				BF11F6642611996F006AC76C /* SceneDelegate.swift */,
+			);
+			path = AppCycle;
+			sourceTree = "<group>";
+		};
 		BFC9260026149B2A00D4FBD0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,13 +166,13 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		BFCBC78326159D68009A9F0F /* PrivateDataView */ = {
+		BFCBC78326159D68009A9F0F /* PrivateDataViewController */ = {
 			isa = PBXGroup;
 			children = (
-				BFCBC78E2615B3B8009A9F0F /* ViewModel */,
 				BFCBC78426159DB7009A9F0F /* PrivateDataViewController.swift */,
+				BFCBC78E2615B3B8009A9F0F /* ViewModel */,
 			);
-			path = PrivateDataView;
+			path = PrivateDataViewController;
 			sourceTree = "<group>";
 		};
 		BFCBC78E2615B3B8009A9F0F /* ViewModel */ = {
@@ -245,12 +255,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF0E75272612B58000D513B4 /* InputTextField.swift in Sources */,
 				BFCBC79D2615E74D009A9F0F /* BirthDateTextField.swift in Sources */,
 				BFC925FB2614980E00D4FBD0 /* PasswordViewModel.swift in Sources */,
 				BF11F6672611996F006AC76C /* ViewController.swift in Sources */,
 				BFC926082614A47B00D4FBD0 /* IdViewModel.swift in Sources */,
-				BF0E753226132D7200D513B4 /* MessageLabel.swift in Sources */,
 				BFCBC7A0261610B6009A9F0F /* Date+Extension.swift in Sources */,
 				BFCBC78B2615A745009A9F0F /* Serviceable.swift in Sources */,
 				BFC925FE26149A5800D4FBD0 /* NameViewModel.swift in Sources */,

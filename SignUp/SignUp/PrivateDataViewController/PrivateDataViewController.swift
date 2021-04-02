@@ -33,10 +33,6 @@ class PrivateDataViewController: BaseViewController {
         configureBind()
     }
     
-    @objc func doneButtonTouched(_ sender : UIBarButtonItem) {
-        birthDateTextField.setDateText(birthDatePicker.date.conventString())
-    }
-    
     func configureBind() {
         birthDateTextField.publisher(for: \.text).assign(to: &privateDataViewModel.$birthDateText)
         emailStackView.textField.textPublisher.assign(to: &privateDataViewModel.emailViewModel.$emailText)
@@ -50,9 +46,13 @@ class PrivateDataViewController: BaseViewController {
             self.phoneStackView.updateUI(state.message, state.isValid())
         }.store(in: &cancellable)
         
-        privateDataViewModel.isInputValid.receive(on: DispatchQueue.main)
+        privateDataViewModel.isInputValid.receive(on: RunLoop.main)
             .assign(to: \.isEnabled, on: nextButton)
             .store(in: &cancellable)
+    }
+    
+    @objc func doneButtonTouched(_ sender : UIBarButtonItem) {
+        birthDateTextField.setDateText(birthDatePicker.date.conventString())
     }
     
     @IBAction func goBackButtonTouched(_ sender: UIButton) {

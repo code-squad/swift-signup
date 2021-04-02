@@ -5,6 +5,7 @@ class PrivacyViewController: UIViewController {
     private var privacyViewTitle: MainTitleLabel!
     private var privacyStackView = PrivacyStackView()
     private let validateManager = RegexValidManager()
+    private var datePicker = UIDatePicker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,7 @@ class PrivacyViewController: UIViewController {
         setUpLabelAndTextField()
         setUpSegmentControl()
         textEdittingForTextField()
+        setDatePicker()
     }
     
     private func enableButton() {
@@ -60,6 +62,21 @@ extension PrivacyViewController {
         privacyStackView.genderInfo.infoLabel.text = PrivacyLabelContents.gender
         privacyStackView.genderInfo.segmentControlInfo.addTarget(self, action: #selector(selectGenderInfo), for: .valueChanged)
     }
+    
+    private func setDatePicker() {
+        let birthdayTextField = privacyStackView.birthdayInfo.inputTextField
+        datePicker = UIDatePicker(frame: CGRect(x: 0, y: 0, width: 300, height: 400))
+        datePicker.datePickerMode = .date
+        datePicker.preferredDatePickerStyle = .wheels
+        birthdayTextField.inputView = datePicker
+
+        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
+        let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let cancel = UIBarButtonItem(title: "Cancel", style: .plain, target: nil, action: #selector(datePickerCancelled))
+        let done = UIBarButtonItem(title: "Done", style: .plain, target: nil, action: #selector(datePickerSelected))
+        toolBar.setItems([cancel, flexible, done], animated: false)
+        birthdayTextField.inputAccessoryView = toolBar
+    }
 }
 
 //MARK: -@objc Action
@@ -71,6 +88,14 @@ extension PrivacyViewController {
     @objc func textFieldEddtingChanged(textField: UITextField) {
         enableButton()
         let _ = isValidStateForEmail() || isValidStateForPhone()
+    }
+    @objc func datePickerCancelled() {
+        privacyStackView.birthdayInfo.inputTextField.resignFirstResponder()
+    }
+    @objc func datePickerSelected() {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        privacyStackView.birthdayInfo.inputTextField.text = dateFormatter.string(from: datePicker.date)
     }
 }
 

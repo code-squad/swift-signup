@@ -14,15 +14,8 @@
   - 비밀번호를 초기 입력시 빨간색 테두리
   - 유효한 비밀번호 인경우 초록색 테두리
   - 수정시에도 계속 정규식을 체크하여 테두리 색깔이 변할 수 있음
-- 비밀번호 형태는 *** 형태로 표시한다.
-- 비밀번호 입력 값과, 재 확인 입력 값이 같아야 한다.
 - 이름은 null값일 수 없다. 반드시 입력해야한다.
   - 입력하지 않은 경우 "필수 입력 항목"이라고 표시되며 빨간색 테두리를 표시한다.
-- 입력할 때에 키보드에서 엔터부분을 Next 역할로 바꾼다.
-- 항목입력 후 다음 항목으로 자동으로 넘어간다.
-- 마지막 항목까지 입력 하고 return을 누른 경우 키보드가 사라진다.
-- 키보드가 화면을 가리지 않도록 한다.
-- 모든 항목 조건이 맞을 때만 다음 화면으로 넘어간다.
 
 ## 고찰♨️
 
@@ -117,7 +110,18 @@ guard let text = textField.text else { return false } // Error
   error: `Initializer for conditional binding must have Optional type, not 'UITextField'` UITextField는 Optional 타입이 아니므로 `guard let` 구문을 활용할 수 없다.
 - 접근2) textField의 text값을 접근하는 내부 메소드를 삭제 할 수 밖에 없다. ✔️
 
-## Step2 Network 연결
+## Step2 keyboard control
+
+- 비밀번호 형태는 *** 형태로 표시한다.
+- 비밀번호 입력 값과, 재 확인 입력 값이 같아야 한다.
+- 입력할 때에 키보드에서 엔터부분을 Next 역할로 바꾼다.
+- 항목입력 후 다음 항목으로 자동으로 넘어간다.
+- 마지막 항목까지 입력 하고 return을 누른 경우 키보드가 사라진다.
+- 키보드가 화면을 가리지 않도록 한다.
+- 모든 항목 입력시에만 다음 버튼이 활성화 된다.
+- 모든 항목 조건이 맞을 때만 다음 화면으로 넘어간다.
+
+## Step3 Network 연결
 
 - 확인 버튼을 누르면 네트워크에 연결을 시도한다.
 - URLSession에 연결한다.
@@ -125,7 +129,7 @@ guard let text = textField.text else { return false } // Error
 - get 메소드로 아이디 리스트를 받아 중복을 체크한다.
 - 아이디가 중복 된 경우 오류가 리턴된다.
 
-## Step3 개인정보 입력 화면
+## Step4 개인정보 입력 화면
 
 - Date Picker를 사용한다.
   - 하단에 선택 버튼을 누르면 선택한 날짜를 표시한다.
@@ -141,7 +145,7 @@ guard let text = textField.text else { return false } // Error
 - 이전 버튼을 눌러서 돌아가면 현재 화면에서 입력했던 내용은 사라져도 된다.
 - 이전 화면은 입력했던 정보가 남아있어야 한다.
 
-## Step4 개인 정보 수집 및 이용에 대한 안내 화면
+## Step5 개인 정보 수집 및 이용에 대한 안내 화면
 
 - Modal로 개인 정보 수집 및 이용에 대한 안내 화면을 띄운다.
 - 내용은 화면 보다 길어야한다.
@@ -150,7 +154,7 @@ guard let text = textField.text else { return false } // Error
   - 동의 버튼을 누른 경우, 애니메이션 없이 다음화면으로 이동한다.
   - 취소 버튼을 누른 경우, 지금 화면이 사라지는 애니메이션을 보여주고, 이전 화면으로 돌아간다. 이때, 이전 화면의 정보들은 남아 있어야 한다.
 
-## Step5 관심사 키워드 화면
+## Step6 관심사 키워드 화면
 
 - 관심사 키워드는  CollectionViewFlowLayout을 적용한다.
 - 관심사를 입력하지 않으면 하단에 안내 문구를 표시한다.
@@ -166,5 +170,5 @@ guard let text = textField.text else { return false } // Error
 - 키보드 엔터 버튼은 관심사 3개를 추가할 때까지는 ADD로 동작
 - 3개 이상 추가하고 나면 Done으로 표시하고 완료버튼과 동일하게 동작한다.
 
-## Step6 로그인 화면
+## Step7 로그인 화면
 

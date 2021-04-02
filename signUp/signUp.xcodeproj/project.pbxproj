@@ -19,7 +19,7 @@
 		712DBC592611B2D900F853A7 /* MainTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DBC582611B2D900F853A7 /* MainTitleLabel.swift */; };
 		712DBC612611B44B00F853A7 /* MainInfoStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DBC602611B44B00F853A7 /* MainInfoStackView.swift */; };
 		712DBC662611B81100F853A7 /* EachInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DBC652611B81100F853A7 /* EachInfoView.swift */; };
-		712DBC732611C51100F853A7 /* NextVCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DBC722611C51100F853A7 /* NextVCButton.swift */; };
+		712DBC732611C51100F853A7 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DBC722611C51100F853A7 /* CustomButton.swift */; };
 		712DBC782611CBD500F853A7 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DBC772611CBD500F853A7 /* PrivacyViewController.swift */; };
 		717F73542615AECF0034E697 /* PrivacyStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717F73532615AECF0034E697 /* PrivacyStackView.swift */; };
 		717F735C2615B24C0034E697 /* GenderSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717F735B2615B24C0034E697 /* GenderSegmentedControl.swift */; };
@@ -67,7 +67,7 @@
 		712DBC582611B2D900F853A7 /* MainTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTitleLabel.swift; sourceTree = "<group>"; };
 		712DBC602611B44B00F853A7 /* MainInfoStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInfoStackView.swift; sourceTree = "<group>"; };
 		712DBC652611B81100F853A7 /* EachInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EachInfoView.swift; sourceTree = "<group>"; };
-		712DBC722611C51100F853A7 /* NextVCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextVCButton.swift; sourceTree = "<group>"; };
+		712DBC722611C51100F853A7 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		712DBC772611CBD500F853A7 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
 		717F73532615AECF0034E697 /* PrivacyStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyStackView.swift; sourceTree = "<group>"; };
 		717F735B2615B24C0034E697 /* GenderSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSegmentedControl.swift; sourceTree = "<group>"; };
@@ -173,7 +173,7 @@
 		712DBC572611B2CE00F853A7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				712DBC722611C51100F853A7 /* NextVCButton.swift */,
+				712DBC722611C51100F853A7 /* CustomButton.swift */,
 				712DBC582611B2D900F853A7 /* MainTitleLabel.swift */,
 				717F73612615B30F0034E697 /* PrivacyView */,
 				717F73602615B2F20034E697 /* MainView */,
@@ -366,7 +366,7 @@
 			files = (
 				712DBC1626119DCF00F853A7 /* SignUpMainViewController.swift in Sources */,
 				712DBC1226119DCF00F853A7 /* AppDelegate.swift in Sources */,
-				712DBC732611C51100F853A7 /* NextVCButton.swift in Sources */,
+				712DBC732611C51100F853A7 /* CustomButton.swift in Sources */,
 				712DBC782611CBD500F853A7 /* PrivacyViewController.swift in Sources */,
 				71C598B526144D6C0097ED4C /* NetwordHandler.swift in Sources */,
 				712CCAC32613FAAB0025DE00 /* InfoCheck.swift in Sources */,

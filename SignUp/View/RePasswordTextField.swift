@@ -1,5 +1,5 @@
 //
-//  PasswordTextField.swift
+//  RePasswordTextField.swift
 //  SignUp
 //
 //  Created by 박혜원 on 2021/04/01.
@@ -8,10 +8,10 @@
 import UIKit
 import Combine
 
-class PasswordTextField : UITextField, ValidCheckProtocol {
-    typealias ValidState = PasswordValidState
+class RePasswordTextField: UITextField, ValidCheckProtocol {
+    typealias ValidState = RePasswordValidState
     
-    var isValid = PasswordValidState.init()
+    var isValid = RePasswordValidState.init()
     var handler : ControlActionClosure?
     private var cancellable : AnyCancellable?
     
@@ -32,8 +32,8 @@ class PasswordTextField : UITextField, ValidCheckProtocol {
         }
     }
     func checkValidation() -> ValidState.State {
-        guard let text = self.text else { return .none }
-        let result = ValidationCheckService.isValidPassword(with: text)
+        guard let text = self.text else { return .notEqual }
+        let result = ValidationCheckService.isEqualPassword(to: text, from: "")
         return result
     }
     
@@ -41,24 +41,23 @@ class PasswordTextField : UITextField, ValidCheckProtocol {
         self.handler = control
     }
     func addTarget(){
-        self.addTarget(self, action: #selector(PasswordTextField.textFieldDidBeginEditing(_:)), for: .editingChanged)
-        self.addTarget(self, action: #selector(PasswordTextField.textFieldDidEndEditing(_:)), for: .editingDidEndOnExit)
-        self.addTarget(self, action: #selector(PasswordTextField.textFieldShouldReturn(_:)), for: .editingDidEnd)
+        self.addTarget(self, action: #selector(RePasswordTextField.textFieldDidBeginEditing(_:)), for: .editingChanged)
+        self.addTarget(self, action: #selector(RePasswordTextField.textFieldShouldReturn(_:)), for: .editingDidEnd)
     }
 }
-extension PasswordTextField {
+extension RePasswordTextField {
     
     @objc func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.layer.borderWidth = 1.0
         textField.layer.cornerRadius = 8
         textField.clipsToBounds = true
     }
-    @objc func textFieldDidEndEditing(_ textField: UITextField) {
+
+    @objc func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         let result = checkValidation()
         isValid.chageState(to: result)
-    }
-    @objc func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if isValid.state == .valid {
+        
+        if isValid.state == .equal {
             textField.layer.borderColor = UIColor.myGreen.cgColor
         } else {
             textField.layer.borderColor = UIColor.red.cgColor

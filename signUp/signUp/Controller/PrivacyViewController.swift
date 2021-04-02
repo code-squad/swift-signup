@@ -26,7 +26,8 @@ class PrivacyViewController: UIViewController {
 extension PrivacyViewController {
     
     private func configureTitle() {
-        privacyViewTitle = MainTitleLabel(frame: CGRect(x: 125, y: 60, width: 150, height: 40))
+        privacyViewTitle = MainTitleLabel(frame: CGRect(x: 0, y: 0, width: 150, height: 40))
+        privacyViewTitle.layer.position = CGPoint(x: view.bounds.width/2, y: 60)
         privacyViewTitle.text = MainTitleContents.privacy
         view.addSubview(privacyViewTitle)
     }

@@ -52,7 +52,8 @@ class SignUpMainViewController: UIViewController {
 extension SignUpMainViewController {
     
     private func configureTitle() {
-        mainViewTitle = MainTitleLabel(frame: CGRect(x: 125, y: 60, width: 150, height: 40))
+        mainViewTitle = MainTitleLabel(frame: CGRect(x: 0, y: 0, width: 150, height: 40))
+        mainViewTitle.layer.position = CGPoint(x: view.bounds.width/2, y: 60)
         mainViewTitle.text = MainTitleContents.main
         view.addSubview(mainViewTitle)
     }

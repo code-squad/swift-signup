@@ -12,6 +12,11 @@ class PrivacyViewController: UIViewController {
         setUpMainView()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        self.view.endEditing(true)
+    }
+    
     private func setUpMainView() {
         view.backgroundColor = UIColor.systemGray6
         configureTitle()
@@ -19,6 +24,12 @@ class PrivacyViewController: UIViewController {
         setUpLabelAndTextField()
         setUpSegmentControl()
         textEdittingForTextField()
+    }
+    
+    private func enableButton() {
+        if enableCheckforButtion() {
+           // 버튼 구현
+        }
     }
 }
 
@@ -56,7 +67,8 @@ extension PrivacyViewController {
         //성별정보 저장구현 예정
     }
     @objc func textFieldEddtingChanged(textField: UITextField) {
-        let _ = isValidStateForEmail()
+        enableButton()
+        let _ = isValidStateForEmail() || isValidStateForPhone()
     }
 }
 
@@ -72,21 +84,38 @@ extension PrivacyViewController {
 
 extension PrivacyViewController {
     
+    private func enableCheckforButtion() -> Bool {
+        return isValidStateForEmail() && isValidStateForPhone()
+    }
+    
     private func isValidStateForEmail()  -> Bool {
         let email = privacyStackView.emailInfo
-        if !validateManager.isValidStateForEmail(email.inputTextField.text) {
+        if validateManager.isEmptyTextField(email.inputTextField.text) {
+            privacyStackView.defaultStateFor(textField: email.inputTextField, label: email.checkLabel)
+        } else if !validateManager.isValidStateForEmail(email.inputTextField.text) {
             privacyStackView.invalidTextFieldBoarder(textField: email.inputTextField)
             privacyStackView.inValidEmailFor(checkLabel: email.checkLabel)
-            return false
         } else {
             privacyStackView.validTextFieldBoarder(textField: email.inputTextField)
             privacyStackView.validEmailFor(checkLabel: email.checkLabel)
             return true
         }
+        return false
     }
     
     private func isValidStateForPhone() -> Bool {
         let phone = privacyStackView.cellPhoneInfo
+        if validateManager.isEmptyTextField(phone.inputTextField.text) {
+            privacyStackView.defaultStateFor(textField: phone.inputTextField, label: phone.checkLabel)
+        } else if !validateManager.isValidStateForPhone(phone.inputTextField.text) {
+            privacyStackView.invalidTextFieldBoarder(textField: phone.inputTextField)
+            privacyStackView.inValidPhoneFor(checkLabel: phone.checkLabel)
+        } else {
+            privacyStackView.validTextFieldBoarder(textField: phone.inputTextField)
+            privacyStackView.validPhoneFor(checkLabel: phone.checkLabel)
+            return true
+        }
         return false
     }
+    
 }

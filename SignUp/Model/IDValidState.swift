@@ -12,6 +12,7 @@ class IDValidState : ObservableObject{
     enum State : String {
         case inValid = "이미 사용중인 아이디입니다."
         case valid = "사용 가능한 아이디입니다."
+        case empty = "필수항목 입니다."
     }
     
     var state : State {
@@ -20,7 +21,7 @@ class IDValidState : ObservableObject{
         }
     }
     init(){
-        state = .inValid
+        state = .empty
     }
     func chageState(to state : State){
         self.state = state

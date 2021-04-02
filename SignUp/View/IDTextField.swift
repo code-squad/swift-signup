@@ -34,7 +34,7 @@ class IDTextField : UITextField, ValidCheckProtocol {
     }
     func checkValidation() -> ValidState.State {
         guard let text = self.text else { return isValid.state }
-        let result = ValidationCheckService.isValidId(input: text)
+        let result = ValidationCheckService.isValidId(with: text)
         return result
     }
     

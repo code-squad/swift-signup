@@ -26,6 +26,8 @@
 		10F1D4AE26157DD0005665E9 /* SignUpLabelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F1D4AD26157DD0005665E9 /* SignUpLabelViewModel.swift */; };
 		10F1D4B226157FAD005665E9 /* NameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F1D4B126157FAD005665E9 /* NameTextField.swift */; };
 		10F1D4B526160BF6005665E9 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F1D4B426160BF6005665E9 /* UIColorExtension.swift */; };
+		10F1D4BD261610DA005665E9 /* RePasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F1D4BC261610DA005665E9 /* RePasswordTextField.swift */; };
+		10F1D4C026161110005665E9 /* RePasswordValidState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F1D4BF26161110005665E9 /* RePasswordValidState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		10F1D4AD26157DD0005665E9 /* SignUpLabelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpLabelViewModel.swift; sourceTree = "<group>"; };
 		10F1D4B126157FAD005665E9 /* NameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextField.swift; sourceTree = "<group>"; };
 		10F1D4B426160BF6005665E9 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		10F1D4BC261610DA005665E9 /* RePasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RePasswordTextField.swift; sourceTree = "<group>"; };
+		10F1D4BF26161110005665E9 /* RePasswordValidState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RePasswordValidState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,7 @@
 				1078FDA8261497D500026DBD /* PasswordValidState.swift */,
 				1019AF8A26145E90005FE7C7 /* IDValidState.swift */,
 				10F1D4902615511F005665E9 /* NameValidState.swift */,
+				10F1D4BF26161110005665E9 /* RePasswordValidState.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 				10F1D49D26155CD4005665E9 /* ValidCheckProtocol.swift */,
 				10F1D4A626157CBE005665E9 /* IDTextField.swift */,
 				10F1D4A926157CD3005665E9 /* PasswordTextField.swift */,
+				10F1D4BC261610DA005665E9 /* RePasswordTextField.swift */,
 				10F1D4B126157FAD005665E9 /* NameTextField.swift */,
 			);
 			path = View;
@@ -244,8 +250,10 @@
 				10F1D49626155B0E005665E9 /* SignUpViewModel.swift in Sources */,
 				1078FDA02614955900026DBD /* ValidationCheckService.swift in Sources */,
 				10F1D4B226157FAD005665E9 /* NameTextField.swift in Sources */,
+				10F1D4C026161110005665E9 /* RePasswordValidState.swift in Sources */,
 				10F1D4AE26157DD0005665E9 /* SignUpLabelViewModel.swift in Sources */,
 				1009A99226119FCA0089EC3F /* ViewController.swift in Sources */,
+				10F1D4BD261610DA005665E9 /* RePasswordTextField.swift in Sources */,
 				1019AF8B26145E90005FE7C7 /* IDValidState.swift in Sources */,
 				1078FDA9261497D500026DBD /* PasswordValidState.swift in Sources */,
 				10F1D4A726157CBE005665E9 /* IDTextField.swift in Sources */,

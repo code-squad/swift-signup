@@ -34,7 +34,7 @@ class NameTextField : UITextField, ValidCheckProtocol {
     }
     func checkValidation() -> ValidState.State {
         guard let text = self.text else { return .inValid }
-        let result = ValidationCheckService.isValidName(input: text)
+        let result = ValidationCheckService.isValidName(with: text)
         return result
     }
     

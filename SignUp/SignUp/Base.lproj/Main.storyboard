@@ -354,7 +354,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="o55-AE-hf2">
                                 <rect key="frame" x="95.666666666666671" y="508.66666666666674" width="198.66666666666663" height="44"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPD-nX-HKI">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPD-nX-HKI" userLabel="이전">
                                         <rect key="frame" x="0.0" y="0.0" width="64.333333333333329" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="Jv1-wR-2Dl"/>

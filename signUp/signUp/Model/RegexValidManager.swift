@@ -68,7 +68,7 @@ class RegexValidManager {
     //Phone Method
     func isValidStateForPhone(_ phoneNumber: String?) -> Bool {
         guard phoneNumber != nil else { return false }
-        let phoneTest = "^010?([0-9]{4})?([0-9]{4})"
+        let phoneTest = "^010([0-9]{4})([0-9]{4})"
         let pred = NSPredicate(format: "SELF MATCHES %@", phoneTest)
         return pred.evaluate(with: phoneNumber)
     }

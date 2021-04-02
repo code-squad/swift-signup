@@ -10,10 +10,10 @@ import Foundation
 struct ComplianceChecker {
     let networkManager = NetworkManager()
     
-    func check(target textField: SignUpTextField, closure : @escaping (TextFormError)->Void = {_ in }) -> TextFormError {
+    func check(target textField: SignUpTextField, closure : @escaping (ErrorCheckResult)->Void = {_ in }) -> ErrorCheckResult {
         
         guard let text = textField.text else {
-            return .none
+            return ErrorResult.init()
         }
         
         switch textField.textFieldType {
@@ -26,7 +26,7 @@ struct ComplianceChecker {
         case .name:
             return checkNameIsNil(with: text)
         default:
-            return .none
+            return ErrorResult.init()
         }
     }
     
@@ -47,6 +47,10 @@ struct ComplianceChecker {
         
         let resultString = generateRegexString(target: target, pattern: pattern)
         
+        if resultString == "" {
+            return false
+        }
+        
         if resultString != target {
             return false
         }
@@ -54,20 +58,23 @@ struct ComplianceChecker {
         return true
     }
     
-    private func checkIdTextForm(with text : String, closure: @escaping (TextFormError)->Void) -> TextFormError{
-        var errorChecker : TextFormError = .none
+    private func checkIdTextForm(with text : String, closure: @escaping (ErrorCheckResult)->Void) -> ErrorCheckResult{
+        var errorChecker = ErrorResult()
         
         networkManager.getUserList(closure: { userList in
             if let userList = userList {
                 
                 if userList.contains(text) {
-                    errorChecker = .wrong(.idUsed)
+                    errorChecker.isError = true
+                    errorChecker.message = ErrorMessage.idUsed.rawValue
                 } else {
-                    errorChecker = .ok
+                    errorChecker.isError = false
+                    errorChecker.message = ErrorMessage.idIsOk.rawValue
                 }
                 
                 if !regexChekcing(target: text, pattern: "([^A-Z][0-9a-z-_]).{3,18}") {
-                    errorChecker = .wrong(.idIneligible)
+                    errorChecker.isError = true
+                    errorChecker.message = ErrorMessage.idIneligible.rawValue
                 }
                 closure(errorChecker)
             }
@@ -75,27 +82,27 @@ struct ComplianceChecker {
         return errorChecker
     }
     
-    private func checkPwTextForm(with text : String) -> TextFormError {
+    private func checkPwTextForm(with text : String) -> ErrorCheckResult {
         if !regexChekcing(target: text, pattern :"([A-Za-z0-9!@#$%]).{7,15}") {
-            return .wrong(.pwOutOfIndex)
+            return ErrorResult.init(isError: true, message: ErrorMessage.pwOutOfIndex.rawValue)
         }
         
         if !regexChekcing(target: text, pattern :"^.*(?=.*[A-Z])[A-Za-z0-9!@#$%].*$") {
-            return .wrong(.pwNoUpperCase)
+            return ErrorResult.init(isError: true, message: ErrorMessage.pwNoUpperCase.rawValue)
         }
         
         if !regexChekcing(target: text, pattern :"^.*(?=.*[0-9])[A-Za-z0-9!@#$%].*$") {
-            return .wrong(.pwNoNumber)
+            return ErrorResult.init(isError: true, message: ErrorMessage.pwNoNumber.rawValue)
         }
         
         if !regexChekcing(target: text, pattern :"^.*(?=.*[!@#$%])[A-Za-z0-9!@#$%].*$") {
-            return .wrong(.pwNoSpecialCharacter)
+            return ErrorResult.init(isError: true, message: ErrorMessage.pwNoSpecialCharacter.rawValue)
         }
         
-        return .ok
+        return ErrorResult.init(isError: false, message: ErrorMessage.pwIsOk.rawValue)
     }
     
-    private func checkPwDuplicated(with textField : SignUpTextField) -> TextFormError {
+    private func checkPwDuplicated(with textField : SignUpTextField) -> ErrorCheckResult {
         
         let optionalFieldArray = textField.superview?.subviews.filter({
             let item = $0 as? SignUpTextField
@@ -106,19 +113,19 @@ struct ComplianceChecker {
         }) as? [SignUpTextField]
     
         guard let fieldArray = optionalFieldArray else {
-            return .none
+            return ErrorResult()
         }
         
         if fieldArray[1].text == fieldArray[2].text {
-            return .ok
+            return ErrorResult.init(isError: false, message: ErrorMessage.pw2IsOk.rawValue)
         } else {
-            return .wrong(.pwDifferent)
+            return ErrorResult.init(isError: true, message: ErrorMessage.pw2Different.rawValue)
         }
         
     }
     
-    private func checkNameIsNil(with text: String) -> TextFormError {
-        return text == "" ? .wrong(.nameIsNil) : .ok
+    private func checkNameIsNil(with text: String) -> ErrorCheckResult {
+        return text == "" ? ErrorResult.init(isError: true, message: ErrorMessage.nameIsNil.rawValue) : ErrorResult.init(isError: false, message: "")
     }
 }
 

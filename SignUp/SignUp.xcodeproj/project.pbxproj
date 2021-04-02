@@ -16,10 +16,10 @@
 		B075D1012611BBC700731DAC /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B075D1002611BBC700731DAC /* TextFieldDelegate.swift */; };
 		B075D10B261207A600731DAC /* ComplianceChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B075D10A261207A600731DAC /* ComplianceChecker.swift */; };
 		B075D10E261209C300731DAC /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B075D10D261209C300731DAC /* UITextField+Extension.swift */; };
-		B075D11126120A5900731DAC /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B075D11026120A5900731DAC /* UILabel+Extension.swift */; };
 		B075D1162612F4AD00731DAC /* UserInfomation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B075D1152612F4AD00731DAC /* UserInfomation.swift */; };
 		B075D11A261300FB00731DAC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B075D119261300FB00731DAC /* NetworkManager.swift */; };
 		B075D12026158BED00731DAC /* SignUpTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B075D11F26158BED00731DAC /* SignUpTextField.swift */; };
+		B075D1262616003400731DAC /* ErrorCheckResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B075D1252616003400731DAC /* ErrorCheckResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,10 +34,10 @@
 		B075D1002611BBC700731DAC /* TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
 		B075D10A261207A600731DAC /* ComplianceChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplianceChecker.swift; sourceTree = "<group>"; };
 		B075D10D261209C300731DAC /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
-		B075D11026120A5900731DAC /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		B075D1152612F4AD00731DAC /* UserInfomation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfomation.swift; sourceTree = "<group>"; };
 		B075D119261300FB00731DAC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B075D11F26158BED00731DAC /* SignUpTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTextField.swift; sourceTree = "<group>"; };
+		B075D1252616003400731DAC /* ErrorCheckResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCheckResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +70,6 @@
 		B075D0E826119A7D00731DAC /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				B075D11E26158BDA00731DAC /* View */,
 				B075D1132612121800731DAC /* Extension */,
 				B075D0FE26119C0200731DAC /* SignUpView */,
 				B075D0E926119A7D00731DAC /* AppDelegate.swift */,
@@ -85,12 +84,14 @@
 		B075D0FE26119C0200731DAC /* SignUpView */ = {
 			isa = PBXGroup;
 			children = (
+				B075D11E26158BDA00731DAC /* View */,
 				B075D0ED26119A7D00731DAC /* SignUpViewController.swift */,
 				B075D0EF26119A7D00731DAC /* Main.storyboard */,
 				B075D1002611BBC700731DAC /* TextFieldDelegate.swift */,
 				B075D10A261207A600731DAC /* ComplianceChecker.swift */,
 				B075D119261300FB00731DAC /* NetworkManager.swift */,
 				B075D1152612F4AD00731DAC /* UserInfomation.swift */,
+				B075D1252616003400731DAC /* ErrorCheckResult.swift */,
 			);
 			path = SignUpView;
 			sourceTree = "<group>";
@@ -99,7 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				B075D10D261209C300731DAC /* UITextField+Extension.swift */,
-				B075D11026120A5900731DAC /* UILabel+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -186,12 +186,12 @@
 				B075D0EE26119A7D00731DAC /* SignUpViewController.swift in Sources */,
 				B075D0EA26119A7D00731DAC /* AppDelegate.swift in Sources */,
 				B075D12026158BED00731DAC /* SignUpTextField.swift in Sources */,
+				B075D1262616003400731DAC /* ErrorCheckResult.swift in Sources */,
 				B075D11A261300FB00731DAC /* NetworkManager.swift in Sources */,
 				B075D1162612F4AD00731DAC /* UserInfomation.swift in Sources */,
 				B075D1012611BBC700731DAC /* TextFieldDelegate.swift in Sources */,
 				B075D10E261209C300731DAC /* UITextField+Extension.swift in Sources */,
 				B075D0EC26119A7D00731DAC /* SceneDelegate.swift in Sources */,
-				B075D11126120A5900731DAC /* UILabel+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

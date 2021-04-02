@@ -133,5 +133,13 @@ class ViewController: UIViewController {
         self.nameTextField.becomeFirstResponder()
         buttonManager.isAllInfoValid()
     }
+    
+    @IBAction func nextButtonPressed(_ sender: Any) {
+        guard let personnalInformationViewController = self.storyboard?.instantiateViewController(identifier: "PersonnalInformationViewController")
+        else {
+            return
+        }
+        navigationController?.pushViewController(personnalInformationViewController, animated: true)
+    }
 }
 

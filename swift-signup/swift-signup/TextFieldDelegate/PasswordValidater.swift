@@ -66,7 +66,7 @@ class PasswordValidater {
 
         switch state {
         case .valid:
-            messageInfo.updateValue("사용 가능한 아이디입니다.", forKey: PasswordValidater.MessageInfo.text)
+            messageInfo.updateValue("안전한 비밀번호입니다.", forKey: PasswordValidater.MessageInfo.text)
             messageInfo.updateValue(UIColor.systemGreen, forKey: PasswordValidater.MessageInfo.color)
         case .lengthInvalid:
             messageInfo.updateValue("8자 이상 16자 이하로 입력해주세요.", forKey: PasswordValidater.MessageInfo.text)

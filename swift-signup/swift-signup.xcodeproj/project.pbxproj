@@ -24,6 +24,7 @@
 		CE366CBD2615BA3400506D3F /* PasswordConfirmValidater.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366CBC2615BA3400506D3F /* PasswordConfirmValidater.swift */; };
 		CE366CC22615BD2400506D3F /* NameTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366CC12615BD2400506D3F /* NameTextFieldDelegate.swift */; };
 		CE366CC72615BD3300506D3F /* NameValidater.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366CC62615BD3300506D3F /* NameValidater.swift */; };
+		CEB52F762616BEEC002C1650 /* PersonalInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB52F752616BEEC002C1650 /* PersonalInformationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		CE366CBC2615BA3400506D3F /* PasswordConfirmValidater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordConfirmValidater.swift; sourceTree = "<group>"; };
 		CE366CC12615BD2400506D3F /* NameTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextFieldDelegate.swift; sourceTree = "<group>"; };
 		CE366CC62615BD3300506D3F /* NameValidater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameValidater.swift; sourceTree = "<group>"; };
+		CEB52F752616BEEC002C1650 /* PersonalInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,22 +119,15 @@
 		CE366BD22611BA8D00506D3F /* swift-signup */ = {
 			isa = PBXGroup;
 			children = (
+				CEB52F7F2616BF5E002C1650 /* Model */,
+				CEB52F7E2616BF05002C1650 /* TextFieldDelegate */,
+				CEB52F7D2616BEF7002C1650 /* Controller */,
 				CE366BD32611BA8D00506D3F /* AppDelegate.swift */,
 				CE366BD52611BA8D00506D3F /* SceneDelegate.swift */,
-				CE366C69261401E900506D3F /* ButtonManager.swift */,
-				CE366BD72611BA8D00506D3F /* ViewController.swift */,
 				CE366BD92611BA8D00506D3F /* Main.storyboard */,
 				CE366BDC2611BA8E00506D3F /* Assets.xcassets */,
 				CE366BDE2611BA8E00506D3F /* LaunchScreen.storyboard */,
 				CE366BE12611BA8E00506D3F /* Info.plist */,
-				CE366C8D2614B17100506D3F /* IdTextFieldDelegate.swift */,
-				CE366C9C261597BD00506D3F /* IdValidater.swift */,
-				CE366CAD2615AF4100506D3F /* PasswordTextFieldDelegate.swift */,
-				CE366CB22615AF7C00506D3F /* PasswordValidater.swift */,
-				CE366CB72615B9ED00506D3F /* PasswordConfirmTextFieldDelegate.swift */,
-				CE366CBC2615BA3400506D3F /* PasswordConfirmValidater.swift */,
-				CE366CC12615BD2400506D3F /* NameTextFieldDelegate.swift */,
-				CE366CC62615BD3300506D3F /* NameValidater.swift */,
 			);
 			path = "swift-signup";
 			sourceTree = "<group>";
@@ -153,6 +148,38 @@
 				CE366BF72611BA8E00506D3F /* Info.plist */,
 			);
 			path = "swift-signupUITests";
+			sourceTree = "<group>";
+		};
+		CEB52F7D2616BEF7002C1650 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE366BD72611BA8D00506D3F /* ViewController.swift */,
+				CEB52F752616BEEC002C1650 /* PersonalInformationViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CEB52F7E2616BF05002C1650 /* TextFieldDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				CE366C8D2614B17100506D3F /* IdTextFieldDelegate.swift */,
+				CE366C9C261597BD00506D3F /* IdValidater.swift */,
+				CE366CAD2615AF4100506D3F /* PasswordTextFieldDelegate.swift */,
+				CE366CB22615AF7C00506D3F /* PasswordValidater.swift */,
+				CE366CB72615B9ED00506D3F /* PasswordConfirmTextFieldDelegate.swift */,
+				CE366CBC2615BA3400506D3F /* PasswordConfirmValidater.swift */,
+				CE366CC12615BD2400506D3F /* NameTextFieldDelegate.swift */,
+				CE366CC62615BD3300506D3F /* NameValidater.swift */,
+			);
+			path = TextFieldDelegate;
+			sourceTree = "<group>";
+		};
+		CEB52F7F2616BF5E002C1650 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE366C69261401E900506D3F /* ButtonManager.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +315,7 @@
 				CE366CB82615B9EE00506D3F /* PasswordConfirmTextFieldDelegate.swift in Sources */,
 				CE366CBD2615BA3400506D3F /* PasswordConfirmValidater.swift in Sources */,
 				CE366BD82611BA8D00506D3F /* ViewController.swift in Sources */,
+				CEB52F762616BEEC002C1650 /* PersonalInformationViewController.swift in Sources */,
 				CE366C8E2614B17100506D3F /* IdTextFieldDelegate.swift in Sources */,
 				CE366CAE2615AF4100506D3F /* PasswordTextFieldDelegate.swift in Sources */,
 				CE366BD42611BA8D00506D3F /* AppDelegate.swift in Sources */,

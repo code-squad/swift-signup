@@ -8,7 +8,6 @@
 import Foundation
 
 struct ComplianceChecker {
-    let networkManager = NetworkManager()
     
     func check(target textField: SignUpTextField, closure : @escaping (ErrorCheckResult)->Void = {_ in }) -> ErrorCheckResult {
         
@@ -61,7 +60,7 @@ struct ComplianceChecker {
     private func checkIdTextForm(with text : String, closure: @escaping (ErrorCheckResult)->Void) -> ErrorCheckResult{
         var errorChecker = ErrorResult()
         
-        networkManager.getUserList(closure: { userList in
+        NetworkManager.shared.getUserList(closure: { userList in
             if let userList = userList {
                 
                 if userList.contains(text) {

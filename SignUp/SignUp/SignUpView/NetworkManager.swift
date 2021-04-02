@@ -7,6 +7,8 @@
 
 import Foundation
 class NetworkManager {
+    static var shared = NetworkManager()
+    
     private let url = URL.init(string: "https://8r6ruzgzve.execute-api.ap-northeast-2.amazonaws.com/default/SwiftCamp")
     
     func getUserList(closure : @escaping ([String]?) -> Void) {
@@ -16,14 +18,23 @@ class NetworkManager {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         URLSession.shared.dataTask(with: request, completionHandler: {(data,response,error) in
-            guard let data = data else {
-                return
-            }
-            let decoder = try? JSONSerialization.jsonObject(with: data, options: []) as? Array<String>
-            guard let userList = decoder?.compactMap({$0}) else { return }
+            
+            let userList = self.serialize(data: data)
             
             closure(userList)
         }).resume()
+    }
+    
+    func serialize(data : Data?) -> Array<String> {
+        guard let data = data else {
+            return [String]()
+        }
+        let decoder = try? JSONSerialization.jsonObject(with: data, options: []) as? Array<String>
+        guard let userList = decoder?.compactMap({$0}) else {
+            return [String]()
+            
+        }
+        return userList
     }
     
     func postUser(userInfo : UserInformation) {

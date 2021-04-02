@@ -294,7 +294,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QAN-dK-R6d" customClass="InputTextField" customModule="SignUp" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QAN-dK-R6d">
                                                 <rect key="frame" x="0.0" y="25.333333333333314" width="350" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="xdC-fa-0Th"/>
@@ -302,7 +302,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQ5-yU-JTf" customClass="MessageLabel" customModule="SignUp" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQ5-yU-JTf">
                                                 <rect key="frame" x="0.0" y="70.333333333333314" width="350" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15" id="0VW-Li-IAr"/>
@@ -326,7 +326,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="- 없이 입력해주세요. 예) 01012311234" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rL5-r5-vYS" customClass="InputTextField" customModule="SignUp" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="- 없이 입력해주세요. 예) 01012311234" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rL5-r5-vYS">
                                                 <rect key="frame" x="0.0" y="25.333333333333371" width="350" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="AKf-7G-mgg"/>
@@ -334,7 +334,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2h2-dc-2Nx" customClass="MessageLabel" customModule="SignUp" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2h2-dc-2Nx">
                                                 <rect key="frame" x="0.0" y="70.333333333333371" width="350" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15" id="5pf-hs-7KN"/>

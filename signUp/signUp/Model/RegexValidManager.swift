@@ -56,4 +56,12 @@ class RegexValidManager {
         let nameTest = name?.getArrayAfterRegex(regex: "[가-힣]").count ?? 0
         return nameTest >= 2
     }
+    
+    //e-mail Method
+    func isValidStateForEmail(_ email: String?) -> Bool {
+        guard email != nil else { return false }
+        let emailTest = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let pred = NSPredicate(format: "SELF MATCHES %@", emailTest)
+        return pred.evaluate(with: email)
+    }
 }

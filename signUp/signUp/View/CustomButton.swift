@@ -24,7 +24,6 @@ class CustomButton: UIButton {
     }
     
     private func configureButton() {
-        setTitle("다음", for: .normal)
         setTitleColor(.systemGray, for: .normal)
         backgroundColor = UIColor.white
     }

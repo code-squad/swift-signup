@@ -88,7 +88,8 @@ extension PrivacyViewController {
     private func configureNextButton() {
         buttonForNext.frame = CGRect(x: 200, y: 600, width: 140, height: 50)
         buttonForBack.frame = CGRect(x: 50, y: 600, width: 140, height: 50)
-        buttonForBack.setTitle("이전", for: .normal)
+        buttonForNext.setTitle(ButtonTitle.next, for: .normal)
+        buttonForBack.setTitle(ButtonTitle.back, for: .normal)
         buttonForBack.isOn = .on
         view.addSubview(buttonForNext)
         view.addSubview(buttonForBack)

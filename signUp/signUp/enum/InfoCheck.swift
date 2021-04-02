@@ -24,6 +24,6 @@ enum NameCheck{
 }
 
 enum EmailCheck {
-    static let inValid = "올바른 형식의 이메일 주소릴 입력해주세요."
+    static let inValid = "올바른 형식의 이메일 주소를 입력해주세요."
     static let valid = "사용 가능한 이메일 주소입니다."
 }

@@ -16,6 +16,7 @@ class PrivacyViewController: UIViewController {
         configureTitle()
         configureMainStackView()
         setUpLabelAndTextField()
+        setUpSegmentControl()
     }
 }
 
@@ -24,7 +25,7 @@ extension PrivacyViewController {
     
     private func configureTitle() {
         privacyViewTitle = MainTitleLabel(frame: CGRect(x: 125, y: 60, width: 150, height: 40))
-        privacyViewTitle.text = "개인정보"
+        privacyViewTitle.text = MainTitleContents.privacy
         view.addSubview(privacyViewTitle)
     }
     private func configureMainStackView() {
@@ -37,5 +38,17 @@ extension PrivacyViewController {
         privacyStackView.emailInfo.infoLabel.text = PrivacyLabelContents.email
         privacyStackView.cellPhoneInfo.infoLabel.text = PrivacyLabelContents.cellPhone
         privacyStackView.cellPhoneInfo.inputTextField.placeholder = PrivacyLabelContents.cellPhonePlaceholder
+    }
+    
+    private func setUpSegmentControl() {
+        privacyStackView.genderInfo.infoLabel.text = PrivacyLabelContents.gender
+        privacyStackView.genderInfo.segmentControlInfo.addTarget(self, action: #selector(selectGenderInfo), for: .valueChanged)
+    }
+}
+
+extension PrivacyViewController {
+    
+    @objc func selectGenderInfo() {
+        //성별정보 저장구현 예정
     }
 }

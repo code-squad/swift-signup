@@ -22,3 +22,8 @@ enum NameCheck{
     static let nameCount = "2자 이상의 한글 이름을 입력해주세요."
     static let valid = "사용 가능한 이름입니다."
 }
+
+enum EmailCheck {
+    static let inValid = "올바른 형식의 이메일 주소릴 입력해주세요."
+    static let valid = "사용 가능한 이메일 주소입니다."
+}

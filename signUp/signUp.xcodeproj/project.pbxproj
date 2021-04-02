@@ -26,7 +26,6 @@
 		719125982612B890008D1DC2 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719125972612B890008D1DC2 /* Regex.swift */; };
 		71A3C2282615701D0028A2B7 /* RegexValidManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A3C2272615701D0028A2B7 /* RegexValidManager.swift */; };
 		71C598B526144D6C0097ED4C /* NetwordHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C598B426144D6C0097ED4C /* NetwordHandler.swift */; };
-		71C598BA261465EB0097ED4C /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C598B9261465EB0097ED4C /* TextFieldDelegate.swift */; };
 		71C598C026146D7D0097ED4C /* MainLabelContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C598BF26146D7D0097ED4C /* MainLabelContents.swift */; };
 		71E01A3A2616AF8600C3530A /* LabelSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E01A392616AF8600C3530A /* LabelSegmentView.swift */; };
 /* End PBXBuildFile section */
@@ -74,7 +73,6 @@
 		719125972612B890008D1DC2 /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
 		71A3C2272615701D0028A2B7 /* RegexValidManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexValidManager.swift; sourceTree = "<group>"; };
 		71C598B426144D6C0097ED4C /* NetwordHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetwordHandler.swift; sourceTree = "<group>"; };
-		71C598B9261465EB0097ED4C /* TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
 		71C598BF26146D7D0097ED4C /* MainLabelContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLabelContents.swift; sourceTree = "<group>"; };
 		71E01A392616AF8600C3530A /* LabelSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelSegmentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,7 +164,6 @@
 			children = (
 				712DBC1526119DCF00F853A7 /* SignUpMainViewController.swift */,
 				712DBC772611CBD500F853A7 /* PrivacyViewController.swift */,
-				71C598B9261465EB0097ED4C /* TextFieldDelegate.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -366,7 +363,6 @@
 			files = (
 				712DBC1626119DCF00F853A7 /* SignUpMainViewController.swift in Sources */,
 				712DBC1226119DCF00F853A7 /* AppDelegate.swift in Sources */,
-				71C598BA261465EB0097ED4C /* TextFieldDelegate.swift in Sources */,
 				712DBC732611C51100F853A7 /* NextVCButton.swift in Sources */,
 				712DBC782611CBD500F853A7 /* PrivacyViewController.swift in Sources */,
 				71C598B526144D6C0097ED4C /* NetwordHandler.swift in Sources */,

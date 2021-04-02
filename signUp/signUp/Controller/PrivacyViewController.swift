@@ -4,6 +4,7 @@ class PrivacyViewController: UIViewController {
     
     private var privacyViewTitle: MainTitleLabel!
     private var privacyStackView = PrivacyStackView()
+    private let validateManager = RegexValidManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,4 +58,17 @@ extension PrivacyViewController {
 //MARK: -Regex
 
 extension PrivacyViewController {
+    
+    private func isValidStateForEmail()  -> Bool {
+        let email = privacyStackView.emailInfo
+        if !validateManager.isValidStateForEmail(email.inputTextField.text) {
+            privacyStackView.invalidTextFieldBoarder(textField: email.inputTextField)
+            privacyStackView.inValidEmailFor(checkLabel: email.checkLabel)
+            return false
+        } else {
+            privacyStackView.validTextFieldBoarder(textField: email.inputTextField)
+            privacyStackView.validEmailFor(checkLabel: email.checkLabel)
+            return true
+        }
+    }
 }

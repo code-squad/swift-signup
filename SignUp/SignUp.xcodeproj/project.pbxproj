@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B3001FDF261569A900336DA2 /* IDChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3001FDE261569A900336DA2 /* IDChecker.swift */; };
-		B31EC8312612C76800832DD0 /* PWRTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31EC8302612C76800832DD0 /* PWRTextFieldDelegate.swift */; };
+		B3001FE426158AD700336DA2 /* PasswordChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3001FE326158AD700336DA2 /* PasswordChecker.swift */; };
+		B3001FF42615BE5200336DA2 /* ButtonEnableChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3001FF32615BE5200336DA2 /* ButtonEnableChecker.swift */; };
+		B31EC8312612C76800832DD0 /* PasswordReconfirmTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31EC8302612C76800832DD0 /* PasswordReconfirmTextFieldDelegate.swift */; };
 		B31EC8392612F41900832DD0 /* NameTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31EC8382612F41900832DD0 /* NameTextFieldDelegate.swift */; };
 		B343223F2611A0CA0094C04A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B343223E2611A0CA0094C04A /* AppDelegate.swift */; };
 		B34322412611A0CA0094C04A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34322402611A0CA0094C04A /* SceneDelegate.swift */; };
@@ -20,8 +22,7 @@
 		B34322612611A0CA0094C04A /* SignUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34322602611A0CA0094C04A /* SignUpUITests.swift */; };
 		B34322722611AD790094C04A /* IDTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34322712611AD790094C04A /* IDTextFieldDelegate.swift */; };
 		B34322772611BFCF0094C04A /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34322762611BFCF0094C04A /* StringExtension.swift */; };
-		B34322982611D0470094C04A /* PWTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34322972611D0470094C04A /* PWTextFieldDelegate.swift */; };
-		B343229D2611FA000094C04A /* LabelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B343229C2611FA000094C04A /* LabelManager.swift */; };
+		B34322982611D0470094C04A /* PasswordTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34322972611D0470094C04A /* PasswordTextFieldDelegate.swift */; };
 		B393560C2614429D00529AD3 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B393560B2614429D00529AD3 /* RequestManager.swift */; };
 		B393561126144FFF00529AD3 /* IdentifierData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B393561026144FFF00529AD3 /* IdentifierData.swift */; };
 /* End PBXBuildFile section */
@@ -45,7 +46,9 @@
 
 /* Begin PBXFileReference section */
 		B3001FDE261569A900336DA2 /* IDChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDChecker.swift; sourceTree = "<group>"; };
-		B31EC8302612C76800832DD0 /* PWRTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWRTextFieldDelegate.swift; sourceTree = "<group>"; };
+		B3001FE326158AD700336DA2 /* PasswordChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChecker.swift; sourceTree = "<group>"; };
+		B3001FF32615BE5200336DA2 /* ButtonEnableChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonEnableChecker.swift; sourceTree = "<group>"; };
+		B31EC8302612C76800832DD0 /* PasswordReconfirmTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordReconfirmTextFieldDelegate.swift; sourceTree = "<group>"; };
 		B31EC8382612F41900832DD0 /* NameTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextFieldDelegate.swift; sourceTree = "<group>"; };
 		B343223B2611A0CA0094C04A /* SignUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B343223E2611A0CA0094C04A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,8 +66,7 @@
 		B34322622611A0CA0094C04A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B34322712611AD790094C04A /* IDTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDTextFieldDelegate.swift; sourceTree = "<group>"; };
 		B34322762611BFCF0094C04A /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		B34322972611D0470094C04A /* PWTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWTextFieldDelegate.swift; sourceTree = "<group>"; };
-		B343229C2611FA000094C04A /* LabelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelManager.swift; sourceTree = "<group>"; };
+		B34322972611D0470094C04A /* PasswordTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextFieldDelegate.swift; sourceTree = "<group>"; };
 		B393560B2614429D00529AD3 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		B393561026144FFF00529AD3 /* IdentifierData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifierData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,13 +123,14 @@
 				B34322402611A0CA0094C04A /* SceneDelegate.swift */,
 				B34322712611AD790094C04A /* IDTextFieldDelegate.swift */,
 				B3001FDE261569A900336DA2 /* IDChecker.swift */,
-				B34322972611D0470094C04A /* PWTextFieldDelegate.swift */,
-				B31EC8302612C76800832DD0 /* PWRTextFieldDelegate.swift */,
+				B34322972611D0470094C04A /* PasswordTextFieldDelegate.swift */,
+				B3001FE326158AD700336DA2 /* PasswordChecker.swift */,
+				B31EC8302612C76800832DD0 /* PasswordReconfirmTextFieldDelegate.swift */,
 				B31EC8382612F41900832DD0 /* NameTextFieldDelegate.swift */,
 				B34322422611A0CA0094C04A /* ViewController.swift */,
+				B3001FF32615BE5200336DA2 /* ButtonEnableChecker.swift */,
 				B393560B2614429D00529AD3 /* RequestManager.swift */,
 				B393561026144FFF00529AD3 /* IdentifierData.swift */,
-				B343229C2611FA000094C04A /* LabelManager.swift */,
 				B34322762611BFCF0094C04A /* StringExtension.swift */,
 				B34322442611A0CA0094C04A /* Main.storyboard */,
 				B34322472611A0CA0094C04A /* Assets.xcassets */,
@@ -286,14 +289,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3001FDF261569A900336DA2 /* IDChecker.swift in Sources */,
+				B3001FF42615BE5200336DA2 /* ButtonEnableChecker.swift in Sources */,
 				B34322432611A0CA0094C04A /* ViewController.swift in Sources */,
-				B34322982611D0470094C04A /* PWTextFieldDelegate.swift in Sources */,
+				B34322982611D0470094C04A /* PasswordTextFieldDelegate.swift in Sources */,
 				B393561126144FFF00529AD3 /* IdentifierData.swift in Sources */,
-				B31EC8312612C76800832DD0 /* PWRTextFieldDelegate.swift in Sources */,
+				B31EC8312612C76800832DD0 /* PasswordReconfirmTextFieldDelegate.swift in Sources */,
 				B34322722611AD790094C04A /* IDTextFieldDelegate.swift in Sources */,
 				B343223F2611A0CA0094C04A /* AppDelegate.swift in Sources */,
 				B393560C2614429D00529AD3 /* RequestManager.swift in Sources */,
-				B343229D2611FA000094C04A /* LabelManager.swift in Sources */,
+				B3001FE426158AD700336DA2 /* PasswordChecker.swift in Sources */,
 				B31EC8392612F41900832DD0 /* NameTextFieldDelegate.swift in Sources */,
 				B34322772611BFCF0094C04A /* StringExtension.swift in Sources */,
 				B34322412611A0CA0094C04A /* SceneDelegate.swift in Sources */,

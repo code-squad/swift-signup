@@ -9,7 +9,7 @@ import UIKit
 
 class IDTextFieldDelegate: NSObject, UITextFieldDelegate {
     
-    private var IDLabel: UILabel!
+    private var IDLabel: UILabel
     private var IdChecker: IDChecker
     
     init(label: UILabel) {

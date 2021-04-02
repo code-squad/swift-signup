@@ -120,7 +120,7 @@ extension PrivacyViewController {
     }
     
     @objc func nextButtonTouched() {
-        
+        //다음 vc구현 예정
     }
 }
 

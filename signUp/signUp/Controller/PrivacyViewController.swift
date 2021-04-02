@@ -18,6 +18,7 @@ class PrivacyViewController: UIViewController {
         configureMainStackView()
         setUpLabelAndTextField()
         setUpSegmentControl()
+        textEdittingForTextField()
     }
 }
 
@@ -52,6 +53,17 @@ extension PrivacyViewController {
     
     @objc func selectGenderInfo() {
         //성별정보 저장구현 예정
+    }
+    @objc func textFieldEddtingChanged(textField: UITextField) {
+        let _ = isValidStateForEmail()
+    }
+}
+
+//MARK: -@Add Target
+extension PrivacyViewController {
+    private func textEdittingForTextField() {
+        privacyStackView.emailInfo.inputTextField.addTarget(self, action: #selector(textFieldEddtingChanged(textField:)), for: .editingChanged)
+        privacyStackView.cellPhoneInfo.inputTextField.addTarget(self, action: #selector(textFieldEddtingChanged(textField:)), for: .editingChanged)
     }
 }
 

@@ -18,7 +18,7 @@ class signUpTests: XCTestCase {
     override func tearDownWithError() throws {
     }
 
-    func testInValidEmail() {
+    func testInvalidEmail() {
         XCTAssertFalse(regexManager.isValidStateForEmail("asdf@naver"))
         XCTAssertFalse(regexManager.isValidStateForEmail("asdf"))
     }
@@ -27,5 +27,14 @@ class signUpTests: XCTestCase {
         XCTAssertTrue(regexManager.isValidStateForEmail("asdf@naver.com"))
         XCTAssertTrue(regexManager.isValidStateForEmail("asdf@naver.co.kr"))
     }
-
+    
+    func testInvalidPhoneNumber() {
+        XCTAssertFalse(regexManager.isValidStateForPhone("1234"))
+        XCTAssertFalse(regexManager.isValidStateForPhone("010-1234-4567"))
+    }
+    
+    func testValidPhoneNumber() {
+        XCTAssertTrue(regexManager.isValidStateForPhone("01012345678"))
+        XCTAssertTrue(regexManager.isValidStateForPhone("01087652987"))
+    }
 }

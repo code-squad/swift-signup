@@ -84,4 +84,9 @@ extension PrivacyViewController {
             return true
         }
     }
+    
+    private func isValidStateForPhone() -> Bool {
+        let phone = privacyStackView.cellPhoneInfo
+        return false
+    }
 }

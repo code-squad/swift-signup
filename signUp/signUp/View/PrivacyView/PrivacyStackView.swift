@@ -58,4 +58,14 @@ extension PrivacyStackView {
         checkLabel.textColor = UIColor.systemGreen
         checkLabel.text = EmailCheck.valid
     }
+    
+    // Phone Method
+//    func inValidEmailFor(checkLabel: UILabel) {
+//        checkLabel.textColor = UIColor.systemRed
+//        checkLabel.text = EmailCheck.inValid
+//    }
+//    func validEmailFor(checkLabel: UILabel) {
+//        checkLabel.textColor = UIColor.systemGreen
+//        checkLabel.text = EmailCheck.valid
+//    }
 }

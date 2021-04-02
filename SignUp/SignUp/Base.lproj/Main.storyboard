@@ -394,6 +394,7 @@
                     <connections>
                         <outlet property="birthDateTextField" destination="uMn-nS-Inh" id="veM-nx-2RO"/>
                         <outlet property="emailStackView" destination="Ovf-Wu-4nf" id="spr-1E-szS"/>
+                        <outlet property="nextButton" destination="Z9A-cM-OTy" id="jah-Tg-1aC"/>
                         <outlet property="phoneStackView" destination="Pna-Vz-d2X" id="BiP-mD-0Ra"/>
                     </connections>
                 </viewController>

@@ -43,12 +43,5 @@ class BirthDatePicker: UIDatePicker {
         guard let maxDate = calendar.date(from: currnet) else { return Date() }
         return maxDate
     }
-    
-    func deformString(_ selectDate : Date) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        return dateFormatter.string(from: selectDate)
-    }
-    
 }
 

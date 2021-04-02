@@ -32,6 +32,7 @@
 		BFCBC7962615B417009A9F0F /* PhoneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCBC7952615B417009A9F0F /* PhoneViewModel.swift */; };
 		BFCBC7992615D68B009A9F0F /* BirthDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCBC7982615D68B009A9F0F /* BirthDatePicker.swift */; };
 		BFCBC79D2615E74D009A9F0F /* BirthDateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCBC79C2615E74D009A9F0F /* BirthDateTextField.swift */; };
+		BFCBC7A0261610B6009A9F0F /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCBC79F261610B6009A9F0F /* Date+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		BFCBC7952615B417009A9F0F /* PhoneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewModel.swift; sourceTree = "<group>"; };
 		BFCBC7982615D68B009A9F0F /* BirthDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthDatePicker.swift; sourceTree = "<group>"; };
 		BFCBC79C2615E74D009A9F0F /* BirthDateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthDateTextField.swift; sourceTree = "<group>"; };
+		BFCBC79F261610B6009A9F0F /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				BF11F67B2611C18E006AC76C /* UITextField+Extension.swift */,
+				BFCBC79F261610B6009A9F0F /* Date+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				BF11F6672611996F006AC76C /* ViewController.swift in Sources */,
 				BFC926082614A47B00D4FBD0 /* IdViewModel.swift in Sources */,
 				BF0E753226132D7200D513B4 /* MessageLabel.swift in Sources */,
+				BFCBC7A0261610B6009A9F0F /* Date+Extension.swift in Sources */,
 				BFCBC78B2615A745009A9F0F /* Serviceable.swift in Sources */,
 				BFC925FE26149A5800D4FBD0 /* NameViewModel.swift in Sources */,
 				BF11F67C2611C18E006AC76C /* UITextField+Extension.swift in Sources */,

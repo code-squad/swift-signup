@@ -27,3 +27,8 @@ enum EmailCheck {
     static let inValid = "올바른 형식의 이메일 주소를 입력해주세요."
     static let valid = "사용 가능한 이메일 주소입니다."
 }
+
+enum PhoneCheck {
+    static let inValid = "올바른 형식의 전화번호를 입력해주세요."
+    static let valid = "사용 가능한 전화번호입니다."
+}

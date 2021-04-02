@@ -8,22 +8,27 @@
 import Foundation
 
 struct RegularExpression {
-    static let digit = "[:digit:]"
-    static let lower = "[:lower:]"
-    static let upper = "[:upper:]"
-    static let special = "[:punct:]"
-    static let rangeOfId = "^().{8,16}"
-    static let rangeOfPassword = "^().{5,20}"
-}
-
-struct ValidationCheckService {
+    
     typealias Length = (start : Int, end: Int)
     
     static let LengthOfPassword : Length = (5,20)
     static let LengthOfId : Length = (8,16)
     
+    static let digit = "[:digit:]"
+    static let lower = "[:lower:]"
+    static let upper = "[:upper:]"
+    static let special = "[:punct:]"
+    static let rangeOfId = "^().{\(LengthOfId.start),\(LengthOfId.end)}"
+    static let rangeOfPassword = "^().{\(LengthOfPassword.start),\(LengthOfPassword.end)}"
+}
+
+struct ValidationCheckService {
+
     static func isValidId(with text : String) -> IDValidState.State {
         // 영문 소문자, 숫자, 특수기호(_,-), 5-20자
+        if text.isEmpty {
+            return .empty
+        }
         if !regularExpressionCheck(with: RegularExpression.digit, target: text) {
             return .inValid
         } else {

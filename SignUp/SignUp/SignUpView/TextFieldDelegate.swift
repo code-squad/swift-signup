@@ -11,7 +11,7 @@ class TextFieldDelegate: NSObject, UITextFieldDelegate {
     
     let complianceChecker = ComplianceChecker()
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    func textFieldDidChangeSelection(_ textField: UITextField) {
         guard let textField = textField as? SignUpTextField else {
             return
         }
@@ -21,6 +21,8 @@ class TextFieldDelegate: NSObject, UITextFieldDelegate {
         })
         
         textField.changeStyle(with: checkResult)
+        
+        return
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

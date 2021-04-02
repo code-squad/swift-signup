@@ -58,27 +58,34 @@ struct ComplianceChecker {
     }
     
     private func checkIdTextForm(with text : String, closure: @escaping (ErrorCheckResult)->Void) -> ErrorCheckResult{
-        var errorChecker = ErrorResult()
+        let errorChecker = ErrorResult()
+        
+        if !regexChekcing(target: text, pattern: "([^A-Z][0-9a-z-_]).{3,18}") {
+            errorChecker.isError = true
+            errorChecker.message = ErrorMessage.idIneligible.rawValue
+            return errorChecker
+        }
         
         NetworkManager.shared.getUserList(closure: { userList in
             if let userList = userList {
-                
-                if userList.contains(text) {
-                    errorChecker.isError = true
-                    errorChecker.message = ErrorMessage.idUsed.rawValue
-                } else {
-                    errorChecker.isError = false
-                    errorChecker.message = ErrorMessage.idIsOk.rawValue
-                }
-                
-                if !regexChekcing(target: text, pattern: "([^A-Z][0-9a-z-_]).{3,18}") {
-                    errorChecker.isError = true
-                    errorChecker.message = ErrorMessage.idIneligible.rawValue
-                }
-                closure(errorChecker)
+                decideIdError(target: text, array: userList, do: closure)
             }
         })
         return errorChecker
+    }
+    
+    private func decideIdError (target text : String, array userList : [String], do closure: @escaping (ErrorCheckResult)->Void) {
+        let errorChecker = ErrorResult()
+        
+        if userList.contains(text) {
+            errorChecker.isError = true
+            errorChecker.message = ErrorMessage.idUsed.rawValue
+        } else {
+            errorChecker.isError = false
+            errorChecker.message = ErrorMessage.idIsOk.rawValue
+        }
+        
+        closure(errorChecker)
     }
     
     private func checkPwTextForm(with text : String) -> ErrorCheckResult {

@@ -12,7 +12,7 @@ enum MainLabelContents {
 enum PrivacyLabelContents {
     static let birthday = "생년월일"
     static let gender = "성별"
-    static let genderItems = ["남성", "여성"]
+    static let genderItems = ["여자", "남자"]
     static let email = "이메일"
     static let cellPhone = "휴대전화"
     static let cellPhonePlaceholder = "- 없이 입력해주세요. 예) 01012345678"

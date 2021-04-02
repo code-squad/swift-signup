@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Efo-IM-hPF">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,7 +13,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SignUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="회원가입" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ou3-V5-45Z">
@@ -127,11 +128,11 @@
                         <outlet property="IDTextField" destination="wBT-SI-QIh" id="ZoV-k2-93i"/>
                         <outlet property="PWRTextField" destination="KYx-d2-dcY" id="TCK-bd-hr9"/>
                         <outlet property="PWTextField" destination="5yS-ln-BRF" id="k9E-ql-A4G"/>
-                        <outlet property="PasswordReconfirmeconfirmLabel" destination="Hzp-a5-Cwj" id="LtH-wd-xV5"/>
                         <outlet property="nameCheckLabel" destination="es4-wt-1gG" id="c1C-TH-YfG"/>
                         <outlet property="nameTextField" destination="xqw-KQ-5h9" id="HHc-1p-9KU"/>
                         <outlet property="nextButton" destination="8Ec-pp-ua3" id="gAc-nq-HPp"/>
                         <outlet property="passwordCheckLabel" destination="732-HQ-wkR" id="wiS-Nu-Csh"/>
+                        <outlet property="passwordReconfirmLabel" destination="Hzp-a5-Cwj" id="6Ns-xj-I4b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -143,7 +144,7 @@
             <objects>
                 <viewController storyboardIdentifier="PrivacyViewController" id="P0a-Zz-hGT" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yot-QB-YCw">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="AU2-lg-ebL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -160,12 +161,10 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Efo-IM-hPF" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0DD-cd-gZ3">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3Uv-5m-GVk">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>

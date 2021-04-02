@@ -116,3 +116,32 @@ class TextFieldDelegate: NSObject, UITextFieldDelegate {
 
 ### 실행화면
 <img src="https://user-images.githubusercontent.com/74946802/113122755-e3b00480-924e-11eb-9737-347c8aa17437.gif" width="300" height="600">
+
+## step.3
+
+### DatePicker
+```swift
+private func setDatePicker() {
+    let birthdayTextField = privacyStackView.birthdayInfo.inputTextField
+    datePicker = UIDatePicker(frame: CGRect(x: 0, y: 0, width: 300, height: 400))
+    datePicker.datePickerMode = .date
+    datePicker.preferredDatePickerStyle = .wheels
+    datePicker.maximumDate = DateFormatManager.setUpMaxDateRagne()
+    datePicker.minimumDate = DateFormatManager.setUpMinDateRange()
+    birthdayTextField.inputView = datePicker
+
+    let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
+    let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+    let cancel = UIBarButtonItem(title: "Cancel", style: .plain, target: nil, action: #selector(datePickerCancelled))
+    let done = UIBarButtonItem(title: "Done", style: .plain, target: nil, action: #selector(datePickerSelected))
+    toolBar.setItems([cancel, flexible, done], animated: false)
+    birthdayTextField.inputAccessoryView = toolBar
+}
+```
+- UIDatePicker 활용하여 날짜를 선택하면 생년월일 TextField에 값 입력 구현
+- 선택가능한 나이는 15세 ~ 99세로 설정
+- ToolBar사용을 의도한 것은 아니었으나, 별도 구현 방법이 떠오르지않아 툴바를 사용하여 구현
+
+#### 실행화면
+
+<img src="https://user-images.githubusercontent.com/74946802/113413037-b56c2980-93f4-11eb-9496-e91d6351e92e.gif" width="300" height="600">

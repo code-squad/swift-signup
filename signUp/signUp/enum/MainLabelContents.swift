@@ -22,3 +22,8 @@ enum MainTitleContents {
     static let main = "회원가입"
     static let privacy = "개인정보"
 }
+
+enum ButtonTitle {
+    static let next = "다음"
+    static let back = "이전"
+}

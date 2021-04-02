@@ -50,8 +50,10 @@ extension PrivacyViewController {
     private func setUpLabelAndTextField() {
         privacyStackView.birthdayInfo.infoLabel.text = PrivacyLabelContents.birthday
         privacyStackView.emailInfo.infoLabel.text = PrivacyLabelContents.email
+        privacyStackView.emailInfo.inputTextField.keyboardType = .emailAddress
         privacyStackView.cellPhoneInfo.infoLabel.text = PrivacyLabelContents.cellPhone
         privacyStackView.cellPhoneInfo.inputTextField.placeholder = PrivacyLabelContents.cellPhonePlaceholder
+        privacyStackView.cellPhoneInfo.inputTextField.keyboardType = .numberPad
     }
     
     private func setUpSegmentControl() {

@@ -28,6 +28,7 @@
 		71C598B526144D6C0097ED4C /* NetwordHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C598B426144D6C0097ED4C /* NetwordHandler.swift */; };
 		71C598BA261465EB0097ED4C /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C598B9261465EB0097ED4C /* TextFieldDelegate.swift */; };
 		71C598C026146D7D0097ED4C /* MainLabelContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C598BF26146D7D0097ED4C /* MainLabelContents.swift */; };
+		71E01A3A2616AF8600C3530A /* LabelSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E01A392616AF8600C3530A /* LabelSegmentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		71C598B426144D6C0097ED4C /* NetwordHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetwordHandler.swift; sourceTree = "<group>"; };
 		71C598B9261465EB0097ED4C /* TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
 		71C598BF26146D7D0097ED4C /* MainLabelContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLabelContents.swift; sourceTree = "<group>"; };
+		71E01A392616AF8600C3530A /* LabelSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelSegmentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 			children = (
 				717F73532615AECF0034E697 /* PrivacyStackView.swift */,
 				717F735B2615B24C0034E697 /* GenderSegmentedControl.swift */,
+				71E01A392616AF8600C3530A /* LabelSegmentView.swift */,
 			);
 			path = PrivacyView;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				717F735C2615B24C0034E697 /* GenderSegmentedControl.swift in Sources */,
 				712DBC662611B81100F853A7 /* EachInfoView.swift in Sources */,
 				71A3C2282615701D0028A2B7 /* RegexValidManager.swift in Sources */,
+				71E01A3A2616AF8600C3530A /* LabelSegmentView.swift in Sources */,
 				712DBC612611B44B00F853A7 /* MainInfoStackView.swift in Sources */,
 				717F73542615AECF0034E697 /* PrivacyStackView.swift in Sources */,
 				71C598C026146D7D0097ED4C /* MainLabelContents.swift in Sources */,

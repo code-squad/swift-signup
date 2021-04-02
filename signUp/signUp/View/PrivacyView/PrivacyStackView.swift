@@ -3,7 +3,7 @@ import UIKit
 class PrivacyStackView: UIStackView {
     
     var birthdayInfo = EachInfoView()
-    var genderInfo = GenderSegmentedControl()
+    var genderInfo = LabelSegmentView()
     var emailInfo = EachInfoView()
     var cellPhoneInfo = EachInfoView()
     

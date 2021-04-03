@@ -25,27 +25,10 @@ class PasswordFieldDelegate: NSObject, UITextFieldDelegate {
             presenter.updateLabel(with: PasswordCheck.empty.rawValue)
             return
         }
-        let result = validateFormat(for: text)
-        presenter.updateLabel(with: result)
-    }
-    
-    func validateFormat(for password: String) -> String {
-        let upperPredicate = NSPredicate(format:"SELF MATCHES %@", "(?=.*[A-Z])[A-Za-z0-9!@#$%].*$")
-        let numberPredicate = NSPredicate(format:"SELF MATCHES %@", "(?=.*[0-9])[A-Za-z0-9!@#$%].*$")
-        let specialCharPredicate = NSPredicate(format:"SELF MATCHES %@", "(?=.*[!@#$%])[A-Za-z0-9!@#$%].*$")
-        if password.count < 8 || password.count > 16 {
-            return PasswordCheck.notEnoughLength.rawValue
+        
+        FormatManager.validate(password: text) { message in
+            presenter.updateLabel(with: message)
         }
-        if !upperPredicate.evaluate(with: password) {
-            return PasswordCheck.noUppercase.rawValue
-        }
-        if !numberPredicate.evaluate(with: password) {
-            return PasswordCheck.noNumber.rawValue
-        }
-        if !specialCharPredicate.evaluate(with: password) {
-            return PasswordCheck.noSpecialChar.rawValue
-        }
-        return PasswordCheck.safe.rawValue
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

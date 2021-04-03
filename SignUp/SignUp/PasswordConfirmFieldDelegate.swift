@@ -9,26 +9,29 @@ import UIKit
 
 class PasswordConfirmFieldDelegate: NSObject, UITextFieldDelegate {
     var passwordConfirmHandler: (() -> Bool)?
-    var updateLabelHandler: (((PasswordCheck, UIColor)) -> Void)?
     var firstResponserHandler: (() -> Void)?
+    private let presenter: PasswordConfirmPresenter
+    
+    init(presenter: PasswordConfirmPresenter) {
+        self.presenter = presenter
+    }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        textField.layer.borderWidth = 1
-        textField.layer.borderColor = UIColor.systemBlue.cgColor
+        presenter.activate()
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        textField.layer.borderWidth = 0
+        presenter.unActivate()
         guard let text = textField.text?.replacingOccurrences(of: " ", with: ""), !text.isEmpty else {
             return
         }
-        guard let handler = passwordConfirmHandler else {
+        guard let confirm = passwordConfirmHandler else {
             return
         }
-        if handler() {
-            updateLabelHandler?((.correspond, .systemGreen))
+        if confirm() {
+            presenter.updateLabel(with: PasswordCheck.correspond.rawValue)
         } else {
-            updateLabelHandler?((.notCorrespond, .systemRed))
+            presenter.updateLabel(with: PasswordCheck.notCorrespond.rawValue)
         }
     }
     

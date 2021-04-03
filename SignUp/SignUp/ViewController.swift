@@ -9,89 +9,56 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var inputForId: UITextField!
-    @IBOutlet weak var inputForPassword: UITextField!
-    @IBOutlet weak var inputForPasswordConfirm: UITextField!
-    @IBOutlet weak var inputForName: UITextField!
+    @IBOutlet weak var idView: IdView!
+    @IBOutlet weak var passwordView: PasswordView!
+    @IBOutlet weak var passwordConfirmView: PasswordConfirmView!
+    @IBOutlet weak var nameView: NameView!
     
-    @IBOutlet weak var messageForId: UILabel!
-    @IBOutlet weak var messageForPassword: UILabel!
-    @IBOutlet weak var messageForPasswordConfirm: UILabel!
-    @IBOutlet weak var messageForName: UILabel!
+    private let idpresenter = IdPresenter()
+    private let passwordPresenter = PasswordPresenter()
+    private let passwordConfirmPresenter = PasswordConfirmPresenter()
+    private let namePresenter = NamePresenter()
     
-    private let idFieldDelegate = IdFieldDelegate()
-    private let passwordFieldDelegate = PasswordFieldDelegate()
-    private let passwordConfirmFieldDelegate = PasswordConfirmFieldDelegate()
-    private let nameFieldDelegate = NameFieldDelegate()
+    private lazy var idFieldDelegate = IdFieldDelegate(presenter: idpresenter)
+    private lazy var passwordFieldDelegate = PasswordFieldDelegate(presenter: passwordPresenter)
+    private lazy var passwordConfirmFieldDelegate = PasswordConfirmFieldDelegate(presenter: passwordConfirmPresenter)
+    private lazy var nameFieldDelegate = NameFieldDelegate(presenter: namePresenter)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setTextFieldDelegate()
-        setUpdateLabelHandler()
+        idpresenter.setView(idView)
+        idView.field.delegate = idFieldDelegate
+        idView.field.becomeFirstResponder()
+        
+        passwordPresenter.setView(passwordView)
+        passwordView.field.delegate = passwordFieldDelegate
+        
+        passwordConfirmPresenter.setView(passwordConfirmView)
+        passwordConfirmView.field.delegate = passwordConfirmFieldDelegate
+        
+        namePresenter.setView(nameView)
+        nameView.field.delegate = nameFieldDelegate
+        
         setFirstResponderHandler()
-        passwordConfirmFieldDelegate.passwordConfirmHandler = checkPasswordCorrespond
-        
-        messageForId.text = ""
-        messageForPassword.text = ""
-        messageForPasswordConfirm.text = ""
-        messageForName.text = ""
-        
-        inputForId.becomeFirstResponder()
+        passwordConfirmHandler()
     }
-
-    func checkPasswordCorrespond() -> Bool {
-        return inputForPassword.text == inputForPasswordConfirm.text
-    }
-    
-    func setTextFieldDelegate() {
-        inputForId.delegate = idFieldDelegate
-        inputForPassword.delegate = passwordFieldDelegate
-        inputForPasswordConfirm.delegate = passwordConfirmFieldDelegate
-        inputForName.delegate = nameFieldDelegate
-    }
-    
-    func setUpdateLabelHandler() {
-        idFieldDelegate.updateLabelHandler = { data in
-            DispatchQueue.main.async {
-                self.messageForId.text = data.0.rawValue
-                self.messageForId.textColor = data.1
-            }
-        }
-        
-        passwordFieldDelegate.updateLabelHandler = { data in
-            DispatchQueue.main.async {
-                self.messageForPassword.text = data.0.rawValue
-                self.messageForPassword.textColor = data.1
-            }
-        }
-        
-        passwordConfirmFieldDelegate.updateLabelHandler = { data in
-            DispatchQueue.main.async {
-                self.messageForPasswordConfirm.text = data.0.rawValue
-                self.messageForPasswordConfirm.textColor = data.1
-            }
-        }
-        
-        nameFieldDelegate.updateLabelHandler = { data in
-            DispatchQueue.main.async {
-                self.messageForName.text = data.0.rawValue
-                self.messageForName.textColor = data.1
-            }
+ 
+    func passwordConfirmHandler() {
+        passwordConfirmFieldDelegate.passwordConfirmHandler = { [weak self] in
+            return self?.passwordView.field.text == self?.passwordConfirmView.field.text
         }
     }
     
-    func setFirstResponderHandler() {
-        idFieldDelegate.firstResponserHandler = {
-            self.inputForPassword.becomeFirstResponder()
+    private func setFirstResponderHandler() {
+        idFieldDelegate.firstResponserHandler = { [weak self] in
+            self?.passwordView.field.becomeFirstResponder()
         }
-        
-        passwordFieldDelegate.firstResponserHandler = {
-            self.inputForPasswordConfirm.becomeFirstResponder()
+        passwordFieldDelegate.firstResponserHandler = { [weak self] in
+            self?.passwordConfirmView.field.becomeFirstResponder()
         }
-        
-        passwordConfirmFieldDelegate.firstResponserHandler = {
-            self.inputForName.becomeFirstResponder()
+        passwordConfirmFieldDelegate.firstResponserHandler = { [weak self] in
+            self?.nameView.field.becomeFirstResponder()
         }
     }
 }

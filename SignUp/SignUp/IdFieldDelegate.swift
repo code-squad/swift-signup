@@ -8,22 +8,24 @@
 import UIKit
 
 class IdFieldDelegate: NSObject, UITextFieldDelegate {
-    
-    var updateLabelHandler: (((IdCheck, UIColor)) -> Void)?
     var firstResponserHandler: (() -> Void)?
+    private let presenter: IdPresenter
+    
+    init(presenter: IdPresenter) {
+        self.presenter = presenter
+    }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        textField.layer.borderWidth = 1
-        textField.layer.borderColor = UIColor.systemBlue.cgColor
+        presenter.activate()
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        textField.layer.borderWidth = 0
+        presenter.unActivate()
         guard let text = textField.text?.replacingOccurrences(of: " ", with: ""), !text.isEmpty else {
             return
         }
         if !validateFormat(for: text) {
-            updateLabelHandler?((.unavailable, .systemRed ))
+            presenter.updateLabel(with: IdCheck.unavailable.rawValue)
         } else {
             validateAvailable(for: text)
         }
@@ -59,9 +61,9 @@ class IdFieldDelegate: NSObject, UITextFieldDelegate {
             }
             
             if status == "200" {
-                self.updateLabelHandler?((.available, .systemGreen))
+                self.presenter.updateLabel(with: IdCheck.available.rawValue)
             } else {
-                self.updateLabelHandler?((.alreadyUsing, .systemRed))
+                self.presenter.updateLabel(with: IdCheck.alreadyUsing.rawValue)
             }
         }).resume()
     }

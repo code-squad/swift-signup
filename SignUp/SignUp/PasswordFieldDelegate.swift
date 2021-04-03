@@ -8,42 +8,44 @@
 import UIKit
 
 class PasswordFieldDelegate: NSObject, UITextFieldDelegate {
-    
-    var updateLabelHandler: (((PasswordCheck, UIColor)) -> Void)?
     var firstResponserHandler: (() -> Void)?
- 
+    private let presenter: PasswordPresenter
+    
+    init(presenter: PasswordPresenter) {
+        self.presenter = presenter
+    }
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        textField.layer.borderWidth = 1
-        textField.layer.borderColor = UIColor.systemBlue.cgColor
+        presenter.activate()
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        textField.layer.borderWidth = 0
-        guard let text = textField.text?.replacingOccurrences(of: " ", with: ""), !text.isEmpty,
-              let data = validateFormat(for: text) else {
-            updateLabelHandler?((.empty, .systemRed))
+        presenter.unActivate()
+        guard let text = textField.text?.replacingOccurrences(of: " ", with: ""), !text.isEmpty else {
+            presenter.updateLabel(with: PasswordCheck.empty.rawValue)
             return
         }
-        updateLabelHandler?(data)
+        let result = validateFormat(for: text)
+        presenter.updateLabel(with: result)
     }
     
-    func validateFormat(for password: String) -> (PasswordCheck, UIColor)? {
+    func validateFormat(for password: String) -> String {
         let upperPredicate = NSPredicate(format:"SELF MATCHES %@", "(?=.*[A-Z])[A-Za-z0-9!@#$%].*$")
         let numberPredicate = NSPredicate(format:"SELF MATCHES %@", "(?=.*[0-9])[A-Za-z0-9!@#$%].*$")
         let specialCharPredicate = NSPredicate(format:"SELF MATCHES %@", "(?=.*[!@#$%])[A-Za-z0-9!@#$%].*$")
         if password.count < 8 || password.count > 16 {
-            return (.notEnoughLength, .systemRed)
+            return PasswordCheck.notEnoughLength.rawValue
         }
         if !upperPredicate.evaluate(with: password) {
-            return (.noUppercase, .systemRed)
+            return PasswordCheck.noUppercase.rawValue
         }
         if !numberPredicate.evaluate(with: password) {
-            return (.noNumber, .systemRed)
+            return PasswordCheck.noNumber.rawValue
         }
         if !specialCharPredicate.evaluate(with: password) {
-            return (.noSpecialChar, .systemRed)
+            return PasswordCheck.noSpecialChar.rawValue
         }
-        return (.safe, .systemGreen)
+        return PasswordCheck.safe.rawValue
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

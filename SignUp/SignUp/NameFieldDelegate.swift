@@ -8,20 +8,23 @@
 import UIKit
 
 class NameFieldDelegate: NSObject, UITextFieldDelegate {
-    var updateLabelHandler: (((NameCheck, UIColor?)) -> Void)?
+    private let presenter: NamePresenter
+    
+    init(presenter: NamePresenter) {
+        self.presenter = presenter
+    }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        textField.layer.borderWidth = 1
-        textField.layer.borderColor = UIColor.systemBlue.cgColor
+        presenter.activate()
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        textField.layer.borderWidth = 0
+        presenter.unActivate()
         guard let text = textField.text?.replacingOccurrences(of: " ", with: ""), !text.isEmpty else {
-            updateLabelHandler?((.empty, .systemRed))
+            presenter.updateLabel(with: NameCheck.empty.rawValue)
             return
         }
-        updateLabelHandler?((.notEmpty, nil))
+        presenter.updateLabel(with: NameCheck.notEmpty.rawValue)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

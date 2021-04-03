@@ -17,6 +17,11 @@
 		D018C5562612083800991D43 /* PasswordFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D018C5552612083800991D43 /* PasswordFieldDelegate.swift */; };
 		D018C55F2613092100991D43 /* PasswordConfirmFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D018C55E2613092100991D43 /* PasswordConfirmFieldDelegate.swift */; };
 		D018C56326130A3F00991D43 /* NameFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D018C56226130A3F00991D43 /* NameFieldDelegate.swift */; };
+		D02268C82618370C003E8AC0 /* PasswordConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02268C42618370B003E8AC0 /* PasswordConfirmView.swift */; };
+		D02268C92618370C003E8AC0 /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02268C52618370B003E8AC0 /* NameView.swift */; };
+		D02268CA2618370C003E8AC0 /* IdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02268C62618370C003E8AC0 /* IdView.swift */; };
+		D02268CB2618370C003E8AC0 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02268C72618370C003E8AC0 /* PasswordView.swift */; };
+		D02268D026183735003E8AC0 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02268CF26183735003E8AC0 /* Presenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,11 @@
 		D018C5552612083800991D43 /* PasswordFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordFieldDelegate.swift; sourceTree = "<group>"; };
 		D018C55E2613092100991D43 /* PasswordConfirmFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordConfirmFieldDelegate.swift; sourceTree = "<group>"; };
 		D018C56226130A3F00991D43 /* NameFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameFieldDelegate.swift; sourceTree = "<group>"; };
+		D02268C42618370B003E8AC0 /* PasswordConfirmView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordConfirmView.swift; sourceTree = "<group>"; };
+		D02268C52618370B003E8AC0 /* NameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
+		D02268C62618370C003E8AC0 /* IdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdView.swift; sourceTree = "<group>"; };
+		D02268C72618370C003E8AC0 /* PasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
+		D02268CF26183735003E8AC0 /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,12 +81,25 @@
 				D018C5552612083800991D43 /* PasswordFieldDelegate.swift */,
 				D018C55E2613092100991D43 /* PasswordConfirmFieldDelegate.swift */,
 				D018C56226130A3F00991D43 /* NameFieldDelegate.swift */,
+				D02268CF26183735003E8AC0 /* Presenter.swift */,
+				D02268CD26183712003E8AC0 /* View */,
 				D018C5192611A63900991D43 /* Main.storyboard */,
 				D018C51C2611A63A00991D43 /* Assets.xcassets */,
 				D018C51E2611A63A00991D43 /* LaunchScreen.storyboard */,
 				D018C5212611A63A00991D43 /* Info.plist */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		D02268CD26183712003E8AC0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D02268C62618370C003E8AC0 /* IdView.swift */,
+				D02268C52618370B003E8AC0 /* NameView.swift */,
+				D02268C42618370B003E8AC0 /* PasswordConfirmView.swift */,
+				D02268C72618370C003E8AC0 /* PasswordView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,13 +172,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D02268C82618370C003E8AC0 /* PasswordConfirmView.swift in Sources */,
+				D02268CB2618370C003E8AC0 /* PasswordView.swift in Sources */,
 				D018C5562612083800991D43 /* PasswordFieldDelegate.swift in Sources */,
+				D02268C92618370C003E8AC0 /* NameView.swift in Sources */,
 				D018C55F2613092100991D43 /* PasswordConfirmFieldDelegate.swift in Sources */,
 				D018C5512611F81D00991D43 /* IdFieldDelegate.swift in Sources */,
+				D02268D026183735003E8AC0 /* Presenter.swift in Sources */,
 				D018C5182611A63900991D43 /* ViewController.swift in Sources */,
 				D018C56326130A3F00991D43 /* NameFieldDelegate.swift in Sources */,
 				D018C5142611A63900991D43 /* AppDelegate.swift in Sources */,
 				D018C5162611A63900991D43 /* SceneDelegate.swift in Sources */,
+				D02268CA2618370C003E8AC0 /* IdView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

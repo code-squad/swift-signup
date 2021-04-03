@@ -22,6 +22,8 @@
 		D02268CA2618370C003E8AC0 /* IdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02268C62618370C003E8AC0 /* IdView.swift */; };
 		D02268CB2618370C003E8AC0 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02268C72618370C003E8AC0 /* PasswordView.swift */; };
 		D02268D026183735003E8AC0 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02268CF26183735003E8AC0 /* Presenter.swift */; };
+		D02268D32618382C003E8AC0 /* ValidateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02268D22618382C003E8AC0 /* ValidateManager.swift */; };
+		D02268D6261838A1003E8AC0 /* FormatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02268D5261838A1003E8AC0 /* FormatManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		D02268C62618370C003E8AC0 /* IdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdView.swift; sourceTree = "<group>"; };
 		D02268C72618370C003E8AC0 /* PasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
 		D02268CF26183735003E8AC0 /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		D02268D22618382C003E8AC0 /* ValidateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateManager.swift; sourceTree = "<group>"; };
+		D02268D5261838A1003E8AC0 /* FormatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 				D018C5172611A63900991D43 /* ViewController.swift */,
 				D018C5502611F81D00991D43 /* IdFieldDelegate.swift */,
 				D018C5552612083800991D43 /* PasswordFieldDelegate.swift */,
+				D02268D22618382C003E8AC0 /* ValidateManager.swift */,
+				D02268D5261838A1003E8AC0 /* FormatManager.swift */,
 				D018C55E2613092100991D43 /* PasswordConfirmFieldDelegate.swift */,
 				D018C56226130A3F00991D43 /* NameFieldDelegate.swift */,
 				D02268CF26183735003E8AC0 /* Presenter.swift */,
@@ -172,12 +178,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D02268D6261838A1003E8AC0 /* FormatManager.swift in Sources */,
 				D02268C82618370C003E8AC0 /* PasswordConfirmView.swift in Sources */,
 				D02268CB2618370C003E8AC0 /* PasswordView.swift in Sources */,
 				D018C5562612083800991D43 /* PasswordFieldDelegate.swift in Sources */,
 				D02268C92618370C003E8AC0 /* NameView.swift in Sources */,
 				D018C55F2613092100991D43 /* PasswordConfirmFieldDelegate.swift in Sources */,
 				D018C5512611F81D00991D43 /* IdFieldDelegate.swift in Sources */,
+				D02268D32618382C003E8AC0 /* ValidateManager.swift in Sources */,
 				D02268D026183735003E8AC0 /* Presenter.swift in Sources */,
 				D018C5182611A63900991D43 /* ViewController.swift in Sources */,
 				D018C56326130A3F00991D43 /* NameFieldDelegate.swift in Sources */,

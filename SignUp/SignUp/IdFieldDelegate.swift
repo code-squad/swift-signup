@@ -38,7 +38,7 @@ class IdFieldDelegate: NSObject, UITextFieldDelegate {
                 case .success(_):
                     self?.presenter.updateLabel(with: IdCheck.available)
                 case .failure(_):
-                self?.presenter.updateLabel(with: IdCheck.alreadyUsing)
+                    self?.presenter.updateLabel(with: IdCheck.alreadyUsing)
                 }
             }
         }

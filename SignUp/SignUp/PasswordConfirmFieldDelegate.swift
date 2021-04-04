@@ -8,12 +8,14 @@
 import UIKit
 
 class PasswordConfirmFieldDelegate: NSObject, UITextFieldDelegate {
-    var passwordConfirmHandler: (() -> Bool)?
-    var firstResponserHandler: (() -> Void)?
+    private var passwordConfirmHandler: () -> Bool
+    private var firstResponserHandler: () -> Void
     private let presenter: PasswordConfirmPresenter
     
-    init(presenter: PasswordConfirmPresenter) {
+    init(presenter: PasswordConfirmPresenter, firstResponserHandler: @escaping () -> Void, passwordConfirmHandler: @escaping () -> Bool) {
         self.presenter = presenter
+        self.firstResponserHandler = firstResponserHandler
+        self.passwordConfirmHandler = passwordConfirmHandler
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -25,18 +27,15 @@ class PasswordConfirmFieldDelegate: NSObject, UITextFieldDelegate {
         guard let text = textField.text?.replacingOccurrences(of: " ", with: ""), !text.isEmpty else {
             return
         }
-        guard let confirm = passwordConfirmHandler else {
-            return
-        }
-        if confirm() {
-            presenter.updateLabel(with: PasswordCheck.correspond.rawValue)
+        if passwordConfirmHandler() {
+            presenter.updateLabel(with: PasswordCheck.correspond.rawValue, status: true)
         } else {
-            presenter.updateLabel(with: PasswordCheck.notCorrespond.rawValue)
+            presenter.updateLabel(with: PasswordCheck.notCorrespond.rawValue, status: false)
         }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        firstResponserHandler?()
+        firstResponserHandler()
         return true
     }
 }

@@ -12,6 +12,7 @@ class IdPresenter {
     
     func setView(_ view: IdView) {
         self.view = view
+        view.label.text = ""
     }
     
     func unActivate() {
@@ -23,10 +24,10 @@ class IdPresenter {
         view?.field.layer.borderColor = UIColor.systemBlue.cgColor
     }
     
-    func updateLabel(with message: String) {
+    func updateLabel(with message: String, status: Bool) {
         DispatchQueue.main.async { [weak self] in
             self?.view?.label.text = message
-            self?.view?.label.textColor = .systemRed
+            self?.view?.label.textColor = status ? .systemGreen : .systemRed
         }
     }
 }
@@ -36,6 +37,7 @@ class PasswordPresenter {
     
     func setView(_ view: PasswordView) {
         self.view = view
+        view.label.text = ""
     }
     
     func unActivate() {
@@ -47,10 +49,10 @@ class PasswordPresenter {
         view?.field.layer.borderColor = UIColor.systemBlue.cgColor
     }
     
-    func updateLabel(with message: String) {
+    func updateLabel(with message: String, status: Bool) {
         DispatchQueue.main.async { [weak self] in
             self?.view?.label.text = message
-            self?.view?.label.textColor = .systemRed
+            self?.view?.label.textColor = status ? .systemGreen : .systemRed
         }
     }
 }
@@ -60,6 +62,7 @@ class PasswordConfirmPresenter {
     
     func setView(_ view: PasswordConfirmView) {
         self.view = view
+        view.label.text = ""
     }
     
     func unActivate() {
@@ -71,10 +74,10 @@ class PasswordConfirmPresenter {
         view?.field.layer.borderColor = UIColor.systemBlue.cgColor
     }
     
-    func updateLabel(with message: String) {
+    func updateLabel(with message: String, status: Bool) {
         DispatchQueue.main.async { [weak self] in
             self?.view?.label.text = message
-            self?.view?.label.textColor = .systemRed
+            self?.view?.label.textColor = status ? .systemGreen : .systemRed
         }
     }
 }
@@ -84,6 +87,7 @@ class NamePresenter {
     
     func setView(_ view: NameView) {
         self.view = view
+        view.label.text = ""
     }
     
     func unActivate() {
@@ -95,10 +99,10 @@ class NamePresenter {
         view?.field.layer.borderColor = UIColor.systemBlue.cgColor
     }
     
-    func updateLabel(with message: String) {
+    func updateLabel(with message: String, status: Bool) {
         DispatchQueue.main.async { [weak self] in
             self?.view?.label.text = message
-            self?.view?.label.textColor = .systemRed
+            self?.view?.label.textColor = status ? .systemGreen : .systemRed
         }
     }
 }

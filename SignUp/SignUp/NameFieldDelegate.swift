@@ -21,10 +21,10 @@ class NameFieldDelegate: NSObject, UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         presenter.unActivate()
         guard let text = textField.text?.replacingOccurrences(of: " ", with: ""), !text.isEmpty else {
-            presenter.updateLabel(with: NameCheck.empty.rawValue)
+            presenter.updateLabel(with: NameCheck.empty.rawValue, status: false)
             return
         }
-        presenter.updateLabel(with: NameCheck.notEmpty.rawValue)
+        presenter.updateLabel(with: NameCheck.notEmpty.rawValue, status: true)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

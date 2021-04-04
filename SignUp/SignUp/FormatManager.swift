@@ -8,24 +8,24 @@
 import Foundation
 
 class FormatManager {
-    static func validate(password: String, completion: (String) -> Void) {
+    static func validate(password: String, completion: (String, Bool) -> Void) {
         if password.count < 8 || password.count > 16 {
-            completion(PasswordCheck.notEnoughLength.rawValue)
+            completion(PasswordCheck.notEnoughLength.rawValue, false)
             return
         }
         if !match(format: FormatManager.Format.passwordWithUppercase, with: password) {
-            completion(PasswordCheck.noUppercase.rawValue)
+            completion(PasswordCheck.noUppercase.rawValue, false)
             return
         }
         if !match(format: FormatManager.Format.passwordWithNumber, with: password) {
-            completion(PasswordCheck.noNumber.rawValue)
+            completion(PasswordCheck.noNumber.rawValue, false)
             return
         }
         if !match(format: FormatManager.Format.passwordWithSpecialChar, with: password) {
-            completion(PasswordCheck.noSpecialChar.rawValue)
+            completion(PasswordCheck.noSpecialChar.rawValue, false)
             return
         }
-        completion(PasswordCheck.safe.rawValue)
+        completion(PasswordCheck.safe.rawValue, true)
     }
     
     static func match(format: String, with value: String) -> Bool {

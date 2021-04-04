@@ -8,11 +8,12 @@
 import UIKit
 
 class PasswordFieldDelegate: NSObject, UITextFieldDelegate {
-    var firstResponserHandler: (() -> Void)?
+    private var firstResponserHandler: () -> Void
     private let presenter: PasswordPresenter
     
-    init(presenter: PasswordPresenter) {
+    init(presenter: PasswordPresenter, handler: @escaping () -> Void) {
         self.presenter = presenter
+        self.firstResponserHandler = handler
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -22,17 +23,17 @@ class PasswordFieldDelegate: NSObject, UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         presenter.unActivate()
         guard let text = textField.text?.replacingOccurrences(of: " ", with: ""), !text.isEmpty else {
-            presenter.updateLabel(with: PasswordCheck.empty.rawValue)
+            presenter.updateLabel(with: PasswordCheck.empty.rawValue, status: false)
             return
         }
         
-        FormatManager.validate(password: text) { message in
-            presenter.updateLabel(with: message)
+        FormatManager.validate(password: text) { message, status in
+            presenter.updateLabel(with: message, status: status)
         }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        firstResponserHandler?()
+        firstResponserHandler()
         return true
     }
 }

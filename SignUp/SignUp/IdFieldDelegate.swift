@@ -14,11 +14,12 @@ class IdFieldDelegate: NSObject, UITextFieldDelegate {
         static let unavailable = "5~20자의 영문 소문자, 숫자와 특수기호(_)(-)만 사용 가능합니다."
     }
     
-    var firstResponserHandler: (() -> Void)?
+    private let firstResponserHandler: () -> Void
     private let presenter: IdPresenter
     
-    init(presenter: IdPresenter) {
+    init(presenter: IdPresenter, handler: @escaping (() -> Void)) {
         self.presenter = presenter
+        self.firstResponserHandler = handler
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -31,21 +32,21 @@ class IdFieldDelegate: NSObject, UITextFieldDelegate {
             return
         }
         if !FormatManager.match(format: FormatManager.Format.id, with: text) {
-            presenter.updateLabel(with: IdCheck.unavailable)
+            presenter.updateLabel(with: IdCheck.unavailable, status: false)
         } else {
             ValidateManager.validate(for: text) { [weak self] result in
                 switch result {
                 case .success(_):
-                    self?.presenter.updateLabel(with: IdCheck.available)
+                    self?.presenter.updateLabel(with: IdCheck.available, status: true)
                 case .failure(_):
-                    self?.presenter.updateLabel(with: IdCheck.alreadyUsing)
+                    self?.presenter.updateLabel(with: IdCheck.alreadyUsing, status: false)
                 }
             }
         }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        firstResponserHandler?()
+        firstResponserHandler()
         return true
     }
 }

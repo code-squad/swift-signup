@@ -19,9 +19,18 @@ class ViewController: UIViewController {
     private let passwordConfirmPresenter = PasswordConfirmPresenter()
     private let namePresenter = NamePresenter()
     
-    private lazy var idFieldDelegate = IdFieldDelegate(presenter: idpresenter)
-    private lazy var passwordFieldDelegate = PasswordFieldDelegate(presenter: passwordPresenter)
-    private lazy var passwordConfirmFieldDelegate = PasswordConfirmFieldDelegate(presenter: passwordConfirmPresenter)
+    private lazy var idFieldDelegate
+        = IdFieldDelegate(presenter: idpresenter, handler: { [weak self] in
+        self?.passwordView.field.becomeFirstResponder()})
+    private lazy var passwordFieldDelegate
+        = PasswordFieldDelegate(presenter: passwordPresenter, handler: { [weak self] in
+        self?.passwordConfirmView.field.becomeFirstResponder()})
+    private lazy var passwordConfirmFieldDelegate
+        = PasswordConfirmFieldDelegate(presenter: passwordConfirmPresenter,
+                                       firstResponserHandler: { [weak self] in
+                                        self?.nameView.field.becomeFirstResponder()},
+                                       passwordConfirmHandler: { [weak self] in
+                                        return self?.passwordView.field.text == self?.passwordConfirmView.field.text})
     private lazy var nameFieldDelegate = NameFieldDelegate(presenter: namePresenter)
     
     override func viewDidLoad() {
@@ -39,26 +48,5 @@ class ViewController: UIViewController {
         
         namePresenter.setView(nameView)
         nameView.field.delegate = nameFieldDelegate
-        
-        setFirstResponderHandler()
-        passwordConfirmHandler()
-    }
- 
-    func passwordConfirmHandler() {
-        passwordConfirmFieldDelegate.passwordConfirmHandler = { [weak self] in
-            return self?.passwordView.field.text == self?.passwordConfirmView.field.text
-        }
-    }
-    
-    private func setFirstResponderHandler() {
-        idFieldDelegate.firstResponserHandler = { [weak self] in
-            self?.passwordView.field.becomeFirstResponder()
-        }
-        passwordFieldDelegate.firstResponserHandler = { [weak self] in
-            self?.passwordConfirmView.field.becomeFirstResponder()
-        }
-        passwordConfirmFieldDelegate.firstResponserHandler = { [weak self] in
-            self?.nameView.field.becomeFirstResponder()
-        }
     }
 }

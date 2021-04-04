@@ -37,24 +37,29 @@ class NetworkManager {
         return userList
     }
     
-    func postUser(userInfo : UserInformation) {
+    func postUser<T:Codable> (input : T, closure : @escaping (Result<T,Error>) -> Void) {
+        
         guard let url = self.url else {
             return
         }
-        let sendData = try? JSONEncoder().encode(userInfo)
+        
+        let sendData = try? JSONEncoder().encode(input)
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.httpBody = sendData
         
         URLSession.shared.dataTask(with: request, completionHandler: {(data,response,error) in
+            
             guard let data = data else {
-                return
+                return closure(.failure(error!))
             }
-            let decoder = try? JSONDecoder().decode(NetworkResponse.self, from: data)
+            
+            let decoder = try? JSONDecoder().decode(T.self, from: data)
             guard let returnData = decoder else {
-                return
+                return closure(.failure(error!))
             }
-            // 필요한 내용 하단에 구현
+            
+            closure(.success(returnData))
         }).resume()
     }
 }

@@ -24,6 +24,7 @@
 		CE366CBD2615BA3400506D3F /* PasswordConfirmValidater.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366CBC2615BA3400506D3F /* PasswordConfirmValidater.swift */; };
 		CE366CC22615BD2400506D3F /* NameTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366CC12615BD2400506D3F /* NameTextFieldDelegate.swift */; };
 		CE366CC72615BD3300506D3F /* NameValidater.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366CC62615BD3300506D3F /* NameValidater.swift */; };
+		CEA3A5422619B47C007AA664 /* CustomTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3A5412619B47C007AA664 /* CustomTextFieldDelegate.swift */; };
 		CEB52F762616BEEC002C1650 /* PersonalInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB52F752616BEEC002C1650 /* PersonalInformationViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		CE366CBC2615BA3400506D3F /* PasswordConfirmValidater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordConfirmValidater.swift; sourceTree = "<group>"; };
 		CE366CC12615BD2400506D3F /* NameTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextFieldDelegate.swift; sourceTree = "<group>"; };
 		CE366CC62615BD3300506D3F /* NameValidater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameValidater.swift; sourceTree = "<group>"; };
+		CEA3A5412619B47C007AA664 /* CustomTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldDelegate.swift; sourceTree = "<group>"; };
 		CEB52F752616BEEC002C1650 /* PersonalInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,6 +172,7 @@
 				CE366CBC2615BA3400506D3F /* PasswordConfirmValidater.swift */,
 				CE366CC12615BD2400506D3F /* NameTextFieldDelegate.swift */,
 				CE366CC62615BD3300506D3F /* NameValidater.swift */,
+				CEA3A5412619B47C007AA664 /* CustomTextFieldDelegate.swift */,
 			);
 			path = TextFieldDelegate;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				CE366BD42611BA8D00506D3F /* AppDelegate.swift in Sources */,
 				CE366CC22615BD2400506D3F /* NameTextFieldDelegate.swift in Sources */,
 				CE366C9D261597BD00506D3F /* IdValidater.swift in Sources */,
+				CEA3A5422619B47C007AA664 /* CustomTextFieldDelegate.swift in Sources */,
 				CE366BD62611BA8D00506D3F /* SceneDelegate.swift in Sources */,
 				CE366CC72615BD3300506D3F /* NameValidater.swift in Sources */,
 				CE366CB32615AF7C00506D3F /* PasswordValidater.swift in Sources */,

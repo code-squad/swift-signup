@@ -12,11 +12,15 @@ class SignUpViewController: UIViewController {
     @IBOutlet var categoryLabelCollection: [UILabel]!
     @IBOutlet var textFieldCollection: [SignUpTextField]!
     @IBOutlet var informationLabelCollection: [UILabel]!
+    @IBOutlet weak var nextButton: UIButton!
     
     private let textFieldDelegate = TextFieldDelegate()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTextField()
+        NotificationCenter.default.addObserver(self, selector: #selector(changeRelatedUI(noti:)), name: .uiUpdate, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(buttonEnableCheck(noti:)), name: .nextButtonEnableCheck, object: textFieldDelegate)
     }
     
     private func configureTextField() {
@@ -29,6 +33,24 @@ class SignUpViewController: UIViewController {
     
     @IBAction func nextButtonTouched(_ sender: Any) {
         //nextView
+    }
+    
+    @objc func buttonEnableCheck(noti : Notification) {
+        guard let buttonEnable = noti.userInfo?["enable"] as? Bool else {
+            return
+        }
+        nextButton.isEnabled = buttonEnable
+        
+    }
+    
+    @objc func changeRelatedUI(noti : Notification) {
+        guard let textField = noti.object as? SignUpTextField else {
+            return
+        }
+        guard let result = noti.userInfo?["result"] as? ErrorResult else {
+            return
+        }
+        textField.changeStyle(with: result)
     }
 }
 

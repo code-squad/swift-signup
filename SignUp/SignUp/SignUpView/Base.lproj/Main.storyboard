@@ -98,7 +98,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csf-km-MRI">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csf-km-MRI">
                                 <rect key="frame" x="150" y="644" width="114" height="68"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
@@ -156,6 +156,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="HKE-VS-fTt"/>
                     <connections>
+                        <outlet property="nextButton" destination="csf-km-MRI" id="Yvg-tv-Wpn"/>
                         <outletCollection property="categoryLabelCollection" destination="VJx-4Y-Gnu" collectionClass="NSMutableArray" id="x59-q8-mkW"/>
                         <outletCollection property="categoryLabelCollection" destination="rEz-eM-4Vv" collectionClass="NSMutableArray" id="Br3-yg-4SV"/>
                         <outletCollection property="categoryLabelCollection" destination="Iqj-1i-dPb" collectionClass="NSMutableArray" id="8DU-4T-EzX"/>

@@ -17,10 +17,10 @@ class TextFieldDelegate: NSObject, UITextFieldDelegate {
         }
         
         let checkResult = complianceChecker.check(target: textField, closure: { errorChecker in
-            textField.changeStyle(with: errorChecker)
+            NotificationCenter.default.post(name: .uiUpdate, object: textField, userInfo: ["result":errorChecker])
         })
         
-        textField.changeStyle(with: checkResult)
+        NotificationCenter.default.post(name: .uiUpdate, object: textField, userInfo: ["result":checkResult])
         
         return
     }
@@ -48,5 +48,36 @@ class TextFieldDelegate: NSObject, UITextFieldDelegate {
         }
         
         return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        let optionalFieldArray = textField.superview?.subviews.filter({
+            let item = $0 as? SignUpTextField
+            guard item != nil else {
+                return false
+            }
+            return true
+        })
+        
+        guard let fieldArray = optionalFieldArray as? [SignUpTextField] else {
+            return
+        }
+        
+        fieldArray.enumerated().forEach({
+            if $0.element.layer.borderColor != UIColor.green.cgColor {
+                // button disabled
+                NotificationCenter.default.post(name: .nextButtonEnableCheck, object: self, userInfo: ["enable":false])
+                return
+            }
+            
+            if $0.element.text == nil {
+                // button disabled
+                NotificationCenter.default.post(name: .nextButtonEnableCheck, object: self, userInfo: ["enable":false])
+                return
+            }
+            
+            //button enabled
+            NotificationCenter.default.post(name: .nextButtonEnableCheck, object: self, userInfo: ["enable":true])
+        })
     }
 }

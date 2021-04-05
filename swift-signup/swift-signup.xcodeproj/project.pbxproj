@@ -30,6 +30,7 @@
 		CEA3A551261B2F0D007AA664 /* PasswordValidater2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3A550261B2F0D007AA664 /* PasswordValidater2.swift */; };
 		CEA3A556261B30E2007AA664 /* PasswordConfirmValidater2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3A555261B30E2007AA664 /* PasswordConfirmValidater2.swift */; };
 		CEA3A55B261B32DD007AA664 /* NameValidater2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3A55A261B32DD007AA664 /* NameValidater2.swift */; };
+		CEA3A560261B4E9A007AA664 /* Validable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3A55F261B4E9A007AA664 /* Validable.swift */; };
 		CEB52F762616BEEC002C1650 /* PersonalInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB52F752616BEEC002C1650 /* PersonalInformationViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		CEA3A550261B2F0D007AA664 /* PasswordValidater2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidater2.swift; sourceTree = "<group>"; };
 		CEA3A555261B30E2007AA664 /* PasswordConfirmValidater2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordConfirmValidater2.swift; sourceTree = "<group>"; };
 		CEA3A55A261B32DD007AA664 /* NameValidater2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameValidater2.swift; sourceTree = "<group>"; };
+		CEA3A55F261B4E9A007AA664 /* Validable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validable.swift; sourceTree = "<group>"; };
 		CEB52F752616BEEC002C1650 /* PersonalInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,6 +198,7 @@
 				CEA3A550261B2F0D007AA664 /* PasswordValidater2.swift */,
 				CEA3A555261B30E2007AA664 /* PasswordConfirmValidater2.swift */,
 				CEA3A55A261B32DD007AA664 /* NameValidater2.swift */,
+				CEA3A55F261B4E9A007AA664 /* Validable.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				CE366CC72615BD3300506D3F /* NameValidater.swift in Sources */,
 				CEA3A547261B26DB007AA664 /* Validater.swift in Sources */,
 				CE366CB32615AF7C00506D3F /* PasswordValidater.swift in Sources */,
+				CEA3A560261B4E9A007AA664 /* Validable.swift in Sources */,
 				CE366C6A261401E900506D3F /* ButtonManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

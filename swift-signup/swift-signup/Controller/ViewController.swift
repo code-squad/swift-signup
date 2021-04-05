@@ -34,12 +34,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
-        NotificationCenter.default.addObserver(self, selector: #selector(idGuideText), name: IdTextFieldDelegate.idTextFieldInfo, object: idTextFieldDelegate)
-        NotificationCenter.default.addObserver(self, selector: #selector(passwordGuideText), name: PasswordTextFieldDelegate.passwordTextFieldInfo, object: passwordTextFieldDelegate)
-        NotificationCenter.default.addObserver(self, selector: #selector(passwordConfirmGuideText), name: PasswordConfirmTextFieldDelegate.passwordConfirmTextFieldInfo, object: passwordConfirmTextFieldDelegate)
-        NotificationCenter.default.addObserver(self, selector: #selector(nameGuideText), name: NameTextFieldDelegate.nameTextFieldInfo, object: nameTextFieldDelegate)
-        NotificationCenter.default.addObserver(self, selector: #selector(buttonState), name: ButtonManager.buttonState, object: buttonManager)
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(idGuideText), name: Validater.evaluatedIdInformation, object: validater)
+        NotificationCenter.default.addObserver(self, selector: #selector(passwordGuideText), name: Validater.evaluatedPasswordInformation, object: validater)
+        NotificationCenter.default.addObserver(self, selector: #selector(passwordConfirmGuideText), name: Validater.evaluatedPasswordConfirmInformation, object: validater)
+        NotificationCenter.default.addObserver(self, selector: #selector(nameGuideText), name: Validater.evaluatedNameInformation, object: validater)
+        NotificationCenter.default.addObserver(self, selector: #selector(buttonState), name: Validater.isButtonValid, object: validater)
+//        NotificationCenter.default.addObserver(self, selector: #selector(buttonState), name: ButtonManager.buttonState, object: buttonManager)
+        configureDelegate()
         configureTextField()
 //        registerDelegate()
 //        registerTextField()
@@ -48,12 +49,14 @@ class ViewController: UIViewController {
     }
 
     //MARK: 새로운 구조들
-    func configureTextField() {
+    func configureDelegate() {
         self.idTextField.delegate = idTextFieldDelegate2
         self.passwordTextField.delegate = passwordTextFieldDelegate2
         self.passwordConfirmTextField.delegate = passwordConfirmTextFieldDelegate2
         self.nameTextField.delegate = nameTextFieldDelegate2
-        
+    }
+    
+    func configureTextField() {
         self.idTextFieldDelegate2.configureText() { text, range, string in
             self.validater.idValidate(text: text, range: range, string: string)
         }
@@ -74,109 +77,119 @@ class ViewController: UIViewController {
     
     
     //MARK: 이전 구조들
-    func registerDelegate() {
-        self.idTextField.delegate = idTextFieldDelegate
-        self.passwordTextField.delegate = passwordTextFieldDelegate
-        self.passwordConfirmTextField.delegate = passwordConfirmTextFieldDelegate
-        self.nameTextField.delegate = nameTextFieldDelegate
-    }
-    
-    func registerTextField() {
-        self.buttonManager.register(userInfo: idTextFieldDelegate)
-        self.buttonManager.register(userInfo: passwordTextFieldDelegate)
-        self.buttonManager.register(userInfo: passwordConfirmTextFieldDelegate)
-        self.buttonManager.register(userInfo: nameTextFieldDelegate)
-    }
-    
-    func setUpPasswordTextField() {
-        self.passwordTextField.isSecureTextEntry = true
-        self.passwordConfirmTextField.isSecureTextEntry = true
-    }
+//    func registerDelegate() {
+//        self.idTextField.delegate = idTextFieldDelegate
+//        self.passwordTextField.delegate = passwordTextFieldDelegate
+//        self.passwordConfirmTextField.delegate = passwordConfirmTextFieldDelegate
+//        self.nameTextField.delegate = nameTextFieldDelegate
+//    }
+//
+//    func registerTextField() {
+//        self.buttonManager.register(userInfo: idTextFieldDelegate)
+//        self.buttonManager.register(userInfo: passwordTextFieldDelegate)
+//        self.buttonManager.register(userInfo: passwordConfirmTextFieldDelegate)
+//        self.buttonManager.register(userInfo: nameTextFieldDelegate)
+//    }
+//
+//    func setUpPasswordTextField() {
+//        self.passwordTextField.isSecureTextEntry = true
+//        self.passwordConfirmTextField.isSecureTextEntry = true
+//    }
     
     //MARK: @objc 처리
     @objc
     func idGuideText(notification: Notification) {
-        guard let text = notification.userInfo?[IdValidater.MessageInfo.text] as? String,
-              let color = notification.userInfo?[IdValidater.MessageInfo.color] as? UIColor
+        guard let text = notification.userInfo?[Validater.MessageInfo.text] as? String,
+              let color = notification.userInfo?[Validater.MessageInfo.color] as? UIColor
         else {
             return
         }
         self.idLabel.text = text
         self.idLabel.textColor = color
-        buttonManager.isAllInfoValid()
+        self.idTextField.layer.borderColor = color.cgColor
+//        buttonManager.isAllInfoValid()
     }
     
     @objc
     func passwordGuideText(notification: Notification) {
-        guard let text = notification.userInfo?[PasswordValidater.MessageInfo.text] as? String,
-              let color = notification.userInfo?[PasswordValidater.MessageInfo.color] as? UIColor,
-              let password = notification.userInfo?[PasswordValidater.MessageInfo.password] as? String
+        guard let text = notification.userInfo?[Validater.MessageInfo.text] as? String,
+              let color = notification.userInfo?[Validater.MessageInfo.color] as? UIColor
         else {
             return
         }
         self.passwordLabel.text = text
         self.passwordLabel.textColor = color
-        self.passwordConfirmTextFieldDelegate.validaterUpdate(password: password)
-        buttonManager.isAllInfoValid()
+        self.passwordTextField.layer.borderColor = color.cgColor
+//        buttonManager.isAllInfoValid()
     }
     
     @objc
     func passwordConfirmGuideText(notification: Notification) {
-        guard let text = notification.userInfo?[PasswordConfirmValidater.MessageInfo.text] as? String,
-              let color = notification.userInfo?[PasswordConfirmValidater.MessageInfo.color] as? UIColor
+        guard let text = notification.userInfo?[Validater.MessageInfo.text] as? String,
+              let color = notification.userInfo?[Validater.MessageInfo.color] as? UIColor
         else {
             return
         }
         self.passwordConfirmLabel.text = text
         self.passwordConfirmLabel.textColor = color
-        buttonManager.isAllInfoValid()
+        self.passwordConfirmTextField.layer.borderColor = color.cgColor
+//        buttonManager.isAllInfoValid()
     }
     
     @objc
     func nameGuideText(notification: Notification) {
-        guard let text = notification.userInfo?[NameValidater.MessageInfo.text] as? String,
-              let color = notification.userInfo?[NameValidater.MessageInfo.color] as? UIColor
+        guard let text = notification.userInfo?[Validater.MessageInfo.text] as? String,
+              let color = notification.userInfo?[Validater.MessageInfo.color] as? UIColor
         else {
             return
         }
         self.nameLabel.text = text
         self.nameLabel.textColor = color
-        buttonManager.isAllInfoValid()
+        self.nameTextField.layer.borderColor = color.cgColor
+//        buttonManager.isAllInfoValid()
     }
     
     @objc
     func buttonState(notification: Notification) {
-        guard let isActive = notification.userInfo?[ButtonManager.Info.state] as? Bool
+        guard let isValid = notification.userInfo?[Validater.TextStateInfo.isAllValid] as? Bool
         else {
             return
         }
-        self.nextButton.isEnabled = isActive
+        self.nextButton.isEnabled = isValid
     }
+//    @objc
+//    func buttonState(notification: Notification) {
+//        guard let isActive = notification.userInfo?[ButtonManager.Info.state] as? Bool
+//        else {
+//            return
+//        }
+//        self.nextButton.isEnabled = isActive
+//    }
     
-    @IBAction func exitIdTextField(_ sender: Any) {
-        self.passwordTextField.becomeFirstResponder()
-        buttonManager.isAllInfoValid()
-    }
-    
-    
-    @IBAction func exitPasswordTextField(_ sender: Any) {
-        self.passwordConfirmTextField.becomeFirstResponder()
-        buttonManager.isAllInfoValid()
-    }
-    
-    
-    @IBAction func exitPasswordConfirmTextField(_ sender: Any) {
-        self.nameTextField.becomeFirstResponder()
-        buttonManager.isAllInfoValid()
-    }
-    
-    @IBAction func exitNameTextField(_ sender: Any) {
-        self.nameTextField.resignFirstResponder()
-        if self.nextButton.isEnabled, let personnalInformationViewController = self.storyboard?.instantiateViewController(identifier: "PersonnalInformationViewController") {
-            navigationController?.pushViewController(personnalInformationViewController, animated: true)
-        }
-    }
-    
+//    @IBAction func exitIdTextField(_ sender: Any) {
+//        self.passwordTextField.becomeFirstResponder()
+//        buttonManager.isAllInfoValid()
+//    }
+//
+//
+//    @IBAction func exitPasswordTextField(_ sender: Any) {
+//        self.passwordConfirmTextField.becomeFirstResponder()
+//        buttonManager.isAllInfoValid()
+//    }
+//
+//
+//    @IBAction func exitPasswordConfirmTextField(_ sender: Any) {
+//        self.nameTextField.becomeFirstResponder()
+//        buttonManager.isAllInfoValid()
+//    }
+//
+//    @IBAction func exitNameTextField(_ sender: Any) {
+//        self.nameTextField.resignFirstResponder()
+//        if self.nextButton.isEnabled, let personnalInformationViewController = self.storyboard?.instantiateViewController(identifier: "PersonnalInformationViewController") {
+//            navigationController?.pushViewController(personnalInformationViewController, animated: true)
+//        }
+//    }
+//
     @IBAction func nextButtonPressed(_ sender: Any) {
         self.nameTextField.resignFirstResponder()
         guard let personnalInformationViewController = self.storyboard?.instantiateViewController(identifier: "PersonnalInformationViewController")

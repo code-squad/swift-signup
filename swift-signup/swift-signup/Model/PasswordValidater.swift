@@ -2,7 +2,7 @@
 import Foundation
 import UIKit
 
-class PasswordValidater2 : Validable {
+class PasswordValidater : Validable {
     
     private var currentState: TextState
     

@@ -43,7 +43,7 @@
                                     <constraint firstAttribute="height" constant="40" id="bmi-jT-Rbu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
                                 <connections>
                                     <action selector="exitPasswordTextField:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="W22-T1-XEJ"/>
                                 </connections>
@@ -54,7 +54,7 @@
                                     <constraint firstAttribute="height" constant="40" id="oPx-wy-6YQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
                                 <connections>
                                     <action selector="exitPasswordConfirmTextField:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="Ynv-6S-Yxe"/>
                                 </connections>

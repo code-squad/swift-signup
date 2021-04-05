@@ -2,7 +2,7 @@
 import Foundation
 import UIKit
 
-class NameValidater2 : Validable {
+class NameValidater : Validable {
     
     private var currentState: TextState
     

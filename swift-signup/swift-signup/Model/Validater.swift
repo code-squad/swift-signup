@@ -3,16 +3,16 @@ import Foundation
 import UIKit
 
 class Validater {
-    private var idValidater: IdValidater2
-    private var passwordValidater: PasswordValidater2
-    private var passwordConfirmValidater: PasswordConfirmValidater2
-    private var nameValidater: NameValidater2
+    private var idValidater: IdValidater
+    private var passwordValidater: PasswordValidater
+    private var passwordConfirmValidater: PasswordConfirmValidater
+    private var nameValidater: NameValidater
     
     init() {
-        self.idValidater = IdValidater2()
-        self.passwordValidater = PasswordValidater2()
-        self.passwordConfirmValidater = PasswordConfirmValidater2()
-        self.nameValidater = NameValidater2()
+        self.idValidater = IdValidater()
+        self.passwordValidater = PasswordValidater()
+        self.passwordConfirmValidater = PasswordConfirmValidater()
+        self.nameValidater = NameValidater()
     }
     
     func combineText(text: String, range: NSRange, string: String) -> String {
@@ -77,7 +77,6 @@ extension Validater {
     static let evaluatedPasswordConfirmInformation = Notification.Name("evaluatedPasswordConfirmInformation")
     static let evaluatedNameInformation = Notification.Name("evaluatedNameInformation")
     static let isButtonValid = Notification.Name("isButtonValid")
-
 
 }
 

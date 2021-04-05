@@ -8,9 +8,9 @@
 import UIKit
 
 class NameFieldDelegate: NSObject, UITextFieldDelegate {
-    private let presenter: NamePresenter
+    private let presenter: Presentable
     
-    init(presenter: NamePresenter) {
+    init(presenter: Presentable) {
         self.presenter = presenter
     }
     

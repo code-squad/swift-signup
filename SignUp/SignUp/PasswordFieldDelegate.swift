@@ -9,9 +9,9 @@ import UIKit
 
 class PasswordFieldDelegate: NSObject, UITextFieldDelegate {
     private var firstResponserHandler: () -> Void
-    private let presenter: PasswordPresenter
+    private let presenter: Presentable
     
-    init(presenter: PasswordPresenter, handler: @escaping () -> Void) {
+    init(presenter: Presentable, handler: @escaping () -> Void) {
         self.presenter = presenter
         self.firstResponserHandler = handler
     }

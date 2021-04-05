@@ -14,39 +14,39 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordConfirmView: PasswordConfirmView!
     @IBOutlet weak var nameView: NameView!
     
-    private let idpresenter = IdPresenter()
-    private let passwordPresenter = PasswordPresenter()
-    private let passwordConfirmPresenter = PasswordConfirmPresenter()
-    private let namePresenter = NamePresenter()
+    private var idViewPresenter = IdViewPresenter()
+    private var passwordViewPresenter = PasswordViewPresenter()
+    private var passwordConfirmViewPresenter = PasswordConfirmViewPresenter()
+    private var nameViewPresenter = NameViewPresenter()
     
     private lazy var idFieldDelegate
-        = IdFieldDelegate(presenter: idpresenter, handler: { [weak self] in
-        self?.passwordView.field.becomeFirstResponder()})
+        = IdFieldDelegate(presenter: idViewPresenter, handler: { [weak self] in
+        self?.passwordView.input.becomeFirstResponder()})
     private lazy var passwordFieldDelegate
-        = PasswordFieldDelegate(presenter: passwordPresenter, handler: { [weak self] in
-        self?.passwordConfirmView.field.becomeFirstResponder()})
+        = PasswordFieldDelegate(presenter: passwordViewPresenter, handler: { [weak self] in
+        self?.passwordConfirmView.input.becomeFirstResponder()})
     private lazy var passwordConfirmFieldDelegate
-        = PasswordConfirmFieldDelegate(presenter: passwordConfirmPresenter,
+        = PasswordConfirmFieldDelegate(presenter: passwordConfirmViewPresenter,
                                        firstResponserHandler: { [weak self] in
-                                        self?.nameView.field.becomeFirstResponder()},
+                                        self?.nameView.input.becomeFirstResponder()},
                                        passwordConfirmHandler: { [weak self] in
-                                        return self?.passwordView.field.text == self?.passwordConfirmView.field.text})
-    private lazy var nameFieldDelegate = NameFieldDelegate(presenter: namePresenter)
+                                        return self?.passwordView.input.text == self?.passwordConfirmView.input.text})
+    private lazy var nameFieldDelegate = NameFieldDelegate(presenter: nameViewPresenter)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        idpresenter.setView(idView)
-        idView.field.delegate = idFieldDelegate
-        idView.field.becomeFirstResponder()
+        idViewPresenter.setView(idView)
+        idView.input.delegate = idFieldDelegate
+        idView.input.becomeFirstResponder()
         
-        passwordPresenter.setView(passwordView)
-        passwordView.field.delegate = passwordFieldDelegate
+        passwordViewPresenter.setView(passwordView)
+        passwordView.input.delegate = passwordFieldDelegate
         
-        passwordConfirmPresenter.setView(passwordConfirmView)
-        passwordConfirmView.field.delegate = passwordConfirmFieldDelegate
+        passwordConfirmViewPresenter.setView(passwordConfirmView)
+        passwordConfirmView.input.delegate = passwordConfirmFieldDelegate
         
-        namePresenter.setView(nameView)
-        nameView.field.delegate = nameFieldDelegate
+        nameViewPresenter.setView(nameView)
+        nameView.input.delegate = nameFieldDelegate
     }
 }

@@ -7,7 +7,25 @@
 
 import UIKit
 
-class PasswordConfirmView: UIStackView {
-    @IBOutlet weak var field: UITextField!
-    @IBOutlet weak var label: UILabel!
+class PasswordConfirmView: UIStackView, SignUpView {
+    @IBOutlet weak var input: UITextField!
+    @IBOutlet weak var message: UILabel!
+    
+    var label: UILabel {
+        get {
+            return message
+        }
+        set {
+            message = newValue
+        }
+    }
+    
+    var field: UITextField {
+        get {
+            return input
+        }
+        set {
+            input = newValue
+        }
+    }
 }

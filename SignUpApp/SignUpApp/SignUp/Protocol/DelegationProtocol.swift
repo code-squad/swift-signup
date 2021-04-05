@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+protocol CheckDelegation {
+    func checkPassword()
+    func checkID()
+    func checkPasswordEquality()
+    func checkUserNameInput()
+    func buttonStateCondition() -> Bool
+}

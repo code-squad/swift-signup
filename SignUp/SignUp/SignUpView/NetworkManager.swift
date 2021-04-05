@@ -7,6 +7,8 @@
 
 import Foundation
 class NetworkManager {
+    static var shared = NetworkManager()
+    
     private let url = URL.init(string: "https://8r6ruzgzve.execute-api.ap-northeast-2.amazonaws.com/default/SwiftCamp")
     
     func getUserList(closure : @escaping ([String]?) -> Void) {
@@ -16,34 +18,48 @@ class NetworkManager {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         URLSession.shared.dataTask(with: request, completionHandler: {(data,response,error) in
-            guard let data = data else {
-                return
-            }
-            let decoder = try? JSONSerialization.jsonObject(with: data, options: []) as? Array<String>
-            guard let userList = decoder?.compactMap({$0}) else { return }
+            
+            let userList = self.serialize(data: data)
             
             closure(userList)
         }).resume()
     }
     
-    func postUser(userInfo : UserInformation) {
+    func serialize(data : Data?) -> Array<String> {
+        guard let data = data else {
+            return [String]()
+        }
+        let decoder = try? JSONSerialization.jsonObject(with: data, options: []) as? Array<String>
+        guard let userList = decoder?.compactMap({$0}) else {
+            return [String]()
+            
+        }
+        return userList
+    }
+    
+    func postUser<T:Codable> (input : T, closure : @escaping (Result<T,Error>) -> Void) {
+        
         guard let url = self.url else {
             return
         }
-        let sendData = try? JSONEncoder().encode(userInfo)
+        
+        let sendData = try? JSONEncoder().encode(input)
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.httpBody = sendData
         
         URLSession.shared.dataTask(with: request, completionHandler: {(data,response,error) in
+            
             guard let data = data else {
-                return
+                return closure(.failure(error!))
             }
-            let decoder = try? JSONDecoder().decode(NetworkResponse.self, from: data)
+            
+            let decoder = try? JSONDecoder().decode(T.self, from: data)
             guard let returnData = decoder else {
-                return
+                return closure(.failure(error!))
             }
-            // 필요한 내용 하단에 구현
+            
+            closure(.success(returnData))
         }).resume()
     }
 }

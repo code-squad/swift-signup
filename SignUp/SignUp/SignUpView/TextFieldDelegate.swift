@@ -25,20 +25,27 @@ class TextFieldDelegate: NSObject, UITextFieldDelegate {
         return
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        let optionalFieldArray = textField.superview?.subviews.filter({
+    private func findSameDimensionSignUpTextField(target : UIView) -> [SignUpTextField] {
+        
+        let optionalFieldArray = target.superview?.subviews.filter({
             let item = $0 as? SignUpTextField
-            guard let textField = item else {
+            guard item != nil else {
                 return false
             }
             return true
         })
         
-        guard let fieldArray = optionalFieldArray else {
-            return true
+        guard let fieldArray = optionalFieldArray as? [SignUpTextField] else {
+            return [SignUpTextField]()
         }
         
-        let currentIndex = fieldArray.firstIndex(of: textField)!
+        return fieldArray
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        let fieldArray = findSameDimensionSignUpTextField(target: textField)
+        
+        let currentIndex = fieldArray.firstIndex(of: textField as! SignUpTextField)!
         if currentIndex == fieldArray.count - 1 {
             textField.endEditing(true)
         }
@@ -51,17 +58,7 @@ class TextFieldDelegate: NSObject, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        let optionalFieldArray = textField.superview?.subviews.filter({
-            let item = $0 as? SignUpTextField
-            guard item != nil else {
-                return false
-            }
-            return true
-        })
-        
-        guard let fieldArray = optionalFieldArray as? [SignUpTextField] else {
-            return
-        }
+        let fieldArray = findSameDimensionSignUpTextField(target: textField)
         
         fieldArray.enumerated().forEach({
             if $0.element.layer.borderColor != UIColor.green.cgColor {

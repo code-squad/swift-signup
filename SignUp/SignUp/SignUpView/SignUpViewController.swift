@@ -19,8 +19,7 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTextField()
-        NotificationCenter.default.addObserver(self, selector: #selector(changeRelatedUI(noti:)), name: .uiUpdate, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(buttonEnableCheck(noti:)), name: .nextButtonEnableCheck, object: textFieldDelegate)
+        configureObserver()
     }
     
     private func configureTextField() {
@@ -29,6 +28,12 @@ class SignUpViewController: UIViewController {
             textFieldCollection[index].delegate = textFieldDelegate
             textFieldCollection[index].relatedLabel = informationLabelCollection[index]
         }
+    }
+    
+    private func configureObserver() {
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(changeRelatedUI(noti:)), name: .uiUpdate, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(buttonEnableCheck(noti:)), name: .nextButtonEnableCheck, object: textFieldDelegate)
     }
     
     @IBAction func nextButtonTouched(_ sender: Any) {

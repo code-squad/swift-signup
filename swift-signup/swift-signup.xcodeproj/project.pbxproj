@@ -15,12 +15,14 @@
 		CE366BE02611BA8E00506D3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE366BDE2611BA8E00506D3F /* LaunchScreen.storyboard */; };
 		CE366BEB2611BA8E00506D3F /* swift_signupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366BEA2611BA8E00506D3F /* swift_signupTests.swift */; };
 		CE366BF62611BA8E00506D3F /* swift_signupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366BF52611BA8E00506D3F /* swift_signupUITests.swift */; };
-		CE366C2C2611F9CF00506D3F /* IdTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366C2B2611F9CF00506D3F /* IdTextField.swift */; };
-		CE366C3426123A5A00506D3F /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366C3326123A5A00506D3F /* PasswordTextField.swift */; };
-		CE366C3F2612470800506D3F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366C3E2612470800506D3F /* CustomTextField.swift */; };
-		CE366C5A2613495D00506D3F /* PasswordConfirmTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366C592613495D00506D3F /* PasswordConfirmTextField.swift */; };
-		CE366C622613EEDC00506D3F /* NameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366C612613EEDC00506D3F /* NameTextField.swift */; };
-		CE366C6A261401E900506D3F /* ButtonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366C69261401E900506D3F /* ButtonManager.swift */; };
+		CEA3A5422619B47C007AA664 /* CustomTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3A5412619B47C007AA664 /* CustomTextFieldDelegate.swift */; };
+		CEA3A547261B26DB007AA664 /* Validater.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3A546261B26DB007AA664 /* Validater.swift */; };
+		CEA3A54C261B2EE2007AA664 /* IdValidater.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3A54B261B2EE2007AA664 /* IdValidater.swift */; };
+		CEA3A551261B2F0D007AA664 /* PasswordValidater.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3A550261B2F0D007AA664 /* PasswordValidater.swift */; };
+		CEA3A556261B30E2007AA664 /* PasswordConfirmValidater.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3A555261B30E2007AA664 /* PasswordConfirmValidater.swift */; };
+		CEA3A55B261B32DD007AA664 /* NameValidater.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3A55A261B32DD007AA664 /* NameValidater.swift */; };
+		CEA3A560261B4E9A007AA664 /* Validable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3A55F261B4E9A007AA664 /* Validable.swift */; };
+		CEB52F762616BEEC002C1650 /* PersonalInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB52F752616BEEC002C1650 /* PersonalInformationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,12 +57,14 @@
 		CE366BF12611BA8E00506D3F /* swift-signupUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-signupUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE366BF52611BA8E00506D3F /* swift_signupUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_signupUITests.swift; sourceTree = "<group>"; };
 		CE366BF72611BA8E00506D3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE366C2B2611F9CF00506D3F /* IdTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdTextField.swift; sourceTree = "<group>"; };
-		CE366C3326123A5A00506D3F /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
-		CE366C3E2612470800506D3F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		CE366C592613495D00506D3F /* PasswordConfirmTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordConfirmTextField.swift; sourceTree = "<group>"; };
-		CE366C612613EEDC00506D3F /* NameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextField.swift; sourceTree = "<group>"; };
-		CE366C69261401E900506D3F /* ButtonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonManager.swift; sourceTree = "<group>"; };
+		CEA3A5412619B47C007AA664 /* CustomTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldDelegate.swift; sourceTree = "<group>"; };
+		CEA3A546261B26DB007AA664 /* Validater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validater.swift; sourceTree = "<group>"; };
+		CEA3A54B261B2EE2007AA664 /* IdValidater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdValidater.swift; sourceTree = "<group>"; };
+		CEA3A550261B2F0D007AA664 /* PasswordValidater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidater.swift; sourceTree = "<group>"; };
+		CEA3A555261B30E2007AA664 /* PasswordConfirmValidater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordConfirmValidater.swift; sourceTree = "<group>"; };
+		CEA3A55A261B32DD007AA664 /* NameValidater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameValidater.swift; sourceTree = "<group>"; };
+		CEA3A55F261B4E9A007AA664 /* Validable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validable.swift; sourceTree = "<group>"; };
+		CEB52F752616BEEC002C1650 /* PersonalInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,15 +115,11 @@
 		CE366BD22611BA8D00506D3F /* swift-signup */ = {
 			isa = PBXGroup;
 			children = (
+				CEB52F7F2616BF5E002C1650 /* Model */,
+				CEB52F7E2616BF05002C1650 /* TextFieldDelegate */,
+				CEB52F7D2616BEF7002C1650 /* Controller */,
 				CE366BD32611BA8D00506D3F /* AppDelegate.swift */,
 				CE366BD52611BA8D00506D3F /* SceneDelegate.swift */,
-				CE366C69261401E900506D3F /* ButtonManager.swift */,
-				CE366BD72611BA8D00506D3F /* ViewController.swift */,
-				CE366C3E2612470800506D3F /* CustomTextField.swift */,
-				CE366C2B2611F9CF00506D3F /* IdTextField.swift */,
-				CE366C3326123A5A00506D3F /* PasswordTextField.swift */,
-				CE366C592613495D00506D3F /* PasswordConfirmTextField.swift */,
-				CE366C612613EEDC00506D3F /* NameTextField.swift */,
 				CE366BD92611BA8D00506D3F /* Main.storyboard */,
 				CE366BDC2611BA8E00506D3F /* Assets.xcassets */,
 				CE366BDE2611BA8E00506D3F /* LaunchScreen.storyboard */,
@@ -144,6 +144,36 @@
 				CE366BF72611BA8E00506D3F /* Info.plist */,
 			);
 			path = "swift-signupUITests";
+			sourceTree = "<group>";
+		};
+		CEB52F7D2616BEF7002C1650 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE366BD72611BA8D00506D3F /* ViewController.swift */,
+				CEB52F752616BEEC002C1650 /* PersonalInformationViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CEB52F7E2616BF05002C1650 /* TextFieldDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				CEA3A5412619B47C007AA664 /* CustomTextFieldDelegate.swift */,
+			);
+			path = TextFieldDelegate;
+			sourceTree = "<group>";
+		};
+		CEB52F7F2616BF5E002C1650 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEA3A546261B26DB007AA664 /* Validater.swift */,
+				CEA3A54B261B2EE2007AA664 /* IdValidater.swift */,
+				CEA3A550261B2F0D007AA664 /* PasswordValidater.swift */,
+				CEA3A555261B30E2007AA664 /* PasswordConfirmValidater.swift */,
+				CEA3A55A261B32DD007AA664 /* NameValidater.swift */,
+				CEA3A55F261B4E9A007AA664 /* Validable.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,15 +306,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE366C622613EEDC00506D3F /* NameTextField.swift in Sources */,
-				CE366C3426123A5A00506D3F /* PasswordTextField.swift in Sources */,
+				CEA3A55B261B32DD007AA664 /* NameValidater.swift in Sources */,
 				CE366BD82611BA8D00506D3F /* ViewController.swift in Sources */,
-				CE366C3F2612470800506D3F /* CustomTextField.swift in Sources */,
+				CEB52F762616BEEC002C1650 /* PersonalInformationViewController.swift in Sources */,
 				CE366BD42611BA8D00506D3F /* AppDelegate.swift in Sources */,
-				CE366C5A2613495D00506D3F /* PasswordConfirmTextField.swift in Sources */,
-				CE366C2C2611F9CF00506D3F /* IdTextField.swift in Sources */,
+				CEA3A54C261B2EE2007AA664 /* IdValidater.swift in Sources */,
+				CEA3A551261B2F0D007AA664 /* PasswordValidater.swift in Sources */,
+				CEA3A556261B30E2007AA664 /* PasswordConfirmValidater.swift in Sources */,
+				CEA3A5422619B47C007AA664 /* CustomTextFieldDelegate.swift in Sources */,
 				CE366BD62611BA8D00506D3F /* SceneDelegate.swift in Sources */,
-				CE366C6A261401E900506D3F /* ButtonManager.swift in Sources */,
+				CEA3A547261B26DB007AA664 /* Validater.swift in Sources */,
+				CEA3A560261B4E9A007AA664 /* Validable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

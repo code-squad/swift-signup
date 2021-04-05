@@ -7,6 +7,25 @@
 
 import UIKit
 
-class IDTextFieldDelegate: UITextFieldDelegate {
-
+class IDTextFieldDelegate: NSObject, UITextFieldDelegate {
+    
+    var delegatedObject: CheckDelegation?
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.layer.borderWidth = 1.0
+        textField.layer.borderColor = UIColor.systemBlue.cgColor
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        textField.layer.borderColor = UIColor.black.cgColor
+        delegatedObject?.checkID()
+        delegatedObject?.buttonStateCondition()
+        return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
 }

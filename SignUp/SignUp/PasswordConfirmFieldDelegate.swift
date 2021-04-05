@@ -10,9 +10,9 @@ import UIKit
 class PasswordConfirmFieldDelegate: NSObject, UITextFieldDelegate {
     private var passwordConfirmHandler: () -> Bool
     private var firstResponserHandler: () -> Void
-    private let presenter: PasswordConfirmPresenter
+    private let presenter: Presentable
     
-    init(presenter: PasswordConfirmPresenter, firstResponserHandler: @escaping () -> Void, passwordConfirmHandler: @escaping () -> Bool) {
+    init(presenter: Presentable, firstResponserHandler: @escaping () -> Void, passwordConfirmHandler: @escaping () -> Bool) {
         self.presenter = presenter
         self.firstResponserHandler = firstResponserHandler
         self.passwordConfirmHandler = passwordConfirmHandler

@@ -41,8 +41,8 @@
                                             </label>
                                         </subviews>
                                         <connections>
-                                            <outlet property="field" destination="bd8-Zt-YBy" id="WiI-ZU-g6d"/>
-                                            <outlet property="label" destination="Koi-NC-5Bj" id="KHr-1H-0Bl"/>
+                                            <outlet property="input" destination="bd8-Zt-YBy" id="Pkr-Wt-keA"/>
+                                            <outlet property="message" destination="Koi-NC-5Bj" id="iMA-cc-gcr"/>
                                         </connections>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Xfq-Q1-ITT" customClass="PasswordView" customModule="SignUp" customModuleProvider="target">
@@ -67,8 +67,8 @@
                                             </label>
                                         </subviews>
                                         <connections>
-                                            <outlet property="field" destination="m2X-Xw-PDZ" id="umc-4N-VLC"/>
-                                            <outlet property="label" destination="V2X-P9-1kz" id="yme-WV-JXO"/>
+                                            <outlet property="input" destination="m2X-Xw-PDZ" id="umc-4N-VLC"/>
+                                            <outlet property="message" destination="V2X-P9-1kz" id="yme-WV-JXO"/>
                                         </connections>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="v6h-8G-IWB" customClass="PasswordConfirmView" customModule="SignUp" customModuleProvider="target">
@@ -93,8 +93,8 @@
                                             </label>
                                         </subviews>
                                         <connections>
-                                            <outlet property="field" destination="DLN-iI-2t5" id="TZG-6z-AIT"/>
-                                            <outlet property="label" destination="P0C-5O-bgY" id="Fux-gh-4wu"/>
+                                            <outlet property="input" destination="DLN-iI-2t5" id="TZG-6z-AIT"/>
+                                            <outlet property="message" destination="P0C-5O-bgY" id="Fux-gh-4wu"/>
                                         </connections>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tx0-0b-RFE" customClass="NameView" customModule="SignUp" customModuleProvider="target">
@@ -119,8 +119,8 @@
                                             </label>
                                         </subviews>
                                         <connections>
-                                            <outlet property="field" destination="KU2-vT-9Wg" id="CbD-aR-3Yq"/>
-                                            <outlet property="label" destination="hGo-0K-iY1" id="6fn-Ei-61I"/>
+                                            <outlet property="input" destination="KU2-vT-9Wg" id="CbD-aR-3Yq"/>
+                                            <outlet property="message" destination="hGo-0K-iY1" id="6fn-Ei-61I"/>
                                         </connections>
                                     </stackView>
                                 </subviews>
@@ -135,9 +135,6 @@
                                 <rect key="frame" x="180" y="664" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="다음"/>
-                                <connections>
-                                    <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HWL-8p-fqX"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -152,7 +149,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="IdView" destination="1RR-nU-fft" id="sp2-21-2MW"/>
+                        <outlet property="idView" destination="1RR-nU-fft" id="IU4-3B-3ku"/>
                         <outlet property="nameView" destination="tx0-0b-RFE" id="Hng-ta-yiW"/>
                         <outlet property="passwordConfirmView" destination="v6h-8G-IWB" id="Hoz-Yj-ZZk"/>
                         <outlet property="passwordView" destination="Xfq-Q1-ITT" id="DJx-Bf-uiF"/>

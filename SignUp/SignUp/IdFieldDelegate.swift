@@ -15,9 +15,9 @@ class IdFieldDelegate: NSObject, UITextFieldDelegate {
     }
     
     private let firstResponserHandler: () -> Void
-    private let presenter: IdPresenter
+    private let presenter: Presentable
     
-    init(presenter: IdPresenter, handler: @escaping (() -> Void)) {
+    init(presenter: Presentable, handler: @escaping (() -> Void)) {
         self.presenter = presenter
         self.firstResponserHandler = handler
     }

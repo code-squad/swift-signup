@@ -1,0 +1,484 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A01ADE9F2614541200C30356 /* IDTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01ADE9E2614541200C30356 /* IDTextFieldDelegate.swift */; };
+		A01ADEA32614545E00C30356 /* PasswordTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01ADEA22614545E00C30356 /* PasswordTextFieldDelegate.swift */; };
+		A01ADEA62614546C00C30356 /* CheckPasswordTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01ADEA52614546C00C30356 /* CheckPasswordTextFieldDelegate.swift */; };
+		A01ADEA92614547900C30356 /* UserNameTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01ADEA82614547900C30356 /* UserNameTextFieldDelegate.swift */; };
+		A07C89AB2618554F00DD3C4B /* PasswordCheckMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07C89AA2618554F00DD3C4B /* PasswordCheckMessage.swift */; };
+		A09160B3261973B60014C3B9 /* IDCheckMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09160B2261973B60014C3B9 /* IDCheckMessage.swift */; };
+		A09160B6261973FA0014C3B9 /* PasswordEqualityMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09160B5261973FA0014C3B9 /* PasswordEqualityMessage.swift */; };
+		A09160B9261974050014C3B9 /* UserNameCheckMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09160B8261974050014C3B9 /* UserNameCheckMessage.swift */; };
+		A09B920D2617406000F6BC4A /* DelegationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09B920C2617406000F6BC4A /* DelegationProtocol.swift */; };
+		A0A2C2F92612DDB800BBD554 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A2C2F82612DDB800BBD554 /* AppDelegate.swift */; };
+		A0A2C2FB2612DDB800BBD554 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A2C2FA2612DDB800BBD554 /* SceneDelegate.swift */; };
+		A0A2C2FD2612DDB800BBD554 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A2C2FC2612DDB800BBD554 /* SignUpViewController.swift */; };
+		A0A2C3002612DDB800BBD554 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0A2C2FE2612DDB800BBD554 /* Main.storyboard */; };
+		A0A2C3022612DDB900BBD554 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0A2C3012612DDB900BBD554 /* Assets.xcassets */; };
+		A0A2C3052612DDB900BBD554 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0A2C3032612DDB900BBD554 /* LaunchScreen.storyboard */; };
+		A0A2C3592612F2E300BBD554 /* StackViewUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A2C3582612F2E300BBD554 /* StackViewUnit.swift */; };
+		A0A2C3602612FE3800BBD554 /* SignUpInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A2C35F2612FE3800BBD554 /* SignUpInfo.swift */; };
+		A0A2C3632612FEBB00BBD554 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A2C3622612FEBB00BBD554 /* SignUpViewModel.swift */; };
+		A0A64573261AB9A8006EAC79 /* PasswordValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A64572261AB9A8006EAC79 /* PasswordValidation.swift */; };
+		A0A64577261ABA1A006EAC79 /* NetworkingForIDCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A64576261ABA1A006EAC79 /* NetworkingForIDCheck.swift */; };
+		A0A6457B261ABA38006EAC79 /* IDValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A6457A261ABA38006EAC79 /* IDValidation.swift */; };
+		A0A6457F261ABF92006EAC79 /* PasswordEqualityValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A6457E261ABF92006EAC79 /* PasswordEqualityValidation.swift */; };
+		A0A64582261AC24B006EAC79 /* UserNameValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A64581261AC24B006EAC79 /* UserNameValidation.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A01ADE9E2614541200C30356 /* IDTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDTextFieldDelegate.swift; sourceTree = "<group>"; };
+		A01ADEA22614545E00C30356 /* PasswordTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextFieldDelegate.swift; sourceTree = "<group>"; };
+		A01ADEA52614546C00C30356 /* CheckPasswordTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPasswordTextFieldDelegate.swift; sourceTree = "<group>"; };
+		A01ADEA82614547900C30356 /* UserNameTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameTextFieldDelegate.swift; sourceTree = "<group>"; };
+		A07C89AA2618554F00DD3C4B /* PasswordCheckMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCheckMessage.swift; sourceTree = "<group>"; };
+		A09160B2261973B60014C3B9 /* IDCheckMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDCheckMessage.swift; sourceTree = "<group>"; };
+		A09160B5261973FA0014C3B9 /* PasswordEqualityMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordEqualityMessage.swift; sourceTree = "<group>"; };
+		A09160B8261974050014C3B9 /* UserNameCheckMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameCheckMessage.swift; sourceTree = "<group>"; };
+		A09B920C2617406000F6BC4A /* DelegationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegationProtocol.swift; sourceTree = "<group>"; };
+		A0A2C2F52612DDB800BBD554 /* SignUpApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignUpApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0A2C2F82612DDB800BBD554 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A0A2C2FA2612DDB800BBD554 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A0A2C2FC2612DDB800BBD554 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		A0A2C2FF2612DDB800BBD554 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A0A2C3012612DDB900BBD554 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A0A2C3042612DDB900BBD554 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A0A2C3062612DDB900BBD554 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0A2C3582612F2E300BBD554 /* StackViewUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewUnit.swift; sourceTree = "<group>"; };
+		A0A2C35F2612FE3800BBD554 /* SignUpInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInfo.swift; sourceTree = "<group>"; };
+		A0A2C3622612FEBB00BBD554 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		A0A64572261AB9A8006EAC79 /* PasswordValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidation.swift; sourceTree = "<group>"; };
+		A0A64576261ABA1A006EAC79 /* NetworkingForIDCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingForIDCheck.swift; sourceTree = "<group>"; };
+		A0A6457A261ABA38006EAC79 /* IDValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDValidation.swift; sourceTree = "<group>"; };
+		A0A6457E261ABF92006EAC79 /* PasswordEqualityValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordEqualityValidation.swift; sourceTree = "<group>"; };
+		A0A64581261AC24B006EAC79 /* UserNameValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameValidation.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A0A2C2F22612DDB800BBD554 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A01ADE9D261453EF00C30356 /* SignUpTextFieldDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				A01ADE9E2614541200C30356 /* IDTextFieldDelegate.swift */,
+				A01ADEA22614545E00C30356 /* PasswordTextFieldDelegate.swift */,
+				A01ADEA52614546C00C30356 /* CheckPasswordTextFieldDelegate.swift */,
+				A01ADEA82614547900C30356 /* UserNameTextFieldDelegate.swift */,
+			);
+			path = SignUpTextFieldDelegate;
+			sourceTree = "<group>";
+		};
+		A09B920B2617404E00F6BC4A /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				A09B920C2617406000F6BC4A /* DelegationProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		A0A2C2EC2612DDB800BBD554 = {
+			isa = PBXGroup;
+			children = (
+				A0A2C2F72612DDB800BBD554 /* SignUpApp */,
+				A0A2C2F62612DDB800BBD554 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A0A2C2F62612DDB800BBD554 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A0A2C2F52612DDB800BBD554 /* SignUpApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A0A2C2F72612DDB800BBD554 /* SignUpApp */ = {
+			isa = PBXGroup;
+			children = (
+				A0A2C30D2612DF9800BBD554 /* SignUp */,
+				A0A2C2F82612DDB800BBD554 /* AppDelegate.swift */,
+				A0A2C2FA2612DDB800BBD554 /* SceneDelegate.swift */,
+				A0A2C2FE2612DDB800BBD554 /* Main.storyboard */,
+				A0A2C3012612DDB900BBD554 /* Assets.xcassets */,
+				A0A2C3032612DDB900BBD554 /* LaunchScreen.storyboard */,
+				A0A2C3062612DDB900BBD554 /* Info.plist */,
+			);
+			path = SignUpApp;
+			sourceTree = "<group>";
+		};
+		A0A2C30D2612DF9800BBD554 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				A0A2C2FC2612DDB800BBD554 /* SignUpViewController.swift */,
+				A0A64575261ABA03006EAC79 /* Networking */,
+				A09B920B2617404E00F6BC4A /* Protocol */,
+				A01ADE9D261453EF00C30356 /* SignUpTextFieldDelegate */,
+				A0A2C3552612F29B00BBD554 /* SignUpModel */,
+				A0A2C3562612F2A700BBD554 /* SignUpView */,
+				A0A2C3572612F2AE00BBD554 /* SignUpViewModel */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		A0A2C3552612F29B00BBD554 /* SignUpModel */ = {
+			isa = PBXGroup;
+			children = (
+				A0A2C35F2612FE3800BBD554 /* SignUpInfo.swift */,
+			);
+			path = SignUpModel;
+			sourceTree = "<group>";
+		};
+		A0A2C3562612F2A700BBD554 /* SignUpView */ = {
+			isa = PBXGroup;
+			children = (
+				A0A2C3582612F2E300BBD554 /* StackViewUnit.swift */,
+			);
+			path = SignUpView;
+			sourceTree = "<group>";
+		};
+		A0A2C3572612F2AE00BBD554 /* SignUpViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A0A2C3622612FEBB00BBD554 /* SignUpViewModel.swift */,
+				A0A64585261AF8F1006EAC79 /* Validation */,
+				A0A64584261AF8E6006EAC79 /* CheckMessage */,
+			);
+			path = SignUpViewModel;
+			sourceTree = "<group>";
+		};
+		A0A64575261ABA03006EAC79 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A0A64576261ABA1A006EAC79 /* NetworkingForIDCheck.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A0A64584261AF8E6006EAC79 /* CheckMessage */ = {
+			isa = PBXGroup;
+			children = (
+				A09160B2261973B60014C3B9 /* IDCheckMessage.swift */,
+				A07C89AA2618554F00DD3C4B /* PasswordCheckMessage.swift */,
+				A09160B5261973FA0014C3B9 /* PasswordEqualityMessage.swift */,
+				A09160B8261974050014C3B9 /* UserNameCheckMessage.swift */,
+			);
+			path = CheckMessage;
+			sourceTree = "<group>";
+		};
+		A0A64585261AF8F1006EAC79 /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				A0A6457A261ABA38006EAC79 /* IDValidation.swift */,
+				A0A64572261AB9A8006EAC79 /* PasswordValidation.swift */,
+				A0A6457E261ABF92006EAC79 /* PasswordEqualityValidation.swift */,
+				A0A64581261AC24B006EAC79 /* UserNameValidation.swift */,
+			);
+			path = Validation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A0A2C2F42612DDB800BBD554 /* SignUpApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0A2C3092612DDB900BBD554 /* Build configuration list for PBXNativeTarget "SignUpApp" */;
+			buildPhases = (
+				A0A2C2F12612DDB800BBD554 /* Sources */,
+				A0A2C2F22612DDB800BBD554 /* Frameworks */,
+				A0A2C2F32612DDB800BBD554 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SignUpApp;
+			productName = SignUpApp;
+			productReference = A0A2C2F52612DDB800BBD554 /* SignUpApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A0A2C2ED2612DDB800BBD554 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					A0A2C2F42612DDB800BBD554 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = A0A2C2F02612DDB800BBD554 /* Build configuration list for PBXProject "SignUpApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A0A2C2EC2612DDB800BBD554;
+			productRefGroup = A0A2C2F62612DDB800BBD554 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A0A2C2F42612DDB800BBD554 /* SignUpApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A0A2C2F32612DDB800BBD554 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0A2C3052612DDB900BBD554 /* LaunchScreen.storyboard in Resources */,
+				A0A2C3022612DDB900BBD554 /* Assets.xcassets in Resources */,
+				A0A2C3002612DDB800BBD554 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A0A2C2F12612DDB800BBD554 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0A2C2FD2612DDB800BBD554 /* SignUpViewController.swift in Sources */,
+				A0A64573261AB9A8006EAC79 /* PasswordValidation.swift in Sources */,
+				A01ADEA32614545E00C30356 /* PasswordTextFieldDelegate.swift in Sources */,
+				A01ADEA62614546C00C30356 /* CheckPasswordTextFieldDelegate.swift in Sources */,
+				A0A2C2F92612DDB800BBD554 /* AppDelegate.swift in Sources */,
+				A0A64577261ABA1A006EAC79 /* NetworkingForIDCheck.swift in Sources */,
+				A01ADEA92614547900C30356 /* UserNameTextFieldDelegate.swift in Sources */,
+				A0A6457B261ABA38006EAC79 /* IDValidation.swift in Sources */,
+				A07C89AB2618554F00DD3C4B /* PasswordCheckMessage.swift in Sources */,
+				A0A2C2FB2612DDB800BBD554 /* SceneDelegate.swift in Sources */,
+				A0A64582261AC24B006EAC79 /* UserNameValidation.swift in Sources */,
+				A09160B3261973B60014C3B9 /* IDCheckMessage.swift in Sources */,
+				A09160B9261974050014C3B9 /* UserNameCheckMessage.swift in Sources */,
+				A0A2C3602612FE3800BBD554 /* SignUpInfo.swift in Sources */,
+				A01ADE9F2614541200C30356 /* IDTextFieldDelegate.swift in Sources */,
+				A0A2C3632612FEBB00BBD554 /* SignUpViewModel.swift in Sources */,
+				A09B920D2617406000F6BC4A /* DelegationProtocol.swift in Sources */,
+				A09160B6261973FA0014C3B9 /* PasswordEqualityMessage.swift in Sources */,
+				A0A2C3592612F2E300BBD554 /* StackViewUnit.swift in Sources */,
+				A0A6457F261ABF92006EAC79 /* PasswordEqualityValidation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A0A2C2FE2612DDB800BBD554 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A0A2C2FF2612DDB800BBD554 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A0A2C3032612DDB900BBD554 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A0A2C3042612DDB900BBD554 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A0A2C3072612DDB900BBD554 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A0A2C3082612DDB900BBD554 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A0A2C30A2612DDB900BBD554 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SignUpApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = asd.SignUpApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A0A2C30B2612DDB900BBD554 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SignUpApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = asd.SignUpApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A0A2C2F02612DDB800BBD554 /* Build configuration list for PBXProject "SignUpApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0A2C3072612DDB900BBD554 /* Debug */,
+				A0A2C3082612DDB900BBD554 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0A2C3092612DDB900BBD554 /* Build configuration list for PBXNativeTarget "SignUpApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0A2C30A2612DDB900BBD554 /* Debug */,
+				A0A2C30B2612DDB900BBD554 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A0A2C2ED2612DDB800BBD554 /* Project object */;
+}

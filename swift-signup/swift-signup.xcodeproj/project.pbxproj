@@ -25,6 +25,11 @@
 		CE366CC22615BD2400506D3F /* NameTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366CC12615BD2400506D3F /* NameTextFieldDelegate.swift */; };
 		CE366CC72615BD3300506D3F /* NameValidater.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366CC62615BD3300506D3F /* NameValidater.swift */; };
 		CEA3A5422619B47C007AA664 /* CustomTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3A5412619B47C007AA664 /* CustomTextFieldDelegate.swift */; };
+		CEA3A547261B26DB007AA664 /* Validater.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3A546261B26DB007AA664 /* Validater.swift */; };
+		CEA3A54C261B2EE2007AA664 /* IdValidater2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3A54B261B2EE2007AA664 /* IdValidater2.swift */; };
+		CEA3A551261B2F0D007AA664 /* PasswordValidater2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3A550261B2F0D007AA664 /* PasswordValidater2.swift */; };
+		CEA3A556261B30E2007AA664 /* PasswordConfirmValidater2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3A555261B30E2007AA664 /* PasswordConfirmValidater2.swift */; };
+		CEA3A55B261B32DD007AA664 /* NameValidater2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3A55A261B32DD007AA664 /* NameValidater2.swift */; };
 		CEB52F762616BEEC002C1650 /* PersonalInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB52F752616BEEC002C1650 /* PersonalInformationViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +75,11 @@
 		CE366CC12615BD2400506D3F /* NameTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextFieldDelegate.swift; sourceTree = "<group>"; };
 		CE366CC62615BD3300506D3F /* NameValidater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameValidater.swift; sourceTree = "<group>"; };
 		CEA3A5412619B47C007AA664 /* CustomTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldDelegate.swift; sourceTree = "<group>"; };
+		CEA3A546261B26DB007AA664 /* Validater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validater.swift; sourceTree = "<group>"; };
+		CEA3A54B261B2EE2007AA664 /* IdValidater2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdValidater2.swift; sourceTree = "<group>"; };
+		CEA3A550261B2F0D007AA664 /* PasswordValidater2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidater2.swift; sourceTree = "<group>"; };
+		CEA3A555261B30E2007AA664 /* PasswordConfirmValidater2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordConfirmValidater2.swift; sourceTree = "<group>"; };
+		CEA3A55A261B32DD007AA664 /* NameValidater2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameValidater2.swift; sourceTree = "<group>"; };
 		CEB52F752616BEEC002C1650 /* PersonalInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,6 +191,11 @@
 			isa = PBXGroup;
 			children = (
 				CE366C69261401E900506D3F /* ButtonManager.swift */,
+				CEA3A546261B26DB007AA664 /* Validater.swift */,
+				CEA3A54B261B2EE2007AA664 /* IdValidater2.swift */,
+				CEA3A550261B2F0D007AA664 /* PasswordValidater2.swift */,
+				CEA3A555261B30E2007AA664 /* PasswordConfirmValidater2.swift */,
+				CEA3A55A261B32DD007AA664 /* NameValidater2.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -315,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA3A55B261B32DD007AA664 /* NameValidater2.swift in Sources */,
 				CE366CB82615B9EE00506D3F /* PasswordConfirmTextFieldDelegate.swift in Sources */,
 				CE366CBD2615BA3400506D3F /* PasswordConfirmValidater.swift in Sources */,
 				CE366BD82611BA8D00506D3F /* ViewController.swift in Sources */,
@@ -323,10 +339,14 @@
 				CE366CAE2615AF4100506D3F /* PasswordTextFieldDelegate.swift in Sources */,
 				CE366BD42611BA8D00506D3F /* AppDelegate.swift in Sources */,
 				CE366CC22615BD2400506D3F /* NameTextFieldDelegate.swift in Sources */,
+				CEA3A54C261B2EE2007AA664 /* IdValidater2.swift in Sources */,
+				CEA3A551261B2F0D007AA664 /* PasswordValidater2.swift in Sources */,
 				CE366C9D261597BD00506D3F /* IdValidater.swift in Sources */,
+				CEA3A556261B30E2007AA664 /* PasswordConfirmValidater2.swift in Sources */,
 				CEA3A5422619B47C007AA664 /* CustomTextFieldDelegate.swift in Sources */,
 				CE366BD62611BA8D00506D3F /* SceneDelegate.swift in Sources */,
 				CE366CC72615BD3300506D3F /* NameValidater.swift in Sources */,
+				CEA3A547261B26DB007AA664 /* Validater.swift in Sources */,
 				CE366CB32615AF7C00506D3F /* PasswordValidater.swift in Sources */,
 				CE366C6A261401E900506D3F /* ButtonManager.swift in Sources */,
 			);

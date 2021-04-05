@@ -22,6 +22,14 @@ class ViewController: UIViewController {
     private var nameTextFieldDelegate = NameTextFieldDelegate()
     @IBOutlet weak var nameLabel: UILabel!
 
+    //MARK: 새로운 구조
+    private var validater = Validater()
+    private var idTextFieldDelegate2 = CustomTextFieldDelegate()
+    private var passwordTextFieldDelegate2 = CustomTextFieldDelegate()
+    private var passwordConfirmTextFieldDelegate2 = CustomTextFieldDelegate()
+    private var nameTextFieldDelegate2 = CustomTextFieldDelegate()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -32,12 +40,40 @@ class ViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(nameGuideText), name: NameTextFieldDelegate.nameTextFieldInfo, object: nameTextFieldDelegate)
         NotificationCenter.default.addObserver(self, selector: #selector(buttonState), name: ButtonManager.buttonState, object: buttonManager)
         
-        registerDelegate()
-        registerTextField()
-        setUpPasswordTextField()
-        buttonManager.isAllInfoValid()
+        configureTextField()
+//        registerDelegate()
+//        registerTextField()
+//        setUpPasswordTextField()
+//        buttonManager.isAllInfoValid()
     }
 
+    //MARK: 새로운 구조들
+    func configureTextField() {
+        self.idTextField.delegate = idTextFieldDelegate2
+        self.passwordTextField.delegate = passwordTextFieldDelegate2
+        self.passwordConfirmTextField.delegate = passwordConfirmTextFieldDelegate2
+        self.nameTextField.delegate = nameTextFieldDelegate2
+        
+        self.idTextFieldDelegate2.configureText() { text, range, string in
+            self.validater.idValidate(text: text, range: range, string: string)
+        }
+        
+        self.passwordTextFieldDelegate2.configureText() { text, range, string in
+            self.validater.passwordValidate(text: text, range: range, string: string)
+        }
+        
+        self.passwordConfirmTextFieldDelegate2.configureText() { text, range, string in
+            self.validater.passwordConfirmValidate(text: text, range: range, string: string)
+        }
+        
+        self.nameTextFieldDelegate2.configureText() { text, range, string in
+            self.validater.nameValidate(text: text, range: range, string: string)
+        }
+    }
+    
+    
+    
+    //MARK: 이전 구조들
     func registerDelegate() {
         self.idTextField.delegate = idTextFieldDelegate
         self.passwordTextField.delegate = passwordTextFieldDelegate
